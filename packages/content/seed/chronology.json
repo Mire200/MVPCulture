@@ -1,0 +1,276 @@
+[
+  {
+    "id": "ch-his-001",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      { "id": "e1", "label": "Révolution française", "year": 1789 },
+      { "id": "e2", "label": "Première Guerre mondiale", "year": 1914 },
+      { "id": "e3", "label": "Premier pas sur la Lune", "year": 1969 },
+      { "id": "e4", "label": "Chute du mur de Berlin", "year": 1989 }
+    ]
+  },
+  {
+    "id": "ch-his-002",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Classe les guerres/événements.",
+    "events": [
+      { "id": "e1", "label": "Bataille de Hastings", "year": 1066 },
+      { "id": "e2", "label": "Chute de Constantinople", "year": 1453 },
+      { "id": "e3", "label": "Découverte de l'Amérique", "year": 1492 },
+      { "id": "e4", "label": "Révolution russe", "year": 1917 },
+      { "id": "e5", "label": "Fin de la Seconde Guerre mondiale", "year": 1945 }
+    ]
+  },
+  {
+    "id": "ch-his-003",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Classe les empereurs romains.",
+    "events": [
+      { "id": "e1", "label": "Auguste", "year": -27 },
+      { "id": "e2", "label": "Néron", "year": 54 },
+      { "id": "e3", "label": "Trajan", "year": 98 },
+      { "id": "e4", "label": "Marc Aurèle", "year": 161 },
+      { "id": "e5", "label": "Constantin", "year": 306 }
+    ]
+  },
+  {
+    "id": "ch-sci-001",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Classe ces découvertes / inventions.",
+    "events": [
+      { "id": "e1", "label": "Théorie de la gravitation (Newton)", "year": 1687 },
+      { "id": "e2", "label": "Machine à vapeur (Watt)", "year": 1769 },
+      { "id": "e3", "label": "Pile électrique (Volta)", "year": 1800 },
+      { "id": "e4", "label": "Téléphone (Bell)", "year": 1876 },
+      { "id": "e5", "label": "Pénicilline (Fleming)", "year": 1928 },
+      { "id": "e6", "label": "ADN double hélice", "year": 1953 }
+    ]
+  },
+  {
+    "id": "ch-tec-001",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Classe ces produits Apple.",
+    "events": [
+      { "id": "e1", "label": "Macintosh", "year": 1984 },
+      { "id": "e2", "label": "iPod", "year": 2001 },
+      { "id": "e3", "label": "iPhone", "year": 2007 },
+      { "id": "e4", "label": "iPad", "year": 2010 },
+      { "id": "e5", "label": "Apple Watch", "year": 2015 },
+      { "id": "e6", "label": "Vision Pro", "year": 2024 }
+    ]
+  },
+  {
+    "id": "ch-tec-002",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Classe ces entreprises par ordre de fondation.",
+    "events": [
+      { "id": "e1", "label": "IBM", "year": 1911 },
+      { "id": "e2", "label": "Apple", "year": 1976 },
+      { "id": "e3", "label": "Microsoft", "year": 1975 },
+      { "id": "e4", "label": "Google", "year": 1998 },
+      { "id": "e5", "label": "Facebook", "year": 2004 }
+    ]
+  },
+  {
+    "id": "ch-cin-001",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Classe ces films par ordre de sortie.",
+    "events": [
+      { "id": "e1", "label": "Le Parrain", "year": 1972 },
+      { "id": "e2", "label": "Star Wars (Un nouvel espoir)", "year": 1977 },
+      { "id": "e3", "label": "Titanic", "year": 1997 },
+      { "id": "e4", "label": "Avatar", "year": 2009 },
+      { "id": "e5", "label": "Parasite", "year": 2019 }
+    ]
+  },
+  {
+    "id": "ch-cin-002",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Classe ces films de Kubrick.",
+    "events": [
+      { "id": "e1", "label": "Les Sentiers de la gloire", "year": 1957 },
+      { "id": "e2", "label": "Spartacus", "year": 1960 },
+      { "id": "e3", "label": "2001: l'Odyssée de l'espace", "year": 1968 },
+      { "id": "e4", "label": "Orange mécanique", "year": 1971 },
+      { "id": "e5", "label": "Shining", "year": 1980 }
+    ]
+  },
+  {
+    "id": "ch-mus-001",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Classe ces albums.",
+    "events": [
+      { "id": "e1", "label": "Sgt. Pepper's (Beatles)", "year": 1967 },
+      { "id": "e2", "label": "Dark Side of the Moon (Pink Floyd)", "year": 1973 },
+      { "id": "e3", "label": "Thriller (Michael Jackson)", "year": 1982 },
+      { "id": "e4", "label": "Nevermind (Nirvana)", "year": 1991 },
+      { "id": "e5", "label": "Random Access Memories (Daft Punk)", "year": 2013 }
+    ]
+  },
+  {
+    "id": "ch-spo-001",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Classe ces Coupes du monde de football.",
+    "events": [
+      { "id": "e1", "label": "Brésil 1970", "year": 1970 },
+      { "id": "e2", "label": "France 1998", "year": 1998 },
+      { "id": "e3", "label": "Brésil 2014", "year": 2014 },
+      { "id": "e4", "label": "Russie 2018", "year": 2018 },
+      { "id": "e5", "label": "Qatar 2022", "year": 2022 }
+    ]
+  },
+  {
+    "id": "ch-his-004",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Classe les présidents français (Ve République).",
+    "events": [
+      { "id": "e1", "label": "Charles de Gaulle", "year": 1958 },
+      { "id": "e2", "label": "Georges Pompidou", "year": 1969 },
+      { "id": "e3", "label": "Valéry Giscard d'Estaing", "year": 1974 },
+      { "id": "e4", "label": "François Mitterrand", "year": 1981 },
+      { "id": "e5", "label": "Jacques Chirac", "year": 1995 },
+      { "id": "e6", "label": "Nicolas Sarkozy", "year": 2007 },
+      { "id": "e7", "label": "François Hollande", "year": 2012 },
+      { "id": "e8", "label": "Emmanuel Macron", "year": 2017 }
+    ]
+  },
+  {
+    "id": "ch-his-005",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Classe ces grands événements du XXe siècle.",
+    "events": [
+      { "id": "e1", "label": "Traité de Versailles", "year": 1919 },
+      { "id": "e2", "label": "Krach boursier de Wall Street", "year": 1929 },
+      { "id": "e3", "label": "Débarquement de Normandie", "year": 1944 },
+      { "id": "e4", "label": "Crise des missiles de Cuba", "year": 1962 },
+      { "id": "e5", "label": "Chute de l'URSS", "year": 1991 }
+    ]
+  },
+  {
+    "id": "ch-art-001",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Classe ces mouvements artistiques (début).",
+    "events": [
+      { "id": "e1", "label": "Renaissance", "year": 1400 },
+      { "id": "e2", "label": "Baroque", "year": 1600 },
+      { "id": "e3", "label": "Romantisme", "year": 1800 },
+      { "id": "e4", "label": "Impressionnisme", "year": 1870 },
+      { "id": "e5", "label": "Cubisme", "year": 1907 }
+    ]
+  },
+  {
+    "id": "ch-lit-001",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Classe ces romans.",
+    "events": [
+      { "id": "e1", "label": "Don Quichotte", "year": 1605 },
+      { "id": "e2", "label": "Les Misérables", "year": 1862 },
+      { "id": "e3", "label": "Le Procès", "year": 1925 },
+      { "id": "e4", "label": "1984", "year": 1949 },
+      { "id": "e5", "label": "Cent ans de solitude", "year": 1967 },
+      { "id": "e6", "label": "Harry Potter à l'école des sorciers", "year": 1997 }
+    ]
+  },
+  {
+    "id": "ch-geo-001",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Classe ces pays par entrée dans l'UE.",
+    "events": [
+      { "id": "e1", "label": "France (fondatrice)", "year": 1957 },
+      { "id": "e2", "label": "Royaume-Uni", "year": 1973 },
+      { "id": "e3", "label": "Espagne", "year": 1986 },
+      { "id": "e4", "label": "Suède", "year": 1995 },
+      { "id": "e5", "label": "Pologne", "year": 2004 },
+      { "id": "e6", "label": "Croatie", "year": 2013 }
+    ]
+  },
+  {
+    "id": "ch-spa-001",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Classe ces missions spatiales.",
+    "events": [
+      { "id": "e1", "label": "Spoutnik 1", "year": 1957 },
+      { "id": "e2", "label": "Youri Gagarine en orbite", "year": 1961 },
+      { "id": "e3", "label": "Apollo 11 (Lune)", "year": 1969 },
+      { "id": "e4", "label": "Station Mir", "year": 1986 },
+      { "id": "e5", "label": "Curiosity sur Mars", "year": 2012 },
+      { "id": "e6", "label": "James Webb (télescope)", "year": 2021 }
+    ]
+  },
+  {
+    "id": "ch-tec-003",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Classe ces langages de programmation.",
+    "events": [
+      { "id": "e1", "label": "Fortran", "year": 1957 },
+      { "id": "e2", "label": "C", "year": 1972 },
+      { "id": "e3", "label": "Python", "year": 1991 },
+      { "id": "e4", "label": "Java", "year": 1995 },
+      { "id": "e5", "label": "JavaScript", "year": 1995 },
+      { "id": "e6", "label": "Rust", "year": 2010 }
+    ]
+  },
+  {
+    "id": "ch-cin-003",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Classe ces films d'animation Pixar.",
+    "events": [
+      { "id": "e1", "label": "Toy Story", "year": 1995 },
+      { "id": "e2", "label": "Le Monde de Nemo", "year": 2003 },
+      { "id": "e3", "label": "Ratatouille", "year": 2007 },
+      { "id": "e4", "label": "Là-haut", "year": 2009 },
+      { "id": "e5", "label": "Coco", "year": 2017 }
+    ]
+  },
+  {
+    "id": "ch-div-001",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Divers",
+    "prompt": "Classe ces JO d'été.",
+    "events": [
+      { "id": "e1", "label": "Athènes 1896", "year": 1896 },
+      { "id": "e2", "label": "Berlin 1936", "year": 1936 },
+      { "id": "e3", "label": "Mexico 1968", "year": 1968 },
+      { "id": "e4", "label": "Sydney 2000", "year": 2000 },
+      { "id": "e5", "label": "Paris 2024", "year": 2024 }
+    ]
+  }
+]

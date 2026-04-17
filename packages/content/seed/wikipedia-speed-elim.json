@@ -1,0 +1,2305 @@
+[
+  {
+    "id": "se-wp-0001",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de France ?",
+    "answer": "Paris",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:France"
+  },
+  {
+    "id": "se-wp-0002",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Allemagne ?",
+    "answer": "Berlin",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Allemagne"
+  },
+  {
+    "id": "se-wp-0003",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Italie ?",
+    "answer": "Rome",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Italie"
+  },
+  {
+    "id": "se-wp-0004",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Espagne ?",
+    "answer": "Madrid",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Espagne"
+  },
+  {
+    "id": "se-wp-0005",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Portugal ?",
+    "answer": "Lisbonne",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Portugal"
+  },
+  {
+    "id": "se-wp-0006",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Belgique ?",
+    "answer": "Bruxelles",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Belgique"
+  },
+  {
+    "id": "se-wp-0007",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Pays-Bas ?",
+    "answer": "Amsterdam",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Pays-Bas"
+  },
+  {
+    "id": "se-wp-0008",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Suisse ?",
+    "answer": "Berne",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Suisse"
+  },
+  {
+    "id": "se-wp-0009",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Autriche ?",
+    "answer": "Vienne",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Autriche"
+  },
+  {
+    "id": "se-wp-0010",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Royaume-Uni ?",
+    "answer": "Londres",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Royaume-Uni"
+  },
+  {
+    "id": "se-wp-0011",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Irlande ?",
+    "answer": "Dublin",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Irlande"
+  },
+  {
+    "id": "se-wp-0012",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Danemark ?",
+    "answer": "Copenhague",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Danemark"
+  },
+  {
+    "id": "se-wp-0013",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Norvège ?",
+    "answer": "Oslo",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Norvège"
+  },
+  {
+    "id": "se-wp-0014",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Suède ?",
+    "answer": "Stockholm",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Suède"
+  },
+  {
+    "id": "se-wp-0015",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Finlande ?",
+    "answer": "Helsinki",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Finlande"
+  },
+  {
+    "id": "se-wp-0016",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Islande ?",
+    "answer": "Reykjavik",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Islande"
+  },
+  {
+    "id": "se-wp-0017",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Pologne ?",
+    "answer": "Varsovie",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Pologne"
+  },
+  {
+    "id": "se-wp-0018",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de République tchèque ?",
+    "answer": "Prague",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:République tchèque"
+  },
+  {
+    "id": "se-wp-0019",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Hongrie ?",
+    "answer": "Budapest",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Hongrie"
+  },
+  {
+    "id": "se-wp-0020",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Roumanie ?",
+    "answer": "Bucarest",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Roumanie"
+  },
+  {
+    "id": "se-wp-0021",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Grèce ?",
+    "answer": "Athènes",
+    "aliases": [
+      "athenes"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Grèce"
+  },
+  {
+    "id": "se-wp-0022",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Bulgarie ?",
+    "answer": "Sofia",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Bulgarie"
+  },
+  {
+    "id": "se-wp-0023",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Croatie ?",
+    "answer": "Zagreb",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Croatie"
+  },
+  {
+    "id": "se-wp-0024",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Serbie ?",
+    "answer": "Belgrade",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Serbie"
+  },
+  {
+    "id": "se-wp-0025",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Ukraine ?",
+    "answer": "Kiev",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Ukraine"
+  },
+  {
+    "id": "se-wp-0026",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Biélorussie ?",
+    "answer": "Minsk",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Biélorussie"
+  },
+  {
+    "id": "se-wp-0027",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Russie ?",
+    "answer": "Moscou",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Russie"
+  },
+  {
+    "id": "se-wp-0028",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Turquie ?",
+    "answer": "Ankara",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Turquie"
+  },
+  {
+    "id": "se-wp-0029",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Moldavie ?",
+    "answer": "Chișinău",
+    "aliases": [
+      "chisinau"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Moldavie"
+  },
+  {
+    "id": "se-wp-0030",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Slovaquie ?",
+    "answer": "Bratislava",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Slovaquie"
+  },
+  {
+    "id": "se-wp-0031",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Slovénie ?",
+    "answer": "Ljubljana",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Slovénie"
+  },
+  {
+    "id": "se-wp-0032",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Lettonie ?",
+    "answer": "Riga",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Lettonie"
+  },
+  {
+    "id": "se-wp-0033",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Lituanie ?",
+    "answer": "Vilnius",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Lituanie"
+  },
+  {
+    "id": "se-wp-0034",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Estonie ?",
+    "answer": "Tallinn",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Estonie"
+  },
+  {
+    "id": "se-wp-0035",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Luxembourg ?",
+    "answer": "Luxembourg",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Luxembourg"
+  },
+  {
+    "id": "se-wp-0036",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Malte ?",
+    "answer": "La Valette",
+    "aliases": [
+      "valette"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Malte"
+  },
+  {
+    "id": "se-wp-0037",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Chypre ?",
+    "answer": "Nicosie",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Chypre"
+  },
+  {
+    "id": "se-wp-0038",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Albanie ?",
+    "answer": "Tirana",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Albanie"
+  },
+  {
+    "id": "se-wp-0039",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Monténégro ?",
+    "answer": "Podgorica",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Monténégro"
+  },
+  {
+    "id": "se-wp-0040",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Macédoine du Nord ?",
+    "answer": "Skopje",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Macédoine du Nord"
+  },
+  {
+    "id": "se-wp-0041",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Kosovo ?",
+    "answer": "Pristina",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Kosovo"
+  },
+  {
+    "id": "se-wp-0042",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Bosnie-Herzégovine ?",
+    "answer": "Sarajevo",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Bosnie-Herzégovine"
+  },
+  {
+    "id": "se-wp-0043",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Andorre ?",
+    "answer": "Andorre-la-Vieille",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Andorre"
+  },
+  {
+    "id": "se-wp-0044",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Monaco ?",
+    "answer": "Monaco",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Monaco"
+  },
+  {
+    "id": "se-wp-0045",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Vatican ?",
+    "answer": "Cité du Vatican",
+    "aliases": [
+      "cite du vatican"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Vatican"
+  },
+  {
+    "id": "se-wp-0046",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Saint-Marin ?",
+    "answer": "Saint-Marin",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Saint-Marin"
+  },
+  {
+    "id": "se-wp-0047",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Chine ?",
+    "answer": "Pékin",
+    "aliases": [
+      "pekin"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Chine"
+  },
+  {
+    "id": "se-wp-0048",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Japon ?",
+    "answer": "Tokyo",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Japon"
+  },
+  {
+    "id": "se-wp-0049",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Corée du Sud ?",
+    "answer": "Séoul",
+    "aliases": [
+      "seoul"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Corée du Sud"
+  },
+  {
+    "id": "se-wp-0050",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Corée du Nord ?",
+    "answer": "Pyongyang",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Corée du Nord"
+  },
+  {
+    "id": "se-wp-0051",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Inde ?",
+    "answer": "New Delhi",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Inde"
+  },
+  {
+    "id": "se-wp-0052",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Pakistan ?",
+    "answer": "Islamabad",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Pakistan"
+  },
+  {
+    "id": "se-wp-0053",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Bangladesh ?",
+    "answer": "Dacca",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Bangladesh"
+  },
+  {
+    "id": "se-wp-0054",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Sri Lanka ?",
+    "answer": "Colombo",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Sri Lanka"
+  },
+  {
+    "id": "se-wp-0055",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Népal ?",
+    "answer": "Katmandou",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Népal"
+  },
+  {
+    "id": "se-wp-0056",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Bhoutan ?",
+    "answer": "Thimphou",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Bhoutan"
+  },
+  {
+    "id": "se-wp-0057",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Afghanistan ?",
+    "answer": "Kaboul",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Afghanistan"
+  },
+  {
+    "id": "se-wp-0058",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Iran ?",
+    "answer": "Téhéran",
+    "aliases": [
+      "teheran"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Iran"
+  },
+  {
+    "id": "se-wp-0059",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Irak ?",
+    "answer": "Bagdad",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Irak"
+  },
+  {
+    "id": "se-wp-0060",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Arabie saoudite ?",
+    "answer": "Riyad",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Arabie saoudite"
+  },
+  {
+    "id": "se-wp-0061",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Émirats arabes unis ?",
+    "answer": "Abou Dabi",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Émirats arabes unis"
+  },
+  {
+    "id": "se-wp-0062",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Qatar ?",
+    "answer": "Doha",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Qatar"
+  },
+  {
+    "id": "se-wp-0063",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Koweït ?",
+    "answer": "Koweït",
+    "aliases": [
+      "koweit"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Koweït"
+  },
+  {
+    "id": "se-wp-0064",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Oman ?",
+    "answer": "Mascate",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Oman"
+  },
+  {
+    "id": "se-wp-0065",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Yémen ?",
+    "answer": "Sanaa",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Yémen"
+  },
+  {
+    "id": "se-wp-0066",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Bahreïn ?",
+    "answer": "Manama",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Bahreïn"
+  },
+  {
+    "id": "se-wp-0067",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Jordanie ?",
+    "answer": "Amman",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Jordanie"
+  },
+  {
+    "id": "se-wp-0068",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Liban ?",
+    "answer": "Beyrouth",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Liban"
+  },
+  {
+    "id": "se-wp-0069",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Syrie ?",
+    "answer": "Damas",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Syrie"
+  },
+  {
+    "id": "se-wp-0070",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Israël ?",
+    "answer": "Jérusalem",
+    "aliases": [
+      "jerusalem"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Israël"
+  },
+  {
+    "id": "se-wp-0071",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Palestine ?",
+    "answer": "Ramallah",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Palestine"
+  },
+  {
+    "id": "se-wp-0072",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Thaïlande ?",
+    "answer": "Bangkok",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Thaïlande"
+  },
+  {
+    "id": "se-wp-0073",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Vietnam ?",
+    "answer": "Hanoï",
+    "aliases": [
+      "hanoi"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Vietnam"
+  },
+  {
+    "id": "se-wp-0074",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Cambodge ?",
+    "answer": "Phnom Penh",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Cambodge"
+  },
+  {
+    "id": "se-wp-0075",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Laos ?",
+    "answer": "Vientiane",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Laos"
+  },
+  {
+    "id": "se-wp-0076",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Birmanie ?",
+    "answer": "Naypyidaw",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Birmanie"
+  },
+  {
+    "id": "se-wp-0077",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Malaisie ?",
+    "answer": "Kuala Lumpur",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Malaisie"
+  },
+  {
+    "id": "se-wp-0078",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Singapour ?",
+    "answer": "Singapour",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Singapour"
+  },
+  {
+    "id": "se-wp-0079",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Indonésie ?",
+    "answer": "Jakarta",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Indonésie"
+  },
+  {
+    "id": "se-wp-0080",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Philippines ?",
+    "answer": "Manille",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Philippines"
+  },
+  {
+    "id": "se-wp-0081",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Brunei ?",
+    "answer": "Bandar Seri Begawan",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Brunei"
+  },
+  {
+    "id": "se-wp-0082",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Timor oriental ?",
+    "answer": "Dili",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Timor oriental"
+  },
+  {
+    "id": "se-wp-0083",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Mongolie ?",
+    "answer": "Oulan-Bator",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Mongolie"
+  },
+  {
+    "id": "se-wp-0084",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Kazakhstan ?",
+    "answer": "Astana",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Kazakhstan"
+  },
+  {
+    "id": "se-wp-0085",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Ouzbékistan ?",
+    "answer": "Tachkent",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Ouzbékistan"
+  },
+  {
+    "id": "se-wp-0086",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Kirghizistan ?",
+    "answer": "Bichkek",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Kirghizistan"
+  },
+  {
+    "id": "se-wp-0087",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Tadjikistan ?",
+    "answer": "Douchanbé",
+    "aliases": [
+      "douchanbe"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Tadjikistan"
+  },
+  {
+    "id": "se-wp-0088",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Turkménistan ?",
+    "answer": "Achgabat",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Turkménistan"
+  },
+  {
+    "id": "se-wp-0089",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Azerbaïdjan ?",
+    "answer": "Bakou",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Azerbaïdjan"
+  },
+  {
+    "id": "se-wp-0090",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Géorgie ?",
+    "answer": "Tbilissi",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Géorgie"
+  },
+  {
+    "id": "se-wp-0091",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Arménie ?",
+    "answer": "Erevan",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Arménie"
+  },
+  {
+    "id": "se-wp-0092",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Maldives ?",
+    "answer": "Malé",
+    "aliases": [
+      "male"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Maldives"
+  },
+  {
+    "id": "se-wp-0093",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de États-Unis ?",
+    "answer": "Washington",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:États-Unis"
+  },
+  {
+    "id": "se-wp-0094",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Canada ?",
+    "answer": "Ottawa",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Canada"
+  },
+  {
+    "id": "se-wp-0095",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Mexique ?",
+    "answer": "Mexico",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Mexique"
+  },
+  {
+    "id": "se-wp-0096",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Capitale de Cuba ?",
+    "answer": "La Havane",
+    "aliases": [
+      "havane"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Cuba"
+  },
+  {
+    "id": "se-wp-0097",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Haïti ?",
+    "answer": "Port-au-Prince",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Haïti"
+  },
+  {
+    "id": "se-wp-0098",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de République dominicaine ?",
+    "answer": "Saint-Domingue",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:République dominicaine"
+  },
+  {
+    "id": "se-wp-0099",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Capitale de Jamaïque ?",
+    "answer": "Kingston",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Jamaïque"
+  },
+  {
+    "id": "se-wp-0100",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Capitale de Bahamas ?",
+    "answer": "Nassau",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Bahamas"
+  },
+  {
+    "id": "se-wp-0101",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Premiers Jeux Olympiques antiques ?",
+    "answer": "776",
+    "aliases": [
+      "-776",
+      "776 av jc"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Premiers Jeux Olympiques antiques"
+  },
+  {
+    "id": "se-wp-0102",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Fondation de Rome (légende) ?",
+    "answer": "753",
+    "aliases": [
+      "-753",
+      "753 av jc"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Fondation de Rome (légende)"
+  },
+  {
+    "id": "se-wp-0103",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Fondation de la République romaine ?",
+    "answer": "509",
+    "aliases": [
+      "-509",
+      "509 av jc"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Fondation de la République romaine"
+  },
+  {
+    "id": "se-wp-0104",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Bataille de Marathon ?",
+    "answer": "490",
+    "aliases": [
+      "-490",
+      "490 av jc"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Bataille de Marathon"
+  },
+  {
+    "id": "se-wp-0105",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Bataille des Thermopyles ?",
+    "answer": "480",
+    "aliases": [
+      "-480",
+      "480 av jc"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Bataille des Thermopyles"
+  },
+  {
+    "id": "se-wp-0106",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Assassinat de Jules César ?",
+    "answer": "44",
+    "aliases": [
+      "-44",
+      "44 av jc"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Assassinat de Jules César"
+  },
+  {
+    "id": "se-wp-0107",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Auguste devient empereur romain ?",
+    "answer": "27",
+    "aliases": [
+      "-27",
+      "27 av jc"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Auguste devient empereur romain"
+  },
+  {
+    "id": "se-wp-0108",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Éruption du Vésuve (Pompéi) ?",
+    "answer": "79",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Éruption du Vésuve (Pompéi)"
+  },
+  {
+    "id": "se-wp-0109",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Édit de Milan (liberté de culte chrétien) ?",
+    "answer": "313",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Édit de Milan (liberté de culte chrétien)"
+  },
+  {
+    "id": "se-wp-0110",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Chute de l'Empire romain d'Occident ?",
+    "answer": "476",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Chute de l'Empire romain d'Occident"
+  },
+  {
+    "id": "se-wp-0111",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Hégire (début du calendrier musulman) ?",
+    "answer": "622",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Hégire (début du calendrier musulman)"
+  },
+  {
+    "id": "se-wp-0112",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Couronnement de Charlemagne ?",
+    "answer": "800",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Couronnement de Charlemagne"
+  },
+  {
+    "id": "se-wp-0113",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Bataille de Hastings ?",
+    "answer": "1066",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Bataille de Hastings"
+  },
+  {
+    "id": "se-wp-0114",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Appel à la première croisade ?",
+    "answer": "1095",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Appel à la première croisade"
+  },
+  {
+    "id": "se-wp-0115",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Magna Carta en Angleterre ?",
+    "answer": "1215",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Magna Carta en Angleterre"
+  },
+  {
+    "id": "se-wp-0116",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Marco Polo part pour la Chine ?",
+    "answer": "1271",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Marco Polo part pour la Chine"
+  },
+  {
+    "id": "se-wp-0117",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Début de la guerre de Cent Ans ?",
+    "answer": "1337",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Début de la guerre de Cent Ans"
+  },
+  {
+    "id": "se-wp-0118",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Début de la peste noire en Europe ?",
+    "answer": "1347",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Début de la peste noire en Europe"
+  },
+  {
+    "id": "se-wp-0119",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Mort de Jeanne d'Arc sur le bûcher ?",
+    "answer": "1431",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Mort de Jeanne d'Arc sur le bûcher"
+  },
+  {
+    "id": "se-wp-0120",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Chute de Constantinople ?",
+    "answer": "1453",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Chute de Constantinople"
+  },
+  {
+    "id": "se-wp-0121",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Découverte de l'Amérique par Christophe Colomb ?",
+    "answer": "1492",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Découverte de l'Amérique par Christophe Colomb"
+  },
+  {
+    "id": "se-wp-0122",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Année de : Vasco de Gama atteint l'Inde ?",
+    "answer": "1498",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia:Vasco de Gama atteint l'Inde"
+  },
+  {
+    "id": "se-wp-0123",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Thèses de Luther (Réforme protestante) ?",
+    "answer": "1517",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Thèses de Luther (Réforme protestante)"
+  },
+  {
+    "id": "se-wp-0124",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Magellan commence son tour du monde ?",
+    "answer": "1519",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Magellan commence son tour du monde"
+  },
+  {
+    "id": "se-wp-0125",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Jacques Cartier découvre le Canada ?",
+    "answer": "1534",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Jacques Cartier découvre le Canada"
+  },
+  {
+    "id": "se-wp-0126",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Défaite de l'Invincible Armada ?",
+    "answer": "1588",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Défaite de l'Invincible Armada"
+  },
+  {
+    "id": "se-wp-0127",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Année de : Publication de Don Quichotte (1ère partie) ?",
+    "answer": "1605",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Publication de Don Quichotte (1ère partie)"
+  },
+  {
+    "id": "se-wp-0128",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Assassinat d'Henri IV ?",
+    "answer": "1610",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Assassinat d'Henri IV"
+  },
+  {
+    "id": "se-wp-0129",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Début du règne de Louis XIV ?",
+    "answer": "1643",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Début du règne de Louis XIV"
+  },
+  {
+    "id": "se-wp-0130",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Grand incendie de Londres ?",
+    "answer": "1666",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Grand incendie de Londres"
+  },
+  {
+    "id": "se-wp-0131",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Installation de Louis XIV à Versailles ?",
+    "answer": "1682",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Installation de Louis XIV à Versailles"
+  },
+  {
+    "id": "se-wp-0132",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Année de : Principia de Newton ?",
+    "answer": "1687",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Principia de Newton"
+  },
+  {
+    "id": "se-wp-0133",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Fondation de Saint-Pétersbourg ?",
+    "answer": "1703",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Fondation de Saint-Pétersbourg"
+  },
+  {
+    "id": "se-wp-0134",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Déclaration d'indépendance des États-Unis ?",
+    "answer": "1776",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Déclaration d'indépendance des États-Unis"
+  },
+  {
+    "id": "se-wp-0135",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Révolution française / prise de la Bastille ?",
+    "answer": "1789",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Révolution française / prise de la Bastille"
+  },
+  {
+    "id": "se-wp-0136",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Sacre de Napoléon empereur ?",
+    "answer": "1804",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Sacre de Napoléon empereur"
+  },
+  {
+    "id": "se-wp-0137",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Bataille de Waterloo ?",
+    "answer": "1815",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Bataille de Waterloo"
+  },
+  {
+    "id": "se-wp-0138",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Année de : Première ligne de chemin de fer (Stockton-Darlington) ?",
+    "answer": "1825",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Première ligne de chemin de fer (Stockton-Darlington)"
+  },
+  {
+    "id": "se-wp-0139",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Année de : Révolution des Trois Glorieuses ?",
+    "answer": "1830",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Révolution des Trois Glorieuses"
+  },
+  {
+    "id": "se-wp-0140",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Année de : Invention de la photographie (Daguerre) ?",
+    "answer": "1839",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia:Invention de la photographie (Daguerre)"
+  },
+  {
+    "id": "se-wp-0141",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Symbole chimique de l'or ?",
+    "answer": "Au",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0142",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Symbole chimique de l'argent ?",
+    "answer": "Ag",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0143",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du fer ?",
+    "answer": "Fe",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0144",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du cuivre ?",
+    "answer": "Cu",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0145",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du plomb ?",
+    "answer": "Pb",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0146",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du mercure ?",
+    "answer": "Hg",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0147",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du potassium ?",
+    "answer": "K",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0148",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du sodium ?",
+    "answer": "Na",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0149",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du chlore ?",
+    "answer": "Cl",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0150",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Symbole chimique de l'oxygène ?",
+    "answer": "O",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0151",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du carbone ?",
+    "answer": "C",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0152",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Symbole chimique de l'azote ?",
+    "answer": "N",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0153",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Symbole chimique de l'hydrogène ?",
+    "answer": "H",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0154",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du calcium ?",
+    "answer": "Ca",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0155",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Symbole chimique du tungstène ?",
+    "answer": "W",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0156",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Planète la plus proche du Soleil ?",
+    "answer": "Mercure",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0157",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Planète la plus éloignée du Soleil ?",
+    "answer": "Neptune",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0158",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Plus grande planète du système solaire ?",
+    "answer": "Jupiter",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0159",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Plus petite planète du système solaire ?",
+    "answer": "Mercure",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0160",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Planète connue pour ses anneaux ?",
+    "answer": "Saturne",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0161",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Planète surnommée l'étoile du berger ?",
+    "answer": "Vénus",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0162",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Planète rouge ?",
+    "answer": "Mars",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0163",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Nom de notre galaxie ?",
+    "answer": "Voie lactée",
+    "aliases": [
+      "voie lactee",
+      "milky way"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0164",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Étoile la plus proche du Soleil ?",
+    "answer": "Proxima du Centaure",
+    "aliases": [
+      "proxima centauri",
+      "proxima"
+    ],
+    "timerSeconds": 12,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0165",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Satellite naturel de la Terre ?",
+    "answer": "Lune",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0166",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Nombre de joueurs par équipe au football (terrain) ?",
+    "answer": "11",
+    "aliases": [
+      "onze"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0167",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Nombre de joueurs par équipe au rugby à XV ?",
+    "answer": "15",
+    "aliases": [
+      "quinze"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0168",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Nombre de joueurs par équipe au basket (terrain) ?",
+    "answer": "5",
+    "aliases": [
+      "cinq"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0169",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Nombre de joueurs par équipe au volley ?",
+    "answer": "6",
+    "aliases": [
+      "six"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0170",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Nombre de joueurs par équipe au handball ?",
+    "answer": "7",
+    "aliases": [
+      "sept"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0171",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Nombre de joueurs par équipe au hockey sur glace (terrain) ?",
+    "answer": "6",
+    "aliases": [
+      "six"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0172",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Distance d'un marathon (km) ?",
+    "answer": "42.195",
+    "aliases": [
+      "42,195",
+      "42"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0173",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Ville du plus ancien Grand Chelem de tennis ?",
+    "answer": "Londres",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0174",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Surface du tournoi de Wimbledon ?",
+    "answer": "gazon",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0175",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Surface du tournoi de Roland-Garros ?",
+    "answer": "terre battue",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0176",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Pays créateur du judo ?",
+    "answer": "Japon",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0177",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Pays créateur du Taekwondo ?",
+    "answer": "Corée du Sud",
+    "aliases": [
+      "coree du sud",
+      "coree"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0178",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Pays organisateur de la Coupe du monde de football 1998 ?",
+    "answer": "France",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0179",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Pays vainqueur de la Coupe du monde de football 2022 ?",
+    "answer": "Argentine",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0180",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Pays vainqueur de la Coupe du monde de football 2018 ?",
+    "answer": "France",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0181",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Fondateur de Microsoft ?",
+    "answer": "Bill Gates",
+    "aliases": [
+      "gates"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0182",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Cofondateur d'Apple (avec Steve Wozniak) ?",
+    "answer": "Steve Jobs",
+    "aliases": [
+      "jobs"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0183",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Fondateur de Tesla (entreprise actuelle dirigée par) ?",
+    "answer": "Elon Musk",
+    "aliases": [
+      "musk"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0184",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Créateur de Facebook ?",
+    "answer": "Mark Zuckerberg",
+    "aliases": [
+      "zuckerberg"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0185",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Créateurs de Google ?",
+    "answer": "Larry Page et Sergey Brin",
+    "aliases": [
+      "page et brin",
+      "page",
+      "brin"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0186",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Créateur de Linux ?",
+    "answer": "Linus Torvalds",
+    "aliases": [
+      "torvalds"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0187",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Créateur du World Wide Web ?",
+    "answer": "Tim Berners-Lee",
+    "aliases": [
+      "berners-lee",
+      "tim berners lee"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0188",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Langage de programmation créé par Guido van Rossum ?",
+    "answer": "Python",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0189",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Langage de programmation utilisé par Node.js ?",
+    "answer": "JavaScript",
+    "aliases": [
+      "js"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0190",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Extension standard d'un fichier image compressé courant ?",
+    "answer": "jpg",
+    "aliases": [
+      "jpeg",
+      ".jpg",
+      ".jpeg"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0191",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Signification de URL ?",
+    "answer": "Uniform Resource Locator",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0192",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Signification de HTML ?",
+    "answer": "HyperText Markup Language",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0193",
+    "mode": "speed-elim",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Signification de CSS ?",
+    "answer": "Cascading Style Sheets",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0194",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "Année de création d'Internet (ARPANET) ?",
+    "answer": "1969",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0195",
+    "mode": "speed-elim",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "Année de création du WWW ?",
+    "answer": "1989",
+    "aliases": [],
+    "timerSeconds": 12,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0196",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Symbole chimique de l'eau ?",
+    "answer": "H2O",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0197",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Divers",
+    "prompt": "Monnaie officielle du Japon ?",
+    "answer": "Yen",
+    "aliases": [],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0198",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Divers",
+    "prompt": "Monnaie officielle du Royaume-Uni ?",
+    "answer": "Livre sterling",
+    "aliases": [
+      "livre",
+      "gbp",
+      "pound"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0199",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Divers",
+    "prompt": "Monnaie officielle de la Suisse ?",
+    "answer": "Franc suisse",
+    "aliases": [
+      "franc",
+      "chf"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  },
+  {
+    "id": "se-wp-0200",
+    "mode": "speed-elim",
+    "difficulty": "easy",
+    "category": "Divers",
+    "prompt": "Monnaie de la zone euro ?",
+    "answer": "Euro",
+    "aliases": [
+      "eur"
+    ],
+    "timerSeconds": 10,
+    "source": "Wikipedia"
+  }
+]

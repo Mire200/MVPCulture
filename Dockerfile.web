@@ -1,0 +1,49 @@
+# syntax=docker/dockerfile:1.7
+# Image de prod pour l'app Next.js (apps/web).
+# Utilise la sortie standalone de Next pour une image minimale.
+
+FROM node:20-alpine AS base
+ENV PNPM_HOME=/pnpm
+ENV PATH=$PNPM_HOME:$PATH
+RUN corepack enable
+
+# ---------- build ----------
+FROM base AS builder
+WORKDIR /app
+
+# Variables NEXT_PUBLIC_* inline-ées au build → passées en ARG.
+ARG NEXT_PUBLIC_REALTIME_URL
+ARG NEXT_PUBLIC_APP_URL
+ENV NEXT_PUBLIC_REALTIME_URL=$NEXT_PUBLIC_REALTIME_URL
+ENV NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL
+ENV NEXT_TELEMETRY_DISABLED=1
+
+COPY pnpm-lock.yaml pnpm-workspace.yaml package.json tsconfig.base.json ./
+COPY packages/shared/package.json packages/shared/
+COPY packages/content/package.json packages/content/
+COPY packages/db/package.json packages/db/
+COPY apps/web/package.json apps/web/
+COPY apps/realtime/package.json apps/realtime/
+
+RUN pnpm install --frozen-lockfile --filter @mvpc/web...
+
+COPY packages/shared packages/shared
+COPY packages/content packages/content
+COPY apps/web apps/web
+
+RUN pnpm --filter @mvpc/web build
+
+# ---------- runner : sortie standalone Next ----------
+FROM node:20-alpine AS runner
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+WORKDIR /app
+
+COPY --from=builder /app/apps/web/.next/standalone ./
+COPY --from=builder /app/apps/web/.next/static ./apps/web/.next/static
+COPY --from=builder /app/apps/web/public ./apps/web/public
+
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+EXPOSE 3000
+CMD ["node", "apps/web/server.js"]

@@ -1,0 +1,289 @@
+[
+  {
+    "id": "e-geo-001",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle est la population de la France en 2023 (en millions) ?",
+    "numericAnswer": 68.05,
+    "unit": "millions",
+    "source": "INSEE 2023"
+  },
+  {
+    "id": "e-geo-002",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle est la hauteur de la Tour Eiffel (antenne comprise) en mètres ?",
+    "numericAnswer": 330,
+    "unit": "m",
+    "source": "Wikipedia:Eiffel_Tower"
+  },
+  {
+    "id": "e-geo-003",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quelle est la superficie de la Russie en km² (en millions) ?",
+    "numericAnswer": 17.1,
+    "unit": "M km²",
+    "source": "Wikipedia:Russia"
+  },
+  {
+    "id": "e-geo-004",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle est l'altitude de l'Everest en mètres ?",
+    "numericAnswer": 8849,
+    "unit": "m",
+    "source": "Wikipedia:Mount_Everest"
+  },
+  {
+    "id": "e-his-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "En quelle année César a-t-il été assassiné (avant J.-C.) ?",
+    "numericAnswer": 44,
+    "unit": "av. J.-C.",
+    "source": "Wikipedia:Julius_Caesar"
+  },
+  {
+    "id": "e-his-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "En quelle année fut fondée la ville de Rome (tradition, av. J.-C.) ?",
+    "numericAnswer": 753,
+    "unit": "av. J.-C.",
+    "source": "Wikipedia:Founding_of_Rome"
+  },
+  {
+    "id": "e-his-003",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "En quelle année la Deuxième Guerre mondiale a-t-elle pris fin ?",
+    "numericAnswer": 1945,
+    "source": "Wikipedia:World_War_II"
+  },
+  {
+    "id": "e-sci-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle est la vitesse de la lumière (en milliers de km/s) ?",
+    "numericAnswer": 299.792,
+    "unit": "milliers de km/s",
+    "source": "Wikipedia:Speed_of_light"
+  },
+  {
+    "id": "e-sci-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien d'os contient le corps humain adulte ?",
+    "numericAnswer": 206,
+    "unit": "os",
+    "source": "Wikipedia:Human_skeleton"
+  },
+  {
+    "id": "e-sci-003",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle est la distance moyenne Terre-Lune (en milliers de km) ?",
+    "numericAnswer": 384.4,
+    "unit": "milliers de km",
+    "source": "Wikipedia:Moon"
+  },
+  {
+    "id": "e-sci-004",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de neurones possède le cerveau humain (en milliards) ?",
+    "numericAnswer": 86,
+    "unit": "milliards",
+    "source": "Wikipedia:Human_brain"
+  },
+  {
+    "id": "e-cin-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quelle est la durée du film Avatar (2009) en minutes ?",
+    "numericAnswer": 162,
+    "unit": "min",
+    "source": "Wikipedia:Avatar_(2009_film)"
+  },
+  {
+    "id": "e-cin-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Combien le film Titanic a-t-il rapporté au box-office mondial (en milliards $) ?",
+    "numericAnswer": 2.25,
+    "unit": "Mrd $",
+    "source": "Wikipedia:Titanic_(1997_film)"
+  },
+  {
+    "id": "e-mus-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Combien d'albums studio les Beatles ont-ils publiés ?",
+    "numericAnswer": 13,
+    "source": "Wikipedia:The_Beatles_discography"
+  },
+  {
+    "id": "e-mus-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "En quelle année Mozart est-il né ?",
+    "numericAnswer": 1756,
+    "source": "Wikipedia:Wolfgang_Amadeus_Mozart"
+  },
+  {
+    "id": "e-spo-001",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Combien de joueurs compte une équipe de football sur le terrain ?",
+    "numericAnswer": 11,
+    "source": "Wikipedia:Football"
+  },
+  {
+    "id": "e-spo-002",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quelle est la longueur d'un marathon (en km) ?",
+    "numericAnswer": 42.195,
+    "unit": "km",
+    "source": "Wikipedia:Marathon"
+  },
+  {
+    "id": "e-spo-003",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "En quelle année furent organisés les premiers Jeux olympiques modernes ?",
+    "numericAnswer": 1896,
+    "source": "Wikipedia:Modern_Olympic_Games"
+  },
+  {
+    "id": "e-ani-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "Combien de temps dort un koala par jour en moyenne (en heures) ?",
+    "numericAnswer": 20,
+    "unit": "h",
+    "source": "Wikipedia:Koala"
+  },
+  {
+    "id": "e-ani-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Animaux",
+    "prompt": "Quelle est la vitesse maximale du guépard en km/h ?",
+    "numericAnswer": 112,
+    "unit": "km/h",
+    "source": "Wikipedia:Cheetah"
+  },
+  {
+    "id": "e-tec-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "En quelle année Google a-t-il été fondé ?",
+    "numericAnswer": 1998,
+    "source": "Wikipedia:Google"
+  },
+  {
+    "id": "e-tec-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "En quelle année l'iPhone a-t-il été présenté ?",
+    "numericAnswer": 2007,
+    "source": "Wikipedia:IPhone"
+  },
+  {
+    "id": "e-div-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Divers",
+    "prompt": "Combien de langues sont officiellement parlées en Suisse ?",
+    "numericAnswer": 4,
+    "source": "Wikipedia:Languages_of_Switzerland"
+  },
+  {
+    "id": "e-div-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Divers",
+    "prompt": "Combien de pays sont membres de l'ONU en 2023 ?",
+    "numericAnswer": 193,
+    "source": "Wikipedia:Member_states_of_the_United_Nations"
+  },
+  {
+    "id": "e-div-003",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Divers",
+    "prompt": "Combien y a-t-il de cartes dans un jeu de 52 sans les jokers ?",
+    "numericAnswer": 52,
+    "source": "Wikipedia:Playing_card"
+  },
+  {
+    "id": "e-his-004",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "En quelle année le mur de Berlin est-il tombé ?",
+    "numericAnswer": 1989,
+    "source": "Wikipedia:Berlin_Wall"
+  },
+  {
+    "id": "e-geo-005",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quelle est la profondeur maximale de la fosse des Mariannes (en km) ?",
+    "numericAnswer": 10.984,
+    "unit": "km",
+    "source": "Wikipedia:Mariana_Trench"
+  },
+  { "id": "e-geo-006", "mode": "estimation", "difficulty": "medium", "category": "Géographie", "prompt": "Combien de pays sont membres de l'Union Européenne en 2024 ?", "numericAnswer": 27 },
+  { "id": "e-geo-007", "mode": "estimation", "difficulty": "medium", "category": "Géographie", "prompt": "Population de Paris intra-muros (en millions) ?", "numericAnswer": 2.1, "unit": "millions" },
+  { "id": "e-geo-008", "mode": "estimation", "difficulty": "hard", "category": "Géographie", "prompt": "Population du Japon (en millions) ?", "numericAnswer": 125, "unit": "millions" },
+  { "id": "e-geo-009", "mode": "estimation", "difficulty": "hard", "category": "Géographie", "prompt": "Longueur de la Grande Muraille de Chine (en km) ?", "numericAnswer": 21196, "unit": "km" },
+  { "id": "e-geo-010", "mode": "estimation", "difficulty": "easy", "category": "Géographie", "prompt": "Nombre de régions administratives en France métropolitaine (2016+) ?", "numericAnswer": 13 },
+  { "id": "e-his-005", "mode": "estimation", "difficulty": "medium", "category": "Histoire", "prompt": "Année de la découverte de l'Amérique par Colomb ?", "numericAnswer": 1492 },
+  { "id": "e-his-006", "mode": "estimation", "difficulty": "hard", "category": "Histoire", "prompt": "Année de la fondation de Paris (Lutèce) par les Parisii (av. J.-C. env.) ?", "numericAnswer": 250, "unit": "av. J.-C." },
+  { "id": "e-his-007", "mode": "estimation", "difficulty": "medium", "category": "Histoire", "prompt": "Année de la Nuit de Cristal en Allemagne ?", "numericAnswer": 1938 },
+  { "id": "e-his-008", "mode": "estimation", "difficulty": "hard", "category": "Histoire", "prompt": "Durée de la guerre de Cent Ans (en années) ?", "numericAnswer": 116, "unit": "ans" },
+  { "id": "e-sci-005", "mode": "estimation", "difficulty": "medium", "category": "Sciences", "prompt": "Température de fusion de l'or (°C) ?", "numericAnswer": 1064, "unit": "°C" },
+  { "id": "e-sci-006", "mode": "estimation", "difficulty": "hard", "category": "Sciences", "prompt": "Nombre d'espèces connues d'insectes (en millions) ?", "numericAnswer": 1, "unit": "millions" },
+  { "id": "e-sci-007", "mode": "estimation", "difficulty": "hard", "category": "Sciences", "prompt": "Distance Terre-Soleil en millions de km ?", "numericAnswer": 149.6, "unit": "M km" },
+  { "id": "e-sci-008", "mode": "estimation", "difficulty": "medium", "category": "Sciences", "prompt": "Nombre de gènes dans le génome humain ?", "numericAnswer": 20000 },
+  { "id": "e-cin-003", "mode": "estimation", "difficulty": "medium", "category": "Cinéma", "prompt": "Durée de Autant en emporte le vent (en minutes) ?", "numericAnswer": 238, "unit": "min" },
+  { "id": "e-cin-004", "mode": "estimation", "difficulty": "hard", "category": "Cinéma", "prompt": "Box-office mondial d'Avatar (2009) (en milliards $) ?", "numericAnswer": 2.92, "unit": "Mrd $" },
+  { "id": "e-mus-003", "mode": "estimation", "difficulty": "medium", "category": "Musique", "prompt": "Nombre de touches d'un piano standard ?", "numericAnswer": 88 },
+  { "id": "e-mus-004", "mode": "estimation", "difficulty": "hard", "category": "Musique", "prompt": "Âge de Mozart à sa mort ?", "numericAnswer": 35, "unit": "ans" },
+  { "id": "e-spo-004", "mode": "estimation", "difficulty": "easy", "category": "Sport", "prompt": "Longueur d'un terrain de football (en mètres, moyenne) ?", "numericAnswer": 105, "unit": "m" },
+  { "id": "e-spo-005", "mode": "estimation", "difficulty": "medium", "category": "Sport", "prompt": "Nombre de titres de Grand Chelem de Novak Djokovic (fin 2023) ?", "numericAnswer": 24 },
+  { "id": "e-ani-003", "mode": "estimation", "difficulty": "medium", "category": "Animaux", "prompt": "Poids moyen d'un éléphant d'Afrique adulte (en tonnes) ?", "numericAnswer": 6, "unit": "t" },
+  { "id": "e-ani-004", "mode": "estimation", "difficulty": "hard", "category": "Animaux", "prompt": "Durée de vie moyenne d'une baleine bleue (en années) ?", "numericAnswer": 80, "unit": "ans" },
+  { "id": "e-tec-003", "mode": "estimation", "difficulty": "easy", "category": "Technologie", "prompt": "Année du lancement de ChatGPT ?", "numericAnswer": 2022 },
+  { "id": "e-tec-004", "mode": "estimation", "difficulty": "medium", "category": "Technologie", "prompt": "Nombre d'utilisateurs mensuels de Facebook (en milliards, 2023) ?", "numericAnswer": 3, "unit": "milliards" },
+  { "id": "e-div-004", "mode": "estimation", "difficulty": "medium", "category": "Divers", "prompt": "Nombre de pays participant aux JO de Tokyo 2020 ?", "numericAnswer": 206 },
+  { "id": "e-div-005", "mode": "estimation", "difficulty": "hard", "category": "Divers", "prompt": "Nombre de langues parlées dans le monde (estimation) ?", "numericAnswer": 7100 },
+  { "id": "e-div-006", "mode": "estimation", "difficulty": "easy", "category": "Divers", "prompt": "Durée d'un mandat présidentiel français (en années) ?", "numericAnswer": 5, "unit": "ans" },
+  { "id": "e-lit-001", "mode": "estimation", "difficulty": "medium", "category": "Littérature", "prompt": "Nombre de volumes de À la recherche du temps perdu ?", "numericAnswer": 7 },
+  { "id": "e-lit-002", "mode": "estimation", "difficulty": "hard", "category": "Littérature", "prompt": "Année de parution du premier Harry Potter ?", "numericAnswer": 1997 }
+]

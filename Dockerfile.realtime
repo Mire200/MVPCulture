@@ -1,0 +1,42 @@
+# syntax=docker/dockerfile:1.7
+# Image de prod pour le serveur realtime (Socket.IO).
+# On utilise `pnpm deploy` pour produire un bundle autonome du service.
+
+FROM node:20-alpine AS base
+ENV PNPM_HOME=/pnpm
+ENV PATH=$PNPM_HOME:$PATH
+RUN corepack enable
+
+# ---------- build : install + build + deploy bundle ----------
+FROM base AS builder
+WORKDIR /app
+
+# Copie des manifestes pour cache install
+COPY pnpm-lock.yaml pnpm-workspace.yaml package.json tsconfig.base.json ./
+COPY packages/shared/package.json packages/shared/
+COPY packages/content/package.json packages/content/
+COPY packages/db/package.json packages/db/
+COPY apps/web/package.json apps/web/
+COPY apps/realtime/package.json apps/realtime/
+
+# N'installe que ce dont @mvpc/realtime a besoin (transitivement).
+# Évite d'installer Prisma & co (packages/db n'est pas une dep).
+RUN pnpm install --frozen-lockfile --filter @mvpc/realtime...
+
+COPY packages/shared packages/shared
+COPY packages/content packages/content
+COPY apps/realtime apps/realtime
+
+RUN pnpm --filter @mvpc/realtime build
+
+# Bundle autonome (node_modules prod + sources + deps workspace inlinées)
+RUN pnpm --filter @mvpc/realtime deploy --prod /bundle
+
+# ---------- runner ----------
+FROM node:20-alpine AS runner
+ENV NODE_ENV=production
+WORKDIR /app
+
+COPY --from=builder /bundle ./
+EXPOSE 4000
+CMD ["node", "dist/index.js"]

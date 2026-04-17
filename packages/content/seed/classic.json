@@ -1,0 +1,742 @@
+[
+  {
+    "id": "c-geo-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle est la capitale de l'Australie ?",
+    "answer": "Canberra",
+    "aliases": ["canberra"],
+    "source": "Wikipedia:Australia"
+  },
+  {
+    "id": "c-geo-002",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel est le plus long fleuve du monde ?",
+    "answer": "Nil",
+    "aliases": ["le nil", "nile"],
+    "source": "Wikipedia:Nile"
+  },
+  {
+    "id": "c-geo-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays compte le plus grand nombre de fuseaux horaires ?",
+    "answer": "France",
+    "aliases": ["la france"],
+    "source": "Wikipedia:Time_zones"
+  },
+  {
+    "id": "c-geo-004",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quelle est la capitale du Kazakhstan depuis 2019 ?",
+    "answer": "Astana",
+    "aliases": ["noursoultan", "nur-sultan"],
+    "source": "Wikipedia:Astana"
+  },
+  {
+    "id": "c-geo-005",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Dans quelle mer se jette le Rhône ?",
+    "answer": "Méditerranée",
+    "aliases": ["mer méditerranée", "mediterranee"],
+    "source": "Wikipedia:Rhône"
+  },
+  {
+    "id": "c-his-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "En quelle année a eu lieu la Révolution française ?",
+    "answer": "1789",
+    "aliases": [],
+    "source": "Wikipedia:French_Revolution"
+  },
+  {
+    "id": "c-his-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Qui était le premier empereur romain ?",
+    "answer": "Auguste",
+    "aliases": ["octave", "augustus"],
+    "source": "Wikipedia:Augustus"
+  },
+  {
+    "id": "c-his-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel traité mit fin à la Première Guerre mondiale en 1919 ?",
+    "answer": "Traité de Versailles",
+    "aliases": ["versailles"],
+    "source": "Wikipedia:Treaty_of_Versailles"
+  },
+  {
+    "id": "c-his-004",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Qui a peint la Joconde ?",
+    "answer": "Léonard de Vinci",
+    "aliases": ["leonard de vinci", "da vinci", "leonardo da vinci"],
+    "source": "Wikipedia:Mona_Lisa"
+  },
+  {
+    "id": "c-his-005",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "En quelle année Constantinople est-elle tombée ?",
+    "answer": "1453",
+    "aliases": [],
+    "source": "Wikipedia:Fall_of_Constantinople"
+  },
+  {
+    "id": "c-sci-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel est le symbole chimique de l'or ?",
+    "answer": "Au",
+    "aliases": ["au"],
+    "source": "Wikipedia:Gold"
+  },
+  {
+    "id": "c-sci-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle particule subatomique a une charge négative ?",
+    "answer": "Électron",
+    "aliases": ["electron"],
+    "source": "Wikipedia:Electron"
+  },
+  {
+    "id": "c-sci-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel est l'élément chimique de numéro atomique 79 ?",
+    "answer": "Or",
+    "aliases": ["gold", "aurum"],
+    "source": "Wikipedia:Gold"
+  },
+  {
+    "id": "c-sci-004",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Qui a formulé la théorie de la relativité restreinte ?",
+    "answer": "Albert Einstein",
+    "aliases": ["einstein"],
+    "source": "Wikipedia:Albert_Einstein"
+  },
+  {
+    "id": "c-sci-005",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Combien de planètes compte notre système solaire ?",
+    "answer": "8",
+    "aliases": ["huit"],
+    "source": "Wikipedia:Solar_System"
+  },
+  {
+    "id": "c-cin-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Qui a réalisé le film Pulp Fiction ?",
+    "answer": "Quentin Tarantino",
+    "aliases": ["tarantino"],
+    "source": "Wikipedia:Pulp_Fiction"
+  },
+  {
+    "id": "c-cin-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Dans quel film dit-on 'Je suis ton père' ?",
+    "answer": "Star Wars",
+    "aliases": ["l'empire contre-attaque", "star wars: l'empire contre-attaque"],
+    "source": "Wikipedia:The_Empire_Strikes_Back"
+  },
+  {
+    "id": "c-cin-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Quel film a remporté la Palme d'or en 2019 ?",
+    "answer": "Parasite",
+    "aliases": [],
+    "source": "Wikipedia:Parasite_(2019_film)"
+  },
+  {
+    "id": "c-cin-004",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Qui a joué Jack Dawson dans Titanic ?",
+    "answer": "Leonardo DiCaprio",
+    "aliases": ["dicaprio", "leo dicaprio"],
+    "source": "Wikipedia:Titanic_(1997_film)"
+  },
+  {
+    "id": "c-cin-005",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Quel est le prénom du réalisateur Kubrick ?",
+    "answer": "Stanley",
+    "aliases": [],
+    "source": "Wikipedia:Stanley_Kubrick"
+  },
+  {
+    "id": "c-mus-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Quel groupe a sorti l'album 'The Dark Side of the Moon' ?",
+    "answer": "Pink Floyd",
+    "aliases": [],
+    "source": "Wikipedia:The_Dark_Side_of_the_Moon"
+  },
+  {
+    "id": "c-mus-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Quel compositeur a écrit 'Les Quatre Saisons' ?",
+    "answer": "Vivaldi",
+    "aliases": ["antonio vivaldi"],
+    "source": "Wikipedia:The_Four_Seasons_(Vivaldi)"
+  },
+  {
+    "id": "c-mus-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Quel chanteur français a composé 'La Javanaise' ?",
+    "answer": "Serge Gainsbourg",
+    "aliases": ["gainsbourg"],
+    "source": "Wikipedia:Serge_Gainsbourg"
+  },
+  {
+    "id": "c-mus-004",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Combien de membres composaient les Beatles ?",
+    "answer": "4",
+    "aliases": ["quatre"],
+    "source": "Wikipedia:The_Beatles"
+  },
+  {
+    "id": "c-lit-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Littérature",
+    "prompt": "Qui a écrit 'Les Misérables' ?",
+    "answer": "Victor Hugo",
+    "aliases": ["hugo"],
+    "source": "Wikipedia:Les_Misérables"
+  },
+  {
+    "id": "c-lit-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Dans quel pays se déroule le roman 'Cent ans de solitude' ?",
+    "answer": "Colombie",
+    "aliases": ["colombia"],
+    "source": "Wikipedia:One_Hundred_Years_of_Solitude"
+  },
+  {
+    "id": "c-lit-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Quel auteur a créé le personnage de Sherlock Holmes ?",
+    "answer": "Arthur Conan Doyle",
+    "aliases": ["conan doyle", "doyle"],
+    "source": "Wikipedia:Sherlock_Holmes"
+  },
+  {
+    "id": "c-spo-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Quel pays a gagné la Coupe du monde de football 2018 ?",
+    "answer": "France",
+    "aliases": ["la france"],
+    "source": "Wikipedia:2018_FIFA_World_Cup"
+  },
+  {
+    "id": "c-spo-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Combien de fois Rafael Nadal a-t-il gagné Roland Garros (jusqu'à 2022) ?",
+    "answer": "14",
+    "aliases": ["quatorze"],
+    "source": "Wikipedia:Rafael_Nadal"
+  },
+  {
+    "id": "c-spo-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Quel pilote détient le record de titres de champion du monde de F1 (partagé) ?",
+    "answer": "Michael Schumacher",
+    "aliases": ["schumacher", "lewis hamilton", "hamilton"],
+    "source": "Wikipedia:Formula_One"
+  },
+  {
+    "id": "c-ani-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Animaux",
+    "prompt": "Quel est le plus grand animal terrestre vivant ?",
+    "answer": "Éléphant d'Afrique",
+    "aliases": ["elephant", "éléphant", "éléphant d'afrique"],
+    "source": "Wikipedia:African_elephant"
+  },
+  {
+    "id": "c-ani-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "Combien de cœurs possède une pieuvre ?",
+    "answer": "3",
+    "aliases": ["trois"],
+    "source": "Wikipedia:Octopus"
+  },
+  {
+    "id": "c-tec-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Qui a co-fondé Apple avec Steve Jobs ?",
+    "answer": "Steve Wozniak",
+    "aliases": ["wozniak"],
+    "source": "Wikipedia:Apple_Inc."
+  },
+  {
+    "id": "c-tec-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Quel langage Guido van Rossum a-t-il créé ?",
+    "answer": "Python",
+    "aliases": [],
+    "source": "Wikipedia:Python_(programming_language)"
+  },
+  {
+    "id": "c-tec-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "En quelle année le World Wide Web a-t-il été inventé ?",
+    "answer": "1989",
+    "aliases": [],
+    "source": "Wikipedia:World_Wide_Web"
+  },
+  {
+    "id": "c-art-001",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Qui a sculpté 'Le Penseur' ?",
+    "answer": "Auguste Rodin",
+    "aliases": ["rodin"],
+    "source": "Wikipedia:The_Thinker"
+  },
+  {
+    "id": "c-art-002",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Quel mouvement artistique est associé à Kandinsky ?",
+    "answer": "Abstraction",
+    "aliases": ["art abstrait", "abstraction lyrique"],
+    "source": "Wikipedia:Wassily_Kandinsky"
+  },
+  {
+    "id": "c-gas-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "De quel pays la pizza est-elle originaire ?",
+    "answer": "Italie",
+    "aliases": ["italia"],
+    "source": "Wikipedia:Pizza"
+  },
+  {
+    "id": "c-gas-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Gastronomie",
+    "prompt": "Quelle épice est la plus chère au monde au poids ?",
+    "answer": "Safran",
+    "aliases": [],
+    "source": "Wikipedia:Saffron"
+  },
+  {
+    "id": "c-cin-006",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Dans Matrix, quelle pilule choisit Neo ?",
+    "answer": "Rouge",
+    "aliases": ["la rouge", "pilule rouge"],
+    "source": "Wikipedia:The_Matrix"
+  },
+  {
+    "id": "c-geo-006",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel est le plus petit pays du monde ?",
+    "answer": "Vatican",
+    "aliases": ["cité du vatican", "cite du vatican"],
+    "source": "Wikipedia:Vatican_City"
+  },
+  {
+    "id": "c-geo-007",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle ville abrite la statue du Christ Rédempteur ?",
+    "answer": "Rio de Janeiro",
+    "aliases": ["rio"],
+    "source": "Wikipedia:Christ_the_Redeemer"
+  },
+  {
+    "id": "c-geo-008",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Dans quel pays se trouve la ville de Machu Picchu ?",
+    "answer": "Pérou",
+    "aliases": ["perou", "peru"],
+    "source": "Wikipedia:Machu_Picchu"
+  },
+  {
+    "id": "c-geo-009",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quel est le plus grand désert du monde ?",
+    "answer": "Antarctique",
+    "aliases": ["desert d'antarctique", "désert d'antarctique"],
+    "source": "Wikipedia:Desert"
+  },
+  {
+    "id": "c-geo-010",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quel pays compte le plus grand nombre d'îles ?",
+    "answer": "Suède",
+    "aliases": ["suede", "sweden"],
+    "source": "Wikipedia:Sweden"
+  },
+  {
+    "id": "c-his-006",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quel roi de France fut surnommé 'le Roi-Soleil' ?",
+    "answer": "Louis XIV",
+    "aliases": ["louis 14", "louis quatorze"],
+    "source": "Wikipedia:Louis_XIV"
+  },
+  {
+    "id": "c-his-007",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle reine est décapitée en 1793 à Paris ?",
+    "answer": "Marie-Antoinette",
+    "aliases": ["marie antoinette"],
+    "source": "Wikipedia:Marie_Antoinette"
+  },
+  {
+    "id": "c-his-008",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "En quelle année a eu lieu la bataille de Marignan ?",
+    "answer": "1515",
+    "aliases": [],
+    "source": "Wikipedia:Battle_of_Marignano"
+  },
+  {
+    "id": "c-his-009",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Qui a prononcé le discours 'I have a dream' en 1963 ?",
+    "answer": "Martin Luther King",
+    "aliases": ["mlk", "king"],
+    "source": "Wikipedia:I_Have_a_Dream"
+  },
+  {
+    "id": "c-sci-006",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel est le plus grand organe du corps humain ?",
+    "answer": "Peau",
+    "aliases": ["la peau"],
+    "source": "Wikipedia:Skin"
+  },
+  {
+    "id": "c-sci-007",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Qui a découvert la pénicilline ?",
+    "answer": "Alexander Fleming",
+    "aliases": ["fleming"],
+    "source": "Wikipedia:Penicillin"
+  },
+  {
+    "id": "c-sci-008",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quelle est l'unité SI de la force ?",
+    "answer": "Newton",
+    "aliases": ["n"],
+    "source": "Wikipedia:Newton_(unit)"
+  },
+  {
+    "id": "c-sci-009",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel gaz les plantes absorbent-elles principalement pour la photosynthèse ?",
+    "answer": "Dioxyde de carbone",
+    "aliases": ["co2", "gaz carbonique"],
+    "source": "Wikipedia:Photosynthesis"
+  },
+  {
+    "id": "c-sci-010",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Qui a découvert la structure en double hélice de l'ADN ?",
+    "answer": "Watson et Crick",
+    "aliases": ["watson crick", "crick watson"],
+    "source": "Wikipedia:Francis_Crick"
+  },
+  {
+    "id": "c-cin-007",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Dans Le Seigneur des Anneaux, qui porte l'anneau jusqu'à la Montagne du Destin ?",
+    "answer": "Frodon",
+    "aliases": ["frodon sacquet", "frodo", "frodo baggins"],
+    "source": "Wikipedia:Frodo_Baggins"
+  },
+  {
+    "id": "c-cin-008",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel film met en scène Andy Dufresne dans une prison ?",
+    "answer": "Les Évadés",
+    "aliases": ["les evades", "the shawshank redemption", "shawshank"],
+    "source": "Wikipedia:The_Shawshank_Redemption"
+  },
+  {
+    "id": "c-cin-009",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Qui a réalisé 'La Dolce Vita' ?",
+    "answer": "Federico Fellini",
+    "aliases": ["fellini"],
+    "source": "Wikipedia:La_Dolce_Vita"
+  },
+  {
+    "id": "c-mus-005",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Quel compositeur allemand est devenu sourd à la fin de sa vie ?",
+    "answer": "Beethoven",
+    "aliases": ["ludwig van beethoven"],
+    "source": "Wikipedia:Ludwig_van_Beethoven"
+  },
+  {
+    "id": "c-mus-006",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Dans quelle ville américaine est né le jazz ?",
+    "answer": "La Nouvelle-Orléans",
+    "aliases": ["nouvelle-orleans", "new orleans", "la nouvelle orleans"],
+    "source": "Wikipedia:Jazz"
+  },
+  {
+    "id": "c-lit-004",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Qui a écrit 'L'Étranger' ?",
+    "answer": "Albert Camus",
+    "aliases": ["camus"],
+    "source": "Wikipedia:The_Stranger_(Camus_novel)"
+  },
+  {
+    "id": "c-lit-005",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Quel est le prénom du monstre créé par Frankenstein dans le roman ?",
+    "answer": "Il n'a pas de prénom",
+    "aliases": ["aucun", "pas de nom", "aucun prenom", "créature", "creature"],
+    "source": "Wikipedia:Frankenstein"
+  },
+  {
+    "id": "c-spo-004",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel joueur a marqué un but de la main surnommé 'la main de Dieu' ?",
+    "answer": "Diego Maradona",
+    "aliases": ["maradona"],
+    "source": "Wikipedia:Hand_of_God_goal"
+  },
+  {
+    "id": "c-spo-005",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Dans quel sport s'affrontent les Silver Ferns ?",
+    "answer": "Netball",
+    "aliases": ["netball"],
+    "source": "Wikipedia:New_Zealand_national_netball_team"
+  },
+  {
+    "id": "c-ani-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "Quel animal est à l'origine du prosciutto ?",
+    "answer": "Cochon",
+    "aliases": ["porc", "cochon"],
+    "source": "Wikipedia:Prosciutto"
+  },
+  {
+    "id": "c-ani-004",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Animaux",
+    "prompt": "Quel est le seul mammifère capable de voler ?",
+    "answer": "Chauve-souris",
+    "aliases": ["chauve souris", "chauves-souris"],
+    "source": "Wikipedia:Bat"
+  },
+  {
+    "id": "c-tec-004",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Qui a fondé Tesla ?",
+    "answer": "Martin Eberhard",
+    "aliases": ["eberhard", "elon musk", "musk"],
+    "source": "Wikipedia:Tesla,_Inc."
+  },
+  {
+    "id": "c-tec-005",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Quelle société est à l'origine du moteur de recherche Bing ?",
+    "answer": "Microsoft",
+    "aliases": ["microsoft"],
+    "source": "Wikipedia:Bing_(search_engine)"
+  },
+  {
+    "id": "c-tec-006",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "Quel système d'exploitation mobile est basé sur le noyau Linux ?",
+    "answer": "Android",
+    "aliases": ["android"],
+    "source": "Wikipedia:Android_(operating_system)"
+  },
+  {
+    "id": "c-gas-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Gastronomie",
+    "prompt": "Quel ingrédient principal entre dans la composition du guacamole ?",
+    "answer": "Avocat",
+    "aliases": ["avocat"],
+    "source": "Wikipedia:Guacamole"
+  },
+  {
+    "id": "c-gas-004",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Gastronomie",
+    "prompt": "D'où est originaire le fromage Gruyère (pays) ?",
+    "answer": "Suisse",
+    "aliases": ["suisse"],
+    "source": "Wikipedia:Gruyère_cheese"
+  },
+  {
+    "id": "c-art-003",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Quel peintre s'est coupé l'oreille ?",
+    "answer": "Van Gogh",
+    "aliases": ["vincent van gogh", "vangogh"],
+    "source": "Wikipedia:Vincent_van_Gogh"
+  },
+  {
+    "id": "c-art-004",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Dans quel musée se trouve la Joconde ?",
+    "answer": "Louvre",
+    "aliases": ["musée du louvre", "musee du louvre", "le louvre"],
+    "source": "Wikipedia:Mona_Lisa"
+  },
+  {
+    "id": "c-div-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Divers",
+    "prompt": "Quelle couleur obtient-on en mélangeant du bleu et du jaune ?",
+    "answer": "Vert",
+    "aliases": ["vert"],
+    "source": "Wikipedia:Color_mixing"
+  },
+  {
+    "id": "c-div-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Divers",
+    "prompt": "Combien de faces a un dodécaèdre régulier ?",
+    "answer": "12",
+    "aliases": ["douze"],
+    "source": "Wikipedia:Dodecahedron"
+  }
+]

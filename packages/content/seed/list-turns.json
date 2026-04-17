@@ -1,0 +1,409 @@
+[
+  {
+    "id": "l-geo-001",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Citez un pays d'Amérique du Sud.",
+    "validItems": [
+      "argentine", "bolivie", "brésil", "bresil", "chili", "colombie", "équateur",
+      "equateur", "guyana", "paraguay", "pérou", "perou", "suriname", "uruguay",
+      "venezuela"
+    ],
+    "turnSeconds": 12,
+    "source": "Wikipedia:South_America"
+  },
+  {
+    "id": "l-geo-002",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez un pays frontalier de l'Allemagne.",
+    "validItems": [
+      "france", "belgique", "pays-bas", "luxembourg", "danemark", "pologne",
+      "république tchèque", "republique tcheque", "tchequie", "autriche", "suisse"
+    ],
+    "turnSeconds": 12,
+    "source": "Wikipedia:Germany"
+  },
+  {
+    "id": "l-geo-003",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Citez une capitale d'un pays scandinave ou nordique.",
+    "validItems": [
+      "oslo", "stockholm", "copenhague", "copenhagen", "helsinki", "reykjavik"
+    ],
+    "turnSeconds": 12,
+    "source": "Wikipedia:Nordic_countries"
+  },
+  {
+    "id": "l-his-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Citez un président de la Ve République française.",
+    "validItems": [
+      "de gaulle", "charles de gaulle", "pompidou", "giscard d'estaing", "giscard",
+      "mitterrand", "chirac", "sarkozy", "hollande", "macron"
+    ],
+    "turnSeconds": 10,
+    "source": "Wikipedia:French_Fifth_Republic"
+  },
+  {
+    "id": "l-his-002",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Citez un empereur romain (du Haut-Empire).",
+    "validItems": [
+      "auguste", "tibère", "tibere", "caligula", "claude", "néron", "neron",
+      "vespasien", "titus", "domitien", "nerva", "trajan", "hadrien", "antonin le pieux",
+      "marc aurèle", "marc aurele", "commode"
+    ],
+    "turnSeconds": 12,
+    "source": "Wikipedia:Roman_emperors"
+  },
+  {
+    "id": "l-sci-001",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Citez une planète du système solaire.",
+    "validItems": [
+      "mercure", "vénus", "venus", "terre", "mars", "jupiter", "saturne",
+      "uranus", "neptune"
+    ],
+    "turnSeconds": 10,
+    "source": "Wikipedia:Solar_System"
+  },
+  {
+    "id": "l-sci-002",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Citez un élément chimique dont le symbole commence par C.",
+    "validItems": [
+      "carbone", "calcium", "chlore", "chrome", "cobalt", "cuivre", "césium",
+      "cesium", "cadmium", "cérium", "cerium", "curium", "californium"
+    ],
+    "turnSeconds": 15,
+    "source": "Wikipedia:List_of_chemical_elements"
+  },
+  {
+    "id": "l-cin-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un film de Christopher Nolan.",
+    "validItems": [
+      "following", "memento", "insomnia", "batman begins", "le prestige", "the prestige",
+      "the dark knight", "the dark knight rises", "inception", "interstellar",
+      "dunkirk", "dunkerque", "tenet", "oppenheimer"
+    ],
+    "turnSeconds": 12,
+    "source": "Wikipedia:Christopher_Nolan_filmography"
+  },
+  {
+    "id": "l-cin-002",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Citez un acteur ayant joué James Bond au cinéma (films officiels EON).",
+    "validItems": [
+      "sean connery", "george lazenby", "roger moore", "timothy dalton",
+      "pierce brosnan", "daniel craig"
+    ],
+    "turnSeconds": 12,
+    "source": "Wikipedia:James_Bond_in_film"
+  },
+  {
+    "id": "l-mus-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Citez un membre des Beatles.",
+    "validItems": [
+      "john lennon", "paul mccartney", "george harrison", "ringo starr",
+      "lennon", "mccartney", "harrison", "starr"
+    ],
+    "turnSeconds": 10,
+    "source": "Wikipedia:The_Beatles"
+  },
+  {
+    "id": "l-mus-002",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Citez un instrument de l'orchestre symphonique (famille cordes frottées).",
+    "validItems": [
+      "violon", "alto", "violoncelle", "contrebasse"
+    ],
+    "turnSeconds": 10,
+    "source": "Wikipedia:Orchestra"
+  },
+  {
+    "id": "l-spo-001",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Citez un sport olympique d'été.",
+    "validItems": [
+      "athlétisme", "athletisme", "natation", "cyclisme", "gymnastique", "judo",
+      "escrime", "aviron", "voile", "tir à l'arc", "tir a l'arc", "tennis",
+      "football", "basketball", "handball", "volley-ball", "boxe", "haltérophilie",
+      "halterophilie", "équitation", "equitation", "triathlon", "skateboard",
+      "surf", "escalade", "taekwondo", "karaté", "karate", "rugby à 7", "rugby a 7",
+      "golf", "badminton", "tennis de table", "tir", "lutte", "hockey sur gazon",
+      "plongeon", "water-polo", "canoë", "canoe", "bmx", "pentathlon moderne",
+      "breaking", "breakdance"
+    ],
+    "turnSeconds": 10,
+    "source": "Wikipedia:Summer_Olympic_sports"
+  },
+  {
+    "id": "l-spo-002",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Citez un club ayant gagné la Ligue des Champions.",
+    "validItems": [
+      "real madrid", "barcelone", "barcelona", "bayern munich", "bayern", "liverpool",
+      "milan", "ac milan", "inter", "inter milan", "manchester united", "man united",
+      "chelsea", "manchester city", "man city", "juventus", "ajax", "porto",
+      "psv eindhoven", "psv", "borussia dortmund", "dortmund", "olympique de marseille",
+      "om", "marseille", "benfica", "celtic", "nottingham forest", "aston villa",
+      "hambourg", "hsv", "red star", "étoile rouge de belgrade", "steaua", "feyenoord"
+    ],
+    "turnSeconds": 15,
+    "source": "Wikipedia:UEFA_Champions_League"
+  },
+  {
+    "id": "l-ani-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "Citez un félin (espèce sauvage).",
+    "validItems": [
+      "lion", "tigre", "léopard", "leopard", "jaguar", "guépard", "guepard",
+      "puma", "lynx", "panthère des neiges", "panthere des neiges", "once",
+      "ocelot", "caracal", "serval", "chat sauvage", "chat doré", "chat dore"
+    ],
+    "turnSeconds": 12,
+    "source": "Wikipedia:Felidae"
+  },
+  {
+    "id": "l-cin-003",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Citez un personnage principal de Friends.",
+    "validItems": [
+      "ross", "rachel", "monica", "chandler", "joey", "phoebe"
+    ],
+    "turnSeconds": 10,
+    "source": "Wikipedia:Friends"
+  },
+  {
+    "id": "l-tec-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Citez un langage de programmation.",
+    "validItems": [
+      "python", "javascript", "typescript", "java", "c", "c++", "c#", "go",
+      "golang", "rust", "ruby", "php", "swift", "kotlin", "dart", "scala",
+      "haskell", "elixir", "clojure", "perl", "r", "julia", "objective-c",
+      "lua", "bash", "shell", "sql", "fortran", "cobol", "pascal", "delphi",
+      "matlab", "groovy", "lisp", "scheme", "erlang", "ocaml", "f#", "zig",
+      "nim", "crystal", "solidity"
+    ],
+    "turnSeconds": 10,
+    "source": "Wikipedia:List_of_programming_languages"
+  },
+  {
+    "id": "l-geo-004",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez un département français.",
+    "validItems": [
+      "ain", "aisne", "allier", "alpes-de-haute-provence", "hautes-alpes", "alpes-maritimes",
+      "ardèche", "ardeche", "ardennes", "ariège", "ariege", "aube", "aude", "aveyron",
+      "bouches-du-rhône", "bouches du rhone", "calvados", "cantal", "charente",
+      "charente-maritime", "cher", "corrèze", "correze", "corse-du-sud", "haute-corse",
+      "côte-d'or", "cote d'or", "côtes-d'armor", "cotes d'armor", "creuse",
+      "dordogne", "doubs", "drôme", "drome", "eure", "eure-et-loir", "finistère", "finistere",
+      "gard", "haute-garonne", "gers", "gironde", "hérault", "herault",
+      "ille-et-vilaine", "indre", "indre-et-loire", "isère", "isere", "jura",
+      "landes", "loir-et-cher", "loire", "haute-loire", "loire-atlantique", "loiret",
+      "lot", "lot-et-garonne", "lozère", "lozere", "maine-et-loire", "manche", "marne",
+      "haute-marne", "mayenne", "meurthe-et-moselle", "meuse", "morbihan", "moselle",
+      "nièvre", "nievre", "nord", "oise", "orne", "pas-de-calais", "puy-de-dôme", "puy de dome",
+      "pyrénées-atlantiques", "pyrenees atlantiques", "hautes-pyrénées", "pyrénées-orientales",
+      "bas-rhin", "haut-rhin", "rhône", "rhone", "haute-saône", "haute saone",
+      "saône-et-loire", "saone et loire", "sarthe", "savoie", "haute-savoie", "paris",
+      "seine-maritime", "seine-et-marne", "yvelines", "deux-sèvres", "deux sevres",
+      "somme", "tarn", "tarn-et-garonne", "var", "vaucluse", "vendée", "vendee",
+      "vienne", "haute-vienne", "vosges", "yonne", "territoire de belfort",
+      "essonne", "hauts-de-seine", "seine-saint-denis", "val-de-marne", "val-d'oise",
+      "guadeloupe", "martinique", "guyane", "la réunion", "la reunion", "mayotte"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-cin-004",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un réalisateur français.",
+    "validItems": [
+      "jean-luc godard", "godard", "françois truffaut", "truffaut",
+      "claude chabrol", "chabrol", "éric rohmer", "eric rohmer", "rohmer",
+      "louis malle", "malle", "alain resnais", "resnais",
+      "agnès varda", "agnes varda", "varda", "claire denis", "denis",
+      "jacques audiard", "audiard", "michel gondry", "gondry", "luc besson", "besson",
+      "jean-pierre jeunet", "jeunet", "olivier assayas", "assayas",
+      "bertrand tavernier", "tavernier", "xavier dolan", "dolan",
+      "michel hazanavicius", "hazanavicius", "jacques demy", "demy",
+      "jean renoir", "renoir", "robert bresson", "bresson", "patrice leconte", "leconte",
+      "cédric klapisch", "cedric klapisch", "klapisch", "céline sciamma", "celine sciamma",
+      "sciamma", "maïwenn", "maiwenn", "rebecca zlotowski", "zlotowski"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-lit-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Citez une pièce de Molière.",
+    "validItems": [
+      "l'avare", "le misanthrope", "tartuffe", "le tartuffe",
+      "dom juan", "don juan", "le malade imaginaire", "le bourgeois gentilhomme",
+      "l'école des femmes", "l'ecole des femmes",
+      "l'école des maris", "l'ecole des maris",
+      "les précieuses ridicules", "les precieuses ridicules",
+      "les fourberies de scapin", "le médecin malgré lui", "le medecin malgre lui",
+      "les femmes savantes", "george dandin", "amphitryon",
+      "l'étourdi", "l'etourdi", "sganarelle", "psyché", "psyche"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-gas-001",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "Citez un fruit rouge.",
+    "validItems": [
+      "fraise", "framboise", "mûre", "mure", "cerise", "groseille",
+      "cassis", "myrtille", "airelle", "cranberry", "canneberge"
+    ],
+    "turnSeconds": 10
+  },
+  {
+    "id": "l-gas-002",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Gastronomie",
+    "prompt": "Citez une épice ou un aromate.",
+    "validItems": [
+      "poivre", "sel", "cumin", "curry", "paprika", "piment",
+      "safran", "cardamome", "cannelle", "gingembre", "muscade", "coriandre",
+      "curcuma", "anis", "badiane", "clou de girofle", "vanille", "fenouil",
+      "thym", "romarin", "origan", "basilic", "persil", "ciboulette", "estragon",
+      "laurier", "sauge", "menthe", "aneth", "marjolaine"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-ani-002",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "Citez un primate.",
+    "validItems": [
+      "gorille", "chimpanzé", "chimpanze", "bonobo", "orang-outan", "orang outan",
+      "gibbon", "macaque", "babouin", "mandrill", "ouistiti", "tamarin",
+      "capucin", "lémurien", "lemurien", "tarsier", "homme", "humain"
+    ],
+    "turnSeconds": 10
+  },
+  {
+    "id": "l-art-001",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Citez une œuvre de Picasso.",
+    "validItems": [
+      "guernica", "les demoiselles d'avignon", "la vie",
+      "le vieux guitariste", "femme en pleurs", "la colombe", "dora maar au chat",
+      "jeune fille à la corbeille fleurie", "les trois musiciens", "portrait de dora maar"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-mus-003",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Citez une note de musique.",
+    "validItems": [
+      "do", "ré", "re", "mi", "fa", "sol", "la", "si"
+    ],
+    "turnSeconds": 8
+  },
+  {
+    "id": "l-div-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Divers",
+    "prompt": "Citez un mois de l'année.",
+    "validItems": [
+      "janvier", "février", "fevrier", "mars", "avril", "mai", "juin",
+      "juillet", "août", "aout", "septembre", "octobre", "novembre", "décembre", "decembre"
+    ],
+    "turnSeconds": 10
+  },
+  {
+    "id": "l-sci-003",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Citez un gaz rare (noble).",
+    "validItems": [
+      "hélium", "helium", "néon", "neon", "argon", "krypton", "xénon", "xenon", "radon"
+    ],
+    "turnSeconds": 10
+  },
+  {
+    "id": "l-tec-002",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Citez une marque de téléphone.",
+    "validItems": [
+      "apple", "iphone", "samsung", "google", "pixel", "huawei", "xiaomi",
+      "oppo", "oneplus", "sony", "nokia", "motorola", "asus", "lg",
+      "honor", "realme", "vivo", "fairphone", "wiko"
+    ],
+    "turnSeconds": 10
+  },
+  {
+    "id": "l-spo-003",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Citez une ville ayant accueilli les JO d'été.",
+    "validItems": [
+      "athènes", "athenes", "paris", "saint-louis", "londres", "stockholm",
+      "anvers", "amsterdam", "los angeles", "berlin", "helsinki", "melbourne",
+      "rome", "tokyo", "mexico", "munich", "montréal", "montreal",
+      "moscou", "séoul", "seoul", "barcelone", "atlanta", "sydney", "pékin", "pekin",
+      "beijing", "rio", "rio de janeiro"
+    ],
+    "turnSeconds": 12
+  }
+]

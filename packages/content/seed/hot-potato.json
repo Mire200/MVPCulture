@@ -1,0 +1,538 @@
+[
+  {
+    "id": "hp-cin-001",
+    "mode": "hot-potato",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Films de la saga Harry Potter",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 8,
+    "validItems": [
+      "à l'école des sorciers", "a l'ecole des sorciers", "pierre philosophale",
+      "la chambre des secrets", "chambre des secrets",
+      "le prisonnier d'azkaban", "prisonnier d'azkaban",
+      "la coupe de feu", "coupe de feu",
+      "l'ordre du phénix", "ordre du phenix", "ordre du phoenix",
+      "le prince de sang-mêlé", "prince de sang-mele",
+      "les reliques de la mort partie 1", "reliques de la mort 1",
+      "les reliques de la mort partie 2", "reliques de la mort 2"
+    ]
+  },
+  {
+    "id": "hp-geo-001",
+    "mode": "hot-potato",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Pays membres du G7",
+    "bidSeconds": 10,
+    "answerSeconds": 30,
+    "maxBid": 7,
+    "validItems": [
+      "france", "allemagne", "italie", "royaume-uni", "royaume uni", "uk",
+      "états-unis", "etats-unis", "usa", "canada", "japon"
+    ]
+  },
+  {
+    "id": "hp-geo-002",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Océans du monde",
+    "bidSeconds": 8,
+    "answerSeconds": 25,
+    "maxBid": 5,
+    "validItems": [
+      "atlantique", "pacifique", "indien", "arctique", "antarctique", "austral",
+      "océan atlantique", "ocean atlantique",
+      "océan pacifique", "ocean pacifique",
+      "océan indien", "ocean indien",
+      "océan arctique", "ocean arctique",
+      "océan austral", "ocean austral"
+    ]
+  },
+  {
+    "id": "hp-geo-003",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Pays baignés par la Méditerranée",
+    "bidSeconds": 10,
+    "answerSeconds": 50,
+    "maxBid": 15,
+    "validItems": [
+      "france", "espagne", "italie", "monaco", "malte", "slovénie", "slovenie",
+      "croatie", "bosnie-herzégovine", "bosnie herzegovine", "monténégro", "montenegro",
+      "albanie", "grèce", "grece", "turquie", "chypre", "syrie", "liban",
+      "israël", "israel", "égypte", "egypte", "libye", "tunisie", "algérie", "algerie",
+      "maroc"
+    ]
+  },
+  {
+    "id": "hp-his-001",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Rois de France des Capétiens directs",
+    "bidSeconds": 10,
+    "answerSeconds": 40,
+    "maxBid": 10,
+    "validItems": [
+      "hugues capet", "robert ii", "robert le pieux", "henri ier",
+      "philippe ier", "louis vi", "louis le gros", "louis vii", "philippe auguste",
+      "philippe ii", "louis viii", "louis ix", "saint louis",
+      "philippe iii", "philippe iv", "philippe le bel",
+      "louis x", "jean ier", "philippe v", "charles iv"
+    ]
+  },
+  {
+    "id": "hp-sci-001",
+    "mode": "hot-potato",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Planètes du système solaire",
+    "bidSeconds": 8,
+    "answerSeconds": 20,
+    "maxBid": 8,
+    "validItems": [
+      "mercure", "vénus", "venus", "terre", "mars", "jupiter",
+      "saturne", "uranus", "neptune"
+    ]
+  },
+  {
+    "id": "hp-sci-002",
+    "mode": "hot-potato",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Éléments chimiques de symbole commençant par A",
+    "bidSeconds": 10,
+    "answerSeconds": 40,
+    "maxBid": 8,
+    "validItems": [
+      "argent", "ag", "or", "au", "aluminium", "al", "arsenic", "as",
+      "argon", "ar", "astate", "at", "actinium", "ac", "américium", "americium", "am"
+    ]
+  },
+  {
+    "id": "hp-mus-001",
+    "mode": "hot-potato",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Albums studio de Daft Punk",
+    "bidSeconds": 8,
+    "answerSeconds": 30,
+    "maxBid": 4,
+    "validItems": [
+      "homework", "discovery", "human after all", "random access memories"
+    ]
+  },
+  {
+    "id": "hp-mus-002",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Chanteurs ayant représenté la France à l'Eurovision (2010+)",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 10,
+    "validItems": [
+      "jessy matador", "amaury vassili", "anggun", "amandine bourgeois",
+      "twin twin", "lisa angell", "amir", "alma", "madame monsieur",
+      "bilal hassani", "tom leeb", "barbara pravi", "alvan", "ahez",
+      "la zarra", "slimane", "louane"
+    ]
+  },
+  {
+    "id": "hp-cin-002",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Films de Pixar",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 15,
+    "validItems": [
+      "toy story", "toy story 2", "toy story 3", "toy story 4",
+      "1001 pattes", "a bug's life", "monstres et cie", "monstres inc",
+      "le monde de nemo", "finding nemo", "les indestructibles", "les indestructibles 2",
+      "cars", "cars 2", "cars 3", "ratatouille", "wall-e", "wall e",
+      "là-haut", "la-haut", "rebelle", "monstres academy",
+      "le monde de dory", "finding dory", "vice-versa", "vice versa",
+      "le voyage d'arlo", "coco", "en avant", "onward", "soul", "luca",
+      "alerte rouge", "turning red", "buzz l'eclair", "élémentaire", "elementaire"
+    ]
+  },
+  {
+    "id": "hp-lit-001",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Romans de Victor Hugo",
+    "bidSeconds": 10,
+    "answerSeconds": 30,
+    "maxBid": 5,
+    "validItems": [
+      "les misérables", "les miserables",
+      "notre-dame de paris", "notre dame de paris",
+      "les travailleurs de la mer",
+      "l'homme qui rit",
+      "quatrevingt-treize", "quatre-vingt-treize", "93",
+      "bug-jargal", "han d'islande", "le dernier jour d'un condamné"
+    ]
+  },
+  {
+    "id": "hp-spo-001",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Équipes ayant gagné la Coupe du Monde de football",
+    "bidSeconds": 10,
+    "answerSeconds": 30,
+    "maxBid": 8,
+    "validItems": [
+      "uruguay", "italie", "allemagne", "allemagne de l'ouest", "brésil", "bresil",
+      "angleterre", "argentine", "france", "espagne"
+    ]
+  },
+  {
+    "id": "hp-cin-003",
+    "mode": "hot-potato",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Films ayant remporté l'Oscar du meilleur film (2000+)",
+    "bidSeconds": 10,
+    "answerSeconds": 60,
+    "maxBid": 20,
+    "validItems": [
+      "american beauty", "gladiator", "a beautiful mind", "un homme d'exception",
+      "chicago", "le seigneur des anneaux le retour du roi", "million dollar baby",
+      "collision", "crash", "les infiltrés", "the departed", "no country for old men",
+      "slumdog millionaire", "démineurs", "the hurt locker",
+      "le discours d'un roi", "the king's speech",
+      "the artist", "argo", "12 years a slave", "birdman",
+      "spotlight", "moonlight", "la forme de l'eau", "shape of water",
+      "green book", "parasite", "nomadland", "coda",
+      "everything everywhere all at once", "oppenheimer"
+    ]
+  },
+  {
+    "id": "hp-geo-004",
+    "mode": "hot-potato",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Pays d'Afrique francophones (officiellement)",
+    "bidSeconds": 10,
+    "answerSeconds": 60,
+    "maxBid": 20,
+    "validItems": [
+      "bénin", "benin", "burkina faso", "burundi", "cameroun", "centrafrique",
+      "république centrafricaine", "comores", "congo", "république du congo",
+      "congo brazzaville", "rdc", "république démocratique du congo",
+      "congo kinshasa", "côte d'ivoire", "cote d'ivoire", "djibouti", "gabon",
+      "guinée", "guinee", "madagascar", "mali", "niger", "rwanda", "sénégal",
+      "senegal", "seychelles", "tchad", "togo"
+    ]
+  },
+  {
+    "id": "hp-ani-001",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "Races de chiens populaires",
+    "bidSeconds": 10,
+    "answerSeconds": 35,
+    "maxBid": 12,
+    "validItems": [
+      "labrador", "golden retriever", "berger allemand", "border collie",
+      "bulldog", "bulldog français", "caniche", "chihuahua", "husky",
+      "dalmatien", "rottweiler", "beagle", "boxer", "teckel", "shih tzu",
+      "yorkshire", "jack russell", "cocker", "doberman", "akita",
+      "shiba", "samoyède", "bichon", "carlin", "pug", "saint-bernard",
+      "terre-neuve", "dogue allemand"
+    ]
+  },
+  {
+    "id": "hp-gas-001",
+    "mode": "hot-potato",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "Fromages français AOP",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 15,
+    "validItems": [
+      "camembert", "camembert de normandie", "brie de meaux", "brie de melun",
+      "roquefort", "comté", "comte", "beaufort", "reblochon", "époisses", "epoisses",
+      "munster", "salers", "cantal", "saint-nectaire", "chaource", "maroilles",
+      "ossau-iraty", "morbier", "tomme des pyrénées", "tome de savoie", "abondance",
+      "livarot", "pont-l'évêque", "selles-sur-cher", "valençay", "bleu d'auvergne",
+      "fourme d'ambert", "crottin de chavignol"
+    ]
+  },
+  {
+    "id": "hp-cin-004",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Films de la saga Star Wars (films principaux)",
+    "bidSeconds": 10,
+    "answerSeconds": 30,
+    "maxBid": 9,
+    "validItems": [
+      "la menace fantôme", "la menace fantome", "épisode 1", "episode 1",
+      "l'attaque des clones", "épisode 2", "episode 2",
+      "la revanche des sith", "épisode 3", "episode 3",
+      "un nouvel espoir", "a new hope", "épisode 4", "episode 4",
+      "l'empire contre-attaque", "episode 5", "épisode 5",
+      "le retour du jedi", "episode 6", "épisode 6",
+      "le réveil de la force", "le reveil de la force", "episode 7", "épisode 7",
+      "les derniers jedi", "episode 8", "épisode 8",
+      "l'ascension de skywalker", "episode 9", "épisode 9"
+    ]
+  },
+  {
+    "id": "hp-his-002",
+    "mode": "hot-potato",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Présidents des États-Unis depuis 1960",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 12,
+    "validItems": [
+      "kennedy", "john kennedy", "jfk", "johnson", "lyndon johnson",
+      "nixon", "ford", "gerald ford", "carter", "jimmy carter",
+      "reagan", "bush", "george bush", "george h.w. bush", "bush père",
+      "clinton", "bill clinton", "george w. bush", "bush fils",
+      "obama", "barack obama", "trump", "donald trump",
+      "biden", "joe biden"
+    ]
+  },
+  {
+    "id": "hp-mus-003",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Chanteurs francophones des années 80",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 15,
+    "validItems": [
+      "jean-jacques goldman", "goldman", "france gall", "michel berger",
+      "renaud", "jean-louis aubert", "téléphone", "telephone", "johnny hallyday",
+      "mylène farmer", "mylene farmer", "étienne daho", "etienne daho",
+      "françois feldman", "francois feldman", "laurent voulzy", "alain souchon",
+      "patrick bruel", "vanessa paradis", "julien clerc", "patricia kaas",
+      "indochine", "niagara", "rita mitsouko", "les rita mitsouko",
+      "desireless", "images", "jeanne mas", "début de soirée", "gold"
+    ]
+  },
+  {
+    "id": "hp-ani-002",
+    "mode": "hot-potato",
+    "difficulty": "hard",
+    "category": "Animaux",
+    "prompt": "Animaux qui pondent des œufs",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 15,
+    "validItems": [
+      "poule", "canard", "oie", "autruche", "pigeon", "aigle", "pingouin",
+      "manchot", "poisson", "truite", "saumon", "requin", "tortue",
+      "serpent", "crocodile", "lézard", "lezard", "grenouille", "crapaud",
+      "salamandre", "araignée", "araignee", "fourmi", "abeille", "papillon",
+      "escargot", "pieuvre", "ornithorynque", "échidné", "echidne"
+    ]
+  },
+  {
+    "id": "hp-lit-002",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Prix Goncourt du XXIe siècle",
+    "bidSeconds": 10,
+    "answerSeconds": 50,
+    "maxBid": 15,
+    "validItems": [
+      "jean-christophe rufin", "rouge brésil", "pascal quignard", "jacques-pierre amette",
+      "laurent gaudé", "laurent gaude", "le soleil des scorta",
+      "françois weyergans", "trois jours chez ma mère",
+      "jonathan littell", "les bienveillantes", "gilles leroy", "alabama song",
+      "atiq rahimi", "syngué sabour", "marie ndiaye", "trois femmes puissantes",
+      "michel houellebecq", "la carte et le territoire",
+      "alexis jenni", "jérôme ferrari", "jerome ferrari", "pierre lemaitre",
+      "au revoir là-haut", "au revoir la-haut", "lydie salvayre", "mathias énard",
+      "mathias enard", "boussole", "leïla slimani", "leila slimani", "chanson douce",
+      "éric vuillard", "eric vuillard", "l'ordre du jour",
+      "nicolas mathieu", "leurs enfants après eux", "jean-paul dubois",
+      "hervé le tellier", "herve le tellier", "l'anomalie",
+      "mohamed mbougar sarr", "brigitte giraud", "jean-baptiste andrea"
+    ]
+  },
+  {
+    "id": "hp-geo-005",
+    "mode": "hot-potato",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Régions administratives de France métropolitaine (2016+)",
+    "bidSeconds": 10,
+    "answerSeconds": 40,
+    "maxBid": 13,
+    "validItems": [
+      "auvergne-rhône-alpes", "auvergne rhone alpes",
+      "bourgogne-franche-comté", "bourgogne franche comte",
+      "bretagne", "centre-val de loire", "centre val de loire",
+      "corse", "grand est", "hauts-de-france", "hauts de france",
+      "île-de-france", "ile de france",
+      "normandie", "nouvelle-aquitaine", "nouvelle aquitaine",
+      "occitanie", "pays de la loire",
+      "provence-alpes-côte d'azur", "paca", "provence alpes cote d'azur"
+    ]
+  },
+  {
+    "id": "hp-tec-001",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Réseaux sociaux / plateformes populaires",
+    "bidSeconds": 10,
+    "answerSeconds": 30,
+    "maxBid": 12,
+    "validItems": [
+      "facebook", "instagram", "twitter", "x", "linkedin", "tiktok",
+      "snapchat", "youtube", "whatsapp", "telegram", "reddit", "pinterest",
+      "discord", "twitch", "mastodon", "threads", "bluesky", "bereal"
+    ]
+  },
+  {
+    "id": "hp-art-001",
+    "mode": "hot-potato",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Peintres impressionnistes",
+    "bidSeconds": 10,
+    "answerSeconds": 35,
+    "maxBid": 10,
+    "validItems": [
+      "monet", "claude monet", "manet", "édouard manet", "edouard manet",
+      "degas", "edgar degas", "renoir", "auguste renoir",
+      "pissarro", "camille pissarro", "sisley", "alfred sisley",
+      "caillebotte", "gustave caillebotte", "morisot", "berthe morisot",
+      "mary cassatt", "cassatt", "bazille", "frédéric bazille",
+      "cézanne", "cezanne", "paul cézanne"
+    ]
+  },
+  {
+    "id": "hp-cin-005",
+    "mode": "hot-potato",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Films Disney (classiques d'animation)",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 15,
+    "validItems": [
+      "blanche-neige", "blanche neige", "pinocchio", "fantasia", "dumbo", "bambi",
+      "cendrillon", "alice au pays des merveilles", "peter pan",
+      "la belle et le clochard", "la belle au bois dormant",
+      "les 101 dalmatiens", "101 dalmatiens", "merlin l'enchanteur",
+      "le livre de la jungle", "les aristochats", "robin des bois",
+      "les aventures de bernard et bianca", "rox et rouky",
+      "taram et le chaudron magique", "basil détective privé",
+      "oliver et compagnie", "la petite sirène", "bernard et bianca au pays des kangourous",
+      "la belle et la bête", "la belle et la bete", "aladdin",
+      "le roi lion", "pocahontas", "le bossu de notre-dame", "hercule",
+      "mulan", "tarzan", "fantasia 2000", "kuzco", "atlantide",
+      "lilo et stitch", "frère des ours", "la ferme se rebelle",
+      "chicken little", "bienvenue chez les robinson", "volt",
+      "la princesse et la grenouille", "raiponce", "winnie l'ourson",
+      "les mondes de ralph", "la reine des neiges", "les nouveaux héros",
+      "zootopie", "vaiana", "ralph 2.0", "la reine des neiges 2",
+      "raya", "encanto", "avalonia"
+    ]
+  },
+  {
+    "id": "hp-his-003",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Pays ayant appartenu à l'URSS",
+    "bidSeconds": 10,
+    "answerSeconds": 40,
+    "maxBid": 15,
+    "validItems": [
+      "russie", "ukraine", "biélorussie", "bielorussie",
+      "estonie", "lettonie", "lituanie", "moldavie", "géorgie", "georgie",
+      "arménie", "armenie", "azerbaïdjan", "azerbaidjan",
+      "kazakhstan", "ouzbékistan", "ouzbekistan", "turkménistan", "turkmenistan",
+      "kirghizistan", "tadjikistan"
+    ]
+  },
+  {
+    "id": "hp-spo-002",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Sports de raquette",
+    "bidSeconds": 8,
+    "answerSeconds": 25,
+    "maxBid": 8,
+    "validItems": [
+      "tennis", "badminton", "tennis de table", "ping-pong", "ping pong",
+      "squash", "padel", "racquetball", "pelote basque", "jeu de paume"
+    ]
+  },
+  {
+    "id": "hp-gas-002",
+    "mode": "hot-potato",
+    "difficulty": "medium",
+    "category": "Gastronomie",
+    "prompt": "Spécialités italiennes",
+    "bidSeconds": 10,
+    "answerSeconds": 35,
+    "maxBid": 12,
+    "validItems": [
+      "pizza", "pâtes", "pates", "lasagnes", "carbonara", "bolognaise",
+      "risotto", "tiramisu", "panna cotta", "osso buco", "minestrone",
+      "focaccia", "arancini", "polenta", "saltimbocca", "gnocchis",
+      "ravioli", "tortellini", "caprese", "bruschetta", "cannoli",
+      "gelato", "amatriciana", "pesto", "saltimbocca", "parmigiana",
+      "vitello tonnato", "ciabatta", "calzone"
+    ]
+  },
+  {
+    "id": "hp-sci-003",
+    "mode": "hot-potato",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Os du corps humain adulte",
+    "bidSeconds": 10,
+    "answerSeconds": 45,
+    "maxBid": 15,
+    "validItems": [
+      "crâne", "crane", "mâchoire", "machoire", "mandibule", "maxillaire",
+      "vertèbres", "vertebres", "colonne vertébrale", "colonne vertebrale",
+      "sternum", "côte", "cote", "côtes", "cotes", "clavicule", "omoplate", "scapula",
+      "humérus", "humerus", "radius", "cubitus", "ulna", "carpe", "métacarpe", "metacarpe",
+      "phalange", "phalanges", "bassin", "os iliaque", "sacrum", "coccyx",
+      "fémur", "femur", "rotule", "patella", "tibia", "péroné", "perone", "fibula",
+      "tarse", "métatarse", "metatarse", "calcanéum", "calcaneum", "astragale"
+    ]
+  },
+  {
+    "id": "hp-mus-004",
+    "mode": "hot-potato",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Instruments à vent",
+    "bidSeconds": 8,
+    "answerSeconds": 30,
+    "maxBid": 10,
+    "validItems": [
+      "flûte", "flute", "flûte traversière", "clarinette", "hautbois", "basson",
+      "saxophone", "trompette", "cor", "cor d'harmonie", "trombone", "tuba",
+      "harmonica", "accordéon", "accordeon", "cornemuse", "didgeridoo",
+      "piccolo", "ocarina", "fifre"
+    ]
+  }
+]

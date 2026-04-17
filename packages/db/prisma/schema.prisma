@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ModeId {
+  classic
+  estimation
+  list_turns
+  hot_potato
+  speed_elim
+  map_mode
+  chronology
+}
+
+enum Difficulty {
+  easy
+  medium
+  hard
+}
+
+enum QuestionStatus {
+  draft
+  published
+  archived
+}
+
+model Pack {
+  id          String     @id @default(cuid())
+  slug        String     @unique
+  name        String
+  description String?
+  isDefault   Boolean    @default(false)
+  createdAt   DateTime   @default(now())
+  questions   Question[]
+}
+
+model Category {
+  id        String     @id @default(cuid())
+  slug      String     @unique
+  name      String
+  questions Question[]
+}
+
+model Question {
+  id           String         @id @default(cuid())
+  mode         ModeId
+  difficulty   Difficulty
+  prompt       String
+  /// Réponse principale (mode classic / speed-elim).
+  answer       String?
+  /// Aliases / orthographes acceptés (mode classic / speed-elim).
+  aliases      String[]       @default([])
+  /// Valeur cible (mode estimation).
+  numericAnswer Float?
+  /// Unité (ex. "km", "hab.").
+  unit         String?
+  /// Liste d'éléments valides (list-turns, hot-potato).
+  validItems   String[]       @default([])
+  turnSeconds  Int?           @default(15)
+  /// Timer de saisie (hot-potato answerSeconds, speed-elim timerSeconds).
+  timerSeconds Int?
+  /// Timer de bid (hot-potato).
+  bidSeconds   Int?
+  /// Bid maximum (hot-potato).
+  maxBid       Int?
+  /// Cible géographique (map).
+  targetLat    Float?
+  targetLng    Float?
+  targetLabel  String?
+  /// Rayon max pour lequel on marque encore (map, en km).
+  maxKm        Float?
+  /// Liste d'événements pour chronology [{ id, label, year }].
+  eventsJson   Json?
+  source       String?
+  status       QuestionStatus @default(published)
+  createdAt    DateTime       @default(now())
+
+  packId     String?
+  pack       Pack?     @relation(fields: [packId], references: [id])
+  categoryId String?
+  category   Category? @relation(fields: [categoryId], references: [id])
+
+  @@index([mode, difficulty, status])
+  @@index([packId])
+}
+
+/// Historique optionnel (MVP : non obligatoire, utile pour debug/analytics).
+model MatchRecord {
+  id          String   @id @default(cuid())
+  roomCode    String
+  hostNickname String
+  playersJson Json
+  scoresJson  Json
+  startedAt   DateTime
+  endedAt     DateTime
+  rounds      Int
+}

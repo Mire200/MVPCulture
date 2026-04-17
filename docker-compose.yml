@@ -1,0 +1,20 @@
+# Postgres local — aligné sur .env.example (DATABASE_URL …/mvpculture)
+services:
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mvpculture
+    volumes:
+      - mvpc_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d mvpculture"]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mvpc_pgdata:

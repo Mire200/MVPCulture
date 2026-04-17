@@ -1,0 +1,3422 @@
+[
+  {
+    "id": "ch-wp-0001",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Révolution française / prise de la Bastille",
+        "year": 1789
+      },
+      {
+        "id": "e2",
+        "label": "Révolution islamique en Iran",
+        "year": 1979
+      },
+      {
+        "id": "e3",
+        "label": "Début de la peste noire en Europe",
+        "year": 1347
+      },
+      {
+        "id": "e4",
+        "label": "Début du règne de Louis XIV",
+        "year": 1643
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0002",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Jacques Cartier découvre le Canada",
+        "year": 1534
+      },
+      {
+        "id": "e2",
+        "label": "Publication de De l'origine des espèces",
+        "year": 1859
+      },
+      {
+        "id": "e3",
+        "label": "Génocide au Rwanda / fin de l'apartheid",
+        "year": 1994
+      },
+      {
+        "id": "e4",
+        "label": "Fondation de la Société des Nations",
+        "year": 1920
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0003",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Crise des missiles de Cuba",
+        "year": 1962
+      },
+      {
+        "id": "e2",
+        "label": "Passage à l'euro fiduciaire",
+        "year": 2002
+      },
+      {
+        "id": "e3",
+        "label": "Attentats du Bataclan à Paris",
+        "year": 2015
+      },
+      {
+        "id": "e4",
+        "label": "Fondation de Saint-Pétersbourg",
+        "year": 1703
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0004",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Invention de l'ampoule électrique (Edison)",
+        "year": 1879
+      },
+      {
+        "id": "e2",
+        "label": "Chute de Constantinople",
+        "year": 1453
+      },
+      {
+        "id": "e3",
+        "label": "Début de la guerre d'Algérie",
+        "year": 1954
+      },
+      {
+        "id": "e4",
+        "label": "Attaque de Pearl Harbor",
+        "year": 1941
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0005",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Thèses de Luther (Réforme protestante)",
+        "year": 1517
+      },
+      {
+        "id": "e2",
+        "label": "Éruption du Vésuve (Pompéi)",
+        "year": 79
+      },
+      {
+        "id": "e3",
+        "label": "Première ligne de chemin de fer (Stockton-Darlington)",
+        "year": 1825
+      },
+      {
+        "id": "e4",
+        "label": "Marche sur Rome (Mussolini)",
+        "year": 1922
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0006",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Principia de Newton",
+        "year": 1687
+      },
+      {
+        "id": "e2",
+        "label": "Abolition de l'esclavage aux États-Unis",
+        "year": 1863
+      },
+      {
+        "id": "e3",
+        "label": "Brexit (référendum)",
+        "year": 2016
+      },
+      {
+        "id": "e4",
+        "label": "Hitler devient chancelier d'Allemagne",
+        "year": 1933
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0007",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Premier pas sur la Lune (Armstrong)",
+        "year": 1969
+      },
+      {
+        "id": "e2",
+        "label": "Premiers Jeux Olympiques antiques",
+        "year": -776
+      },
+      {
+        "id": "e3",
+        "label": "Appel à la première croisade",
+        "year": 1095
+      },
+      {
+        "id": "e4",
+        "label": "Assassinat de Jules César",
+        "year": -44
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0008",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Commune de Paris",
+        "year": 1871
+      },
+      {
+        "id": "e2",
+        "label": "Mort de Jeanne d'Arc sur le bûcher",
+        "year": 1431
+      },
+      {
+        "id": "e3",
+        "label": "Chute de l'Empire romain d'Occident",
+        "year": 476
+      },
+      {
+        "id": "e4",
+        "label": "Tsunami dans l'océan Indien",
+        "year": 2004
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0009",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Pandémie de Covid-19",
+        "year": 2020
+      },
+      {
+        "id": "e2",
+        "label": "Fondation de la RFA et de la RDA",
+        "year": 1949
+      },
+      {
+        "id": "e3",
+        "label": "Publication de Don Quichotte (1ère partie)",
+        "year": 1605
+      },
+      {
+        "id": "e4",
+        "label": "Découverte de la structure de l'ADN",
+        "year": 1953
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0010",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "France championne du monde de football",
+        "year": 1998
+      },
+      {
+        "id": "e2",
+        "label": "Ouverture du canal de Suez",
+        "year": 1869
+      },
+      {
+        "id": "e3",
+        "label": "Inauguration de la tour Eiffel",
+        "year": 1889
+      },
+      {
+        "id": "e4",
+        "label": "Mai 68 en France",
+        "year": 1968
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0011",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Défaite de l'Invincible Armada",
+        "year": 1588
+      },
+      {
+        "id": "e2",
+        "label": "Invention de la photographie (Daguerre)",
+        "year": 1839
+      },
+      {
+        "id": "e3",
+        "label": "Auguste devient empereur romain",
+        "year": -27
+      },
+      {
+        "id": "e4",
+        "label": "Vasco de Gama atteint l'Inde",
+        "year": 1498
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0012",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Lindbergh traverse l'Atlantique en avion",
+        "year": 1927
+      },
+      {
+        "id": "e2",
+        "label": "Printemps des peuples / manifeste communiste",
+        "year": 1848
+      },
+      {
+        "id": "e3",
+        "label": "Mitterrand élu président de la République",
+        "year": 1981
+      },
+      {
+        "id": "e4",
+        "label": "Krach boursier de Wall Street",
+        "year": 1929
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0013",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Indépendance de l'Inde",
+        "year": 1947
+      },
+      {
+        "id": "e2",
+        "label": "Bataille de Marathon",
+        "year": -490
+      },
+      {
+        "id": "e3",
+        "label": "Assassinat de John F. Kennedy",
+        "year": 1963
+      },
+      {
+        "id": "e4",
+        "label": "Marco Polo part pour la Chine",
+        "year": 1271
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0014",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Théorie de la relativité restreinte (Einstein)",
+        "year": 1905
+      },
+      {
+        "id": "e2",
+        "label": "Sacre de Napoléon empereur",
+        "year": 1804
+      },
+      {
+        "id": "e3",
+        "label": "Chute du mur de Berlin",
+        "year": 1989
+      },
+      {
+        "id": "e4",
+        "label": "Invasion de l'Ukraine par la Russie",
+        "year": 2022
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0015",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Fondation de Rome (légende)",
+        "year": -753
+      },
+      {
+        "id": "e2",
+        "label": "Début de la guerre de Cent Ans",
+        "year": 1337
+      },
+      {
+        "id": "e3",
+        "label": "Invention du téléphone (Bell)",
+        "year": 1876
+      },
+      {
+        "id": "e4",
+        "label": "Découverte de l'Amérique par Christophe Colomb",
+        "year": 1492
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0016",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Dissolution de l'URSS",
+        "year": 1991
+      },
+      {
+        "id": "e2",
+        "label": "Fin de la Première Guerre mondiale",
+        "year": 1918
+      },
+      {
+        "id": "e3",
+        "label": "Couronnement de Charlemagne",
+        "year": 800
+      },
+      {
+        "id": "e4",
+        "label": "Installation de Louis XIV à Versailles",
+        "year": 1682
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0017",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Découverte de la pénicilline (Fleming)",
+        "year": 1928
+      },
+      {
+        "id": "e2",
+        "label": "Édit de Milan (liberté de culte chrétien)",
+        "year": 313
+      },
+      {
+        "id": "e3",
+        "label": "Premier vol des frères Wright",
+        "year": 1903
+      },
+      {
+        "id": "e4",
+        "label": "Grand incendie de Londres",
+        "year": 1666
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0018",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Début de la Première Guerre mondiale",
+        "year": 1914
+      },
+      {
+        "id": "e2",
+        "label": "Révolution des Trois Glorieuses",
+        "year": 1830
+      },
+      {
+        "id": "e3",
+        "label": "Fondation de la République romaine",
+        "year": -509
+      },
+      {
+        "id": "e4",
+        "label": "Premiers Jeux Olympiques modernes (Athènes)",
+        "year": 1896
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0019",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Bataille de Waterloo",
+        "year": 1815
+      },
+      {
+        "id": "e2",
+        "label": "Magellan commence son tour du monde",
+        "year": 1519
+      },
+      {
+        "id": "e3",
+        "label": "Déclaration d'indépendance des États-Unis",
+        "year": 1776
+      },
+      {
+        "id": "e4",
+        "label": "Bataille de Hastings",
+        "year": 1066
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0020",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Débarquement de Normandie",
+        "year": 1944
+      },
+      {
+        "id": "e2",
+        "label": "Printemps arabe / mort de Ben Laden",
+        "year": 2011
+      },
+      {
+        "id": "e3",
+        "label": "Hégire (début du calendrier musulman)",
+        "year": 622
+      },
+      {
+        "id": "e4",
+        "label": "Magna Carta en Angleterre",
+        "year": 1215
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0021",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Youri Gagarine 1er homme dans l'espace",
+        "year": 1961
+      },
+      {
+        "id": "e2",
+        "label": "Catastrophe de Tchernobyl",
+        "year": 1986
+      },
+      {
+        "id": "e3",
+        "label": "Fin de la guerre du Vietnam",
+        "year": 1975
+      },
+      {
+        "id": "e4",
+        "label": "Début de la Seconde Guerre mondiale",
+        "year": 1939
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0022",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Assassinat d'Henri IV",
+        "year": 1610
+      },
+      {
+        "id": "e2",
+        "label": "Attentats du 11 septembre",
+        "year": 2001
+      },
+      {
+        "id": "e3",
+        "label": "Création de l'État d'Israël",
+        "year": 1948
+      },
+      {
+        "id": "e4",
+        "label": "Front populaire en France",
+        "year": 1936
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0023",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Bataille des Thermopyles",
+        "year": -480
+      },
+      {
+        "id": "e2",
+        "label": "Révolution russe",
+        "year": 1917
+      },
+      {
+        "id": "e3",
+        "label": "Fin de la Seconde Guerre mondiale / Hiroshima",
+        "year": 1945
+      },
+      {
+        "id": "e4",
+        "label": "Naufrage du Titanic",
+        "year": 1912
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0024",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Lancement de Spoutnik (1er satellite)",
+        "year": 1957
+      },
+      {
+        "id": "e2",
+        "label": "Crise financière mondiale",
+        "year": 2008
+      },
+      {
+        "id": "e3",
+        "label": "Premier choc pétrolier",
+        "year": 1973
+      },
+      {
+        "id": "e4",
+        "label": "Création de l'Organisation mondiale du commerce",
+        "year": 1995
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0025",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Brexit (référendum)",
+        "year": 2016
+      },
+      {
+        "id": "e2",
+        "label": "Mort de Jeanne d'Arc sur le bûcher",
+        "year": 1431
+      },
+      {
+        "id": "e3",
+        "label": "Révolution russe",
+        "year": 1917
+      },
+      {
+        "id": "e4",
+        "label": "Commune de Paris",
+        "year": 1871
+      },
+      {
+        "id": "e5",
+        "label": "Premiers Jeux Olympiques modernes (Athènes)",
+        "year": 1896
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0026",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Mai 68 en France",
+        "year": 1968
+      },
+      {
+        "id": "e2",
+        "label": "Assassinat de Jules César",
+        "year": -44
+      },
+      {
+        "id": "e3",
+        "label": "Génocide au Rwanda / fin de l'apartheid",
+        "year": 1994
+      },
+      {
+        "id": "e4",
+        "label": "Appel à la première croisade",
+        "year": 1095
+      },
+      {
+        "id": "e5",
+        "label": "Chute de Constantinople",
+        "year": 1453
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0027",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Dissolution de l'URSS",
+        "year": 1991
+      },
+      {
+        "id": "e2",
+        "label": "Hitler devient chancelier d'Allemagne",
+        "year": 1933
+      },
+      {
+        "id": "e3",
+        "label": "Théorie de la relativité restreinte (Einstein)",
+        "year": 1905
+      },
+      {
+        "id": "e4",
+        "label": "Jacques Cartier découvre le Canada",
+        "year": 1534
+      },
+      {
+        "id": "e5",
+        "label": "Magellan commence son tour du monde",
+        "year": 1519
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0028",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Front populaire en France",
+        "year": 1936
+      },
+      {
+        "id": "e2",
+        "label": "Publication de De l'origine des espèces",
+        "year": 1859
+      },
+      {
+        "id": "e3",
+        "label": "Chute de l'Empire romain d'Occident",
+        "year": 476
+      },
+      {
+        "id": "e4",
+        "label": "Début de la Seconde Guerre mondiale",
+        "year": 1939
+      },
+      {
+        "id": "e5",
+        "label": "Printemps arabe / mort de Ben Laden",
+        "year": 2011
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0029",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Indépendance de l'Inde",
+        "year": 1947
+      },
+      {
+        "id": "e2",
+        "label": "Déclaration d'indépendance des États-Unis",
+        "year": 1776
+      },
+      {
+        "id": "e3",
+        "label": "Découverte de la pénicilline (Fleming)",
+        "year": 1928
+      },
+      {
+        "id": "e4",
+        "label": "Premier pas sur la Lune (Armstrong)",
+        "year": 1969
+      },
+      {
+        "id": "e5",
+        "label": "Attentats du 11 septembre",
+        "year": 2001
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0030",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Passage à l'euro fiduciaire",
+        "year": 2002
+      },
+      {
+        "id": "e2",
+        "label": "Attentats du Bataclan à Paris",
+        "year": 2015
+      },
+      {
+        "id": "e3",
+        "label": "Création de l'État d'Israël",
+        "year": 1948
+      },
+      {
+        "id": "e4",
+        "label": "Premiers Jeux Olympiques antiques",
+        "year": -776
+      },
+      {
+        "id": "e5",
+        "label": "Révolution des Trois Glorieuses",
+        "year": 1830
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0031",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Première ligne de chemin de fer (Stockton-Darlington)",
+        "year": 1825
+      },
+      {
+        "id": "e2",
+        "label": "Fin de la Seconde Guerre mondiale / Hiroshima",
+        "year": 1945
+      },
+      {
+        "id": "e3",
+        "label": "Vasco de Gama atteint l'Inde",
+        "year": 1498
+      },
+      {
+        "id": "e4",
+        "label": "Sacre de Napoléon empereur",
+        "year": 1804
+      },
+      {
+        "id": "e5",
+        "label": "Assassinat de John F. Kennedy",
+        "year": 1963
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0032",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Bataille de Marathon",
+        "year": -490
+      },
+      {
+        "id": "e2",
+        "label": "Édit de Milan (liberté de culte chrétien)",
+        "year": 313
+      },
+      {
+        "id": "e3",
+        "label": "Bataille de Hastings",
+        "year": 1066
+      },
+      {
+        "id": "e4",
+        "label": "Crise financière mondiale",
+        "year": 2008
+      },
+      {
+        "id": "e5",
+        "label": "Youri Gagarine 1er homme dans l'espace",
+        "year": 1961
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0033",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Invention du téléphone (Bell)",
+        "year": 1876
+      },
+      {
+        "id": "e2",
+        "label": "Fondation de Rome (légende)",
+        "year": -753
+      },
+      {
+        "id": "e3",
+        "label": "Auguste devient empereur romain",
+        "year": -27
+      },
+      {
+        "id": "e4",
+        "label": "Débarquement de Normandie",
+        "year": 1944
+      },
+      {
+        "id": "e5",
+        "label": "Fondation de Saint-Pétersbourg",
+        "year": 1703
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0034",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "France championne du monde de football",
+        "year": 1998
+      },
+      {
+        "id": "e2",
+        "label": "Installation de Louis XIV à Versailles",
+        "year": 1682
+      },
+      {
+        "id": "e3",
+        "label": "Naufrage du Titanic",
+        "year": 1912
+      },
+      {
+        "id": "e4",
+        "label": "Printemps des peuples / manifeste communiste",
+        "year": 1848
+      },
+      {
+        "id": "e5",
+        "label": "Lindbergh traverse l'Atlantique en avion",
+        "year": 1927
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0035",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Découverte de l'Amérique par Christophe Colomb",
+        "year": 1492
+      },
+      {
+        "id": "e2",
+        "label": "Inauguration de la tour Eiffel",
+        "year": 1889
+      },
+      {
+        "id": "e3",
+        "label": "Fondation de la Société des Nations",
+        "year": 1920
+      },
+      {
+        "id": "e4",
+        "label": "Principia de Newton",
+        "year": 1687
+      },
+      {
+        "id": "e5",
+        "label": "Début de la Première Guerre mondiale",
+        "year": 1914
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0036",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Invention de la photographie (Daguerre)",
+        "year": 1839
+      },
+      {
+        "id": "e2",
+        "label": "Lancement de Spoutnik (1er satellite)",
+        "year": 1957
+      },
+      {
+        "id": "e3",
+        "label": "Chute du mur de Berlin",
+        "year": 1989
+      },
+      {
+        "id": "e4",
+        "label": "Mitterrand élu président de la République",
+        "year": 1981
+      },
+      {
+        "id": "e5",
+        "label": "Grand incendie de Londres",
+        "year": 1666
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0037",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Fin de la guerre du Vietnam",
+        "year": 1975
+      },
+      {
+        "id": "e2",
+        "label": "Révolution islamique en Iran",
+        "year": 1979
+      },
+      {
+        "id": "e3",
+        "label": "Tsunami dans l'océan Indien",
+        "year": 2004
+      },
+      {
+        "id": "e4",
+        "label": "Révolution française / prise de la Bastille",
+        "year": 1789
+      },
+      {
+        "id": "e5",
+        "label": "Invasion de l'Ukraine par la Russie",
+        "year": 2022
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0038",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Assassinat d'Henri IV",
+        "year": 1610
+      },
+      {
+        "id": "e2",
+        "label": "Couronnement de Charlemagne",
+        "year": 800
+      },
+      {
+        "id": "e3",
+        "label": "Début de la guerre de Cent Ans",
+        "year": 1337
+      },
+      {
+        "id": "e4",
+        "label": "Bataille des Thermopyles",
+        "year": -480
+      },
+      {
+        "id": "e5",
+        "label": "Invention de l'ampoule électrique (Edison)",
+        "year": 1879
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0039",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Premier choc pétrolier",
+        "year": 1973
+      },
+      {
+        "id": "e2",
+        "label": "Début de la guerre d'Algérie",
+        "year": 1954
+      },
+      {
+        "id": "e3",
+        "label": "Ouverture du canal de Suez",
+        "year": 1869
+      },
+      {
+        "id": "e4",
+        "label": "Catastrophe de Tchernobyl",
+        "year": 1986
+      },
+      {
+        "id": "e5",
+        "label": "Fin de la Première Guerre mondiale",
+        "year": 1918
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0040",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Abolition de l'esclavage aux États-Unis",
+        "year": 1863
+      },
+      {
+        "id": "e2",
+        "label": "Découverte de la structure de l'ADN",
+        "year": 1953
+      },
+      {
+        "id": "e3",
+        "label": "Création de l'Organisation mondiale du commerce",
+        "year": 1995
+      },
+      {
+        "id": "e4",
+        "label": "Hégire (début du calendrier musulman)",
+        "year": 622
+      },
+      {
+        "id": "e5",
+        "label": "Thèses de Luther (Réforme protestante)",
+        "year": 1517
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0041",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Fondation de la République romaine",
+        "year": -509
+      },
+      {
+        "id": "e2",
+        "label": "Crise des missiles de Cuba",
+        "year": 1962
+      },
+      {
+        "id": "e3",
+        "label": "Krach boursier de Wall Street",
+        "year": 1929
+      },
+      {
+        "id": "e4",
+        "label": "Pandémie de Covid-19",
+        "year": 2020
+      },
+      {
+        "id": "e5",
+        "label": "Bataille de Waterloo",
+        "year": 1815
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0042",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Fondation de la RFA et de la RDA",
+        "year": 1949
+      },
+      {
+        "id": "e2",
+        "label": "Marche sur Rome (Mussolini)",
+        "year": 1922
+      },
+      {
+        "id": "e3",
+        "label": "Début du règne de Louis XIV",
+        "year": 1643
+      },
+      {
+        "id": "e4",
+        "label": "Éruption du Vésuve (Pompéi)",
+        "year": 79
+      },
+      {
+        "id": "e5",
+        "label": "Publication de Don Quichotte (1ère partie)",
+        "year": 1605
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0043",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Magna Carta en Angleterre",
+        "year": 1215
+      },
+      {
+        "id": "e2",
+        "label": "Début de la peste noire en Europe",
+        "year": 1347
+      },
+      {
+        "id": "e3",
+        "label": "Défaite de l'Invincible Armada",
+        "year": 1588
+      },
+      {
+        "id": "e4",
+        "label": "Premier vol des frères Wright",
+        "year": 1903
+      },
+      {
+        "id": "e5",
+        "label": "Attaque de Pearl Harbor",
+        "year": 1941
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0044",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Fondation de Rome (légende)",
+        "year": -753
+      },
+      {
+        "id": "e2",
+        "label": "Lancement de Spoutnik (1er satellite)",
+        "year": 1957
+      },
+      {
+        "id": "e3",
+        "label": "Indépendance de l'Inde",
+        "year": 1947
+      },
+      {
+        "id": "e4",
+        "label": "Début de la guerre de Cent Ans",
+        "year": 1337
+      },
+      {
+        "id": "e5",
+        "label": "Révolution islamique en Iran",
+        "year": 1979
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0045",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Découverte de la pénicilline (Fleming)",
+        "year": 1928
+      },
+      {
+        "id": "e2",
+        "label": "Attaque de Pearl Harbor",
+        "year": 1941
+      },
+      {
+        "id": "e3",
+        "label": "Théorie de la relativité restreinte (Einstein)",
+        "year": 1905
+      },
+      {
+        "id": "e4",
+        "label": "Sacre de Napoléon empereur",
+        "year": 1804
+      },
+      {
+        "id": "e5",
+        "label": "Début de la guerre d'Algérie",
+        "year": 1954
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0046",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Commune de Paris",
+        "year": 1871
+      },
+      {
+        "id": "e2",
+        "label": "Découverte de la structure de l'ADN",
+        "year": 1953
+      },
+      {
+        "id": "e3",
+        "label": "Révolution française / prise de la Bastille",
+        "year": 1789
+      },
+      {
+        "id": "e4",
+        "label": "Vasco de Gama atteint l'Inde",
+        "year": 1498
+      },
+      {
+        "id": "e5",
+        "label": "Déclaration d'indépendance des États-Unis",
+        "year": 1776
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0047",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Magellan commence son tour du monde",
+        "year": 1519
+      },
+      {
+        "id": "e2",
+        "label": "Création de l'Organisation mondiale du commerce",
+        "year": 1995
+      },
+      {
+        "id": "e3",
+        "label": "Passage à l'euro fiduciaire",
+        "year": 2002
+      },
+      {
+        "id": "e4",
+        "label": "Crise des missiles de Cuba",
+        "year": 1962
+      },
+      {
+        "id": "e5",
+        "label": "Génocide au Rwanda / fin de l'apartheid",
+        "year": 1994
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0048",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Principia de Newton",
+        "year": 1687
+      },
+      {
+        "id": "e2",
+        "label": "Catastrophe de Tchernobyl",
+        "year": 1986
+      },
+      {
+        "id": "e3",
+        "label": "Mort de Jeanne d'Arc sur le bûcher",
+        "year": 1431
+      },
+      {
+        "id": "e4",
+        "label": "Fondation de Saint-Pétersbourg",
+        "year": 1703
+      },
+      {
+        "id": "e5",
+        "label": "Tsunami dans l'océan Indien",
+        "year": 2004
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0049",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Appel à la première croisade",
+        "year": 1095
+      },
+      {
+        "id": "e2",
+        "label": "Ouverture du canal de Suez",
+        "year": 1869
+      },
+      {
+        "id": "e3",
+        "label": "Inauguration de la tour Eiffel",
+        "year": 1889
+      },
+      {
+        "id": "e4",
+        "label": "Mitterrand élu président de la République",
+        "year": 1981
+      },
+      {
+        "id": "e5",
+        "label": "Fin de la guerre du Vietnam",
+        "year": 1975
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0050",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Marco Polo part pour la Chine",
+        "year": 1271
+      },
+      {
+        "id": "e2",
+        "label": "Bataille de Marathon",
+        "year": -490
+      },
+      {
+        "id": "e3",
+        "label": "Début du règne de Louis XIV",
+        "year": 1643
+      },
+      {
+        "id": "e4",
+        "label": "Auguste devient empereur romain",
+        "year": -27
+      },
+      {
+        "id": "e5",
+        "label": "Première ligne de chemin de fer (Stockton-Darlington)",
+        "year": 1825
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0051",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Thèses de Luther (Réforme protestante)",
+        "year": 1517
+      },
+      {
+        "id": "e2",
+        "label": "Crise financière mondiale",
+        "year": 2008
+      },
+      {
+        "id": "e3",
+        "label": "Bataille des Thermopyles",
+        "year": -480
+      },
+      {
+        "id": "e4",
+        "label": "Marche sur Rome (Mussolini)",
+        "year": 1922
+      },
+      {
+        "id": "e5",
+        "label": "Début de la peste noire en Europe",
+        "year": 1347
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0052",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Attentats du 11 septembre",
+        "year": 2001
+      },
+      {
+        "id": "e2",
+        "label": "Lindbergh traverse l'Atlantique en avion",
+        "year": 1927
+      },
+      {
+        "id": "e3",
+        "label": "Pandémie de Covid-19",
+        "year": 2020
+      },
+      {
+        "id": "e4",
+        "label": "Hitler devient chancelier d'Allemagne",
+        "year": 1933
+      },
+      {
+        "id": "e5",
+        "label": "Création de l'État d'Israël",
+        "year": 1948
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0053",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Magna Carta en Angleterre",
+        "year": 1215
+      },
+      {
+        "id": "e2",
+        "label": "Défaite de l'Invincible Armada",
+        "year": 1588
+      },
+      {
+        "id": "e3",
+        "label": "Révolution russe",
+        "year": 1917
+      },
+      {
+        "id": "e4",
+        "label": "Front populaire en France",
+        "year": 1936
+      },
+      {
+        "id": "e5",
+        "label": "Assassinat de Jules César",
+        "year": -44
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0054",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Édit de Milan (liberté de culte chrétien)",
+        "year": 313
+      },
+      {
+        "id": "e2",
+        "label": "Assassinat d'Henri IV",
+        "year": 1610
+      },
+      {
+        "id": "e3",
+        "label": "Grand incendie de Londres",
+        "year": 1666
+      },
+      {
+        "id": "e4",
+        "label": "Fondation de la RFA et de la RDA",
+        "year": 1949
+      },
+      {
+        "id": "e5",
+        "label": "Krach boursier de Wall Street",
+        "year": 1929
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0055",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Jacques Cartier découvre le Canada",
+        "year": 1534
+      },
+      {
+        "id": "e2",
+        "label": "Premier choc pétrolier",
+        "year": 1973
+      },
+      {
+        "id": "e3",
+        "label": "Invasion de l'Ukraine par la Russie",
+        "year": 2022
+      },
+      {
+        "id": "e4",
+        "label": "Chute de Constantinople",
+        "year": 1453
+      },
+      {
+        "id": "e5",
+        "label": "Invention de la photographie (Daguerre)",
+        "year": 1839
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0056",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Hégire (début du calendrier musulman)",
+        "year": 622
+      },
+      {
+        "id": "e2",
+        "label": "Début de la Première Guerre mondiale",
+        "year": 1914
+      },
+      {
+        "id": "e3",
+        "label": "Chute du mur de Berlin",
+        "year": 1989
+      },
+      {
+        "id": "e4",
+        "label": "Révolution des Trois Glorieuses",
+        "year": 1830
+      },
+      {
+        "id": "e5",
+        "label": "Bataille de Waterloo",
+        "year": 1815
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0057",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "France championne du monde de football",
+        "year": 1998
+      },
+      {
+        "id": "e2",
+        "label": "Printemps des peuples / manifeste communiste",
+        "year": 1848
+      },
+      {
+        "id": "e3",
+        "label": "Fondation de la République romaine",
+        "year": -509
+      },
+      {
+        "id": "e4",
+        "label": "Publication de Don Quichotte (1ère partie)",
+        "year": 1605
+      },
+      {
+        "id": "e5",
+        "label": "Fin de la Première Guerre mondiale",
+        "year": 1918
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0058",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Début de la Seconde Guerre mondiale",
+        "year": 1939
+      },
+      {
+        "id": "e2",
+        "label": "Découverte de l'Amérique par Christophe Colomb",
+        "year": 1492
+      },
+      {
+        "id": "e3",
+        "label": "Naufrage du Titanic",
+        "year": 1912
+      },
+      {
+        "id": "e4",
+        "label": "Premiers Jeux Olympiques modernes (Athènes)",
+        "year": 1896
+      },
+      {
+        "id": "e5",
+        "label": "Premier pas sur la Lune (Armstrong)",
+        "year": 1969
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0059",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Attentats du Bataclan à Paris",
+        "year": 2015
+      },
+      {
+        "id": "e2",
+        "label": "Printemps arabe / mort de Ben Laden",
+        "year": 2011
+      },
+      {
+        "id": "e3",
+        "label": "Éruption du Vésuve (Pompéi)",
+        "year": 79
+      },
+      {
+        "id": "e4",
+        "label": "Brexit (référendum)",
+        "year": 2016
+      },
+      {
+        "id": "e5",
+        "label": "Installation de Louis XIV à Versailles",
+        "year": 1682
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0060",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Bataille de Hastings",
+        "year": 1066
+      },
+      {
+        "id": "e2",
+        "label": "Débarquement de Normandie",
+        "year": 1944
+      },
+      {
+        "id": "e3",
+        "label": "Publication de De l'origine des espèces",
+        "year": 1859
+      },
+      {
+        "id": "e4",
+        "label": "Fin de la Seconde Guerre mondiale / Hiroshima",
+        "year": 1945
+      },
+      {
+        "id": "e5",
+        "label": "Invention du téléphone (Bell)",
+        "year": 1876
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0061",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Mai 68 en France",
+        "year": 1968
+      },
+      {
+        "id": "e2",
+        "label": "Invention de l'ampoule électrique (Edison)",
+        "year": 1879
+      },
+      {
+        "id": "e3",
+        "label": "Dissolution de l'URSS",
+        "year": 1991
+      },
+      {
+        "id": "e4",
+        "label": "Couronnement de Charlemagne",
+        "year": 800
+      },
+      {
+        "id": "e5",
+        "label": "Premiers Jeux Olympiques antiques",
+        "year": -776
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0062",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Fondation de la Société des Nations",
+        "year": 1920
+      },
+      {
+        "id": "e2",
+        "label": "Assassinat de John F. Kennedy",
+        "year": 1963
+      },
+      {
+        "id": "e3",
+        "label": "Youri Gagarine 1er homme dans l'espace",
+        "year": 1961
+      },
+      {
+        "id": "e4",
+        "label": "Chute de l'Empire romain d'Occident",
+        "year": 476
+      },
+      {
+        "id": "e5",
+        "label": "Premier vol des frères Wright",
+        "year": 1903
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0063",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Révolution islamique en Iran",
+        "year": 1979
+      },
+      {
+        "id": "e2",
+        "label": "Génocide au Rwanda / fin de l'apartheid",
+        "year": 1994
+      },
+      {
+        "id": "e3",
+        "label": "Naufrage du Titanic",
+        "year": 1912
+      },
+      {
+        "id": "e4",
+        "label": "Débarquement de Normandie",
+        "year": 1944
+      },
+      {
+        "id": "e5",
+        "label": "Vasco de Gama atteint l'Inde",
+        "year": 1498
+      },
+      {
+        "id": "e6",
+        "label": "Grand incendie de Londres",
+        "year": 1666
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0064",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Printemps des peuples / manifeste communiste",
+        "year": 1848
+      },
+      {
+        "id": "e2",
+        "label": "Début de la guerre de Cent Ans",
+        "year": 1337
+      },
+      {
+        "id": "e3",
+        "label": "Installation de Louis XIV à Versailles",
+        "year": 1682
+      },
+      {
+        "id": "e4",
+        "label": "Révolution des Trois Glorieuses",
+        "year": 1830
+      },
+      {
+        "id": "e5",
+        "label": "Découverte de la pénicilline (Fleming)",
+        "year": 1928
+      },
+      {
+        "id": "e6",
+        "label": "Fondation de la RFA et de la RDA",
+        "year": 1949
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0065",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Mai 68 en France",
+        "year": 1968
+      },
+      {
+        "id": "e2",
+        "label": "Mitterrand élu président de la République",
+        "year": 1981
+      },
+      {
+        "id": "e3",
+        "label": "Fondation de Saint-Pétersbourg",
+        "year": 1703
+      },
+      {
+        "id": "e4",
+        "label": "Auguste devient empereur romain",
+        "year": -27
+      },
+      {
+        "id": "e5",
+        "label": "Bataille de Marathon",
+        "year": -490
+      },
+      {
+        "id": "e6",
+        "label": "Passage à l'euro fiduciaire",
+        "year": 2002
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0066",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Couronnement de Charlemagne",
+        "year": 800
+      },
+      {
+        "id": "e2",
+        "label": "Youri Gagarine 1er homme dans l'espace",
+        "year": 1961
+      },
+      {
+        "id": "e3",
+        "label": "Marco Polo part pour la Chine",
+        "year": 1271
+      },
+      {
+        "id": "e4",
+        "label": "Défaite de l'Invincible Armada",
+        "year": 1588
+      },
+      {
+        "id": "e5",
+        "label": "Bataille de Hastings",
+        "year": 1066
+      },
+      {
+        "id": "e6",
+        "label": "Appel à la première croisade",
+        "year": 1095
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0067",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Révolution française / prise de la Bastille",
+        "year": 1789
+      },
+      {
+        "id": "e2",
+        "label": "Front populaire en France",
+        "year": 1936
+      },
+      {
+        "id": "e3",
+        "label": "Révolution russe",
+        "year": 1917
+      },
+      {
+        "id": "e4",
+        "label": "Hitler devient chancelier d'Allemagne",
+        "year": 1933
+      },
+      {
+        "id": "e5",
+        "label": "Invention du téléphone (Bell)",
+        "year": 1876
+      },
+      {
+        "id": "e6",
+        "label": "France championne du monde de football",
+        "year": 1998
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0068",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Commune de Paris",
+        "year": 1871
+      },
+      {
+        "id": "e2",
+        "label": "Première ligne de chemin de fer (Stockton-Darlington)",
+        "year": 1825
+      },
+      {
+        "id": "e3",
+        "label": "Fondation de Rome (légende)",
+        "year": -753
+      },
+      {
+        "id": "e4",
+        "label": "Publication de De l'origine des espèces",
+        "year": 1859
+      },
+      {
+        "id": "e5",
+        "label": "Début du règne de Louis XIV",
+        "year": 1643
+      },
+      {
+        "id": "e6",
+        "label": "Invasion de l'Ukraine par la Russie",
+        "year": 2022
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0069",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Création de l'Organisation mondiale du commerce",
+        "year": 1995
+      },
+      {
+        "id": "e2",
+        "label": "Déclaration d'indépendance des États-Unis",
+        "year": 1776
+      },
+      {
+        "id": "e3",
+        "label": "Premiers Jeux Olympiques antiques",
+        "year": -776
+      },
+      {
+        "id": "e4",
+        "label": "Attentats du 11 septembre",
+        "year": 2001
+      },
+      {
+        "id": "e5",
+        "label": "Inauguration de la tour Eiffel",
+        "year": 1889
+      },
+      {
+        "id": "e6",
+        "label": "Brexit (référendum)",
+        "year": 2016
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0070",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Lancement de Spoutnik (1er satellite)",
+        "year": 1957
+      },
+      {
+        "id": "e2",
+        "label": "Crise financière mondiale",
+        "year": 2008
+      },
+      {
+        "id": "e3",
+        "label": "Début de la Première Guerre mondiale",
+        "year": 1914
+      },
+      {
+        "id": "e4",
+        "label": "Crise des missiles de Cuba",
+        "year": 1962
+      },
+      {
+        "id": "e5",
+        "label": "Chute de Constantinople",
+        "year": 1453
+      },
+      {
+        "id": "e6",
+        "label": "Assassinat de Jules César",
+        "year": -44
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0071",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Films marquants — du plus ancien au plus récent.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Citizen Kane",
+        "year": 1941
+      },
+      {
+        "id": "e2",
+        "label": "Le Parrain",
+        "year": 1972
+      },
+      {
+        "id": "e3",
+        "label": "La Guerre des étoiles",
+        "year": 1977
+      },
+      {
+        "id": "e4",
+        "label": "Pulp Fiction",
+        "year": 1994
+      },
+      {
+        "id": "e5",
+        "label": "Matrix",
+        "year": 1999
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0072",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Albums légendaires par année.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Sgt. Pepper's (Beatles)",
+        "year": 1967
+      },
+      {
+        "id": "e2",
+        "label": "Dark Side of the Moon",
+        "year": 1973
+      },
+      {
+        "id": "e3",
+        "label": "Thriller",
+        "year": 1982
+      },
+      {
+        "id": "e4",
+        "label": "Nevermind",
+        "year": 1991
+      },
+      {
+        "id": "e5",
+        "label": "21 (Adele)",
+        "year": 2011
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0073",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Inventions par ordre.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Téléphone",
+        "year": 1876
+      },
+      {
+        "id": "e2",
+        "label": "Ampoule électrique",
+        "year": 1879
+      },
+      {
+        "id": "e3",
+        "label": "Avion (Wright)",
+        "year": 1903
+      },
+      {
+        "id": "e4",
+        "label": "Internet (ARPANET)",
+        "year": 1969
+      },
+      {
+        "id": "e5",
+        "label": "World Wide Web",
+        "year": 1989
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0074",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Découvertes scientifiques.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Héliocentrisme (Copernic)",
+        "year": 1543
+      },
+      {
+        "id": "e2",
+        "label": "Gravitation (Newton)",
+        "year": 1687
+      },
+      {
+        "id": "e3",
+        "label": "Évolution (Darwin)",
+        "year": 1859
+      },
+      {
+        "id": "e4",
+        "label": "Relativité (Einstein)",
+        "year": 1905
+      },
+      {
+        "id": "e5",
+        "label": "Structure ADN",
+        "year": 1953
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0075",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Empires et civilisations.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "République romaine",
+        "year": -509
+      },
+      {
+        "id": "e2",
+        "label": "Unification de la Chine (Qin)",
+        "year": -221
+      },
+      {
+        "id": "e3",
+        "label": "Chute Rome d'Occident",
+        "year": 476
+      },
+      {
+        "id": "e4",
+        "label": "Chute Constantinople",
+        "year": 1453
+      },
+      {
+        "id": "e5",
+        "label": "Fin du Saint-Empire",
+        "year": 1806
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0076",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Explorations majeures.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Marco Polo part",
+        "year": 1271
+      },
+      {
+        "id": "e2",
+        "label": "Colomb découvre l'Amérique",
+        "year": 1492
+      },
+      {
+        "id": "e3",
+        "label": "Vasco de Gama en Inde",
+        "year": 1498
+      },
+      {
+        "id": "e4",
+        "label": "Magellan commence son tour",
+        "year": 1519
+      },
+      {
+        "id": "e5",
+        "label": "Amundsen au pôle Sud",
+        "year": 1911
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0077",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Rois de France célèbres.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Couronnement de Charlemagne",
+        "year": 800
+      },
+      {
+        "id": "e2",
+        "label": "Hugues Capet",
+        "year": 987
+      },
+      {
+        "id": "e3",
+        "label": "Louis IX",
+        "year": 1226
+      },
+      {
+        "id": "e4",
+        "label": "François Ier à Marignan",
+        "year": 1515
+      },
+      {
+        "id": "e5",
+        "label": "Louis XIV à Versailles",
+        "year": 1682
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0078",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Technologies numériques.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Premier micro-processeur",
+        "year": 1971
+      },
+      {
+        "id": "e2",
+        "label": "IBM PC",
+        "year": 1981
+      },
+      {
+        "id": "e3",
+        "label": "Web public",
+        "year": 1991
+      },
+      {
+        "id": "e4",
+        "label": "iPhone",
+        "year": 2007
+      },
+      {
+        "id": "e5",
+        "label": "ChatGPT",
+        "year": 2022
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0079",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Écrivains — naissance.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Dante",
+        "year": 1265
+      },
+      {
+        "id": "e2",
+        "label": "Shakespeare",
+        "year": 1564
+      },
+      {
+        "id": "e3",
+        "label": "Molière",
+        "year": 1622
+      },
+      {
+        "id": "e4",
+        "label": "Victor Hugo",
+        "year": 1802
+      },
+      {
+        "id": "e5",
+        "label": "Proust",
+        "year": 1871
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0080",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Art",
+    "prompt": "Peintres — naissance.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Léonard de Vinci",
+        "year": 1452
+      },
+      {
+        "id": "e2",
+        "label": "Rembrandt",
+        "year": 1606
+      },
+      {
+        "id": "e3",
+        "label": "Van Gogh",
+        "year": 1853
+      },
+      {
+        "id": "e4",
+        "label": "Picasso",
+        "year": 1881
+      },
+      {
+        "id": "e5",
+        "label": "Dalí",
+        "year": 1904
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0081",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Coupes du monde de foot — par an.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Uruguay",
+        "year": 1930
+      },
+      {
+        "id": "e2",
+        "label": "Angleterre",
+        "year": 1966
+      },
+      {
+        "id": "e3",
+        "label": "France",
+        "year": 1998
+      },
+      {
+        "id": "e4",
+        "label": "Allemagne",
+        "year": 2014
+      },
+      {
+        "id": "e5",
+        "label": "Argentine",
+        "year": 2022
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0082",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Événements du XXe siècle.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "WW1 commence",
+        "year": 1914
+      },
+      {
+        "id": "e2",
+        "label": "Krach",
+        "year": 1929
+      },
+      {
+        "id": "e3",
+        "label": "WW2 finit",
+        "year": 1945
+      },
+      {
+        "id": "e4",
+        "label": "Lune",
+        "year": 1969
+      },
+      {
+        "id": "e5",
+        "label": "Mur de Berlin",
+        "year": 1989
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0083",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "JO d'été par ville.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Athènes",
+        "year": 1896
+      },
+      {
+        "id": "e2",
+        "label": "Paris",
+        "year": 1924
+      },
+      {
+        "id": "e3",
+        "label": "Barcelone",
+        "year": 1992
+      },
+      {
+        "id": "e4",
+        "label": "Pékin",
+        "year": 2008
+      },
+      {
+        "id": "e5",
+        "label": "Paris",
+        "year": 2024
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0084",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Naissance de personnalités.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Napoléon",
+        "year": 1769
+      },
+      {
+        "id": "e2",
+        "label": "Darwin",
+        "year": 1809
+      },
+      {
+        "id": "e3",
+        "label": "Einstein",
+        "year": 1879
+      },
+      {
+        "id": "e4",
+        "label": "Martin Luther King",
+        "year": 1929
+      },
+      {
+        "id": "e5",
+        "label": "Steve Jobs",
+        "year": 1955
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0085",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Révolutions.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Indépendance américaine",
+        "year": 1776
+      },
+      {
+        "id": "e2",
+        "label": "Révolution française",
+        "year": 1789
+      },
+      {
+        "id": "e3",
+        "label": "Printemps des peuples",
+        "year": 1848
+      },
+      {
+        "id": "e4",
+        "label": "Révolution russe",
+        "year": 1917
+      },
+      {
+        "id": "e5",
+        "label": "Révolution iranienne",
+        "year": 1979
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0086",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Catastrophes modernes.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Séisme San Francisco",
+        "year": 1906
+      },
+      {
+        "id": "e2",
+        "label": "Titanic",
+        "year": 1912
+      },
+      {
+        "id": "e3",
+        "label": "Tchernobyl",
+        "year": 1986
+      },
+      {
+        "id": "e4",
+        "label": "Tsunami océan Indien",
+        "year": 2004
+      },
+      {
+        "id": "e5",
+        "label": "Fukushima",
+        "year": 2011
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0087",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Pandémies.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Peste noire",
+        "year": 1347
+      },
+      {
+        "id": "e2",
+        "label": "Variole aux Amériques",
+        "year": 1520
+      },
+      {
+        "id": "e3",
+        "label": "Grippe espagnole",
+        "year": 1918
+      },
+      {
+        "id": "e4",
+        "label": "Début du SIDA",
+        "year": 1981
+      },
+      {
+        "id": "e5",
+        "label": "Covid-19",
+        "year": 2020
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0088",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Conquête spatiale.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Spoutnik",
+        "year": 1957
+      },
+      {
+        "id": "e2",
+        "label": "Gagarine",
+        "year": 1961
+      },
+      {
+        "id": "e3",
+        "label": "Apollo 11",
+        "year": 1969
+      },
+      {
+        "id": "e4",
+        "label": "Navette spatiale",
+        "year": 1981
+      },
+      {
+        "id": "e5",
+        "label": "Début ISS",
+        "year": 1998
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0089",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Musique pop.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Naissance de Michael Jackson",
+        "year": 1958
+      },
+      {
+        "id": "e2",
+        "label": "Beatles en Amérique",
+        "year": 1964
+      },
+      {
+        "id": "e3",
+        "label": "Saturday Night Fever",
+        "year": 1977
+      },
+      {
+        "id": "e4",
+        "label": "U2 – The Joshua Tree",
+        "year": 1987
+      },
+      {
+        "id": "e5",
+        "label": "Lady Gaga – The Fame",
+        "year": 2008
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0090",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Prix Nobel célèbres.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Marie Curie (physique)",
+        "year": 1903
+      },
+      {
+        "id": "e2",
+        "label": "Einstein (physique)",
+        "year": 1921
+      },
+      {
+        "id": "e3",
+        "label": "Hemingway (littérature)",
+        "year": 1954
+      },
+      {
+        "id": "e4",
+        "label": "Mandela (paix)",
+        "year": 1993
+      },
+      {
+        "id": "e5",
+        "label": "Malala Yousafzai (paix)",
+        "year": 2014
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0091",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Géographie : indépendances.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "USA",
+        "year": 1776
+      },
+      {
+        "id": "e2",
+        "label": "Haïti",
+        "year": 1804
+      },
+      {
+        "id": "e3",
+        "label": "Inde",
+        "year": 1947
+      },
+      {
+        "id": "e4",
+        "label": "Plusieurs pays africains",
+        "year": 1960
+      },
+      {
+        "id": "e5",
+        "label": "Pays baltes",
+        "year": 1991
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0092",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Cinéma français.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Premier film des Lumière",
+        "year": 1895
+      },
+      {
+        "id": "e2",
+        "label": "À bout de souffle",
+        "year": 1959
+      },
+      {
+        "id": "e3",
+        "label": "La Grande Vadrouille",
+        "year": 1966
+      },
+      {
+        "id": "e4",
+        "label": "Amélie Poulain",
+        "year": 2001
+      },
+      {
+        "id": "e5",
+        "label": "Intouchables",
+        "year": 2011
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0093",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Musique classique.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Naissance de Bach",
+        "year": 1685
+      },
+      {
+        "id": "e2",
+        "label": "Naissance de Mozart",
+        "year": 1756
+      },
+      {
+        "id": "e3",
+        "label": "Naissance de Beethoven",
+        "year": 1770
+      },
+      {
+        "id": "e4",
+        "label": "Naissance de Chopin",
+        "year": 1810
+      },
+      {
+        "id": "e5",
+        "label": "Naissance de Tchaïkovski",
+        "year": 1840
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0094",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Traités importants.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Westphalie",
+        "year": 1648
+      },
+      {
+        "id": "e2",
+        "label": "Vienne",
+        "year": 1815
+      },
+      {
+        "id": "e3",
+        "label": "Versailles",
+        "year": 1919
+      },
+      {
+        "id": "e4",
+        "label": "Rome (CEE)",
+        "year": 1957
+      },
+      {
+        "id": "e5",
+        "label": "Maastricht",
+        "year": 1992
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0095",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Constructions monumentales.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Pyramide de Khéops",
+        "year": -2560
+      },
+      {
+        "id": "e2",
+        "label": "Colisée",
+        "year": 80
+      },
+      {
+        "id": "e3",
+        "label": "Notre-Dame finie",
+        "year": 1345
+      },
+      {
+        "id": "e4",
+        "label": "Tour Eiffel",
+        "year": 1889
+      },
+      {
+        "id": "e5",
+        "label": "Burj Khalifa",
+        "year": 2010
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0096",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Philosophes — naissance.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Socrate",
+        "year": -470
+      },
+      {
+        "id": "e2",
+        "label": "Platon",
+        "year": -427
+      },
+      {
+        "id": "e3",
+        "label": "Aristote",
+        "year": -384
+      },
+      {
+        "id": "e4",
+        "label": "Descartes",
+        "year": 1596
+      },
+      {
+        "id": "e5",
+        "label": "Nietzsche",
+        "year": 1844
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0097",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Présidents français.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "De Gaulle",
+        "year": 1959
+      },
+      {
+        "id": "e2",
+        "label": "Giscard d'Estaing",
+        "year": 1974
+      },
+      {
+        "id": "e3",
+        "label": "Mitterrand",
+        "year": 1981
+      },
+      {
+        "id": "e4",
+        "label": "Sarkozy",
+        "year": 2007
+      },
+      {
+        "id": "e5",
+        "label": "Macron",
+        "year": 2017
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0098",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Jeux vidéo emblématiques.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Pong",
+        "year": 1972
+      },
+      {
+        "id": "e2",
+        "label": "Super Mario Bros",
+        "year": 1985
+      },
+      {
+        "id": "e3",
+        "label": "PlayStation",
+        "year": 1994
+      },
+      {
+        "id": "e4",
+        "label": "Wii",
+        "year": 2006
+      },
+      {
+        "id": "e5",
+        "label": "Nintendo Switch",
+        "year": 2017
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0099",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Séries mondiales.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "La Quatrième Dimension",
+        "year": 1959
+      },
+      {
+        "id": "e2",
+        "label": "Les Sopranos",
+        "year": 1999
+      },
+      {
+        "id": "e3",
+        "label": "Breaking Bad",
+        "year": 2008
+      },
+      {
+        "id": "e4",
+        "label": "Game of Thrones",
+        "year": 2011
+      },
+      {
+        "id": "e5",
+        "label": "Stranger Things",
+        "year": 2016
+      }
+    ],
+    "source": "Wikipedia"
+  },
+  {
+    "id": "ch-wp-0100",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Prix Goncourt.",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Premier Goncourt",
+        "year": 1903
+      },
+      {
+        "id": "e2",
+        "label": "Malraux – La Condition humaine",
+        "year": 1933
+      },
+      {
+        "id": "e3",
+        "label": "Duras – L'Amant",
+        "year": 1984
+      },
+      {
+        "id": "e4",
+        "label": "Littell – Les Bienveillantes",
+        "year": 2006
+      },
+      {
+        "id": "e5",
+        "label": "Sarr",
+        "year": 2022
+      }
+    ],
+    "source": "Wikipedia"
+  }
+]

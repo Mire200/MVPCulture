@@ -1,0 +1,15 @@
+node_modules
+**/node_modules
+.next
+apps/web/.next
+apps/*/dist
+.env
+.env.local
+.git
+.github
+docs
+*.md
+.DS_Store
+.vscode
+.cursor
+.claude
