@@ -29,8 +29,9 @@ COPY apps/realtime apps/realtime
 
 RUN pnpm --filter @mvpc/realtime build
 
-# Bundle autonome (node_modules prod + sources + deps workspace inlinées)
-RUN pnpm --filter @mvpc/realtime deploy --prod /bundle
+# Bundle autonome (node_modules prod + sources + deps workspace inlinées).
+# pnpm v10+ : deploy sur workspace non « injecté » → --legacy (voir ERR_PNPM_DEPLOY_NONINJECTED_WORKSPACE).
+RUN pnpm --filter @mvpc/realtime deploy --prod --legacy /bundle
 
 # ---------- runner ----------
 FROM node:20-alpine AS runner
