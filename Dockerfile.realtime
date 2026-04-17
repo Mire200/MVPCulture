@@ -11,8 +11,8 @@ RUN corepack enable
 FROM base AS builder
 WORKDIR /app
 
-# Copie des manifestes pour cache install
-COPY pnpm-lock.yaml pnpm-workspace.yaml package.json tsconfig.base.json ./
+# Copie des manifestes pour cache install (incl. .npmrc → force-legacy-deploy pour pnpm deploy)
+COPY pnpm-lock.yaml pnpm-workspace.yaml package.json tsconfig.base.json .npmrc ./
 COPY packages/shared/package.json packages/shared/
 COPY packages/content/package.json packages/content/
 COPY packages/db/package.json packages/db/
