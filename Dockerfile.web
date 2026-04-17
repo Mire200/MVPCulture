@@ -31,7 +31,7 @@ COPY packages/shared packages/shared
 COPY packages/content packages/content
 COPY apps/web apps/web
 
-RUN pnpm --filter @mvpc/web build
+RUN pnpm --filter @mvpc/shared build && pnpm --filter @mvpc/content build && pnpm --filter @mvpc/web build
 
 # ---------- runner : sortie standalone Next ----------
 FROM node:20-alpine AS runner

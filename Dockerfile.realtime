@@ -27,7 +27,8 @@ COPY packages/shared packages/shared
 COPY packages/content packages/content
 COPY apps/realtime apps/realtime
 
-RUN pnpm --filter @mvpc/realtime build
+# Workspace packages : exports point vers dist/*.js en prod (Node ne charge pas le .ts).
+RUN pnpm --filter @mvpc/shared build && pnpm --filter @mvpc/content build && pnpm --filter @mvpc/realtime build
 
 # Bundle autonome (node_modules prod + sources + deps workspace inlinées).
 # pnpm v10+ : deploy sur workspace non « injecté » → --legacy (voir ERR_PNPM_DEPLOY_NONINJECTED_WORKSPACE).
