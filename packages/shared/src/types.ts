@@ -9,6 +9,7 @@ export const GameModeIdSchema = z.enum([
   'speed-elim',
   'map',
   'chronology',
+  'guess-who',
 ]);
 export type GameModeId = z.infer<typeof GameModeIdSchema>;
 
@@ -102,6 +103,11 @@ export const ChronologyQuestionSchema = BaseQuestionSchema.extend({
 });
 export type ChronologyQuestion = z.infer<typeof ChronologyQuestionSchema>;
 
+export const GuessWhoQuestionSchema = BaseQuestionSchema.extend({
+  mode: z.literal('guess-who'),
+});
+export type GuessWhoQuestion = z.infer<typeof GuessWhoQuestionSchema>;
+
 export const QuestionSchema = z.discriminatedUnion('mode', [
   ClassicQuestionSchema,
   EstimationQuestionSchema,
@@ -110,6 +116,7 @@ export const QuestionSchema = z.discriminatedUnion('mode', [
   SpeedElimQuestionSchema,
   MapQuestionSchema,
   ChronologyQuestionSchema,
+  GuessWhoQuestionSchema,
 ]);
 export type Question = z.infer<typeof QuestionSchema>;
 
@@ -143,6 +150,12 @@ export interface RoundStateBase {
   currentPlayerId?: string;
   hpPhase?: 'bid' | 'answer';
   hpProgress?: Record<string, { bid?: number; count: number; done: boolean }>;
+  gwPhase?: 'select' | 'play';
+  gwSecrets?: Record<string, boolean>;
+  gwEliminated?: string[];
+  gwRevealed?: Record<string, string>;
+  gwCurrentGrid?: string[];
+  gwWinnerId?: string;
 }
 
 export interface PublicQuestion {
@@ -204,6 +217,41 @@ export interface RoundScoring {
   deltas: Record<string, number>;
   totals: Record<string, number>;
   officialAnswer: string;
+}
+
+/** Palette de stylos du lobby — une couleur stable par joueur (ordre d’arrivée). */
+export const LOBBY_PEN_PALETTE: readonly string[] = [
+  '#22d3ee',
+  '#a855f7',
+  '#a3e635',
+  '#f43f5e',
+  '#fbbf24',
+  '#ec4899',
+  '#3b82f6',
+  '#10b981',
+  '#f97316',
+  '#e879f9',
+  '#14b8a6',
+  '#eab308',
+];
+
+/** Couleur de stylo affichée / serveur pour un joueur (tri par `joinedAt`). */
+export function lobbyPenColorForPlayer(players: Player[], playerId: string | null): string {
+  if (!playerId || players.length === 0) return LOBBY_PEN_PALETTE[0]!;
+  const sorted = [...players].sort((a, b) => a.joinedAt - b.joinedAt);
+  const idx = sorted.findIndex((p) => p.id === playerId);
+  const i = idx >= 0 ? idx : 0;
+  return LOBBY_PEN_PALETTE[i % LOBBY_PEN_PALETTE.length]!;
+}
+
+/** Trait de dessin du lobby (coordonnées normalisées 0–1 dans le cadre du canevas). */
+export interface LobbyDrawStroke {
+  id: string;
+  playerId: string;
+  color: string;
+  /** Épaisseur relative (fraction de la plus petite dimension du canevas). */
+  widthNorm: number;
+  points: [number, number][];
 }
 
 export interface RoomSnapshot {

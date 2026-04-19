@@ -55,10 +55,23 @@ export interface HotPotatoState {
   usedByPlayer: Record<string, Set<string>>;
 }
 
+export interface GuessWhoState {
+  sub: 'select' | 'play';
+  turnOrder: string[];
+  currentTargetIndex: number;
+  secrets: Map<string, string>;
+  grids: Map<string, string[]>;
+  masks: Map<string, Set<string>>;
+  eliminated: Set<string>;
+  revealed: Map<string, string>;
+  winnerId?: string;
+}
+
 export type CollectPhase =
   | { kind: 'parallel'; answers: Map<string, CollectedAnswer>; endsAt: number }
   | { kind: 'turns'; turn: TurnState }
-  | { kind: 'hot-potato'; hp: HotPotatoState };
+  | { kind: 'hot-potato'; hp: HotPotatoState }
+  | { kind: 'guess-who'; gw: GuessWhoState };
 
 export interface RoundState {
   roundIndex: number;

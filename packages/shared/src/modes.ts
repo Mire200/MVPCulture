@@ -74,6 +74,16 @@ export const MODE_DESCRIPTORS: Record<GameModeId, ModeDescriptor> = {
     usesSpeed: false,
     inputKind: 'drag-order',
   },
+  'guess-who': {
+    id: 'guess-who',
+    label: 'Qui est-ce ?',
+    shortLabel: 'Qui est-ce',
+    description:
+      'Chaque joueur choisit un avatar secret. Tour par tour, on devine les avatars à l’oral et on masque la grille.',
+    implemented: true,
+    usesSpeed: false,
+    inputKind: 'text',
+  },
 };
 
 export const ALL_MODES: GameModeId[] = [
@@ -84,6 +94,7 @@ export const ALL_MODES: GameModeId[] = [
   'speed-elim',
   'map',
   'chronology',
+  'guess-who',
 ];
 
 export const MVP_MODES: GameModeId[] = ['classic', 'estimation', 'list-turns'];

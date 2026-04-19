@@ -1,10 +1,13 @@
 import http from 'node:http';
-import { Server } from 'socket.io';
+import { Server, type Socket } from 'socket.io';
 import {
   AnswerPayloadSchema,
   CreateRoomPayloadSchema,
   ERROR_CODES,
+  GuessWhoPickSecretPayloadSchema,
+  GuessWhoToggleMaskPayloadSchema,
   JoinRoomPayloadSchema,
+  LobbyDrawStrokePayloadSchema,
   StartGamePayloadSchema,
   ValidatePayloadSchema,
   type ClientToServerEvents,
@@ -15,6 +18,7 @@ import { RoomManager } from './rooms/RoomManager.js';
 import { Room } from './rooms/Room.js';
 import { signHostToken, verifyHostToken } from './util/hostToken.js';
 import { hitRateLimit } from './util/rateLimit.js';
+import { Radio } from './radio/Radio.js';
 
 type SockData = { roomCode?: string; playerId?: string };
 
@@ -38,8 +42,29 @@ const io = new Server<ClientToServerEvents, ServerToClientEvents, Record<string,
   },
 );
 
+const radio = new Radio();
+radio.start();
+radio.onChange((state) => {
+  io.emit('radio:state', state);
+});
+
 function broadcastRoom(room: Room) {
   io.to(room.code).emit('room:state', room.snapshot());
+}
+
+function emitGwMasksToPlayer(room: Room, playerId: string) {
+  if (!room.round || room.round.mode !== 'guess-who') return;
+  const socketId = room.socketsByPlayer.get(playerId);
+  if (!socketId) return;
+  const byTarget = room.gwMasksSnapshot(playerId);
+  io.to(socketId).emit('guessWho:masks', { byTarget });
+}
+
+function emitLobbyDrawingSync(
+  socket: Socket<ClientToServerEvents, ServerToClientEvents, Record<string, never>, SockData>,
+  room: Room,
+) {
+  socket.emit('lobby:drawing:sync', { strokes: room.lobbyDrawing });
 }
 
 function emitError(socket: ReturnType<Server['sockets']['sockets']['get']> | any, code: string, message: string) {
@@ -122,6 +147,7 @@ io.on('connection', (socket) => {
         snapshot: room.snapshot(),
       },
     });
+    emitLobbyDrawingSync(socket, room);
     broadcastRoom(room);
   });
 
@@ -161,6 +187,7 @@ io.on('connection', (socket) => {
       ok: true,
       data: { code: room.code, playerId: player.id, snapshot: room.snapshot() },
     });
+    if (room.phase === 'lobby') emitLobbyDrawingSync(socket, room);
     io.to(room.code).emit('room:player_joined', player);
     broadcastRoom(room);
   });
@@ -184,7 +211,11 @@ io.on('connection', (socket) => {
       ok: true,
       data: { code: room.code, playerId: payload.playerId, hostToken, snapshot: room.snapshot() },
     });
+    if (room.phase === 'lobby') emitLobbyDrawingSync(socket, room);
     broadcastRoom(room);
+    if (room.round?.mode === 'guess-who') {
+      emitGwMasksToPlayer(room, payload.playerId);
+    }
   });
 
   socket.on('room:leave', () => {
@@ -212,6 +243,7 @@ io.on('connection', (socket) => {
         message: 'Partie déjà commencée',
       });
     }
+    io.to(room.code).emit('lobby:draw:cleared');
     ack({ ok: true, data: null });
     io.to(room.code).emit('round:started', room.snapshot());
     broadcastRoom(room);
@@ -340,9 +372,189 @@ io.on('connection', (socket) => {
     room.roundIndex = -1;
     room.round = undefined;
     for (const p of room.players.values()) p.score = 0;
+    room.clearLobbyDrawing();
+    io.to(room.code).emit('lobby:draw:cleared');
     broadcastRoom(room);
     ack({ ok: true, data: null });
   });
+
+  socket.on('guessWho:pickSecret', (payload, ack) => {
+    const parsed = GuessWhoPickSecretPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    try {
+      room.gwPickSecret(playerId, parsed.data.avatarSrc);
+      ack({ ok: true, data: null });
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('guessWho:toggleMask', (payload, ack) => {
+    const parsed = GuessWhoToggleMaskPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`gwmask:${playerId}`, 120, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de masques' });
+    }
+    try {
+      room.gwToggleMask(
+        playerId,
+        parsed.data.targetId,
+        parsed.data.avatarSrc,
+        parsed.data.masked,
+      );
+      ack({ ok: true, data: null });
+      emitGwMasksToPlayer(room, playerId);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('guessWho:nextTurn', (...args: unknown[]) => {
+    const ack = (args.find((a) => typeof a === 'function') ?? (() => {})) as (
+      res: unknown,
+    ) => void;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    try {
+      room.gwNextTurn(playerId);
+      ack({ ok: true, data: null });
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('guessWho:selfEliminate', (...args: unknown[]) => {
+    const ack = (args.find((a) => typeof a === 'function') ?? (() => {})) as (
+      res: unknown,
+    ) => void;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    try {
+      const { revealedAvatar, completed } = room.gwSelfEliminate(playerId);
+      io.to(room.code).emit('guessWho:playerEliminated', {
+        playerId,
+        revealedAvatar,
+      });
+      if (completed) {
+        room.goToReveal();
+        if (room.round?.reveal) io.to(room.code).emit('round:reveal', room.round.reveal);
+      }
+      broadcastRoom(room);
+      ack({ ok: true, data: null });
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('lobby:draw:stroke', (payload, ack) => {
+    const parsed = LobbyDrawStrokePayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (room.phase !== 'lobby') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Pas en attente' });
+    }
+    /* Segments 2 points en continu : fenêtre 1s (≈90/s max par joueur). */
+    if (hitRateLimit(`lobbydraw:${playerId}`, 90, 1000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de traits' });
+    }
+    const stroke = room.appendLobbyStroke(playerId, parsed.data);
+    io.to(room.code).emit('lobby:draw:stroke', stroke);
+    ack({ ok: true, data: null });
+  });
+
+  socket.on('lobby:draw:clear', (...args: unknown[]) => {
+    const ack = args.find((a) => typeof a === 'function') as ((res: unknown) => void) | undefined;
+    if (!ack) return;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (room.phase !== 'lobby') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Pas en attente' });
+    }
+    if (room.hostId !== playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_HOST, message: 'Seul l’hôte peut effacer' });
+    }
+    room.clearLobbyDrawing();
+    io.to(room.code).emit('lobby:draw:cleared');
+    ack({ ok: true, data: null });
+  });
+
+  socket.on('lobby:drawing:request', (...args: unknown[]) => {
+    const ack = args.find((a) => typeof a === 'function') as ((res: unknown) => void) | undefined;
+    if (!ack) return;
+    const { room } = socketRoom(socket);
+    if (!room) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    ack({ ok: true, data: { strokes: room.lobbyDrawing } });
+  });
+
+  socket.on('radio:sync', (...args: unknown[]) => {
+    const ack = args[args.length - 1] as (res: unknown) => void;
+    if (typeof ack !== 'function') return;
+    ack({ ok: true, data: radio.getState() });
+  });
+
+  socket.on('radio:skip', (...args: unknown[]) => {
+    const ack = args[args.length - 1] as (res: unknown) => void;
+    if (typeof ack !== 'function') return;
+    if (hitRateLimit(`radio:skip:${socket.id}`, 3, 10_000)) {
+      return ack({
+        ok: false,
+        code: ERROR_CODES.RATE_LIMITED,
+        message: 'Doucement sur le zapping',
+      });
+    }
+    const state = radio.skip();
+    ack({ ok: true, data: state });
+  });
+
+  // Push l'état courant aux nouveaux arrivants pour qu'ils se synchronisent.
+  socket.emit('radio:state', radio.getState());
 
   socket.on('disconnect', () => {
     leave(socket);

@@ -1,17 +1,27 @@
 import { nanoid } from 'nanoid';
 import {
+  AVATAR_POOL,
   type GameConfig,
   type HostValidation,
+  type LobbyDrawStroke,
   type Player,
   type Question,
   type RoomSnapshot,
   type RoomPhase,
   MAX_PLAYERS_PER_ROOM,
+  lobbyPenColorForPlayer,
 } from '@mvpc/shared';
 import type { RoundEvent, RoundState } from '../engine/types.js';
 import { getMode } from '../engine/registry.js';
 import { buildRoundPlaylist } from '../engine/questionBank.js';
 import { listTurnsTick, setRoundPlayers } from '../engine/modes/listTurns.js';
+import {
+  buildGrid,
+  gwAdvanceTurn,
+  gwCurrentTargetId,
+  gwGetMasks,
+  gwMasksForPlayer,
+} from '../engine/modes/guessWho.js';
 
 const ROOM_CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 
@@ -44,6 +54,9 @@ export class Room {
   playlist: Question[] = [];
   roundIndex = -1;
   round?: RoundState;
+
+  /** Dessin collaboratif du lobby (effacé au lancement de partie). */
+  lobbyDrawing: LobbyDrawStroke[] = [];
 
   // ID de la socket associée au joueur hôte (pour reconnexion).
   constructor(hostId: string, code?: string) {
@@ -100,6 +113,7 @@ export class Room {
     if (this.phase !== 'lobby' && this.phase !== 'match_final') {
       throw new Error('ROOM_ALREADY_STARTED');
     }
+    this.lobbyDrawing = [];
     this.config = { ...DEFAULT_CONFIG, ...this.config, ...(partial ?? {}) };
     this.playlist = buildRoundPlaylist(this.config);
     this.roundIndex = -1;
@@ -214,6 +228,12 @@ export class Room {
     let currentPlayerId: string | undefined;
     let hpPhase: 'bid' | 'answer' | undefined;
     let hpProgress: Record<string, { bid?: number; count: number; done: boolean }> | undefined;
+    let gwPhase: 'select' | 'play' | undefined;
+    let gwSecrets: Record<string, boolean> | undefined;
+    let gwEliminated: string[] | undefined;
+    let gwRevealed: Record<string, string> | undefined;
+    let gwCurrentGrid: string[] | undefined;
+    let gwWinnerId: string | undefined;
     if (r.collect.kind === 'parallel') {
       endsAt = r.collect.endsAt;
     } else if (r.collect.kind === 'turns') {
@@ -226,6 +246,20 @@ export class Room {
       for (const [pid, s] of Object.entries(r.collect.hp.players)) {
         hpProgress[pid] = { bid: s.bid, count: s.items.length, done: s.done };
       }
+    } else if (r.collect.kind === 'guess-who') {
+      const gw = r.collect.gw;
+      gwPhase = gw.sub;
+      currentPlayerId = gwCurrentTargetId(gw);
+      gwSecrets = {};
+      for (const p of this.allPlayers()) {
+        gwSecrets[p.id] = gw.secrets.has(p.id);
+      }
+      gwEliminated = [...gw.eliminated];
+      gwRevealed = Object.fromEntries(gw.revealed.entries());
+      if (currentPlayerId) {
+        gwCurrentGrid = gw.grids.get(currentPlayerId);
+      }
+      gwWinnerId = gw.winnerId;
     }
     return {
       roundIndex: r.roundIndex,
@@ -236,7 +270,116 @@ export class Room {
       currentPlayerId,
       hpPhase,
       hpProgress,
+      gwPhase,
+      gwSecrets,
+      gwEliminated,
+      gwRevealed,
+      gwCurrentGrid,
+      gwWinnerId,
     };
+  }
+
+  gwPickSecret(playerId: string, avatarSrc: string): void {
+    if (!this.round) throw new Error('PHASE_MISMATCH');
+    if (this.phase !== 'round_collect') throw new Error('PHASE_MISMATCH');
+    if (this.round.collect.kind !== 'guess-who') throw new Error('PHASE_MISMATCH');
+    const gw = this.round.collect.gw;
+    if (gw.sub !== 'select') throw new Error('PHASE_MISMATCH');
+    if (!AVATAR_POOL.includes(avatarSrc)) throw new Error('INVALID_PAYLOAD');
+    if (!this.players.has(playerId)) throw new Error('NOT_IN_ROOM');
+    gw.secrets.set(playerId, avatarSrc);
+    gw.grids.set(playerId, buildGrid(avatarSrc));
+    const everyonePicked = this.allPlayers().every((p) => gw.secrets.has(p.id));
+    if (everyonePicked && this.allPlayers().length >= 2) {
+      gw.sub = 'play';
+      const firstAlive = gw.turnOrder.findIndex((id) => !gw.eliminated.has(id));
+      gw.currentTargetIndex = Math.max(0, firstAlive);
+    }
+  }
+
+  gwToggleMask(
+    maskerId: string,
+    targetId: string,
+    avatarSrc: string,
+    masked: boolean,
+  ): void {
+    if (!this.round) throw new Error('PHASE_MISMATCH');
+    if (this.phase !== 'round_collect') throw new Error('PHASE_MISMATCH');
+    if (this.round.collect.kind !== 'guess-who') throw new Error('PHASE_MISMATCH');
+    const gw = this.round.collect.gw;
+    if (gw.sub !== 'play') throw new Error('PHASE_MISMATCH');
+    if (!this.players.has(maskerId)) throw new Error('NOT_IN_ROOM');
+    const grid = gw.grids.get(targetId);
+    if (!grid || !grid.includes(avatarSrc)) throw new Error('INVALID_PAYLOAD');
+    const set = gwGetMasks(gw, maskerId, targetId);
+    if (masked) set.add(avatarSrc);
+    else set.delete(avatarSrc);
+  }
+
+  gwMasksSnapshot(playerId: string): Record<string, string[]> {
+    if (!this.round) return {};
+    if (this.round.collect.kind !== 'guess-who') return {};
+    return gwMasksForPlayer(this.round.collect.gw, playerId);
+  }
+
+  gwNextTurn(callerId: string): void {
+    if (!this.round) throw new Error('PHASE_MISMATCH');
+    if (this.phase !== 'round_collect') throw new Error('PHASE_MISMATCH');
+    if (this.round.collect.kind !== 'guess-who') throw new Error('PHASE_MISMATCH');
+    const gw = this.round.collect.gw;
+    if (gw.sub !== 'play') throw new Error('PHASE_MISMATCH');
+    const currentId = gwCurrentTargetId(gw);
+    if (currentId !== callerId) throw new Error('NOT_YOUR_TURN');
+    gwAdvanceTurn(gw);
+  }
+
+  gwSelfEliminate(callerId: string): {
+    revealedAvatar: string;
+    completed: boolean;
+  } {
+    if (!this.round) throw new Error('PHASE_MISMATCH');
+    if (this.phase !== 'round_collect') throw new Error('PHASE_MISMATCH');
+    if (this.round.collect.kind !== 'guess-who') throw new Error('PHASE_MISMATCH');
+    const gw = this.round.collect.gw;
+    if (gw.sub !== 'play') throw new Error('PHASE_MISMATCH');
+    const currentId = gwCurrentTargetId(gw);
+    if (currentId !== callerId) throw new Error('NOT_YOUR_TURN');
+    const secret = gw.secrets.get(callerId);
+    if (!secret) throw new Error('INVALID_PAYLOAD');
+    gw.eliminated.add(callerId);
+    gw.revealed.set(callerId, secret);
+    const aliveCount = gw.turnOrder.filter((id) => !gw.eliminated.has(id)).length;
+    let completed = false;
+    if (aliveCount <= 1) {
+      const winner = gw.turnOrder.find((id) => !gw.eliminated.has(id));
+      if (winner) gw.winnerId = winner;
+      completed = true;
+    } else {
+      gwAdvanceTurn(gw);
+    }
+    return { revealedAvatar: secret, completed };
+  }
+
+  private static readonly MAX_LOBBY_STROKES = 900;
+
+  appendLobbyStroke(playerId: string, data: Omit<LobbyDrawStroke, 'id' | 'playerId' | 'color'>): LobbyDrawStroke {
+    const color = lobbyPenColorForPlayer(this.allPlayers(), playerId);
+    const stroke: LobbyDrawStroke = {
+      id: nanoid(10),
+      playerId,
+      color,
+      widthNorm: data.widthNorm,
+      points: data.points,
+    };
+    this.lobbyDrawing.push(stroke);
+    while (this.lobbyDrawing.length > Room.MAX_LOBBY_STROKES) {
+      this.lobbyDrawing.shift();
+    }
+    return stroke;
+  }
+
+  clearLobbyDrawing(): void {
+    this.lobbyDrawing = [];
   }
 
   snapshot(): RoomSnapshot {

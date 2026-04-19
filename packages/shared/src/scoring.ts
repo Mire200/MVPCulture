@@ -19,6 +19,7 @@ export const MODE_USES_SPEED: Record<GameModeId, boolean> = {
   'speed-elim': true,
   map: false,
   chronology: false,
+  'guess-who': false,
 };
 
 export function classicScore(difficulty: Difficulty, correct: boolean): number {

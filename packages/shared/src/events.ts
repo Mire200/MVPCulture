@@ -3,11 +3,13 @@ import {
   AvatarSchema,
   GameConfigSchema,
   type HostValidation,
+  type LobbyDrawStroke,
   type Player,
   type RoomSnapshot,
   type RoundReveal,
   type RoundScoring,
 } from './types.js';
+import type { RadioStatePayload } from './radio.js';
 
 export const CreateRoomPayloadSchema = z.object({
   nickname: z.string().trim().min(1).max(20),
@@ -52,6 +54,27 @@ export const ValidatePayloadSchema = z.object({
 });
 export type ValidatePayload = z.infer<typeof ValidatePayloadSchema>;
 
+export const GuessWhoPickSecretPayloadSchema = z.object({
+  avatarSrc: z.string().min(1).max(200),
+});
+export type GuessWhoPickSecretPayload = z.infer<typeof GuessWhoPickSecretPayloadSchema>;
+
+export const GuessWhoToggleMaskPayloadSchema = z.object({
+  targetId: z.string().min(1).max(50),
+  avatarSrc: z.string().min(1).max(200),
+  masked: z.boolean(),
+});
+export type GuessWhoToggleMaskPayload = z.infer<typeof GuessWhoToggleMaskPayloadSchema>;
+
+export const LobbyDrawStrokePayloadSchema = z.object({
+  widthNorm: z.number().min(0.004).max(0.12),
+  points: z
+    .array(z.tuple([z.number().min(0).max(1), z.number().min(0).max(1)]))
+    .min(2)
+    .max(6000),
+});
+export type LobbyDrawStrokePayload = z.infer<typeof LobbyDrawStrokePayloadSchema>;
+
 export type ClientToServerEvents = {
   'room:create': (payload: CreateRoomPayload, ack: (res: AckResult<CreateRoomResult>) => void) => void;
   'room:join': (payload: JoinRoomPayload, ack: (res: AckResult<JoinRoomResult>) => void) => void;
@@ -65,6 +88,21 @@ export type ClientToServerEvents = {
   'round:validate': (payload: ValidatePayload, ack: (res: AckResult<null>) => void) => void;
   'round:advance': (ack: (res: AckResult<null>) => void) => void;
   'match:rematch': (ack: (res: AckResult<null>) => void) => void;
+  'guessWho:pickSecret': (
+    payload: GuessWhoPickSecretPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'guessWho:toggleMask': (
+    payload: GuessWhoToggleMaskPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'guessWho:nextTurn': (ack: (res: AckResult<null>) => void) => void;
+  'guessWho:selfEliminate': (ack: (res: AckResult<null>) => void) => void;
+  'radio:sync': (ack: (res: AckResult<RadioStatePayload>) => void) => void;
+  'radio:skip': (ack: (res: AckResult<RadioStatePayload>) => void) => void;
+  'lobby:draw:stroke': (payload: LobbyDrawStrokePayload, ack: (res: AckResult<null>) => void) => void;
+  'lobby:draw:clear': (ack: (res: AckResult<null>) => void) => void;
+  'lobby:drawing:request': (ack: (res: AckResult<{ strokes: LobbyDrawStroke[] }>) => void) => void;
 };
 
 export type ServerToClientEvents = {
@@ -81,6 +119,12 @@ export type ServerToClientEvents = {
   'round:scored': (scoring: RoundScoring) => void;
   'match:final': (payload: { standings: Player[] }) => void;
   'error': (payload: { code: string; message: string }) => void;
+  'guessWho:masks': (payload: { byTarget: Record<string, string[]> }) => void;
+  'guessWho:playerEliminated': (payload: { playerId: string; revealedAvatar: string }) => void;
+  'radio:state': (state: RadioStatePayload) => void;
+  'lobby:draw:stroke': (stroke: LobbyDrawStroke) => void;
+  'lobby:draw:cleared': () => void;
+  'lobby:drawing:sync': (payload: { strokes: LobbyDrawStroke[] }) => void;
 };
 
 export type AckResult<T> = { ok: true; data: T } | { ok: false; code: string; message: string };

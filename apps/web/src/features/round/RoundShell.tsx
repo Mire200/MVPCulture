@@ -2,7 +2,7 @@
 import { useGameStore } from '@/store/gameStore';
 import { AvatarBadge } from '@/components/AvatarPicker';
 import { motion } from 'framer-motion';
-import { Flame, Sparkles, Zap, MapPin, Hourglass, Dices } from 'lucide-react';
+import { Flame, Sparkles, Zap, MapPin, Hourglass, Dices, HelpCircle } from 'lucide-react';
 import { Timer } from '@/components/Timer';
 
 type ChipVariant = 'cyan' | 'magenta' | 'violet' | 'lime' | 'amber';
@@ -18,6 +18,7 @@ const MODE_META: Record<
   'speed-elim': { label: 'Rapidité', chip: 'cyan', icon: <Zap className="w-3.5 h-3.5" /> },
   map: { label: 'Carte', chip: 'cyan', icon: <MapPin className="w-3.5 h-3.5" /> },
   chronology: { label: 'Chronologie', chip: 'violet', icon: <Hourglass className="w-3.5 h-3.5" /> },
+  'guess-who': { label: 'Qui est-ce ?', chip: 'amber', icon: <HelpCircle className="w-3.5 h-3.5" /> },
 };
 
 export function RoundShell({ children }: { children: React.ReactNode }) {

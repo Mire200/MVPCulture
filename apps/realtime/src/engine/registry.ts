@@ -7,6 +7,7 @@ import { hotPotatoMode } from './modes/hotPotato.js';
 import { speedElimMode } from './modes/speedElim.js';
 import { mapMode } from './modes/mapMode.js';
 import { chronologyMode } from './modes/chronology.js';
+import { guessWhoMode } from './modes/guessWho.js';
 
 export const MODE_REGISTRY: Partial<Record<GameModeId, GameMode>> = {
   classic: classicMode,
@@ -16,6 +17,7 @@ export const MODE_REGISTRY: Partial<Record<GameModeId, GameMode>> = {
   'speed-elim': speedElimMode,
   map: mapMode,
   chronology: chronologyMode,
+  'guess-who': guessWhoMode,
 };
 
 export function getMode(id: GameModeId): GameMode {

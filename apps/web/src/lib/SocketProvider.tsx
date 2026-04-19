@@ -18,6 +18,10 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
   const pushElim = useGameStore((s) => s.pushElimination);
   const setHostValidations = useGameStore((s) => s.setHostValidations);
   const setError = useGameStore((s) => s.setError);
+  const setGwMasks = useGameStore((s) => s.setGwMasks);
+  const setLobbyDrawing = useGameStore((s) => s.setLobbyDrawing);
+  const appendLobbyStroke = useGameStore((s) => s.appendLobbyStroke);
+  const clearLobbyDrawing = useGameStore((s) => s.clearLobbyDrawing);
 
   useEffect(() => {
     const sock = getSocket();
@@ -30,12 +34,16 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
 
     sock.on('room:state', (snapshot) => {
       setSnapshot(snapshot);
+      if (snapshot.phase !== 'lobby') {
+        clearLobbyDrawing();
+      }
       if (snapshot.phase === 'round_collect') {
         // round started / in progress : nothing automatic
       }
     });
     sock.on('round:started', (snapshot) => {
       resetRoundLocal();
+      clearLobbyDrawing();
       setSnapshot(snapshot);
     });
     sock.on('round:reveal', (reveal) => {
@@ -59,6 +67,21 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
     sock.on('match:final', ({ standings }) => {
       setFinalStandings(standings);
     });
+    sock.on('guessWho:masks', ({ byTarget }) => {
+      setGwMasks(byTarget);
+    });
+    sock.on('guessWho:playerEliminated', () => {
+      // L'état public arrive via room:state ; rien d'autre à faire ici.
+    });
+    sock.on('lobby:draw:stroke', (stroke) => {
+      appendLobbyStroke(stroke);
+    });
+    sock.on('lobby:draw:cleared', () => {
+      clearLobbyDrawing();
+    });
+    sock.on('lobby:drawing:sync', ({ strokes }) => {
+      setLobbyDrawing(strokes);
+    });
     sock.on('error', (err) => setError(err));
 
     return () => {
@@ -73,6 +96,11 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
       sock.off('round:validated');
       sock.off('round:scored');
       sock.off('match:final');
+      sock.off('guessWho:masks');
+      sock.off('guessWho:playerEliminated');
+      sock.off('lobby:draw:stroke');
+      sock.off('lobby:draw:cleared');
+      sock.off('lobby:drawing:sync');
       sock.off('error');
     };
   }, [
@@ -86,6 +114,10 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
     pushElim,
     setHostValidations,
     setError,
+    setGwMasks,
+    setLobbyDrawing,
+    appendLobbyStroke,
+    clearLobbyDrawing,
   ]);
 
   // Save host token if we receive one via create ack (handled in the page using the socket directly).

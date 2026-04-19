@@ -1,13 +1,19 @@
 'use client';
 import { useGameStore } from '@/store/gameStore';
 import { AvatarBadge } from '@/components/AvatarPicker';
-import { Copy, Check, Crown, Play, Settings2, Tags } from 'lucide-react';
-import { useState } from 'react';
+import { Copy, Check, Crown, Play, Settings2, Tags, Eraser } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { getSocket } from '@/lib/socket';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { GameModeId } from '@mvpc/shared';
+import { lobbyPenColorForPlayer } from '@mvpc/shared';
 import { ALL_CATEGORIES } from '@mvpc/content';
 import { mvpSound } from '@/lib/sound';
+import {
+  LobbyDrawingCanvas,
+  readStoredPenWidthNorm,
+  DEFAULT_PEN_WIDTH_NORM,
+} from './LobbyDrawingCanvas';
 
 const MODE_LABELS: Record<string, string> = {
   classic: 'Classique',
@@ -17,6 +23,7 @@ const MODE_LABELS: Record<string, string> = {
   'speed-elim': 'Rapidité',
   map: 'Carte',
   chronology: 'Chrono',
+  'guess-who': 'Qui est-ce ?',
 };
 
 const ALL_MODE_IDS: GameModeId[] = [
@@ -27,6 +34,7 @@ const ALL_MODE_IDS: GameModeId[] = [
   'speed-elim',
   'map',
   'chronology',
+  'guess-who',
 ];
 
 export function LobbyView() {
@@ -40,9 +48,15 @@ export function LobbyView() {
   const [categoriesPool, setCategoriesPool] = useState<string[]>(
     snapshot?.config.categoriesPool ?? [],
   );
+  const [penWidthNorm, setPenWidthNorm] = useState(DEFAULT_PEN_WIDTH_NORM);
+
+  useEffect(() => {
+    setPenWidthNorm(readStoredPenWidthNorm());
+  }, []);
 
   if (!snapshot) return null;
   const isHost = snapshot.hostId === myId;
+  const myPenColor = lobbyPenColorForPlayer(snapshot.players, myId);
   const inviteUrl =
     typeof window !== 'undefined' ? `${window.location.origin}/r/${snapshot.code}` : '';
 
@@ -56,19 +70,40 @@ export function LobbyView() {
   const start = () => {
     mvpSound.whoosh();
     const sock = getSocket();
-    sock.emit('game:start', { config: { rounds, modesPool, categoriesPool } }, (res) => {
-      if (!res.ok) alert(res.message);
-    });
+    const effectiveRounds = isGuessWho ? 1 : rounds;
+    sock.emit(
+      'game:start',
+      { config: { rounds: effectiveRounds, modesPool, categoriesPool } },
+      (res) => {
+        if (!res.ok) alert(res.message);
+      },
+    );
   };
 
   const toggleMode = (id: GameModeId) => {
-    setModesPool((prev) => (prev.includes(id) ? prev.filter((m) => m !== id) : [...prev, id]));
+    setModesPool((prev) => {
+      const has = prev.includes(id);
+      if (id === 'guess-who') {
+        return has ? [] : ['guess-who'];
+      }
+      if (has) return prev.filter((m) => m !== id);
+      return [...prev.filter((m) => m !== 'guess-who'), id];
+    });
   };
+
+  const isGuessWho = modesPool.length === 1 && modesPool[0] === 'guess-who';
 
   const toggleCategory = (cat: string) => {
     setCategoriesPool((prev) =>
       prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat],
     );
+  };
+
+  const clearLobbyCanvas = () => {
+    const sock = getSocket();
+    sock.emit('lobby:draw:clear', (res) => {
+      if (!res.ok) alert(res.message);
+    });
   };
 
   return (
@@ -108,17 +143,67 @@ export function LobbyView() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 panel p-6 space-y-4">
-          <div className="flex items-center justify-between">
+        <div className="lg:col-span-2 panel p-6 space-y-4 relative overflow-hidden min-h-[220px]">
+          <LobbyDrawingCanvas widthNorm={penWidthNorm} penColor={myPenColor} />
+          <div className="relative z-10 space-y-4 pointer-events-none">
+          <div className="flex items-center justify-between gap-2 pointer-events-auto">
             <h2 className="font-display text-xl font-semibold">
               Joueurs{' '}
               <span className="text-text-muted font-normal">
                 ({snapshot.players.length}/12)
               </span>
             </h2>
-            <span className="text-text-dim text-xs">max 12</span>
+            <div className="flex items-center gap-2 shrink-0">
+              <span className="text-text-dim text-xs hidden sm:inline">
+                Dessine dans le fond ·
+              </span>
+              {isHost && (
+                <button
+                  type="button"
+                  onClick={clearLobbyCanvas}
+                  className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wider text-text-dim hover:text-neon-rose transition-colors"
+                  title="Effacer tout le dessin pour tout le monde"
+                >
+                  <Eraser className="w-3 h-3" />
+                  Effacer
+                </button>
+              )}
+              <span className="text-text-dim text-xs">max 12</span>
+            </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pointer-events-auto border border-border/60 rounded-xl px-3 py-2 bg-bg/40">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] uppercase tracking-wider text-text-dim">Stylo</span>
+              <span
+                className="w-5 h-5 rounded-full border-2 border-white/30 shrink-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.35)]"
+                style={{ backgroundColor: myPenColor }}
+                title="Couleur fixe selon l’ordre d’arrivée dans le salon"
+              />
+            </div>
+            <label className="flex items-center gap-2 flex-1 min-w-[160px] max-w-[260px]">
+              <span className="text-[10px] text-text-dim whitespace-nowrap">Épaisseur</span>
+              <input
+                type="range"
+                min={4}
+                max={120}
+                step={1}
+                value={Math.round(penWidthNorm * 1000)}
+                onChange={(e) => {
+                  const v = parseInt(e.target.value, 10);
+                  const next = Math.min(0.12, Math.max(0.004, v / 1000));
+                  setPenWidthNorm(next);
+                  if (typeof window !== 'undefined') {
+                    localStorage.setItem('mvpc.lobby.penWidthNorm', String(next));
+                  }
+                }}
+                className="flex-1 h-1.5 rounded-full accent-neon-cyan bg-surface-2"
+                aria-label="Épaisseur du trait"
+              />
+            </label>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pointer-events-auto">
             <AnimatePresence>
               {snapshot.players.map((p, i) => (
                 <motion.div
@@ -133,7 +218,7 @@ export function LobbyView() {
                     damping: 22,
                     delay: i * 0.03,
                   }}
-                  className="panel-elevated p-3 flex items-center gap-3 relative overflow-hidden"
+                  className="panel-elevated p-3 flex items-center gap-3 relative overflow-hidden z-20"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -163,6 +248,7 @@ export function LobbyView() {
               ))}
             </AnimatePresence>
           </div>
+          </div>
         </div>
 
         <div className="panel p-6 space-y-5">
@@ -179,13 +265,13 @@ export function LobbyView() {
               type="range"
               min={3}
               max={20}
-              value={rounds}
+              value={isGuessWho ? 1 : rounds}
               onChange={(e) => setRounds(parseInt(e.target.value, 10))}
-              disabled={!isHost}
-              className="w-full accent-neon-cyan"
+              disabled={!isHost || isGuessWho}
+              className="w-full accent-neon-cyan disabled:opacity-50"
             />
             <div className="text-right text-neon-cyan font-mono font-bold">
-              {rounds} manches
+              {isGuessWho ? 'Partie unique' : `${rounds} manches`}
             </div>
           </div>
 

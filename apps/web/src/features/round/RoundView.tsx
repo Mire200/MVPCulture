@@ -7,6 +7,7 @@ import { HotPotatoRound } from './HotPotatoRound';
 import { SpeedElimRound } from './SpeedElimRound';
 import { MapRound } from './MapRound';
 import { ChronologyRound } from './ChronologyRound';
+import { GuessWhoRound } from './GuessWhoRound';
 import { RoundShell } from './RoundShell';
 
 export function RoundView() {
@@ -23,6 +24,7 @@ export function RoundView() {
       {mode === 'speed-elim' && <SpeedElimRound />}
       {mode === 'map' && <MapRound />}
       {mode === 'chronology' && <ChronologyRound />}
+      {mode === 'guess-who' && <GuessWhoRound />}
     </RoundShell>
   );
 }
