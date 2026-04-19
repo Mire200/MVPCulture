@@ -4,7 +4,7 @@ import { useGameStore } from '@/store/gameStore';
 import { AvatarBadge } from '@/components/AvatarPicker';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, X, ChevronRight, Sparkles, Target, Zap } from 'lucide-react';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { getSocket } from '@/lib/socket';
 import { mvpConfetti } from '@/lib/confetti';
 import { mvpSound } from '@/lib/sound';
@@ -40,27 +40,51 @@ export function RevealView() {
   }, [reveal, snapshot]);
 
   const officialPlayedRef = useRef(false);
+  const [bowlingActive, setBowlingActive] = useState(false);
+  const prevBowlingRef = useRef(false);
+
+  // Reset complet quand la question change.
   useEffect(() => {
     setRevealedIdx(0);
     officialPlayedRef.current = false;
-    if (!answersInOrder.length) return;
-    const id = setInterval(() => {
-      setRevealedIdx((i) => {
-        const next = i + 1 > answersInOrder.length ? answersInOrder.length : i + 1;
-        if (next > i && next <= answersInOrder.length) {
-          const row = answersInOrder[i];
-          const correct =
-            row?.auto === true ||
-            (row?.answer?.success === true) ||
-            (typeof row?.answer?.distanceKm === 'number' && row.answer.distanceKm < 50);
-          if (correct) mvpSound.success();
-          else mvpSound.fail();
-        }
-        return next;
-      });
-    }, 700);
-    return () => clearInterval(id);
+    setBowlingActive(false);
+    prevBowlingRef.current = false;
   }, [answersInOrder]);
+
+  const doAdvance = useCallback(() => {
+    setRevealedIdx((i) => {
+      if (i >= answersInOrder.length) return i;
+      const row = answersInOrder[i];
+      const correct =
+        row?.auto === true ||
+        (row?.answer?.success === true) ||
+        (typeof row?.answer?.distanceKm === 'number' && row.answer.distanceKm < 50);
+      if (correct) mvpSound.success();
+      else mvpSound.fail();
+      return i + 1;
+    });
+  }, [answersInOrder]);
+
+  // Programmation du prochain reveal, avec pause automatique pendant la
+  // lecture d'une vidéo bowling.
+  useEffect(() => {
+    if (!answersInOrder.length) return;
+    if (revealedIdx >= answersInOrder.length) return;
+
+    // Transition fin de vidéo → on enchaîne rapidement avec le joueur suivant.
+    if (prevBowlingRef.current && !bowlingActive) {
+      prevBowlingRef.current = false;
+      const id = setTimeout(doAdvance, 700);
+      return () => clearTimeout(id);
+    }
+    prevBowlingRef.current = bowlingActive;
+
+    if (bowlingActive) return; // pause : on attend la fin de la vidéo
+
+    const tick = mode === 'map' ? 4200 : 700;
+    const id = setTimeout(doAdvance, tick);
+    return () => clearTimeout(id);
+  }, [revealedIdx, answersInOrder, mode, bowlingActive, doAdvance]);
 
   useEffect(() => {
     if (
@@ -138,6 +162,8 @@ export function RevealView() {
             lng: answer?.lng,
             distanceKm: answer?.distanceKm,
           }))}
+          revealedCount={revealedIdx}
+          onBowlingStateChange={setBowlingActive}
         />
       )}
 

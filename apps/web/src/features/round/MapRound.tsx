@@ -4,12 +4,12 @@ import { useState } from 'react';
 import { getSocket } from '@/lib/socket';
 import { useGameStore } from '@/store/gameStore';
 import { motion } from 'framer-motion';
-import { Check, MapPin, Send } from 'lucide-react';
+import { Check, Send } from 'lucide-react';
 
 const MapPickerLazy = dynamic(() => import('./MapPicker').then((m) => m.MapPicker), {
   ssr: false,
   loading: () => (
-    <div className="h-64 rounded-2xl bg-surface-2 animate-pulse flex items-center justify-center text-text-dim">
+    <div className="mvpc-map-fullbleed bg-surface-2 animate-pulse flex items-center justify-center text-text-dim">
       Chargement de la carte…
     </div>
   ),
@@ -19,6 +19,10 @@ export function MapRound() {
   const myId = useGameStore((s) => s.playerId);
   const alreadyAnswered = useGameStore((s) => (myId ? s.answeredPlayerIds.has(myId) : false));
   const questionId = useGameStore((s) => s.snapshot?.round?.question.id);
+  const myColor = useGameStore((s) => {
+    const p = s.snapshot?.players.find((pl) => pl.id === s.playerId);
+    return p?.avatar.color;
+  });
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
@@ -37,24 +41,22 @@ export function MapRound() {
   const done = submitted || alreadyAnswered;
 
   return (
-    <div className="panel p-4 space-y-3">
-      <div className="flex items-center gap-2 text-accent-cyan text-sm">
-        <MapPin className="w-4 h-4" />
-        Clique sur la carte pour placer ton marqueur.
-      </div>
-      <div className="rounded-2xl overflow-hidden ring-1 ring-white/10">
+    <div className="space-y-3">
+      <div className="mvpc-map-fullbleed relative rounded-3xl overflow-hidden ring-1 ring-white/10">
         <MapPickerLazy
           resetKey={questionId}
           value={coords}
           onChange={setCoords}
           readOnly={done}
+          color={myColor}
+          fill
         />
+        {coords && (
+          <div className="absolute left-3 top-3 z-10 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-sm ring-1 ring-white/10 font-mono text-[11px] tracking-wider text-white/80">
+            {coords.lat.toFixed(2)}, {coords.lng.toFixed(2)}
+          </div>
+        )}
       </div>
-      {coords && (
-        <div className="text-xs text-text-muted">
-          Position sélectionnée : {coords.lat.toFixed(2)}, {coords.lng.toFixed(2)}
-        </div>
-      )}
       <motion.button
         whileTap={{ scale: 0.97 }}
         disabled={done || !coords}
