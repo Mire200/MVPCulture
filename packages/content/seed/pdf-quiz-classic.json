@@ -1,0 +1,116 @@
+[
+  {
+    "id": "pdf-cg-051",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "La mythologie regorge d’étres hybrides. Associez chaque monstre à sa description. (a = Sirène, b = Satyre, c = Minotaure, d = Chimère, e = Gorgone)",
+    "answer": "a→5 (mi-femme, mi-oiseau) ; b→1 (corps d'homme, membres de cheval) ; c→4 (tête de taureau) ; d→2 (lion, chèvre, serpent) ; e→3 (femme aux serpents dans la chevelure)",
+    "aliases": [],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-081",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Par le serment du Jeu de paume, le 20 juin 1789, les députés jurent de ne pas se séparer avant d’avoir :",
+    "answer": "Donné une Constitution à la France",
+    "aliases": [],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-092",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Lors de la Première Guerre mondiale, les soldats français sont surnommés les « poilus « car :",
+    "answer": "Lors de la Première Guerre mondiale, les soldats français",
+    "aliases": [
+      "Les conditions étaient si difficiles dans les tranchées qu’ils se laissaient pousser la barbe et les cheveux.",
+      "À l’époque, le mot « poilu » désignait quelqu'un de courageux."
+    ],
+    "tags": [
+      "pdf-culture-generale",
+      "double-reponse"
+    ]
+  },
+  {
+    "id": "pdf-cg-212",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Vrai ou faux? Les chômeurs ne cotisent pas à l’assurance-maladie.",
+    "answer": "Vrai",
+    "aliases": [
+      "Vrai, les chômeurs ne cotisent pas à l’assurance-maladie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-213",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Vrai ou faux ? Il est possible de vendre son sperme.",
+    "answer": "Faux",
+    "aliases": [],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-242",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Vrai ou faux? En Europe, le recours à la peine de mort est interdit en temps de paix.",
+    "answer": "Vrai",
+    "aliases": [],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-308",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Vrai ou faux? Les graisses insaturées sont mauvaises pour nos artères.",
+    "answer": "Faux",
+    "aliases": [],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-316",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Vrai ou faux ? Les antibiotiques n’ont aucun effet sur les virus.",
+    "answer": "Vrai",
+    "aliases": [],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-317",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Vrai ou faux? Les vrais jumeaux ont les mêmes empreintes digitales.",
+    "answer": "Faux",
+    "aliases": [],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  }
+]

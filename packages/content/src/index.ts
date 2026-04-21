@@ -1,10 +1,13 @@
 import classic from '../seed/classic.json' with { type: 'json' };
+import qcm from '../seed/qcm.json' with { type: 'json' };
 import estimation from '../seed/estimation.json' with { type: 'json' };
 import listTurns from '../seed/list-turns.json' with { type: 'json' };
 import hotPotato from '../seed/hot-potato.json' with { type: 'json' };
 import speedElim from '../seed/speed-elim.json' with { type: 'json' };
 import mapMode from '../seed/map.json' with { type: 'json' };
 import chronology from '../seed/chronology.json' with { type: 'json' };
+import imposter from '../seed/imposter.json' with { type: 'json' };
+import codenames from '../seed/codenames.json' with { type: 'json' };
 import wpClassic from '../seed/wikipedia-classic.json' with { type: 'json' };
 import wpEstimation from '../seed/wikipedia-estimation.json' with { type: 'json' };
 import wpListTurns from '../seed/wikipedia-list-turns.json' with { type: 'json' };
@@ -18,6 +21,7 @@ export const CLASSIC_QUESTIONS = [
   ...(classic as unknown as Question[]),
   ...(wpClassic as unknown as Question[]),
 ];
+export const QCM_QUESTIONS = qcm as unknown as Question[];
 export const ESTIMATION_QUESTIONS = [
   ...(estimation as unknown as Question[]),
   ...(wpEstimation as unknown as Question[]),
@@ -42,9 +46,12 @@ export const CHRONOLOGY_QUESTIONS = [
   ...(chronology as unknown as Question[]),
   ...(wpChronology as unknown as Question[]),
 ];
+export const IMPOSTER_QUESTIONS = imposter as unknown as Question[];
+export const CODENAMES_WORDS = codenames as unknown as string[];
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLASSIC_QUESTIONS,
+  ...QCM_QUESTIONS,
   ...ESTIMATION_QUESTIONS,
   ...LIST_TURNS_QUESTIONS,
   ...HOT_POTATO_QUESTIONS,

@@ -1,73 +1,205 @@
 [
   {
-    "id": "ch-his-001",
+    "id": "ch-rev-001",
     "mode": "chronology",
     "difficulty": "easy",
     "category": "Histoire",
-    "prompt": "Remets ces événements dans l'ordre chronologique.",
+    "prompt": "Révolutions et grands soulèvements",
     "events": [
-      { "id": "e1", "label": "Révolution française", "year": 1789 },
-      { "id": "e2", "label": "Première Guerre mondiale", "year": 1914 },
-      { "id": "e3", "label": "Premier pas sur la Lune", "year": 1969 },
-      { "id": "e4", "label": "Chute du mur de Berlin", "year": 1989 }
+      {
+        "id": "e1",
+        "label": "Révolution française",
+        "year": 1789
+      },
+      {
+        "id": "e2",
+        "label": "Révolution russe (Octobre)",
+        "year": 1917
+      },
+      {
+        "id": "e3",
+        "label": "Révolution iranienne",
+        "year": 1979
+      },
+      {
+        "id": "e4",
+        "label": "Printemps arabe (début Tunisie)",
+        "year": 2010
+      }
+    ],
+    "tags": [
+      "histoire",
+      "revolutions"
     ]
   },
   {
-    "id": "ch-his-002",
+    "id": "ch-guer-001",
     "mode": "chronology",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "category": "Histoire",
-    "prompt": "Classe les guerres/événements.",
+    "prompt": "Grandes guerres du XXᵉ siècle",
     "events": [
-      { "id": "e1", "label": "Bataille de Hastings", "year": 1066 },
-      { "id": "e2", "label": "Chute de Constantinople", "year": 1453 },
-      { "id": "e3", "label": "Découverte de l'Amérique", "year": 1492 },
-      { "id": "e4", "label": "Révolution russe", "year": 1917 },
-      { "id": "e5", "label": "Fin de la Seconde Guerre mondiale", "year": 1945 }
+      {
+        "id": "e1",
+        "label": "Première Guerre mondiale (début)",
+        "year": 1914
+      },
+      {
+        "id": "e2",
+        "label": "Seconde Guerre mondiale (début)",
+        "year": 1939
+      },
+      {
+        "id": "e3",
+        "label": "Guerre de Corée (début)",
+        "year": 1950
+      },
+      {
+        "id": "e4",
+        "label": "Guerre du Vietnam (implication US)",
+        "year": 1965
+      },
+      {
+        "id": "e5",
+        "label": "Guerre du Golfe",
+        "year": 1991
+      }
     ]
   },
   {
-    "id": "ch-his-003",
+    "id": "ch-emp-001",
     "mode": "chronology",
     "difficulty": "hard",
     "category": "Histoire",
-    "prompt": "Classe les empereurs romains.",
+    "prompt": "Empereurs romains par début de règne",
     "events": [
-      { "id": "e1", "label": "Auguste", "year": -27 },
-      { "id": "e2", "label": "Néron", "year": 54 },
-      { "id": "e3", "label": "Trajan", "year": 98 },
-      { "id": "e4", "label": "Marc Aurèle", "year": 161 },
-      { "id": "e5", "label": "Constantin", "year": 306 }
+      {
+        "id": "e1",
+        "label": "Auguste",
+        "year": -27
+      },
+      {
+        "id": "e2",
+        "label": "Néron",
+        "year": 54
+      },
+      {
+        "id": "e3",
+        "label": "Trajan",
+        "year": 98
+      },
+      {
+        "id": "e4",
+        "label": "Marc Aurèle",
+        "year": 161
+      },
+      {
+        "id": "e5",
+        "label": "Constantin",
+        "year": 306
+      }
     ]
   },
   {
-    "id": "ch-sci-001",
+    "id": "ch-roi-001",
     "mode": "chronology",
     "difficulty": "medium",
-    "category": "Sciences",
-    "prompt": "Classe ces découvertes / inventions.",
+    "category": "Histoire",
+    "prompt": "Rois de France par début de règne",
     "events": [
-      { "id": "e1", "label": "Théorie de la gravitation (Newton)", "year": 1687 },
-      { "id": "e2", "label": "Machine à vapeur (Watt)", "year": 1769 },
-      { "id": "e3", "label": "Pile électrique (Volta)", "year": 1800 },
-      { "id": "e4", "label": "Téléphone (Bell)", "year": 1876 },
-      { "id": "e5", "label": "Pénicilline (Fleming)", "year": 1928 },
-      { "id": "e6", "label": "ADN double hélice", "year": 1953 }
+      {
+        "id": "e1",
+        "label": "Philippe Auguste",
+        "year": 1180
+      },
+      {
+        "id": "e2",
+        "label": "Saint Louis",
+        "year": 1226
+      },
+      {
+        "id": "e3",
+        "label": "François Ier",
+        "year": 1515
+      },
+      {
+        "id": "e4",
+        "label": "Louis XIV",
+        "year": 1643
+      },
+      {
+        "id": "e5",
+        "label": "Louis XVI",
+        "year": 1774
+      }
+    ]
+  },
+  {
+    "id": "ch-fr-001",
+    "mode": "chronology",
+    "difficulty": "easy",
+    "category": "Histoire de France",
+    "prompt": "Grands moments de la France",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Bataille d'Hastings (Normands)",
+        "year": 1066
+      },
+      {
+        "id": "e2",
+        "label": "Jeanne d'Arc sacre Charles VII",
+        "year": 1429
+      },
+      {
+        "id": "e3",
+        "label": "Révolution française",
+        "year": 1789
+      },
+      {
+        "id": "e4",
+        "label": "Libération de Paris",
+        "year": 1944
+      },
+      {
+        "id": "e5",
+        "label": "Mai 68",
+        "year": 1968
+      }
     ]
   },
   {
     "id": "ch-tec-001",
     "mode": "chronology",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "category": "Technologie",
-    "prompt": "Classe ces produits Apple.",
+    "prompt": "Inventions qui ont changé le quotidien",
     "events": [
-      { "id": "e1", "label": "Macintosh", "year": 1984 },
-      { "id": "e2", "label": "iPod", "year": 2001 },
-      { "id": "e3", "label": "iPhone", "year": 2007 },
-      { "id": "e4", "label": "iPad", "year": 2010 },
-      { "id": "e5", "label": "Apple Watch", "year": 2015 },
-      { "id": "e6", "label": "Vision Pro", "year": 2024 }
+      {
+        "id": "e1",
+        "label": "Imprimerie (Gutenberg)",
+        "year": 1450
+      },
+      {
+        "id": "e2",
+        "label": "Machine à vapeur (Watt)",
+        "year": 1769
+      },
+      {
+        "id": "e3",
+        "label": "Téléphone (Bell)",
+        "year": 1876
+      },
+      {
+        "id": "e4",
+        "label": "Automobile moderne (Benz)",
+        "year": 1886
+      },
+      {
+        "id": "e5",
+        "label": "Premier avion motorisé (Wright)",
+        "year": 1903
+      }
     ]
   },
   {
@@ -75,27 +207,155 @@
     "mode": "chronology",
     "difficulty": "medium",
     "category": "Technologie",
-    "prompt": "Classe ces entreprises par ordre de fondation.",
+    "prompt": "Révolution numérique",
     "events": [
-      { "id": "e1", "label": "IBM", "year": 1911 },
-      { "id": "e2", "label": "Apple", "year": 1976 },
-      { "id": "e3", "label": "Microsoft", "year": 1975 },
-      { "id": "e4", "label": "Google", "year": 1998 },
-      { "id": "e5", "label": "Facebook", "year": 2004 }
+      {
+        "id": "e1",
+        "label": "Premier e-mail",
+        "year": 1971
+      },
+      {
+        "id": "e2",
+        "label": "Premier Macintosh",
+        "year": 1984
+      },
+      {
+        "id": "e3",
+        "label": "Lancement du World Wide Web",
+        "year": 1991
+      },
+      {
+        "id": "e4",
+        "label": "Lancement de Google",
+        "year": 1998
+      },
+      {
+        "id": "e5",
+        "label": "Premier iPhone",
+        "year": 2007
+      },
+      {
+        "id": "e6",
+        "label": "Lancement de ChatGPT",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "id": "ch-sci-001",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Découvertes scientifiques majeures",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Théorie de la gravitation (Newton)",
+        "year": 1687
+      },
+      {
+        "id": "e2",
+        "label": "Pile électrique (Volta)",
+        "year": 1800
+      },
+      {
+        "id": "e3",
+        "label": "Relativité restreinte (Einstein)",
+        "year": 1905
+      },
+      {
+        "id": "e4",
+        "label": "Pénicilline (Fleming)",
+        "year": 1928
+      },
+      {
+        "id": "e5",
+        "label": "ADN double hélice (Watson & Crick)",
+        "year": 1953
+      },
+      {
+        "id": "e6",
+        "label": "Boson de Higgs confirmé",
+        "year": 2012
+      }
+    ]
+  },
+  {
+    "id": "ch-spc-001",
+    "mode": "chronology",
+    "difficulty": "hard",
+    "category": "Espace",
+    "prompt": "Conquête spatiale",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Spoutnik 1 (1er satellite)",
+        "year": 1957
+      },
+      {
+        "id": "e2",
+        "label": "Gagarine, 1er homme dans l'espace",
+        "year": 1961
+      },
+      {
+        "id": "e3",
+        "label": "Apollo 11, 1ers pas sur la Lune",
+        "year": 1969
+      },
+      {
+        "id": "e4",
+        "label": "1er lancement de la navette spatiale",
+        "year": 1981
+      },
+      {
+        "id": "e5",
+        "label": "Assemblage de l'ISS commence",
+        "year": 1998
+      },
+      {
+        "id": "e6",
+        "label": "Perseverance atterrit sur Mars",
+        "year": 2021
+      }
     ]
   },
   {
     "id": "ch-cin-001",
     "mode": "chronology",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "category": "Cinéma",
-    "prompt": "Classe ces films par ordre de sortie.",
+    "prompt": "Films cultes par année de sortie",
     "events": [
-      { "id": "e1", "label": "Le Parrain", "year": 1972 },
-      { "id": "e2", "label": "Star Wars (Un nouvel espoir)", "year": 1977 },
-      { "id": "e3", "label": "Titanic", "year": 1997 },
-      { "id": "e4", "label": "Avatar", "year": 2009 },
-      { "id": "e5", "label": "Parasite", "year": 2019 }
+      {
+        "id": "e1",
+        "label": "Casablanca",
+        "year": 1942
+      },
+      {
+        "id": "e2",
+        "label": "Le Parrain",
+        "year": 1972
+      },
+      {
+        "id": "e3",
+        "label": "Star Wars : Un Nouvel Espoir",
+        "year": 1977
+      },
+      {
+        "id": "e4",
+        "label": "Titanic (Cameron)",
+        "year": 1997
+      },
+      {
+        "id": "e5",
+        "label": "Le Seigneur des Anneaux : La Communauté",
+        "year": 2001
+      },
+      {
+        "id": "e6",
+        "label": "Avengers: Endgame",
+        "year": 2019
+      }
     ]
   },
   {
@@ -103,27 +363,106 @@
     "mode": "chronology",
     "difficulty": "hard",
     "category": "Cinéma",
-    "prompt": "Classe ces films de Kubrick.",
+    "prompt": "Films Palme d'Or récents",
     "events": [
-      { "id": "e1", "label": "Les Sentiers de la gloire", "year": 1957 },
-      { "id": "e2", "label": "Spartacus", "year": 1960 },
-      { "id": "e3", "label": "2001: l'Odyssée de l'espace", "year": 1968 },
-      { "id": "e4", "label": "Orange mécanique", "year": 1971 },
-      { "id": "e5", "label": "Shining", "year": 1980 }
+      {
+        "id": "e1",
+        "label": "Parasite",
+        "year": 2019
+      },
+      {
+        "id": "e2",
+        "label": "Titane",
+        "year": 2021
+      },
+      {
+        "id": "e3",
+        "label": "Sans filtre (Triangle of Sadness)",
+        "year": 2022
+      },
+      {
+        "id": "e4",
+        "label": "Anatomie d'une chute",
+        "year": 2023
+      },
+      {
+        "id": "e5",
+        "label": "Anora",
+        "year": 2024
+      }
     ]
   },
   {
     "id": "ch-mus-001",
     "mode": "chronology",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "category": "Musique",
-    "prompt": "Classe ces albums.",
+    "prompt": "Albums qui ont marqué leur époque",
     "events": [
-      { "id": "e1", "label": "Sgt. Pepper's (Beatles)", "year": 1967 },
-      { "id": "e2", "label": "Dark Side of the Moon (Pink Floyd)", "year": 1973 },
-      { "id": "e3", "label": "Thriller (Michael Jackson)", "year": 1982 },
-      { "id": "e4", "label": "Nevermind (Nirvana)", "year": 1991 },
-      { "id": "e5", "label": "Random Access Memories (Daft Punk)", "year": 2013 }
+      {
+        "id": "e1",
+        "label": "Sgt. Pepper's Lonely Hearts Club Band",
+        "year": 1967
+      },
+      {
+        "id": "e2",
+        "label": "The Dark Side of the Moon",
+        "year": 1973
+      },
+      {
+        "id": "e3",
+        "label": "Thriller (Michael Jackson)",
+        "year": 1982
+      },
+      {
+        "id": "e4",
+        "label": "Nevermind (Nirvana)",
+        "year": 1991
+      },
+      {
+        "id": "e5",
+        "label": "21 (Adele)",
+        "year": 2011
+      }
+    ]
+  },
+  {
+    "id": "ch-jv-001",
+    "mode": "chronology",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Sorties majeures de l'industrie",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Pong",
+        "year": 1972
+      },
+      {
+        "id": "e2",
+        "label": "Pac-Man",
+        "year": 1980
+      },
+      {
+        "id": "e3",
+        "label": "Super Mario Bros.",
+        "year": 1985
+      },
+      {
+        "id": "e4",
+        "label": "Pokémon Rouge/Vert",
+        "year": 1996
+      },
+      {
+        "id": "e5",
+        "label": "World of Warcraft",
+        "year": 2004
+      },
+      {
+        "id": "e6",
+        "label": "Minecraft (sortie officielle)",
+        "year": 2011
+      }
     ]
   },
   {
@@ -131,58 +470,72 @@
     "mode": "chronology",
     "difficulty": "medium",
     "category": "Sport",
-    "prompt": "Classe ces Coupes du monde de football.",
+    "prompt": "Coupes du monde de football (vainqueurs)",
     "events": [
-      { "id": "e1", "label": "Brésil 1970", "year": 1970 },
-      { "id": "e2", "label": "France 1998", "year": 1998 },
-      { "id": "e3", "label": "Brésil 2014", "year": 2014 },
-      { "id": "e4", "label": "Russie 2018", "year": 2018 },
-      { "id": "e5", "label": "Qatar 2022", "year": 2022 }
+      {
+        "id": "e1",
+        "label": "Brésil à Mexico 70",
+        "year": 1970
+      },
+      {
+        "id": "e2",
+        "label": "Allemagne (RFA) en 1974",
+        "year": 1974
+      },
+      {
+        "id": "e3",
+        "label": "France 98",
+        "year": 1998
+      },
+      {
+        "id": "e4",
+        "label": "Espagne 2010",
+        "year": 2010
+      },
+      {
+        "id": "e5",
+        "label": "Argentine 2022",
+        "year": 2022
+      }
     ]
   },
   {
-    "id": "ch-his-004",
-    "mode": "chronology",
-    "difficulty": "medium",
-    "category": "Histoire",
-    "prompt": "Classe les présidents français (Ve République).",
-    "events": [
-      { "id": "e1", "label": "Charles de Gaulle", "year": 1958 },
-      { "id": "e2", "label": "Georges Pompidou", "year": 1969 },
-      { "id": "e3", "label": "Valéry Giscard d'Estaing", "year": 1974 },
-      { "id": "e4", "label": "François Mitterrand", "year": 1981 },
-      { "id": "e5", "label": "Jacques Chirac", "year": 1995 },
-      { "id": "e6", "label": "Nicolas Sarkozy", "year": 2007 },
-      { "id": "e7", "label": "François Hollande", "year": 2012 },
-      { "id": "e8", "label": "Emmanuel Macron", "year": 2017 }
-    ]
-  },
-  {
-    "id": "ch-his-005",
-    "mode": "chronology",
-    "difficulty": "easy",
-    "category": "Histoire",
-    "prompt": "Classe ces grands événements du XXe siècle.",
-    "events": [
-      { "id": "e1", "label": "Traité de Versailles", "year": 1919 },
-      { "id": "e2", "label": "Krach boursier de Wall Street", "year": 1929 },
-      { "id": "e3", "label": "Débarquement de Normandie", "year": 1944 },
-      { "id": "e4", "label": "Crise des missiles de Cuba", "year": 1962 },
-      { "id": "e5", "label": "Chute de l'URSS", "year": 1991 }
-    ]
-  },
-  {
-    "id": "ch-art-001",
+    "id": "ch-spo-002",
     "mode": "chronology",
     "difficulty": "hard",
-    "category": "Arts",
-    "prompt": "Classe ces mouvements artistiques (début).",
+    "category": "Sport",
+    "prompt": "Jeux Olympiques d'été (ville hôte)",
     "events": [
-      { "id": "e1", "label": "Renaissance", "year": 1400 },
-      { "id": "e2", "label": "Baroque", "year": 1600 },
-      { "id": "e3", "label": "Romantisme", "year": 1800 },
-      { "id": "e4", "label": "Impressionnisme", "year": 1870 },
-      { "id": "e5", "label": "Cubisme", "year": 1907 }
+      {
+        "id": "e1",
+        "label": "Athènes 2004",
+        "year": 2004
+      },
+      {
+        "id": "e2",
+        "label": "Pékin 2008",
+        "year": 2008
+      },
+      {
+        "id": "e3",
+        "label": "Londres 2012",
+        "year": 2012
+      },
+      {
+        "id": "e4",
+        "label": "Rio 2016",
+        "year": 2016
+      },
+      {
+        "id": "e5",
+        "label": "Tokyo 2020",
+        "year": 2021
+      },
+      {
+        "id": "e6",
+        "label": "Paris 2024",
+        "year": 2024
+      }
     ]
   },
   {
@@ -190,87 +543,1756 @@
     "mode": "chronology",
     "difficulty": "hard",
     "category": "Littérature",
-    "prompt": "Classe ces romans.",
+    "prompt": "Chefs-d'œuvre par année de publication",
     "events": [
-      { "id": "e1", "label": "Don Quichotte", "year": 1605 },
-      { "id": "e2", "label": "Les Misérables", "year": 1862 },
-      { "id": "e3", "label": "Le Procès", "year": 1925 },
-      { "id": "e4", "label": "1984", "year": 1949 },
-      { "id": "e5", "label": "Cent ans de solitude", "year": 1967 },
-      { "id": "e6", "label": "Harry Potter à l'école des sorciers", "year": 1997 }
+      {
+        "id": "e1",
+        "label": "Don Quichotte (Cervantès)",
+        "year": 1605
+      },
+      {
+        "id": "e2",
+        "label": "Les Misérables (Hugo)",
+        "year": 1862
+      },
+      {
+        "id": "e3",
+        "label": "Le Meilleur des mondes (Huxley)",
+        "year": 1932
+      },
+      {
+        "id": "e4",
+        "label": "1984 (Orwell)",
+        "year": 1949
+      },
+      {
+        "id": "e5",
+        "label": "Harry Potter à l'école des sorciers",
+        "year": 1997
+      }
     ]
   },
   {
     "id": "ch-geo-001",
     "mode": "chronology",
-    "difficulty": "hard",
-    "category": "Géographie",
-    "prompt": "Classe ces pays par entrée dans l'UE.",
+    "difficulty": "medium",
+    "category": "Géopolitique",
+    "prompt": "Indépendances et formations d'États",
     "events": [
-      { "id": "e1", "label": "France (fondatrice)", "year": 1957 },
-      { "id": "e2", "label": "Royaume-Uni", "year": 1973 },
-      { "id": "e3", "label": "Espagne", "year": 1986 },
-      { "id": "e4", "label": "Suède", "year": 1995 },
-      { "id": "e5", "label": "Pologne", "year": 2004 },
-      { "id": "e6", "label": "Croatie", "year": 2013 }
+      {
+        "id": "e1",
+        "label": "Indépendance des États-Unis",
+        "year": 1776
+      },
+      {
+        "id": "e2",
+        "label": "Unification de l'Italie",
+        "year": 1861
+      },
+      {
+        "id": "e3",
+        "label": "Indépendance de l'Inde",
+        "year": 1947
+      },
+      {
+        "id": "e4",
+        "label": "Chute de l'URSS",
+        "year": 1991
+      },
+      {
+        "id": "e5",
+        "label": "Indépendance du Soudan du Sud",
+        "year": 2011
+      }
     ]
   },
   {
-    "id": "ch-spa-001",
+    "id": "ch-ent-001",
     "mode": "chronology",
     "difficulty": "medium",
-    "category": "Sciences",
-    "prompt": "Classe ces missions spatiales.",
+    "category": "Entreprises",
+    "prompt": "Fondations d'entreprises tech",
     "events": [
-      { "id": "e1", "label": "Spoutnik 1", "year": 1957 },
-      { "id": "e2", "label": "Youri Gagarine en orbite", "year": 1961 },
-      { "id": "e3", "label": "Apollo 11 (Lune)", "year": 1969 },
-      { "id": "e4", "label": "Station Mir", "year": 1986 },
-      { "id": "e5", "label": "Curiosity sur Mars", "year": 2012 },
-      { "id": "e6", "label": "James Webb (télescope)", "year": 2021 }
+      {
+        "id": "e1",
+        "label": "Microsoft",
+        "year": 1975
+      },
+      {
+        "id": "e2",
+        "label": "Apple",
+        "year": 1976
+      },
+      {
+        "id": "e3",
+        "label": "Amazon",
+        "year": 1994
+      },
+      {
+        "id": "e4",
+        "label": "Google",
+        "year": 1998
+      },
+      {
+        "id": "e5",
+        "label": "Facebook",
+        "year": 2004
+      },
+      {
+        "id": "e6",
+        "label": "OpenAI",
+        "year": 2015
+      }
     ]
   },
   {
-    "id": "ch-tec-003",
     "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-001",
+    "difficulty": "hard",
+    "category": "France",
+    "prompt": "France politique (années 2000)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Loi sur les signes religieux ostensibles à l’école publique",
+        "year": 2004
+      },
+      {
+        "id": "e2",
+        "label": "Référendum français sur le traité constitutionnel européen",
+        "year": 2005
+      },
+      {
+        "id": "e3",
+        "label": "Émeutes urbaines après la mort de Zyed et Bouna",
+        "year": 2005
+      },
+      {
+        "id": "e4",
+        "label": "Élection de Nicolas Sarkozy à la présidence",
+        "year": 2007
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-002",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Grands événements mondiaux (2001-2005)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Attentats du 11 septembre aux États-Unis",
+        "year": 2001
+      },
+      {
+        "id": "e2",
+        "label": "Début de la guerre en Irak",
+        "year": 2003
+      },
+      {
+        "id": "e3",
+        "label": "Tsunami dans l’océan Indien",
+        "year": 2004
+      },
+      {
+        "id": "e4",
+        "label": "Mort du pape Jean-Paul II",
+        "year": 2005
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-003",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Sciences récentes",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Annonce du séquençage quasi complet du génome humain",
+        "year": 2003
+      },
+      {
+        "id": "e2",
+        "label": "Annonce de la découverte du boson de Higgs au CERN",
+        "year": 2012
+      },
+      {
+        "id": "e3",
+        "label": "Première image publiée d’un trou noir (M87*)",
+        "year": 2019
+      },
+      {
+        "id": "e4",
+        "label": "Premier vaccin à ARN messager contre le Covid-19 autorisé (urgence)",
+        "year": 2020
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-004",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Économie et crises",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Éclatement de la bulle Internet (pic Nasdaq)",
+        "year": 2000
+      },
+      {
+        "id": "e2",
+        "label": "Faillite de Lehman Brothers",
+        "year": 2008
+      },
+      {
+        "id": "e3",
+        "label": "Crise majeure de la dette grecque",
+        "year": 2010
+      },
+      {
+        "id": "e4",
+        "label": "Choc économique mondial lié au Covid-19",
+        "year": 2020
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-005",
+    "difficulty": "medium",
+    "category": "Union européenne",
+    "prompt": "Union européenne",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Introduction des billets et pièces en euros",
+        "year": 2002
+      },
+      {
+        "id": "e2",
+        "label": "Grand élargissement de l’UE à l’Est (10 pays)",
+        "year": 2004
+      },
+      {
+        "id": "e3",
+        "label": "Rejet français du traité constitutionnel européen",
+        "year": 2005
+      },
+      {
+        "id": "e4",
+        "label": "Brexit effectif (sortie du marché unique)",
+        "year": 2020
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-006",
+    "difficulty": "hard",
+    "category": "Moyen-Orient",
+    "prompt": "Moyen-Orient contemporain",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Début de la guerre civile syrienne",
+        "year": 2011
+      },
+      {
+        "id": "e2",
+        "label": "Mort d’Oussama ben Laden",
+        "year": 2011
+      },
+      {
+        "id": "e3",
+        "label": "Retrait militaire américain d’Irak",
+        "year": 2011
+      },
+      {
+        "id": "e4",
+        "label": "Accord sur le nucléaire iranien (JCPOA)",
+        "year": 2015
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-007",
     "difficulty": "medium",
     "category": "Technologie",
-    "prompt": "Classe ces langages de programmation.",
+    "prompt": "Technologie grand public",
     "events": [
-      { "id": "e1", "label": "Fortran", "year": 1957 },
-      { "id": "e2", "label": "C", "year": 1972 },
-      { "id": "e3", "label": "Python", "year": 1991 },
-      { "id": "e4", "label": "Java", "year": 1995 },
-      { "id": "e5", "label": "JavaScript", "year": 1995 },
-      { "id": "e6", "label": "Rust", "year": 2010 }
+      {
+        "id": "e1",
+        "label": "Lancement de l’iPhone",
+        "year": 2007
+      },
+      {
+        "id": "e2",
+        "label": "Premier smartphone Android commercialisé (HTC Dream)",
+        "year": 2008
+      },
+      {
+        "id": "e3",
+        "label": "Lancement de l’iPad",
+        "year": 2010
+      },
+      {
+        "id": "e4",
+        "label": "Lancement d’Instagram",
+        "year": 2010
+      }
     ]
   },
   {
-    "id": "ch-cin-003",
     "mode": "chronology",
-    "difficulty": "easy",
-    "category": "Cinéma",
-    "prompt": "Classe ces films d'animation Pixar.",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-008",
+    "difficulty": "hard",
+    "category": "Environnement",
+    "prompt": "Environnement et climat",
     "events": [
-      { "id": "e1", "label": "Toy Story", "year": 1995 },
-      { "id": "e2", "label": "Le Monde de Nemo", "year": 2003 },
-      { "id": "e3", "label": "Ratatouille", "year": 2007 },
-      { "id": "e4", "label": "Là-haut", "year": 2009 },
-      { "id": "e5", "label": "Coco", "year": 2017 }
+      {
+        "id": "e1",
+        "label": "Adoption du protocole de Kyoto",
+        "year": 1997
+      },
+      {
+        "id": "e2",
+        "label": "Entrée en vigueur du protocole de Kyoto",
+        "year": 2005
+      },
+      {
+        "id": "e3",
+        "label": "Accord de Paris sur le climat",
+        "year": 2015
+      },
+      {
+        "id": "e4",
+        "label": "COP26 de Glasgow",
+        "year": 2021
+      }
     ]
   },
   {
-    "id": "ch-div-001",
     "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-009",
+    "difficulty": "hard",
+    "category": "France",
+    "prompt": "France sociale et législative",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Adoption du PACS",
+        "year": 1999
+      },
+      {
+        "id": "e2",
+        "label": "Loi sur la parité hommes-femmes en politique",
+        "year": 2000
+      },
+      {
+        "id": "e3",
+        "label": "Ouverture du mariage aux couples de même sexe",
+        "year": 2013
+      },
+      {
+        "id": "e4",
+        "label": "PMA ouverte à toutes les femmes",
+        "year": 2021
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-010",
     "difficulty": "medium",
-    "category": "Divers",
-    "prompt": "Classe ces JO d'été.",
+    "category": "Espace",
+    "prompt": "Exploration spatiale récente",
     "events": [
-      { "id": "e1", "label": "Athènes 1896", "year": 1896 },
-      { "id": "e2", "label": "Berlin 1936", "year": 1936 },
-      { "id": "e3", "label": "Mexico 1968", "year": 1968 },
-      { "id": "e4", "label": "Sydney 2000", "year": 2000 },
-      { "id": "e5", "label": "Paris 2024", "year": 2024 }
+      {
+        "id": "e1",
+        "label": "Lancement du premier module de la Station spatiale internationale",
+        "year": 1998
+      },
+      {
+        "id": "e2",
+        "label": "Atterrissage du rover Curiosity sur Mars",
+        "year": 2012
+      },
+      {
+        "id": "e3",
+        "label": "Premier vol habité privé SpaceX vers l’ISS (Crew Dragon)",
+        "year": 2020
+      },
+      {
+        "id": "e4",
+        "label": "Lancement du télescope James Webb",
+        "year": 2021
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-011",
+    "difficulty": "medium",
+    "category": "Chine",
+    "prompt": "Chine contemporaine",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Rétrocession de Hong Kong à la Chine",
+        "year": 1997
+      },
+      {
+        "id": "e2",
+        "label": "Entrée de la Chine dans l’OMC",
+        "year": 2001
+      },
+      {
+        "id": "e3",
+        "label": "Jeux olympiques de Pékin",
+        "year": 2008
+      },
+      {
+        "id": "e4",
+        "label": "Xi Jinping président de la République populaire de Chine",
+        "year": 2013
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-012",
+    "difficulty": "hard",
+    "category": "Afrique",
+    "prompt": "Afrique contemporaine",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Fin officielle de l’apartheid en Afrique du Sud",
+        "year": 1991
+      },
+      {
+        "id": "e2",
+        "label": "Nelson Mandela élu président de l’Afrique du Sud",
+        "year": 1994
+      },
+      {
+        "id": "e3",
+        "label": "Génocide des Tutsi au Rwanda",
+        "year": 1994
+      },
+      {
+        "id": "e4",
+        "label": "Indépendance du Soudan du Sud",
+        "year": 2011
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-013",
+    "difficulty": "medium",
+    "category": "Internet",
+    "prompt": "Internet",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Création de Wikipédia",
+        "year": 2001
+      },
+      {
+        "id": "e2",
+        "label": "Lancement de YouTube",
+        "year": 2005
+      },
+      {
+        "id": "e3",
+        "label": "Lancement de Twitter",
+        "year": 2006
+      },
+      {
+        "id": "e4",
+        "label": "Rachat d’Instagram par Facebook",
+        "year": 2012
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-014",
+    "difficulty": "medium",
+    "category": "États-Unis",
+    "prompt": "Politique américaine récente",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Élection de George W. Bush",
+        "year": 2000
+      },
+      {
+        "id": "e2",
+        "label": "Élection de Barack Obama",
+        "year": 2008
+      },
+      {
+        "id": "e3",
+        "label": "Adoption de l’Affordable Care Act (Obamacare)",
+        "year": 2010
+      },
+      {
+        "id": "e4",
+        "label": "Élection de Donald Trump",
+        "year": 2016
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-015",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Révolutions et soulèvements",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Révolution des Œillets au Portugal",
+        "year": 1974
+      },
+      {
+        "id": "e2",
+        "label": "Révolution iranienne (chute du shah)",
+        "year": 1979
+      },
+      {
+        "id": "e3",
+        "label": "Chute du mur de Berlin",
+        "year": 1989
+      },
+      {
+        "id": "e4",
+        "label": "Révolution tunisienne (début du Printemps arabe)",
+        "year": 2011
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-016",
+    "difficulty": "medium",
+    "category": "Médias sociaux",
+    "prompt": "Médias sociaux (lancements)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Lancement de Facebook",
+        "year": 2004
+      },
+      {
+        "id": "e2",
+        "label": "Lancement de Reddit",
+        "year": 2005
+      },
+      {
+        "id": "e3",
+        "label": "Lancement de Snapchat",
+        "year": 2011
+      },
+      {
+        "id": "e4",
+        "label": "TikTok internationalisé sous ce nom",
+        "year": 2017
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-017",
+    "difficulty": "hard",
+    "category": "Santé",
+    "prompt": "Pandémies et santé publique",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Épidémie de SRAS",
+        "year": 2003
+      },
+      {
+        "id": "e2",
+        "label": "Grippe A (H1N1) déclarée pandémie",
+        "year": 2009
+      },
+      {
+        "id": "e3",
+        "label": "Épidémie d’Ebola en Afrique de l’Ouest",
+        "year": 2014
+      },
+      {
+        "id": "e4",
+        "label": "Covid-19 déclaré pandémie par l’OMS",
+        "year": 2020
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-018",
+    "difficulty": "hard",
+    "category": "États-Unis",
+    "prompt": "Droits civiques aux États-Unis",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Arrêt Brown v. Board of Education",
+        "year": 1954
+      },
+      {
+        "id": "e2",
+        "label": "Rosa Parks refuse de céder sa place dans un bus",
+        "year": 1955
+      },
+      {
+        "id": "e3",
+        "label": "Marche sur Washington de Martin Luther King",
+        "year": 1963
+      },
+      {
+        "id": "e4",
+        "label": "Civil Rights Act",
+        "year": 1964
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-019",
+    "difficulty": "medium",
+    "category": "Décolonisation",
+    "prompt": "Indépendances (Afrique et Asie)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Indépendance de l’Inde",
+        "year": 1947
+      },
+      {
+        "id": "e2",
+        "label": "Indépendance du Maroc",
+        "year": 1956
+      },
+      {
+        "id": "e3",
+        "label": "Indépendance de l’Algérie",
+        "year": 1962
+      },
+      {
+        "id": "e4",
+        "label": "Indépendance de l’Angola",
+        "year": 1975
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-020",
+    "difficulty": "medium",
+    "category": "Organisations internationales",
+    "prompt": "Institutions internationales",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Création de l’ONU",
+        "year": 1945
+      },
+      {
+        "id": "e2",
+        "label": "Création de l’OTAN",
+        "year": 1949
+      },
+      {
+        "id": "e3",
+        "label": "Traité CECA (Communauté européenne du charbon et de l’acier)",
+        "year": 1951
+      },
+      {
+        "id": "e4",
+        "label": "Création de l’OMC",
+        "year": 1995
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-021",
+    "difficulty": "hard",
+    "category": "Physique",
+    "prompt": "Physique du XXe siècle",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Relativité restreinte (Einstein)",
+        "year": 1905
+      },
+      {
+        "id": "e2",
+        "label": "Relativité générale (Einstein)",
+        "year": 1915
+      },
+      {
+        "id": "e3",
+        "label": "Première fission nucléaire expérimentale (Hahn-Meitner)",
+        "year": 1938
+      },
+      {
+        "id": "e4",
+        "label": "Premier essai atomique Trinity",
+        "year": 1945
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-022",
+    "difficulty": "medium",
+    "category": "Biologie",
+    "prompt": "Biologie et médecine",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Découverte de la pénicilline (Fleming)",
+        "year": 1928
+      },
+      {
+        "id": "e2",
+        "label": "Structure de l’ADN (Watson et Crick)",
+        "year": 1953
+      },
+      {
+        "id": "e3",
+        "label": "Naissance du premier bébé-éprouvette",
+        "year": 1978
+      },
+      {
+        "id": "e4",
+        "label": "Naissance de Dolly (clonage)",
+        "year": 1996
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-023",
+    "difficulty": "hard",
+    "category": "Informatique",
+    "prompt": "Informatique",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Création du langage C",
+        "year": 1972
+      },
+      {
+        "id": "e2",
+        "label": "Premier Macintosh Apple",
+        "year": 1984
+      },
+      {
+        "id": "e3",
+        "label": "Création du World Wide Web (Tim Berners-Lee)",
+        "year": 1989
+      },
+      {
+        "id": "e4",
+        "label": "Première version du noyau Linux",
+        "year": 1991
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-024",
+    "difficulty": "hard",
+    "category": "Union européenne",
+    "prompt": "Monnaie et Europe",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Signature du traité de Maastricht",
+        "year": 1992
+      },
+      {
+        "id": "e2",
+        "label": "Euro comme monnaie scripturale",
+        "year": 1999
+      },
+      {
+        "id": "e3",
+        "label": "Billets et pièces en euro en circulation",
+        "year": 2002
+      },
+      {
+        "id": "e4",
+        "label": "La Croatie adopte l’euro",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-025",
+    "difficulty": "medium",
+    "category": "France",
+    "prompt": "Présidents de la Ve République (entrée en fonction)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Georges Pompidou",
+        "year": 1969
+      },
+      {
+        "id": "e2",
+        "label": "Valéry Giscard d’Estaing",
+        "year": 1974
+      },
+      {
+        "id": "e3",
+        "label": "François Mitterrand",
+        "year": 1981
+      },
+      {
+        "id": "e4",
+        "label": "Jacques Chirac",
+        "year": 1995
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-026",
+    "difficulty": "hard",
+    "category": "Balkans",
+    "prompt": "Guerres des Balkans",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Début du siège de Sarajevo",
+        "year": 1992
+      },
+      {
+        "id": "e2",
+        "label": "Massacre de Srebrenica",
+        "year": 1995
+      },
+      {
+        "id": "e3",
+        "label": "Accords de Dayton",
+        "year": 1995
+      },
+      {
+        "id": "e4",
+        "label": "Indépendance du Kosovo proclamée",
+        "year": 2008
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-027",
+    "difficulty": "medium",
+    "category": "Espace",
+    "prompt": "Exploration spatiale (XXe siècle)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Spoutnik 1",
+        "year": 1957
+      },
+      {
+        "id": "e2",
+        "label": "Premier homme dans l’espace (Youri Gagarine)",
+        "year": 1961
+      },
+      {
+        "id": "e3",
+        "label": "Premier pas sur la Lune (Apollo 11)",
+        "year": 1969
+      },
+      {
+        "id": "e4",
+        "label": "Premier atterrissage réussi sur Mars (Viking 1)",
+        "year": 1976
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-028",
+    "difficulty": "hard",
+    "category": "Énergie",
+    "prompt": "Énergie nucléaire",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Première centrale nucléaire civile reliée au réseau (Obninsk)",
+        "year": 1954
+      },
+      {
+        "id": "e2",
+        "label": "Accident de Three Mile Island",
+        "year": 1979
+      },
+      {
+        "id": "e3",
+        "label": "Catastrophe de Tchernobyl",
+        "year": 1986
+      },
+      {
+        "id": "e4",
+        "label": "Accident nucléaire de Fukushima",
+        "year": 2011
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-029",
+    "difficulty": "hard",
+    "category": "Amérique latine",
+    "prompt": "Amérique latine (politique)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Coup d’État au Chili contre Salvador Allende",
+        "year": 1973
+      },
+      {
+        "id": "e2",
+        "label": "Fin de la dictature militaire au Brésil",
+        "year": 1985
+      },
+      {
+        "id": "e3",
+        "label": "Élection d’Hugo Chávez au Venezuela",
+        "year": 1998
+      },
+      {
+        "id": "e4",
+        "label": "Première élection de Lula à la présidence du Brésil",
+        "year": 2002
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-030",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Albums (fin des années 1990-2000)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "OK Computer (Radiohead)",
+        "year": 1997
+      },
+      {
+        "id": "e2",
+        "label": "The Miseducation of Lauryn Hill",
+        "year": 1998
+      },
+      {
+        "id": "e3",
+        "label": "Kid A (Radiohead)",
+        "year": 2000
+      },
+      {
+        "id": "e4",
+        "label": "The Marshall Mathers LP (Eminem)",
+        "year": 2000
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-031",
+    "difficulty": "hard",
+    "category": "Japon",
+    "prompt": "Japon contemporain",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Séisme de Kobe",
+        "year": 1995
+      },
+      {
+        "id": "e2",
+        "label": "Attentat au gaz sarin dans le métro de Tokyo",
+        "year": 1995
+      },
+      {
+        "id": "e3",
+        "label": "Catastrophe nucléaire de Fukushima",
+        "year": 2011
+      },
+      {
+        "id": "e4",
+        "label": "Assassinat de Shinzo Abe",
+        "year": 2022
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-032",
+    "difficulty": "easy",
+    "category": "Entreprises",
+    "prompt": "Grandes entreprises tech (fondation)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Microsoft",
+        "year": 1975
+      },
+      {
+        "id": "e2",
+        "label": "Apple",
+        "year": 1976
+      },
+      {
+        "id": "e3",
+        "label": "Amazon",
+        "year": 1994
+      },
+      {
+        "id": "e4",
+        "label": "Google",
+        "year": 1998
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-033",
+    "difficulty": "hard",
+    "category": "France",
+    "prompt": "Droits des femmes en France",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Droit de vote des femmes en France",
+        "year": 1944
+      },
+      {
+        "id": "e2",
+        "label": "Loi Neuwirth (contraception)",
+        "year": 1967
+      },
+      {
+        "id": "e3",
+        "label": "Loi Veil (IVG)",
+        "year": 1975
+      },
+      {
+        "id": "e4",
+        "label": "Édith Cresson, première femme Première ministre",
+        "year": 1991
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-034",
+    "difficulty": "hard",
+    "category": "Géopolitique",
+    "prompt": "Guerres et interventions récentes",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Bombardements OTAN au Kosovo",
+        "year": 1999
+      },
+      {
+        "id": "e2",
+        "label": "Début de la guerre d’Afghanistan (États-Unis)",
+        "year": 2001
+      },
+      {
+        "id": "e3",
+        "label": "Début de la guerre en Irak",
+        "year": 2003
+      },
+      {
+        "id": "e4",
+        "label": "Annexion de la Crimée par la Russie",
+        "year": 2014
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-035",
+    "difficulty": "hard",
+    "category": "France",
+    "prompt": "Économie et société françaises",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Loi sur les 35 heures",
+        "year": 2000
+      },
+      {
+        "id": "e2",
+        "label": "Création du RSA",
+        "year": 2009
+      },
+      {
+        "id": "e3",
+        "label": "Crise des Gilets jaunes",
+        "year": 2018
+      },
+      {
+        "id": "e4",
+        "label": "Réforme des retraites promulguée",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-036",
+    "difficulty": "hard",
+    "category": "Climat",
+    "prompt": "Climat et alertes scientifiques",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Création du GIEC (IPCC)",
+        "year": 1988
+      },
+      {
+        "id": "e2",
+        "label": "Premier rapport d’évaluation du GIEC",
+        "year": 1990
+      },
+      {
+        "id": "e3",
+        "label": "Adoption du protocole de Kyoto",
+        "year": 1997
+      },
+      {
+        "id": "e4",
+        "label": "Accord de Paris sur le climat",
+        "year": 2015
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-037",
+    "difficulty": "medium",
+    "category": "Catastrophes",
+    "prompt": "Grandes catastrophes naturelles récentes",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Tsunami de l’océan Indien",
+        "year": 2004
+      },
+      {
+        "id": "e2",
+        "label": "Séisme d’Haïti",
+        "year": 2010
+      },
+      {
+        "id": "e3",
+        "label": "Séisme et tsunami de Tōhoku (Japon)",
+        "year": 2011
+      },
+      {
+        "id": "e4",
+        "label": "Séismes en Turquie et Syrie",
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-038",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Football (surprises récentes)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "La France gagne la Coupe du monde",
+        "year": 1998
+      },
+      {
+        "id": "e2",
+        "label": "La Grèce gagne l’Euro",
+        "year": 2004
+      },
+      {
+        "id": "e3",
+        "label": "L’Espagne gagne la Coupe du monde",
+        "year": 2010
+      },
+      {
+        "id": "e4",
+        "label": "Leicester champion d’Angleterre",
+        "year": 2016
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-039",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Littérature contemporaine (publications)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Harry Potter à l’école des sorciers",
+        "year": 1997
+      },
+      {
+        "id": "e2",
+        "label": "Millénium : Les Hommes qui n’aimaient pas les femmes",
+        "year": 2005
+      },
+      {
+        "id": "e3",
+        "label": "Les Bienveillantes (Jonathan Littell)",
+        "year": 2006
+      },
+      {
+        "id": "e4",
+        "label": "La Vérité sur l’affaire Harry Quebert",
+        "year": 2012
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-040",
+    "difficulty": "hard",
+    "category": "France",
+    "prompt": "Droits LGBT+ en France",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Dépénalisation de l’homosexualité",
+        "year": 1982
+      },
+      {
+        "id": "e2",
+        "label": "Adoption du PACS",
+        "year": 1999
+      },
+      {
+        "id": "e3",
+        "label": "Mariage pour tous",
+        "year": 2013
+      },
+      {
+        "id": "e4",
+        "label": "PMA pour toutes les femmes",
+        "year": 2021
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-041",
+    "difficulty": "hard",
+    "category": "Aviation",
+    "prompt": "Transport et aviation",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Premier vol du Concorde",
+        "year": 1969
+      },
+      {
+        "id": "e2",
+        "label": "Mise en service commerciale du Concorde",
+        "year": 1976
+      },
+      {
+        "id": "e3",
+        "label": "Dernier vol commercial du Concorde",
+        "year": 2003
+      },
+      {
+        "id": "e4",
+        "label": "Premier vol de l’Airbus A380",
+        "year": 2005
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-042",
+    "difficulty": "hard",
+    "category": "Philosophie",
+    "prompt": "Philosophie et sciences humaines (publications)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "La Société du spectacle (Guy Debord)",
+        "year": 1967
+      },
+      {
+        "id": "e2",
+        "label": "Surveiller et punir (Michel Foucault)",
+        "year": 1975
+      },
+      {
+        "id": "e3",
+        "label": "La Distinction (Pierre Bourdieu)",
+        "year": 1979
+      },
+      {
+        "id": "e4",
+        "label": "La Condition postmoderne (Jean-François Lyotard)",
+        "year": 1979
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-043",
+    "difficulty": "hard",
+    "category": "Moyen-Orient",
+    "prompt": "Monde arabe contemporain",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Accords de Camp David",
+        "year": 1978
+      },
+      {
+        "id": "e2",
+        "label": "Première Intifada",
+        "year": 1987
+      },
+      {
+        "id": "e3",
+        "label": "Accords d’Oslo",
+        "year": 1993
+      },
+      {
+        "id": "e4",
+        "label": "Printemps arabe (début)",
+        "year": 2011
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-044",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "Intelligence artificielle",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Deep Blue bat Garry Kasparov aux échecs",
+        "year": 1997
+      },
+      {
+        "id": "e2",
+        "label": "AlphaGo bat Lee Sedol au go",
+        "year": 2016
+      },
+      {
+        "id": "e3",
+        "label": "Lancement public de ChatGPT",
+        "year": 2022
+      },
+      {
+        "id": "e4",
+        "label": "Adoption européenne de l’AI Act",
+        "year": 2024
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-045",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Téléphonie et numérique Apple",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Premier SMS envoyé",
+        "year": 1992
+      },
+      {
+        "id": "e2",
+        "label": "Premier iPod",
+        "year": 2001
+      },
+      {
+        "id": "e3",
+        "label": "Premier iPhone",
+        "year": 2007
+      },
+      {
+        "id": "e4",
+        "label": "Premier iPad",
+        "year": 2010
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-046",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Cinéma et médias (premières)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "The Jazz Singer (premier parlant célèbre)",
+        "year": 1927
+      },
+      {
+        "id": "e2",
+        "label": "Première cérémonie des Oscars",
+        "year": 1929
+      },
+      {
+        "id": "e3",
+        "label": "Le Magicien d’Oz (couleur intégrale populaire)",
+        "year": 1939
+      },
+      {
+        "id": "e4",
+        "label": "Première Palme d’or sous ce nom (Festival de Cannes)",
+        "year": 1955
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-047",
+    "difficulty": "medium",
+    "category": "Afrique du Nord",
+    "prompt": "Afrique du Nord (indépendances et révolution)",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Indépendance du Maroc",
+        "year": 1956
+      },
+      {
+        "id": "e2",
+        "label": "Indépendance de la Tunisie",
+        "year": 1956
+      },
+      {
+        "id": "e3",
+        "label": "Indépendance de l’Algérie",
+        "year": 1962
+      },
+      {
+        "id": "e4",
+        "label": "Révolution tunisienne",
+        "year": 2011
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-048",
+    "difficulty": "hard",
+    "category": "France",
+    "prompt": "Grandes lois françaises",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Loi de séparation des Églises et de l’État",
+        "year": 1905
+      },
+      {
+        "id": "e2",
+        "label": "Droit de vote des femmes",
+        "year": 1944
+      },
+      {
+        "id": "e3",
+        "label": "Abolition de la peine de mort",
+        "year": 1981
+      },
+      {
+        "id": "e4",
+        "label": "Mariage pour tous",
+        "year": 2013
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-049",
+    "difficulty": "hard",
+    "category": "Médias",
+    "prompt": "Presse et révélations",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Publication des Pentagon Papers",
+        "year": 1971
+      },
+      {
+        "id": "e2",
+        "label": "Affaire du Watergate (éclatement médiatique)",
+        "year": 1972
+      },
+      {
+        "id": "e3",
+        "label": "WikiLeaks : câbles diplomatiques américains",
+        "year": 2010
+      },
+      {
+        "id": "e4",
+        "label": "Révélations Snowden sur la NSA",
+        "year": 2013
+      }
+    ]
+  },
+  {
+    "mode": "chronology",
+    "tags": [
+      "chronologie",
+      "contemporain"
+    ],
+    "id": "ch-cur-050",
+    "difficulty": "hard",
+    "category": "Économie",
+    "prompt": "Mondialisation",
+    "events": [
+      {
+        "id": "e1",
+        "label": "Création du GATT",
+        "year": 1947
+      },
+      {
+        "id": "e2",
+        "label": "Création de l’OMC",
+        "year": 1995
+      },
+      {
+        "id": "e3",
+        "label": "Entrée de la Chine dans l’OMC",
+        "year": 2001
+      },
+      {
+        "id": "e4",
+        "label": "Crise financière mondiale",
+        "year": 2008
+      }
     ]
   }
 ]

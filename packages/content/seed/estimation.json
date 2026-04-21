@@ -1,43 +1,151 @@
 [
   {
-    "id": "e-geo-001",
-    "mode": "estimation",
-    "difficulty": "easy",
-    "category": "Géographie",
-    "prompt": "Quelle est la population de la France en 2023 (en millions) ?",
-    "numericAnswer": 68.05,
-    "unit": "millions",
-    "source": "INSEE 2023"
-  },
-  {
-    "id": "e-geo-002",
+    "id": "e-rec-001",
     "mode": "estimation",
     "difficulty": "medium",
-    "category": "Géographie",
-    "prompt": "Quelle est la hauteur de la Tour Eiffel (antenne comprise) en mètres ?",
-    "numericAnswer": 330,
+    "category": "Records",
+    "prompt": "Quelle profondeur maximale atteint la fosse des Mariannes (en mètres) ?",
+    "numericAnswer": 10984,
     "unit": "m",
-    "source": "Wikipedia:Eiffel_Tower"
+    "tags": [
+      "records",
+      "nature"
+    ]
   },
   {
-    "id": "e-geo-003",
+    "id": "e-rec-002",
     "mode": "estimation",
     "difficulty": "hard",
-    "category": "Géographie",
-    "prompt": "Quelle est la superficie de la Russie en km² (en millions) ?",
-    "numericAnswer": 17.1,
-    "unit": "M km²",
-    "source": "Wikipedia:Russia"
+    "category": "Records",
+    "prompt": "Combien d'étages compte la Burj Khalifa à Dubaï ?",
+    "numericAnswer": 163,
+    "unit": "étages"
   },
   {
-    "id": "e-geo-004",
+    "id": "e-rec-003",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Records",
+    "prompt": "Quelle est la longueur de la Grande Muraille de Chine (en km) ?",
+    "numericAnswer": 21196,
+    "unit": "km"
+  },
+  {
+    "id": "e-rec-004",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Records",
+    "prompt": "Quel est le record du monde d'apnée statique en minutes ?",
+    "numericAnswer": 24,
+    "unit": "min"
+  },
+  {
+    "id": "e-rec-005",
     "mode": "estimation",
     "difficulty": "medium",
-    "category": "Géographie",
-    "prompt": "Quelle est l'altitude de l'Everest en mètres ?",
-    "numericAnswer": 8849,
-    "unit": "m",
-    "source": "Wikipedia:Mount_Everest"
+    "category": "Records",
+    "prompt": "Combien de kilomètres parcourt en moyenne le cœur humain de sang pompé par jour ?",
+    "numericAnswer": 19000,
+    "unit": "km (sang pompé)"
+  },
+  {
+    "id": "e-cin-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Combien a rapporté Avatar (2009) au box-office mondial (en milliards de $) ?",
+    "numericAnswer": 2.92,
+    "unit": "milliards $"
+  },
+  {
+    "id": "e-cin-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Quel était le budget du film Titanic de James Cameron (en millions de $) ?",
+    "numericAnswer": 200,
+    "unit": "millions $"
+  },
+  {
+    "id": "e-cin-003",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "En combien de jours Peter Jackson a-t-il tourné Le Seigneur des Anneaux (les 3 films) ?",
+    "numericAnswer": 438,
+    "unit": "jours"
+  },
+  {
+    "id": "e-cin-004",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Combien de plans effets spéciaux contient Avengers: Endgame ?",
+    "numericAnswer": 2496,
+    "unit": "plans"
+  },
+  {
+    "id": "e-cin-005",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Combien de films Marvel Kevin Feige a-t-il produits entre 2008 et 2024 ?",
+    "numericAnswer": 34,
+    "unit": "films"
+  },
+  {
+    "id": "e-nat-001",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Animaux",
+    "prompt": "Combien de dents a un adulte (sans dents de sagesse) ?",
+    "numericAnswer": 28,
+    "unit": "dents"
+  },
+  {
+    "id": "e-nat-002",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "À quelle vitesse maximale court un guépard (en km/h) ?",
+    "numericAnswer": 112,
+    "unit": "km/h"
+  },
+  {
+    "id": "e-nat-003",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Animaux",
+    "prompt": "Combien de battements d'ailes par seconde fait un colibri en vol stationnaire ?",
+    "numericAnswer": 80,
+    "unit": "battements/s"
+  },
+  {
+    "id": "e-nat-004",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "Combien de temps dort un koala par jour (en heures) ?",
+    "numericAnswer": 20,
+    "unit": "heures"
+  },
+  {
+    "id": "e-nat-005",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Animaux",
+    "prompt": "Combien pèse la langue d'une baleine bleue adulte (en kg) ?",
+    "numericAnswer": 2700,
+    "unit": "kg"
+  },
+  {
+    "id": "e-nat-006",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Animaux",
+    "prompt": "Combien de temps dure la gestation d'une éléphante (en mois) ?",
+    "numericAnswer": 22,
+    "unit": "mois"
   },
   {
     "id": "e-his-001",
@@ -46,244 +154,2112 @@
     "category": "Histoire",
     "prompt": "En quelle année César a-t-il été assassiné (avant J.-C.) ?",
     "numericAnswer": 44,
-    "unit": "av. J.-C.",
-    "source": "Wikipedia:Julius_Caesar"
+    "unit": "av. J.-C."
   },
   {
     "id": "e-his-002",
     "mode": "estimation",
     "difficulty": "hard",
     "category": "Histoire",
-    "prompt": "En quelle année fut fondée la ville de Rome (tradition, av. J.-C.) ?",
-    "numericAnswer": 753,
-    "unit": "av. J.-C.",
-    "source": "Wikipedia:Founding_of_Rome"
+    "prompt": "Combien de pharaons ont régné sur l'Égypte antique (environ) ?",
+    "numericAnswer": 170,
+    "unit": "pharaons"
   },
   {
     "id": "e-his-003",
     "mode": "estimation",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "category": "Histoire",
-    "prompt": "En quelle année la Deuxième Guerre mondiale a-t-elle pris fin ?",
-    "numericAnswer": 1945,
-    "source": "Wikipedia:World_War_II"
+    "prompt": "Combien de temps Louis XIV a-t-il régné (en années) ?",
+    "numericAnswer": 72,
+    "unit": "ans"
+  },
+  {
+    "id": "e-his-004",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Combien d'hommes Napoléon a-t-il perdus pendant la campagne de Russie de 1812 (environ) ?",
+    "numericAnswer": 400000,
+    "unit": "hommes"
   },
   {
     "id": "e-sci-001",
     "mode": "estimation",
     "difficulty": "medium",
     "category": "Sciences",
-    "prompt": "Quelle est la vitesse de la lumière (en milliers de km/s) ?",
+    "prompt": "Quelle est la vitesse de la lumière dans le vide (en milliers de km/s) ?",
     "numericAnswer": 299.792,
-    "unit": "milliers de km/s",
-    "source": "Wikipedia:Speed_of_light"
+    "unit": "milliers de km/s"
   },
   {
     "id": "e-sci-002",
     "mode": "estimation",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "Sciences",
-    "prompt": "Combien d'os contient le corps humain adulte ?",
-    "numericAnswer": 206,
-    "unit": "os",
-    "source": "Wikipedia:Human_skeleton"
+    "prompt": "Combien de km sépare la Terre de la Lune (en milliers) ?",
+    "numericAnswer": 384,
+    "unit": "milliers de km"
   },
   {
     "id": "e-sci-003",
     "mode": "estimation",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "Sciences",
-    "prompt": "Quelle est la distance moyenne Terre-Lune (en milliers de km) ?",
-    "numericAnswer": 384.4,
-    "unit": "milliers de km",
-    "source": "Wikipedia:Moon"
+    "prompt": "À quelle altitude orbite la Station spatiale internationale (en km) ?",
+    "numericAnswer": 408,
+    "unit": "km"
   },
   {
     "id": "e-sci-004",
     "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Combien d'os compte le corps humain adulte ?",
+    "numericAnswer": 206,
+    "unit": "os"
+  },
+  {
+    "id": "e-sci-005",
+    "mode": "estimation",
     "difficulty": "hard",
     "category": "Sciences",
-    "prompt": "Combien de neurones possède le cerveau humain (en milliards) ?",
-    "numericAnswer": 86,
-    "unit": "milliards",
-    "source": "Wikipedia:Human_brain"
+    "prompt": "Combien de litres de sang pompe le cœur humain par jour ?",
+    "numericAnswer": 7200,
+    "unit": "litres"
   },
   {
-    "id": "e-cin-001",
+    "id": "e-sci-006",
     "mode": "estimation",
     "difficulty": "medium",
-    "category": "Cinéma",
-    "prompt": "Quelle est la durée du film Avatar (2009) en minutes ?",
-    "numericAnswer": 162,
-    "unit": "min",
-    "source": "Wikipedia:Avatar_(2009_film)"
-  },
-  {
-    "id": "e-cin-002",
-    "mode": "estimation",
-    "difficulty": "hard",
-    "category": "Cinéma",
-    "prompt": "Combien le film Titanic a-t-il rapporté au box-office mondial (en milliards $) ?",
-    "numericAnswer": 2.25,
-    "unit": "Mrd $",
-    "source": "Wikipedia:Titanic_(1997_film)"
-  },
-  {
-    "id": "e-mus-001",
-    "mode": "estimation",
-    "difficulty": "medium",
-    "category": "Musique",
-    "prompt": "Combien d'albums studio les Beatles ont-ils publiés ?",
-    "numericAnswer": 13,
-    "source": "Wikipedia:The_Beatles_discography"
-  },
-  {
-    "id": "e-mus-002",
-    "mode": "estimation",
-    "difficulty": "hard",
-    "category": "Musique",
-    "prompt": "En quelle année Mozart est-il né ?",
-    "numericAnswer": 1756,
-    "source": "Wikipedia:Wolfgang_Amadeus_Mozart"
-  },
-  {
-    "id": "e-spo-001",
-    "mode": "estimation",
-    "difficulty": "easy",
-    "category": "Sport",
-    "prompt": "Combien de joueurs compte une équipe de football sur le terrain ?",
-    "numericAnswer": 11,
-    "source": "Wikipedia:Football"
-  },
-  {
-    "id": "e-spo-002",
-    "mode": "estimation",
-    "difficulty": "medium",
-    "category": "Sport",
-    "prompt": "Quelle est la longueur d'un marathon (en km) ?",
-    "numericAnswer": 42.195,
-    "unit": "km",
-    "source": "Wikipedia:Marathon"
-  },
-  {
-    "id": "e-spo-003",
-    "mode": "estimation",
-    "difficulty": "hard",
-    "category": "Sport",
-    "prompt": "En quelle année furent organisés les premiers Jeux olympiques modernes ?",
-    "numericAnswer": 1896,
-    "source": "Wikipedia:Modern_Olympic_Games"
-  },
-  {
-    "id": "e-ani-001",
-    "mode": "estimation",
-    "difficulty": "medium",
-    "category": "Animaux",
-    "prompt": "Combien de temps dort un koala par jour en moyenne (en heures) ?",
-    "numericAnswer": 20,
-    "unit": "h",
-    "source": "Wikipedia:Koala"
-  },
-  {
-    "id": "e-ani-002",
-    "mode": "estimation",
-    "difficulty": "hard",
-    "category": "Animaux",
-    "prompt": "Quelle est la vitesse maximale du guépard en km/h ?",
-    "numericAnswer": 112,
-    "unit": "km/h",
-    "source": "Wikipedia:Cheetah"
+    "category": "Sciences",
+    "prompt": "Quelle est la température de surface du Soleil (en degrés Celsius) ?",
+    "numericAnswer": 5500,
+    "unit": "°C"
   },
   {
     "id": "e-tec-001",
     "mode": "estimation",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "category": "Technologie",
-    "prompt": "En quelle année Google a-t-il été fondé ?",
-    "numericAnswer": 1998,
-    "source": "Wikipedia:Google"
+    "prompt": "En quelle année Apple a-t-il sorti le premier iPhone ?",
+    "numericAnswer": 2007,
+    "unit": "année"
   },
   {
     "id": "e-tec-002",
     "mode": "estimation",
     "difficulty": "hard",
     "category": "Technologie",
-    "prompt": "En quelle année l'iPhone a-t-il été présenté ?",
-    "numericAnswer": 2007,
-    "source": "Wikipedia:IPhone"
+    "prompt": "Combien de lignes de code contient le noyau Linux en 2024 (en millions) ?",
+    "numericAnswer": 34,
+    "unit": "M lignes"
   },
   {
-    "id": "e-div-001",
+    "id": "e-tec-003",
     "mode": "estimation",
     "difficulty": "medium",
-    "category": "Divers",
-    "prompt": "Combien de langues sont officiellement parlées en Suisse ?",
-    "numericAnswer": 4,
-    "source": "Wikipedia:Languages_of_Switzerland"
+    "category": "Technologie",
+    "prompt": "Combien de recherches Google sont effectuées par seconde en moyenne (en milliers) ?",
+    "numericAnswer": 99,
+    "unit": "milliers/s"
   },
   {
-    "id": "e-div-002",
+    "id": "e-tec-004",
     "mode": "estimation",
     "difficulty": "hard",
-    "category": "Divers",
-    "prompt": "Combien de pays sont membres de l'ONU en 2023 ?",
-    "numericAnswer": 193,
-    "source": "Wikipedia:Member_states_of_the_United_Nations"
+    "category": "Technologie",
+    "prompt": "Combien d'heures de vidéo sont mises en ligne sur YouTube par minute ?",
+    "numericAnswer": 500,
+    "unit": "heures/min"
   },
   {
-    "id": "e-div-003",
+    "id": "e-tec-005",
     "mode": "estimation",
-    "difficulty": "easy",
-    "category": "Divers",
-    "prompt": "Combien y a-t-il de cartes dans un jeu de 52 sans les jokers ?",
-    "numericAnswer": 52,
-    "source": "Wikipedia:Playing_card"
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Combien de transistors contient un processeur M1 d'Apple (en milliards) ?",
+    "numericAnswer": 16,
+    "unit": "milliards"
   },
   {
-    "id": "e-his-004",
+    "id": "e-spo-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Combien de buts a marqué Cristiano Ronaldo en équipe nationale (en 2024) ?",
+    "numericAnswer": 131,
+    "unit": "buts"
+  },
+  {
+    "id": "e-spo-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Quel est le record du monde du marathon masculin (en minutes) ?",
+    "numericAnswer": 120,
+    "unit": "min"
+  },
+  {
+    "id": "e-spo-003",
     "mode": "estimation",
     "difficulty": "easy",
-    "category": "Histoire",
-    "prompt": "En quelle année le mur de Berlin est-il tombé ?",
-    "numericAnswer": 1989,
-    "source": "Wikipedia:Berlin_Wall"
+    "category": "Sport",
+    "prompt": "Combien d'équipes participent à la Coupe du monde de football (format 2022) ?",
+    "numericAnswer": 32,
+    "unit": "équipes"
+  },
+  {
+    "id": "e-spo-004",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Combien de Grand Chelem Rafael Nadal a-t-il remportés en tennis ?",
+    "numericAnswer": 22,
+    "unit": "titres"
+  },
+  {
+    "id": "e-mus-001",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Combien de chansons les Beatles ont-ils enregistrées en studio (environ) ?",
+    "numericAnswer": 213,
+    "unit": "chansons"
+  },
+  {
+    "id": "e-mus-002",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "En quelle année Spotify a-t-il été lancé ?",
+    "numericAnswer": 2008,
+    "unit": "année"
+  },
+  {
+    "id": "e-mus-003",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "En millions de streams, combien a fait « Blinding Lights » de The Weeknd sur Spotify (en 2024) ?",
+    "numericAnswer": 4200,
+    "unit": "millions"
+  },
+  {
+    "id": "e-mus-004",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Combien d'albums studio a sorti Taylor Swift (fin 2024) ?",
+    "numericAnswer": 11,
+    "unit": "albums"
+  },
+  {
+    "id": "e-jv-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Combien d'exemplaires s'est vendu Minecraft (en millions, fin 2023) ?",
+    "numericAnswer": 300,
+    "unit": "millions"
+  },
+  {
+    "id": "e-jv-002",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Jeux vidéo",
+    "prompt": "Combien a rapporté GTA V au cumul (en milliards de $, 2024) ?",
+    "numericAnswer": 8,
+    "unit": "milliards $"
+  },
+  {
+    "id": "e-jv-003",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Combien de Pokémon existent dans la 9ᵉ génération (Écarlate/Violet) ?",
+    "numericAnswer": 1025,
+    "unit": "Pokémon"
+  },
+  {
+    "id": "e-jv-004",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Jeux vidéo",
+    "prompt": "En quelle année est sorti le premier Super Mario Bros sur NES ?",
+    "numericAnswer": 1985,
+    "unit": "année"
+  },
+  {
+    "id": "e-geo-001",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Combien de pays comptent l'Union européenne en 2024 ?",
+    "numericAnswer": 27,
+    "unit": "pays"
+  },
+  {
+    "id": "e-geo-002",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle est la hauteur de la Tour Eiffel antenne comprise (en mètres) ?",
+    "numericAnswer": 330,
+    "unit": "m"
+  },
+  {
+    "id": "e-geo-003",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quelle est la superficie de la Russie (en millions de km²) ?",
+    "numericAnswer": 17.1,
+    "unit": "M km²"
+  },
+  {
+    "id": "e-geo-004",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle est l'altitude de l'Everest (en mètres) ?",
+    "numericAnswer": 8849,
+    "unit": "m"
   },
   {
     "id": "e-geo-005",
     "mode": "estimation",
     "difficulty": "hard",
     "category": "Géographie",
-    "prompt": "Quelle est la profondeur maximale de la fosse des Mariannes (en km) ?",
-    "numericAnswer": 10.984,
-    "unit": "km",
-    "source": "Wikipedia:Mariana_Trench"
+    "prompt": "Combien de langues officielles compte la Suisse ?",
+    "numericAnswer": 4,
+    "unit": "langues"
   },
-  { "id": "e-geo-006", "mode": "estimation", "difficulty": "medium", "category": "Géographie", "prompt": "Combien de pays sont membres de l'Union Européenne en 2024 ?", "numericAnswer": 27 },
-  { "id": "e-geo-007", "mode": "estimation", "difficulty": "medium", "category": "Géographie", "prompt": "Population de Paris intra-muros (en millions) ?", "numericAnswer": 2.1, "unit": "millions" },
-  { "id": "e-geo-008", "mode": "estimation", "difficulty": "hard", "category": "Géographie", "prompt": "Population du Japon (en millions) ?", "numericAnswer": 125, "unit": "millions" },
-  { "id": "e-geo-009", "mode": "estimation", "difficulty": "hard", "category": "Géographie", "prompt": "Longueur de la Grande Muraille de Chine (en km) ?", "numericAnswer": 21196, "unit": "km" },
-  { "id": "e-geo-010", "mode": "estimation", "difficulty": "easy", "category": "Géographie", "prompt": "Nombre de régions administratives en France métropolitaine (2016+) ?", "numericAnswer": 13 },
-  { "id": "e-his-005", "mode": "estimation", "difficulty": "medium", "category": "Histoire", "prompt": "Année de la découverte de l'Amérique par Colomb ?", "numericAnswer": 1492 },
-  { "id": "e-his-006", "mode": "estimation", "difficulty": "hard", "category": "Histoire", "prompt": "Année de la fondation de Paris (Lutèce) par les Parisii (av. J.-C. env.) ?", "numericAnswer": 250, "unit": "av. J.-C." },
-  { "id": "e-his-007", "mode": "estimation", "difficulty": "medium", "category": "Histoire", "prompt": "Année de la Nuit de Cristal en Allemagne ?", "numericAnswer": 1938 },
-  { "id": "e-his-008", "mode": "estimation", "difficulty": "hard", "category": "Histoire", "prompt": "Durée de la guerre de Cent Ans (en années) ?", "numericAnswer": 116, "unit": "ans" },
-  { "id": "e-sci-005", "mode": "estimation", "difficulty": "medium", "category": "Sciences", "prompt": "Température de fusion de l'or (°C) ?", "numericAnswer": 1064, "unit": "°C" },
-  { "id": "e-sci-006", "mode": "estimation", "difficulty": "hard", "category": "Sciences", "prompt": "Nombre d'espèces connues d'insectes (en millions) ?", "numericAnswer": 1, "unit": "millions" },
-  { "id": "e-sci-007", "mode": "estimation", "difficulty": "hard", "category": "Sciences", "prompt": "Distance Terre-Soleil en millions de km ?", "numericAnswer": 149.6, "unit": "M km" },
-  { "id": "e-sci-008", "mode": "estimation", "difficulty": "medium", "category": "Sciences", "prompt": "Nombre de gènes dans le génome humain ?", "numericAnswer": 20000 },
-  { "id": "e-cin-003", "mode": "estimation", "difficulty": "medium", "category": "Cinéma", "prompt": "Durée de Autant en emporte le vent (en minutes) ?", "numericAnswer": 238, "unit": "min" },
-  { "id": "e-cin-004", "mode": "estimation", "difficulty": "hard", "category": "Cinéma", "prompt": "Box-office mondial d'Avatar (2009) (en milliards $) ?", "numericAnswer": 2.92, "unit": "Mrd $" },
-  { "id": "e-mus-003", "mode": "estimation", "difficulty": "medium", "category": "Musique", "prompt": "Nombre de touches d'un piano standard ?", "numericAnswer": 88 },
-  { "id": "e-mus-004", "mode": "estimation", "difficulty": "hard", "category": "Musique", "prompt": "Âge de Mozart à sa mort ?", "numericAnswer": 35, "unit": "ans" },
-  { "id": "e-spo-004", "mode": "estimation", "difficulty": "easy", "category": "Sport", "prompt": "Longueur d'un terrain de football (en mètres, moyenne) ?", "numericAnswer": 105, "unit": "m" },
-  { "id": "e-spo-005", "mode": "estimation", "difficulty": "medium", "category": "Sport", "prompt": "Nombre de titres de Grand Chelem de Novak Djokovic (fin 2023) ?", "numericAnswer": 24 },
-  { "id": "e-ani-003", "mode": "estimation", "difficulty": "medium", "category": "Animaux", "prompt": "Poids moyen d'un éléphant d'Afrique adulte (en tonnes) ?", "numericAnswer": 6, "unit": "t" },
-  { "id": "e-ani-004", "mode": "estimation", "difficulty": "hard", "category": "Animaux", "prompt": "Durée de vie moyenne d'une baleine bleue (en années) ?", "numericAnswer": 80, "unit": "ans" },
-  { "id": "e-tec-003", "mode": "estimation", "difficulty": "easy", "category": "Technologie", "prompt": "Année du lancement de ChatGPT ?", "numericAnswer": 2022 },
-  { "id": "e-tec-004", "mode": "estimation", "difficulty": "medium", "category": "Technologie", "prompt": "Nombre d'utilisateurs mensuels de Facebook (en milliards, 2023) ?", "numericAnswer": 3, "unit": "milliards" },
-  { "id": "e-div-004", "mode": "estimation", "difficulty": "medium", "category": "Divers", "prompt": "Nombre de pays participant aux JO de Tokyo 2020 ?", "numericAnswer": 206 },
-  { "id": "e-div-005", "mode": "estimation", "difficulty": "hard", "category": "Divers", "prompt": "Nombre de langues parlées dans le monde (estimation) ?", "numericAnswer": 7100 },
-  { "id": "e-div-006", "mode": "estimation", "difficulty": "easy", "category": "Divers", "prompt": "Durée d'un mandat présidentiel français (en années) ?", "numericAnswer": 5, "unit": "ans" },
-  { "id": "e-lit-001", "mode": "estimation", "difficulty": "medium", "category": "Littérature", "prompt": "Nombre de volumes de À la recherche du temps perdu ?", "numericAnswer": 7 },
-  { "id": "e-lit-002", "mode": "estimation", "difficulty": "hard", "category": "Littérature", "prompt": "Année de parution du premier Harry Potter ?", "numericAnswer": 1997 }
+  {
+    "id": "e-eco-001",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Économie",
+    "prompt": "Combien Elon Musk a-t-il payé pour racheter Twitter (en milliards de $) ?",
+    "numericAnswer": 44,
+    "unit": "milliards $"
+  },
+  {
+    "id": "e-eco-002",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quelle est la capitalisation d'Apple début 2024 (en billions de $) ?",
+    "numericAnswer": 3,
+    "unit": "billions $"
+  },
+  {
+    "id": "e-eco-003",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Économie",
+    "prompt": "Combien de personnes travaillent chez Amazon dans le monde (en millions, 2023) ?",
+    "numericAnswer": 1.5,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Transports",
+    "prompt": "Combien de voyages sont effectués chaque jour dans le métro parisien ?",
+    "numericAnswer": 4.5,
+    "unit": "millions de voyages/jour"
+  },
+  {
+    "id": "e-bulk-002",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Quotidien",
+    "prompt": "Combien de litres d’eau une personne consomme-t-elle en moyenne par jour à domicile en France ?",
+    "numericAnswer": 150,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk-003",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Transports",
+    "prompt": "Combien de kilomètres une voiture française parcourt-elle en moyenne par an ?",
+    "numericAnswer": 12000,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk-004",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien de temps un Français passe-t-il en moyenne devant les écrans chaque jour hors travail ?",
+    "numericAnswer": 4.5,
+    "unit": "heures"
+  },
+  {
+    "id": "e-bulk-005",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Combien pèse environ un cerveau humain adulte ?",
+    "numericAnswer": 1.4,
+    "unit": "kg"
+  },
+  {
+    "id": "e-bulk-006",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Combien de mots un adulte prononce-t-il en moyenne par jour ?",
+    "numericAnswer": 15000,
+    "unit": "mots"
+  },
+  {
+    "id": "e-bulk-007",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien de litres de salive produit-on environ par jour ?",
+    "numericAnswer": 1.2,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk-008",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de kilomètres un humain moyen marche-t-il au cours de sa vie ?",
+    "numericAnswer": 150000,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk-009",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Combien de cheveux une personne perd-elle en moyenne par jour ?",
+    "numericAnswer": 80,
+    "unit": "cheveux"
+  },
+  {
+    "id": "e-bulk-010",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de bactéries vivent environ dans le corps humain ?",
+    "numericAnswer": 38000,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-011",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien de fois cligne-t-on des yeux en moyenne par jour ?",
+    "numericAnswer": 18000,
+    "unit": "fois"
+  },
+  {
+    "id": "e-bulk-012",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de litres d’air un adulte respire-t-il par jour ?",
+    "numericAnswer": 11000,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk-013",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien de temps passe-t-on à dormir au cours d’une vie de 80 ans ?",
+    "numericAnswer": 26,
+    "unit": "années"
+  },
+  {
+    "id": "e-bulk-014",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien de temps passe-t-on aux toilettes au cours d’une vie ?",
+    "numericAnswer": 2,
+    "unit": "années"
+  },
+  {
+    "id": "e-bulk-015",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien de calories brûle une personne en dormant 8 heures ?",
+    "numericAnswer": 500,
+    "unit": "kcal"
+  },
+  {
+    "id": "e-bulk-016",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Alimentation",
+    "prompt": "Combien de kilogrammes de nourriture une personne mange-t-elle environ en un an ?",
+    "numericAnswer": 800,
+    "unit": "kg"
+  },
+  {
+    "id": "e-bulk-017",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Environnement",
+    "prompt": "Combien de litres d’eau sont nécessaires pour produire un jean ?",
+    "numericAnswer": 7500,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk-018",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Environnement",
+    "prompt": "Combien de litres d’eau sont nécessaires pour produire une tasse de café ?",
+    "numericAnswer": 140,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk-019",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Environnement",
+    "prompt": "Combien de litres d’eau sont nécessaires pour produire 1 kg de chocolat ?",
+    "numericAnswer": 17000,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk-020",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Alimentation",
+    "prompt": "Combien de kilomètres parcourt en moyenne une tomate avant d’arriver dans une assiette en Europe ?",
+    "numericAnswer": 1200,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk-021",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Environnement",
+    "prompt": "Combien de tonnes de nourriture sont gaspillées chaque année dans le monde ?",
+    "numericAnswer": 1.05,
+    "unit": "milliards de tonnes"
+  },
+  {
+    "id": "e-bulk-022",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Environnement",
+    "prompt": "Combien de kilogrammes de déchets ménagers un Français produit-il environ par an ?",
+    "numericAnswer": 550,
+    "unit": "kg"
+  },
+  {
+    "id": "e-bulk-023",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Environnement",
+    "prompt": "Combien de mégots sont jetés chaque année dans le monde ?",
+    "numericAnswer": 4500,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-024",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Environnement",
+    "prompt": "Combien de bouteilles en plastique sont vendues chaque minute dans le monde ?",
+    "numericAnswer": 1,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-025",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Environnement",
+    "prompt": "Combien de tonnes de plastique finissent dans les océans chaque année ?",
+    "numericAnswer": 11,
+    "unit": "millions de tonnes"
+  },
+  {
+    "id": "e-bulk-026",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Mode",
+    "prompt": "Combien de vêtements une personne achète-t-elle en moyenne par an en Europe ?",
+    "numericAnswer": 26,
+    "unit": "vêtements"
+  },
+  {
+    "id": "e-bulk-027",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Mode",
+    "prompt": "Combien de fois un vêtement fast fashion est-il porté avant d’être abandonné ?",
+    "numericAnswer": 7,
+    "unit": "fois"
+  },
+  {
+    "id": "e-bulk-028",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Combien de smartphones sont vendus chaque année dans le monde ?",
+    "numericAnswer": 1.2,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-029",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Combien de fois une personne consulte-t-elle son téléphone par jour en moyenne ?",
+    "numericAnswer": 80,
+    "unit": "fois"
+  },
+  {
+    "id": "e-bulk-030",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Combien de notifications reçoit-on en moyenne par jour sur smartphone ?",
+    "numericAnswer": 60,
+    "unit": "notifications"
+  },
+  {
+    "id": "e-bulk-031",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Internet",
+    "prompt": "Combien de recherches Google sont faites chaque jour dans le monde ?",
+    "numericAnswer": 8.5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-032",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Internet",
+    "prompt": "Combien d’e-mails sont envoyés chaque jour dans le monde ?",
+    "numericAnswer": 360,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-033",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Internet",
+    "prompt": "Combien d’heures de vidéo sont mises en ligne sur YouTube chaque minute ?",
+    "numericAnswer": 500,
+    "unit": "heures"
+  },
+  {
+    "id": "e-bulk-034",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "Combien de photos sont prises chaque année dans le monde ?",
+    "numericAnswer": 1800,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-035",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "Combien de données numériques le monde produit-il chaque jour ?",
+    "numericAnswer": 330,
+    "unit": "Eo"
+  },
+  {
+    "id": "e-bulk-036",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Énergie",
+    "prompt": "Combien d’énergie consomme environ un grand centre de données en un an ?",
+    "numericAnswer": 500,
+    "unit": "GWh"
+  },
+  {
+    "id": "e-bulk-037",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Internet",
+    "prompt": "Combien de kilomètres de câbles sous-marins Internet existent dans le monde ?",
+    "numericAnswer": 1.4,
+    "unit": "millions de km"
+  },
+  {
+    "id": "e-bulk-038",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Espace",
+    "prompt": "Combien de satellites actifs orbitent autour de la Terre ?",
+    "numericAnswer": 10000,
+    "unit": "satellites"
+  },
+  {
+    "id": "e-bulk-039",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Espace",
+    "prompt": "Combien de débris spatiaux de plus de 10 cm sont suivis autour de la Terre ?",
+    "numericAnswer": 36500,
+    "unit": "débris"
+  },
+  {
+    "id": "e-bulk-040",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Espace",
+    "prompt": "Combien coûte environ le lancement d’un kilogramme en orbite basse avec les lanceurs les moins chers ?",
+    "numericAnswer": 2000,
+    "unit": "$/kg"
+  },
+  {
+    "id": "e-bulk-041",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Astronomie",
+    "prompt": "Combien d’étoiles contient environ la Voie lactée ?",
+    "numericAnswer": 200,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-042",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Astronomie",
+    "prompt": "Combien de planètes pourrait-il y avoir dans la Voie lactée ?",
+    "numericAnswer": 300,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-043",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Astronomie",
+    "prompt": "Combien de galaxies contient l’univers observable ?",
+    "numericAnswer": 200,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-044",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Astronomie",
+    "prompt": "Combien de temps mettrait une sonde actuelle pour atteindre Proxima du Centaure ?",
+    "numericAnswer": 70000,
+    "unit": "ans"
+  },
+  {
+    "id": "e-bulk-045",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Astronomie",
+    "prompt": "Combien de kilomètres séparent en moyenne la Terre de la Lune ?",
+    "numericAnswer": 384400,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk-046",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de kilogrammes de matière tombent chaque jour sur Terre sous forme de poussières et météorites ?",
+    "numericAnswer": 50000,
+    "unit": "kg"
+  },
+  {
+    "id": "e-bulk-047",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien de volcans potentiellement actifs existe-t-il sur Terre ?",
+    "numericAnswer": 1350,
+    "unit": "volcans"
+  },
+  {
+    "id": "e-bulk-048",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Météo",
+    "prompt": "Combien d’éclairs frappent la Terre chaque seconde ?",
+    "numericAnswer": 44,
+    "unit": "éclairs"
+  },
+  {
+    "id": "e-bulk-049",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Combien de tremblements de terre sont détectés chaque année dans le monde ?",
+    "numericAnswer": 500000,
+    "unit": "tremblements"
+  },
+  {
+    "id": "e-bulk-050",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Océans",
+    "prompt": "Combien de litres d’eau contient l’océan mondial ?",
+    "numericAnswer": 1335,
+    "unit": "milliards de milliards de L"
+  },
+  {
+    "id": "e-bulk-051",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Biodiversité",
+    "prompt": "Combien d’espèces vivantes seraient encore inconnues de la science ?",
+    "numericAnswer": 8,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-052",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Biodiversité",
+    "prompt": "Combien d’espèces disparaissent chaque année dans le monde ?",
+    "numericAnswer": 10000,
+    "unit": "espèces"
+  },
+  {
+    "id": "e-bulk-053",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Biodiversité",
+    "prompt": "Combien de fourmis vivraient sur Terre ?",
+    "numericAnswer": 20,
+    "unit": "millions de milliards"
+  },
+  {
+    "id": "e-bulk-054",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Biodiversité",
+    "prompt": "Quel est le poids total approximatif de toutes les fourmis sur Terre ?",
+    "numericAnswer": 12,
+    "unit": "millions de tonnes"
+  },
+  {
+    "id": "e-bulk-055",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Nature",
+    "prompt": "Combien d’abeilles peut contenir une ruche en pleine saison ?",
+    "numericAnswer": 50000,
+    "unit": "abeilles"
+  },
+  {
+    "id": "e-bulk-056",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Alimentation",
+    "prompt": "Combien de kilomètres les abeilles parcourent-elles collectivement pour produire 1 kg de miel ?",
+    "numericAnswer": 180000,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk-057",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Nature",
+    "prompt": "Combien de moustiques existeraient approximativement sur Terre à un moment donné ?",
+    "numericAnswer": 110000,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-058",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Nature",
+    "prompt": "Combien d’humains un moustique femelle peut-il piquer en une nuit ?",
+    "numericAnswer": 3,
+    "unit": "humains"
+  },
+  {
+    "id": "e-bulk-059",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Nature",
+    "prompt": "Combien de kilomètres peut parcourir un papillon monarque pendant sa migration ?",
+    "numericAnswer": 4500,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk-060",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Nature",
+    "prompt": "Combien de temps une baleine bleue peut-elle retenir sa respiration ?",
+    "numericAnswer": 45,
+    "unit": "min"
+  },
+  {
+    "id": "e-bulk-061",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Agriculture",
+    "prompt": "Combien de litres de lait une vache laitière produit-elle par jour en élevage intensif ?",
+    "numericAnswer": 30,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk-062",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Alimentation",
+    "prompt": "Combien de poulets sont abattus chaque année dans le monde ?",
+    "numericAnswer": 75,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-063",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Alimentation",
+    "prompt": "Combien de poissons sont pêchés ou élevés chaque année pour l’alimentation humaine ?",
+    "numericAnswer": 1000,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-064",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Alimentation",
+    "prompt": "Combien de tonnes de riz sont produites chaque année dans le monde ?",
+    "numericAnswer": 520,
+    "unit": "millions de tonnes"
+  },
+  {
+    "id": "e-bulk-065",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Alimentation",
+    "prompt": "Combien de tasses de café sont bues chaque jour dans le monde ?",
+    "numericAnswer": 2.25,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-066",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Alimentation",
+    "prompt": "Combien de pizzas sont consommées chaque année dans le monde ?",
+    "numericAnswer": 30,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-067",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Alimentation",
+    "prompt": "Combien de hamburgers McDonald’s sont vendus par jour dans le monde ?",
+    "numericAnswer": 69,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-068",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Alimentation",
+    "prompt": "Combien de portions de boissons Coca-Cola Company sont consommées chaque jour ?",
+    "numericAnswer": 1.9,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-069",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Alimentation",
+    "prompt": "Combien de litres de bière sont consommés chaque année dans le monde ?",
+    "numericAnswer": 185,
+    "unit": "milliards de L"
+  },
+  {
+    "id": "e-bulk-070",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Alimentation",
+    "prompt": "Combien de tonnes de chocolat sont consommées chaque année dans le monde ?",
+    "numericAnswer": 7.5,
+    "unit": "millions de tonnes"
+  },
+  {
+    "id": "e-bulk-071",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Patrimoine",
+    "prompt": "Combien de personnes visitent le Louvre chaque année en période normale ?",
+    "numericAnswer": 9,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-072",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Patrimoine",
+    "prompt": "Combien de personnes montent chaque année à la tour Eiffel ?",
+    "numericAnswer": 6.5,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-073",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Religion",
+    "prompt": "Combien de pèlerins participent au Hajj lors d’une grande année normale ?",
+    "numericAnswer": 2.5,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-074",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Tourisme",
+    "prompt": "Combien de touristes internationaux voyagent dans le monde en une année normale ?",
+    "numericAnswer": 1.5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-075",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Aviation",
+    "prompt": "Combien de passagers prennent l’avion chaque année dans le monde ?",
+    "numericAnswer": 4.5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-076",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Aviation",
+    "prompt": "Combien d’avions sont en vol dans le monde à un instant donné en journée normale ?",
+    "numericAnswer": 10000,
+    "unit": "avions"
+  },
+  {
+    "id": "e-bulk-077",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Commerce",
+    "prompt": "Combien de conteneurs maritimes circulent dans le monde ?",
+    "numericAnswer": 45,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-078",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Maritime",
+    "prompt": "Combien de navires de commerce naviguent sur les mers ?",
+    "numericAnswer": 100000,
+    "unit": "navires"
+  },
+  {
+    "id": "e-bulk-079",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Transports",
+    "prompt": "Combien de kilomètres de routes existe-t-il dans le monde ?",
+    "numericAnswer": 65,
+    "unit": "millions de km"
+  },
+  {
+    "id": "e-bulk-080",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Transports",
+    "prompt": "Combien de kilomètres de voies ferrées existe-t-il dans le monde ?",
+    "numericAnswer": 1.3,
+    "unit": "millions de km"
+  },
+  {
+    "id": "e-bulk-081",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Démographie",
+    "prompt": "Combien de personnes vivent dans des bidonvilles ou quartiers informels dans le monde ?",
+    "numericAnswer": 1,
+    "unit": "milliards de personnes"
+  },
+  {
+    "id": "e-bulk-082",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Démographie",
+    "prompt": "Combien de personnes n’ont pas accès à l’eau potable gérée en toute sécurité ?",
+    "numericAnswer": 2.2,
+    "unit": "milliards de personnes"
+  },
+  {
+    "id": "e-bulk-083",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Démographie",
+    "prompt": "Combien de personnes souffrent de sous-alimentation chronique dans le monde ?",
+    "numericAnswer": 735,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-084",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Langues",
+    "prompt": "Combien de personnes parlent anglais comme première ou seconde langue ?",
+    "numericAnswer": 1.45,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-085",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Combien de langues sont parlées dans le monde aujourd’hui ?",
+    "numericAnswer": 7000,
+    "unit": "langues"
+  },
+  {
+    "id": "e-bulk-086",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Langues",
+    "prompt": "Combien de langues pourraient disparaître d’ici la fin du siècle ?",
+    "numericAnswer": 3500,
+    "unit": "langues"
+  },
+  {
+    "id": "e-bulk-087",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Culture",
+    "prompt": "Combien de livres sont publiés chaque année dans le monde ?",
+    "numericAnswer": 2.2,
+    "unit": "millions de titres"
+  },
+  {
+    "id": "e-bulk-088",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Religion",
+    "prompt": "Combien d’exemplaires de la Bible auraient été diffusés dans l’histoire ?",
+    "numericAnswer": 5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-089",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Combien de chansons sont disponibles sur Spotify ?",
+    "numericAnswer": 100,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-090",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Combien de morceaux sont ajoutés chaque jour sur les plateformes de streaming musical ?",
+    "numericAnswer": 100000,
+    "unit": "titres"
+  },
+  {
+    "id": "e-bulk-091",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Combien de spectateurs regardent la finale de la Coupe du monde de football dans le monde ?",
+    "numericAnswer": 1.5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-092",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Médias",
+    "prompt": "Combien coûte une publicité de 30 secondes pendant le Super Bowl américain ?",
+    "numericAnswer": 7,
+    "unit": "millions de dollars"
+  },
+  {
+    "id": "e-bulk-093",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Combien d’argent génère l’industrie mondiale du jeu vidéo par an ?",
+    "numericAnswer": 185,
+    "unit": "milliards $"
+  },
+  {
+    "id": "e-bulk-094",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Combien de joueurs actifs compte Roblox chaque jour ?",
+    "numericAnswer": 75,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk-095",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Combien de personnes jouent aux jeux vidéo dans le monde ?",
+    "numericAnswer": 3.2,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-096",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Réseaux sociaux",
+    "prompt": "Combien de temps un utilisateur passe-t-il en moyenne par jour sur TikTok ?",
+    "numericAnswer": 80,
+    "unit": "minutes"
+  },
+  {
+    "id": "e-bulk-097",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Réseaux sociaux",
+    "prompt": "Combien de vidéos TikTok sont vues chaque jour dans le monde ?",
+    "numericAnswer": 50,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-098",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Internet",
+    "prompt": "Combien de messages WhatsApp sont envoyés chaque jour ?",
+    "numericAnswer": 100,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk-099",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Démographie",
+    "prompt": "Combien de personnes vivent dans une ville de plus d’un million d’habitants ?",
+    "numericAnswer": 2,
+    "unit": "milliards de personnes"
+  },
+  {
+    "id": "e-bulk-100",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Économie",
+    "prompt": "Combien d’argent liquide circule physiquement dans le monde ?",
+    "numericAnswer": 9000,
+    "unit": "milliards $"
+  },
+  {
+    "id": "e-bulk2-001",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Combien d’années a duré l’Empire romain d’Occident, de la fondation de l’Empire par Auguste à sa chute ?",
+    "numericAnswer": 503,
+    "unit": "ans"
+  },
+  {
+    "id": "e-bulk2-002",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Combien d’années a duré la guerre de Cent Ans ?",
+    "numericAnswer": 116,
+    "unit": "ans"
+  },
+  {
+    "id": "e-bulk2-003",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Combien de jours a duré le règne dit des Cent-Jours de Napoléon ?",
+    "numericAnswer": 111,
+    "unit": "jours"
+  },
+  {
+    "id": "e-bulk2-004",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Combien de temps a duré le siège de Leningrad pendant la Seconde Guerre mondiale ?",
+    "numericAnswer": 872,
+    "unit": "jours"
+  },
+  {
+    "id": "e-bulk2-005",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Combien de soldats alliés ont débarqué en Normandie le 6 juin 1944 ?",
+    "numericAnswer": 156000,
+    "unit": "soldats"
+  },
+  {
+    "id": "e-bulk2-006",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Combien de blocs de pierre composent environ la pyramide de Khéops ?",
+    "numericAnswer": 2.3,
+    "unit": "millions de blocs"
+  },
+  {
+    "id": "e-bulk2-007",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Combien d’années a duré la construction principale de la pyramide de Khéops ?",
+    "numericAnswer": 20,
+    "unit": "ans"
+  },
+  {
+    "id": "e-bulk2-008",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Combien de kilomètres mesurait environ le mur de Berlin ?",
+    "numericAnswer": 155,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-009",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Combien de kilomètres de routes l’Empire romain possédait-il à son apogée ?",
+    "numericAnswer": 400000,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-010",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Combien de personnes vivaient environ à Rome au sommet de l’Empire romain ?",
+    "numericAnswer": 1,
+    "unit": "million d’habitants"
+  },
+  {
+    "id": "e-bulk2-011",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Combien de temps a duré le siège de Sarajevo, l’un des plus longs sièges modernes ?",
+    "numericAnswer": 1425,
+    "unit": "jours"
+  },
+  {
+    "id": "e-bulk2-012",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Combien de personnes ont été déplacées lors de la partition de l’Inde en 1947 ?",
+    "numericAnswer": 15,
+    "unit": "millions de personnes"
+  },
+  {
+    "id": "e-bulk2-013",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Combien de personnes ont travaillé environ sur le projet Manhattan ?",
+    "numericAnswer": 130000,
+    "unit": "personnes"
+  },
+  {
+    "id": "e-bulk2-014",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Combien de kilomètres mesurait environ la route de la soie ?",
+    "numericAnswer": 6500,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-015",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Combien d’années a duré la IIIe République française ?",
+    "numericAnswer": 70,
+    "unit": "ans"
+  },
+  {
+    "id": "e-bulk2-016",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Combien de pays compte l’Afrique ?",
+    "numericAnswer": 54,
+    "unit": "pays"
+  },
+  {
+    "id": "e-bulk2-017",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien de kilomètres mesure environ le Nil ?",
+    "numericAnswer": 6650,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-018",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle est l’altitude approximative du mont Everest ?",
+    "numericAnswer": 8849,
+    "unit": "m"
+  },
+  {
+    "id": "e-bulk2-019",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien mesure environ l’équateur terrestre ?",
+    "numericAnswer": 40075,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-020",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien de fuseaux horaires traverse officiellement la Russie ?",
+    "numericAnswer": 11,
+    "unit": "fuseaux"
+  },
+  {
+    "id": "e-bulk2-021",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle est la superficie approximative du Sahara ?",
+    "numericAnswer": 9.2,
+    "unit": "millions de km²"
+  },
+  {
+    "id": "e-bulk2-022",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien d’îles compte environ l’Indonésie ?",
+    "numericAnswer": 17000,
+    "unit": "îles"
+  },
+  {
+    "id": "e-bulk2-023",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle est la profondeur approximative de la fosse des Mariannes ?",
+    "numericAnswer": 11000,
+    "unit": "m"
+  },
+  {
+    "id": "e-bulk2-024",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien de kilomètres séparent environ Paris de New York à vol d’oiseau ?",
+    "numericAnswer": 5850,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-025",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien de kilomètres mesure environ la Grande Muraille de Chine, toutes sections confondues ?",
+    "numericAnswer": 21196,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-026",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Combien de pays sont traversés par le Danube ?",
+    "numericAnswer": 10,
+    "unit": "pays"
+  },
+  {
+    "id": "e-bulk2-027",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Combien de pays ont une frontière terrestre avec la France si on inclut l’outre-mer ?",
+    "numericAnswer": 11,
+    "unit": "pays"
+  },
+  {
+    "id": "e-bulk2-028",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle est la superficie approximative de la Russie ?",
+    "numericAnswer": 17.1,
+    "unit": "millions de km²"
+  },
+  {
+    "id": "e-bulk2-029",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Combien de kilomètres de côtes possède environ le Canada ?",
+    "numericAnswer": 243000,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-030",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien de personnes vivent environ dans l’aire urbaine de Tokyo ?",
+    "numericAnswer": 37,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk2-031",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Astronomie",
+    "prompt": "Combien de kilomètres séparent en moyenne la Terre de la Lune ?",
+    "numericAnswer": 384400,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-032",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Astronomie",
+    "prompt": "Combien de minutes met la lumière du Soleil à atteindre la Terre ?",
+    "numericAnswer": 8.3,
+    "unit": "minutes"
+  },
+  {
+    "id": "e-bulk2-033",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Astronomie",
+    "prompt": "Combien de kilomètres par heure la Terre parcourt-elle autour du Soleil ?",
+    "numericAnswer": 107000,
+    "unit": "km/h"
+  },
+  {
+    "id": "e-bulk2-034",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Astronomie",
+    "prompt": "Combien de Terres pourraient tenir dans le Soleil ?",
+    "numericAnswer": 1.3,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk2-035",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Astronomie",
+    "prompt": "Combien d’étoiles contient environ la Voie lactée ?",
+    "numericAnswer": 200,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-036",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Astronomie",
+    "prompt": "Combien de galaxies contient environ l’univers observable ?",
+    "numericAnswer": 200,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-037",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Astronomie",
+    "prompt": "Combien de planètes pourrait contenir la Voie lactée ?",
+    "numericAnswer": 300,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-038",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Espace",
+    "prompt": "Combien de couchers de soleil peut voir un astronaute en 24 h depuis l’ISS ?",
+    "numericAnswer": 16,
+    "unit": "fois"
+  },
+  {
+    "id": "e-bulk2-039",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Espace",
+    "prompt": "Combien de kilogrammes d’échantillons lunaires les missions Apollo ont-elles ramenés ?",
+    "numericAnswer": 382,
+    "unit": "kg"
+  },
+  {
+    "id": "e-bulk2-040",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Espace",
+    "prompt": "Combien de personnes ont marché sur la Lune ?",
+    "numericAnswer": 12,
+    "unit": "personnes"
+  },
+  {
+    "id": "e-bulk2-041",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien de volcans potentiellement actifs existe-t-il sur Terre ?",
+    "numericAnswer": 1350,
+    "unit": "volcans"
+  },
+  {
+    "id": "e-bulk2-042",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Météo",
+    "prompt": "Combien d’éclairs frappent la Terre chaque seconde ?",
+    "numericAnswer": 44,
+    "unit": "éclairs"
+  },
+  {
+    "id": "e-bulk2-043",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Combien de tremblements de terre sont détectés chaque année dans le monde ?",
+    "numericAnswer": 500000,
+    "unit": "tremblements"
+  },
+  {
+    "id": "e-bulk2-044",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Océans",
+    "prompt": "Combien de litres d’eau contient environ l’océan mondial ?",
+    "numericAnswer": 1335,
+    "unit": "milliards de milliards de L"
+  },
+  {
+    "id": "e-bulk2-045",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Espace",
+    "prompt": "Combien de satellites actifs orbitent autour de la Terre ?",
+    "numericAnswer": 10000,
+    "unit": "satellites"
+  },
+  {
+    "id": "e-bulk2-046",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de cellules contient environ le corps humain ?",
+    "numericAnswer": 37000,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-047",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien de neurones contient environ le cerveau humain ?",
+    "numericAnswer": 86,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-048",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de kilomètres de vaisseaux sanguins contient le corps humain ?",
+    "numericAnswer": 100000,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-049",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de litres de sang le cœur pompe-t-il environ par jour ?",
+    "numericAnswer": 7500,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk2-050",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de battements le cœur effectue-t-il environ dans une vie de 80 ans ?",
+    "numericAnswer": 3,
+    "unit": "milliards de battements"
+  },
+  {
+    "id": "e-bulk2-051",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de litres d’air un adulte respire-t-il environ par jour ?",
+    "numericAnswer": 11000,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk2-052",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien de bactéries vivent environ dans le corps humain ?",
+    "numericAnswer": 38000,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-053",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien de fois cligne-t-on des yeux en moyenne par jour ?",
+    "numericAnswer": 18000,
+    "unit": "fois"
+  },
+  {
+    "id": "e-bulk2-054",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien d’années passe-t-on à dormir dans une vie de 80 ans ?",
+    "numericAnswer": 26,
+    "unit": "ans"
+  },
+  {
+    "id": "e-bulk2-055",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Combien de litres de salive produit-on environ par jour ?",
+    "numericAnswer": 1.2,
+    "unit": "L"
+  },
+  {
+    "id": "e-bulk2-056",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Nature",
+    "prompt": "Combien de fois par seconde un colibri peut-il battre des ailes ?",
+    "numericAnswer": 80,
+    "unit": "battements/s"
+  },
+  {
+    "id": "e-bulk2-057",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Nature",
+    "prompt": "Combien de kilomètres une sterne arctique peut-elle parcourir pendant sa migration annuelle ?",
+    "numericAnswer": 70000,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-058",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Nature",
+    "prompt": "Combien d’années peut vivre un requin du Groenland ?",
+    "numericAnswer": 400,
+    "unit": "ans"
+  },
+  {
+    "id": "e-bulk2-059",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Nature",
+    "prompt": "Combien pèse environ la langue d’une baleine bleue ?",
+    "numericAnswer": 2.7,
+    "unit": "tonnes"
+  },
+  {
+    "id": "e-bulk2-060",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Nature",
+    "prompt": "Combien de fourmis vivraient environ sur Terre ?",
+    "numericAnswer": 20,
+    "unit": "millions de milliards"
+  },
+  {
+    "id": "e-bulk2-061",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Patrimoine",
+    "prompt": "Combien pèse environ la tour Eiffel ?",
+    "numericAnswer": 10100,
+    "unit": "tonnes"
+  },
+  {
+    "id": "e-bulk2-062",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Patrimoine",
+    "prompt": "Combien de marches faut-il gravir pour atteindre le deuxième étage de la tour Eiffel ?",
+    "numericAnswer": 674,
+    "unit": "marches"
+  },
+  {
+    "id": "e-bulk2-063",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Patrimoine",
+    "prompt": "Combien de pièces compte le château de Versailles ?",
+    "numericAnswer": 2300,
+    "unit": "pièces"
+  },
+  {
+    "id": "e-bulk2-064",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Patrimoine",
+    "prompt": "Combien de visiteurs le Louvre accueille-t-il environ par an en période normale ?",
+    "numericAnswer": 9,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk2-065",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Patrimoine",
+    "prompt": "Combien de personnes pouvaient entrer dans le Colisée de Rome ?",
+    "numericAnswer": 50000,
+    "unit": "spectateurs"
+  },
+  {
+    "id": "e-bulk2-066",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Patrimoine",
+    "prompt": "Combien de fenêtres possède l’Empire State Building ?",
+    "numericAnswer": 6514,
+    "unit": "fenêtres"
+  },
+  {
+    "id": "e-bulk2-067",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Patrimoine",
+    "prompt": "Combien de statues moai compte environ l’île de Pâques ?",
+    "numericAnswer": 900,
+    "unit": "statues"
+  },
+  {
+    "id": "e-bulk2-068",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Patrimoine",
+    "prompt": "Combien de personnes ont travaillé environ à la construction du Taj Mahal ?",
+    "numericAnswer": 20000,
+    "unit": "personnes"
+  },
+  {
+    "id": "e-bulk2-069",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Patrimoine",
+    "prompt": "Combien mesure environ la statue de la Liberté avec son socle ?",
+    "numericAnswer": 93,
+    "unit": "m"
+  },
+  {
+    "id": "e-bulk2-070",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Patrimoine",
+    "prompt": "Combien d’années a duré la construction initiale de Notre-Dame de Paris au Moyen Âge ?",
+    "numericAnswer": 182,
+    "unit": "ans"
+  },
+  {
+    "id": "e-bulk2-071",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Combien de kilomètres fait un Ironman complet ?",
+    "numericAnswer": 226,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-072",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Combien de spectateurs regardent environ la finale de la Coupe du monde de football dans le monde ?",
+    "numericAnswer": 1.5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-073",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Combien de pays participent à la Coupe du monde de football 2026 ?",
+    "numericAnswer": 48,
+    "unit": "pays"
+  },
+  {
+    "id": "e-bulk2-074",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Combien de kilomètres un joueur de football parcourt-il en moyenne pendant un match ?",
+    "numericAnswer": 10,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-075",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Combien de kilomètres un cycliste du Tour de France parcourt-il environ sur une édition moderne ?",
+    "numericAnswer": 3500,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-076",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Combien de calories un coureur peut-il brûler pendant un marathon ?",
+    "numericAnswer": 2800,
+    "unit": "kcal"
+  },
+  {
+    "id": "e-bulk2-077",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Combien de balles sont utilisées environ pendant un tournoi de Roland-Garros ?",
+    "numericAnswer": 70000,
+    "unit": "balles"
+  },
+  {
+    "id": "e-bulk2-078",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Combien de personnes ont assisté au plus grand match de football connu au Maracanã en 1950 ?",
+    "numericAnswer": 199854,
+    "unit": "spectateurs"
+  },
+  {
+    "id": "e-bulk2-079",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Combien gagne environ le vainqueur du Tour de France au classement général ?",
+    "numericAnswer": 500000,
+    "unit": "€"
+  },
+  {
+    "id": "e-bulk2-080",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Combien de kilomètres nage un nageur pendant une épreuve olympique de 10 km en eau libre ?",
+    "numericAnswer": 10,
+    "unit": "km"
+  },
+  {
+    "id": "e-bulk2-081",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Combien de langues sont parlées dans le monde aujourd’hui ?",
+    "numericAnswer": 7000,
+    "unit": "langues"
+  },
+  {
+    "id": "e-bulk2-082",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Langues",
+    "prompt": "Combien de langues pourraient disparaître d’ici la fin du siècle ?",
+    "numericAnswer": 3500,
+    "unit": "langues"
+  },
+  {
+    "id": "e-bulk2-083",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Langues",
+    "prompt": "Combien de personnes parlent anglais comme première ou seconde langue ?",
+    "numericAnswer": 1.45,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-084",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Culture",
+    "prompt": "Combien de livres sont publiés chaque année dans le monde ?",
+    "numericAnswer": 2.2,
+    "unit": "millions de titres"
+  },
+  {
+    "id": "e-bulk2-085",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Religion",
+    "prompt": "Combien d’exemplaires de la Bible auraient été diffusés dans l’histoire ?",
+    "numericAnswer": 5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-086",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Combien de chansons sont disponibles sur Spotify ?",
+    "numericAnswer": 100,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk2-087",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Internet",
+    "prompt": "Combien d’heures de vidéo sont mises en ligne sur YouTube chaque minute ?",
+    "numericAnswer": 500,
+    "unit": "heures"
+  },
+  {
+    "id": "e-bulk2-088",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Internet",
+    "prompt": "Combien d’e-mails sont envoyés chaque jour dans le monde ?",
+    "numericAnswer": 360,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-089",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Internet",
+    "prompt": "Combien de recherches Google sont effectuées chaque seconde ?",
+    "numericAnswer": 99000,
+    "unit": "recherches/s"
+  },
+  {
+    "id": "e-bulk2-090",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Internet",
+    "prompt": "Combien de messages WhatsApp sont envoyés chaque jour ?",
+    "numericAnswer": 100,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-091",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Aviation",
+    "prompt": "Combien de passagers prennent l’avion chaque année dans le monde ?",
+    "numericAnswer": 4.5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-092",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Tourisme",
+    "prompt": "Combien de touristes internationaux voyagent dans le monde en une année normale ?",
+    "numericAnswer": 1.5,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-093",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Environnement",
+    "prompt": "Combien de tonnes de CO₂ l’humanité émet-elle environ par an ?",
+    "numericAnswer": 37,
+    "unit": "milliards de tonnes"
+  },
+  {
+    "id": "e-bulk2-094",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Environnement",
+    "prompt": "Combien de tonnes de plastique sont produites chaque année dans le monde ?",
+    "numericAnswer": 400,
+    "unit": "millions de tonnes"
+  },
+  {
+    "id": "e-bulk2-095",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Environnement",
+    "prompt": "Combien d’arbres existe-t-il environ sur Terre ?",
+    "numericAnswer": 3000,
+    "unit": "milliards d’arbres"
+  },
+  {
+    "id": "e-bulk2-096",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Environnement",
+    "prompt": "Combien d’arbres sont coupés chaque année dans le monde ?",
+    "numericAnswer": 15,
+    "unit": "milliards"
+  },
+  {
+    "id": "e-bulk2-097",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Démographie",
+    "prompt": "Combien de personnes vivent dans des bidonvilles ou quartiers informels dans le monde ?",
+    "numericAnswer": 1,
+    "unit": "milliards de personnes"
+  },
+  {
+    "id": "e-bulk2-098",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Démographie",
+    "prompt": "Combien de personnes souffrent de sous-alimentation chronique dans le monde ?",
+    "numericAnswer": 735,
+    "unit": "millions"
+  },
+  {
+    "id": "e-bulk2-099",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Combien de dollars l’industrie mondiale du jeu vidéo génère-t-elle environ par an ?",
+    "numericAnswer": 185,
+    "unit": "milliards $"
+  },
+  {
+    "id": "e-bulk2-100",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Économie",
+    "prompt": "Combien vaut environ le marché mondial du luxe par an ?",
+    "numericAnswer": 360,
+    "unit": "milliards $"
+  }
 ]

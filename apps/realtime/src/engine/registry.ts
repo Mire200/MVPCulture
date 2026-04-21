@@ -1,6 +1,7 @@
 import type { GameModeId } from '@mvpc/shared';
 import type { GameMode } from './types.js';
 import { classicMode } from './modes/classic.js';
+import { qcmMode } from './modes/qcm.js';
 import { estimationMode } from './modes/estimation.js';
 import { listTurnsMode } from './modes/listTurns.js';
 import { hotPotatoMode } from './modes/hotPotato.js';
@@ -8,9 +9,12 @@ import { speedElimMode } from './modes/speedElim.js';
 import { mapMode } from './modes/mapMode.js';
 import { chronologyMode } from './modes/chronology.js';
 import { guessWhoMode } from './modes/guessWho.js';
+import { imposterMode } from './modes/imposter.js';
+import { codenamesMode } from './modes/codenames.js';
 
 export const MODE_REGISTRY: Partial<Record<GameModeId, GameMode>> = {
   classic: classicMode,
+  qcm: qcmMode,
   estimation: estimationMode,
   'list-turns': listTurnsMode,
   'hot-potato': hotPotatoMode,
@@ -18,6 +22,8 @@ export const MODE_REGISTRY: Partial<Record<GameModeId, GameMode>> = {
   map: mapMode,
   chronology: chronologyMode,
   'guess-who': guessWhoMode,
+  imposter: imposterMode,
+  codenames: codenamesMode,
 };
 
 export function getMode(id: GameModeId): GameMode {

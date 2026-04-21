@@ -17,6 +17,7 @@ import {
 import type { RadioStatePayload } from '@mvpc/shared';
 import { getSocket } from '@/lib/socket';
 import { cn } from '@/lib/cn';
+import { getTvAudioOn, subscribeTvAudio } from '@/lib/mediaBus';
 
 const STORAGE_VOLUME = 'mvpc.radio.volume';
 const STORAGE_MUTED = 'mvpc.radio.muted';
@@ -51,6 +52,13 @@ export function RadioPlayer() {
     return localStorage.getItem(STORAGE_UNLOCKED) === '1';
   });
   const [progress, setProgress] = useState(0);
+  const [tvAudioOn, setTvAudioOnState] = useState<boolean>(() => getTvAudioOn());
+
+  // Si la télé du lobby prend la parole, la radio se tait (et redémarre quand
+  // l'utilisateur referme la télé).
+  useEffect(() => {
+    return subscribeTvAudio((v) => setTvAudioOnState(v));
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_VOLUME, String(volume));
@@ -91,8 +99,8 @@ export function RadioPlayer() {
     const el = audioRef.current;
     if (!el) return;
     el.volume = volume;
-    el.muted = muted || !unlocked;
-  }, [volume, muted, unlocked]);
+    el.muted = muted || !unlocked || tvAudioOn;
+  }, [volume, muted, unlocked, tvAudioOn]);
 
   // À chaque changement de piste : charger la nouvelle src et se positionner.
   useEffect(() => {
@@ -114,7 +122,7 @@ export function RadioPlayer() {
           el.currentTime = target;
         }
       }
-      if (unlocked && !muted) {
+      if (unlocked && !muted && !tvAudioOn) {
         el.play().catch(() => {
           // Autoplay bloqué : on attend une interaction utilisateur.
         });
@@ -134,11 +142,11 @@ export function RadioPlayer() {
       el.addEventListener('loadedmetadata', onMeta);
       return () => el.removeEventListener('loadedmetadata', onMeta);
     }
-  }, [state, clockOffset, unlocked, muted]);
+  }, [state, clockOffset, unlocked, muted, tvAudioOn]);
 
   // Re-sync périodique pour corriger la dérive.
   useEffect(() => {
-    if (!state || !unlocked || muted) return;
+    if (!state || !unlocked || muted || tvAudioOn) return;
     const id = setInterval(() => {
       const el = audioRef.current;
       if (!el || !state) return;
@@ -150,7 +158,7 @@ export function RadioPlayer() {
       }
     }, 5000);
     return () => clearInterval(id);
-  }, [state, clockOffset, unlocked, muted]);
+  }, [state, clockOffset, unlocked, muted, tvAudioOn]);
 
   // Tick local pour la barre de progression.
   useEffect(() => {

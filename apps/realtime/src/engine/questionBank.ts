@@ -1,4 +1,4 @@
-import { ALL_QUESTIONS } from '@mvpc/content';
+import { ALL_QUESTIONS, IMPOSTER_QUESTIONS } from '@mvpc/content';
 import type { GameConfig, GameModeId, Question } from '@mvpc/shared';
 
 function syntheticGuessWho(index: number): Question {
@@ -8,6 +8,16 @@ function syntheticGuessWho(index: number): Question {
     difficulty: 'easy',
     category: 'Qui est-ce',
     prompt: 'Qui est-ce ?',
+  } as Question;
+}
+
+function syntheticCodenames(index: number): Question {
+  return {
+    id: `cn-${index}`,
+    mode: 'codenames',
+    difficulty: 'medium',
+    category: 'Codenames',
+    prompt: 'Codenames',
   } as Question;
 }
 
@@ -35,11 +45,25 @@ export function buildRoundPlaylist(config: GameConfig): Question[] {
   const playlist: Question[] = [];
   const usedIds = new Set<string>();
 
-  // Le mode "guess-who" occupe toute la session : il se joue en une seule
-  // manche, quelle que soit la config `rounds`. Si présent dans le pool,
-  // on renvoie une unique Question synthétique.
+  // Le mode "guess-who" occupe toute la session : il se joue en
+  // GUESS_WHO_ROUNDS manches consécutives, chaque joueur repart avec un
+  // nouveau secret à chaque manche. Les guesses ratés bannissent le joueur
+  // de tout futur guess sur la partie (stocké sur la Room).
   if (pool.includes('guess-who')) {
-    return [syntheticGuessWho(0)];
+    const GUESS_WHO_ROUNDS = 3;
+    return Array.from({ length: GUESS_WHO_ROUNDS }, (_, i) => syntheticGuessWho(i));
+  }
+  // Le mode "imposter" occupe aussi toute la session : une seule manche
+  // avec une paire de mots tirée au hasard dans la banque.
+  if (pool.includes('imposter')) {
+    const list = IMPOSTER_QUESTIONS;
+    if (list.length === 0) return [];
+    return [pickRandom(list)];
+  }
+  // Le mode "codenames" occupe toute la session ; question synthétique car
+  // la grille est tirée au moment du `prepare` depuis la banque de mots.
+  if (pool.includes('codenames')) {
+    return [syntheticCodenames(0)];
   }
 
   for (let i = 0; i < config.rounds; i++) {

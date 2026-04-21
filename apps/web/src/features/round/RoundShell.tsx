@@ -2,7 +2,7 @@
 import { useGameStore } from '@/store/gameStore';
 import { AvatarBadge } from '@/components/AvatarPicker';
 import { motion } from 'framer-motion';
-import { Flame, Sparkles, Zap, MapPin, Hourglass, Dices, HelpCircle } from 'lucide-react';
+import { Flame, Sparkles, Zap, MapPin, Hourglass, Dices, HelpCircle, UserX, Grid3x3 } from 'lucide-react';
 import { Timer } from '@/components/Timer';
 
 type ChipVariant = 'cyan' | 'magenta' | 'violet' | 'lime' | 'amber';
@@ -12,6 +12,7 @@ const MODE_META: Record<
   { label: string; chip: ChipVariant; icon: React.ReactNode }
 > = {
   classic: { label: 'Question ouverte', chip: 'cyan', icon: <Sparkles className="w-3.5 h-3.5" /> },
+  qcm: { label: 'Choix multiples', chip: 'lime', icon: <Grid3x3 className="w-3.5 h-3.5" /> },
   estimation: { label: 'Estimation', chip: 'magenta', icon: <Dices className="w-3.5 h-3.5" /> },
   'list-turns': { label: 'Liste tour par tour', chip: 'violet', icon: <Flame className="w-3.5 h-3.5" /> },
   'hot-potato': { label: 'Patate chaude', chip: 'magenta', icon: <Flame className="w-3.5 h-3.5" /> },
@@ -19,6 +20,8 @@ const MODE_META: Record<
   map: { label: 'Carte', chip: 'cyan', icon: <MapPin className="w-3.5 h-3.5" /> },
   chronology: { label: 'Chronologie', chip: 'violet', icon: <Hourglass className="w-3.5 h-3.5" /> },
   'guess-who': { label: 'Qui est-ce ?', chip: 'amber', icon: <HelpCircle className="w-3.5 h-3.5" /> },
+  imposter: { label: "Mot de l'imposteur", chip: 'magenta', icon: <UserX className="w-3.5 h-3.5" /> },
+  codenames: { label: 'Codenames', chip: 'cyan', icon: <Grid3x3 className="w-3.5 h-3.5" /> },
 };
 
 export function RoundShell({ children }: { children: React.ReactNode }) {

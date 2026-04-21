@@ -2,12 +2,21 @@ import http from 'node:http';
 import { Server, type Socket } from 'socket.io';
 import {
   AnswerPayloadSchema,
+  CodenamesGuessTilePayloadSchema,
+  CodenamesSetSpymasterPayloadSchema,
+  CodenamesSetTeamPayloadSchema,
+  CodenamesSubmitCluePayloadSchema,
   CreateRoomPayloadSchema,
   ERROR_CODES,
+  GuessWhoGuessPayloadSchema,
   GuessWhoPickSecretPayloadSchema,
   GuessWhoToggleMaskPayloadSchema,
+  ImposterGuessPayloadSchema,
+  ImposterSubmitCluePayloadSchema,
+  ImposterVotePayloadSchema,
   JoinRoomPayloadSchema,
   LobbyDrawStrokePayloadSchema,
+  SetLobbyConfigPayloadSchema,
   StartGamePayloadSchema,
   ValidatePayloadSchema,
   type ClientToServerEvents,
@@ -19,6 +28,7 @@ import { Room } from './rooms/Room.js';
 import { signHostToken, verifyHostToken } from './util/hostToken.js';
 import { hitRateLimit } from './util/rateLimit.js';
 import { Radio } from './radio/Radio.js';
+import { Tv } from './tv/Tv.js';
 
 type SockData = { roomCode?: string; playerId?: string };
 
@@ -38,7 +48,12 @@ const io = new Server<ClientToServerEvents, ServerToClientEvents, Record<string,
   httpServer,
   {
     cors: { origin: config.corsOrigin, methods: ['GET', 'POST'], credentials: true },
-    pingTimeout: 20_000,
+    // Les navigateurs mobiles / onglets en arrière-plan throttlent agressivement
+    // JS et les WebSockets (iOS suspend quand l'écran s'éteint). On laisse
+    // beaucoup de marge avant de considérer un socket comme mort pour éviter
+    // d'éjecter un joueur qui a juste changé d'onglet quelques dizaines de s.
+    pingInterval: 25_000,
+    pingTimeout: 60_000,
   },
 );
 
@@ -48,8 +63,56 @@ radio.onChange((state) => {
   io.emit('radio:state', state);
 });
 
+const tv = new Tv();
+tv.start();
+tv.onChange((state) => {
+  io.emit('tv:state', state);
+});
+
 function broadcastRoom(room: Room) {
   io.to(room.code).emit('room:state', room.snapshot());
+}
+
+/**
+ * Éviction différée dans le lobby : quand un joueur se déconnecte avant le
+ * lancement de la partie, on ne le supprime pas immédiatement (sinon un simple
+ * changement d'onglet le fait disparaître). On marque comme déconnecté et on
+ * programme une suppression après un délai ; si le joueur revient via
+ * room:resume entre-temps on annule l'éviction.
+ */
+const LOBBY_GRACE_MS = 60_000;
+const pendingLobbyEvictions = new Map<string, NodeJS.Timeout>();
+const evictionKey = (roomCode: string, playerId: string) => `${roomCode}:${playerId}`;
+
+function cancelLobbyEviction(roomCode: string, playerId: string) {
+  const k = evictionKey(roomCode, playerId);
+  const t = pendingLobbyEvictions.get(k);
+  if (t) {
+    clearTimeout(t);
+    pendingLobbyEvictions.delete(k);
+  }
+}
+
+function scheduleLobbyEviction(roomCode: string, playerId: string) {
+  cancelLobbyEviction(roomCode, playerId);
+  const t = setTimeout(() => {
+    pendingLobbyEvictions.delete(evictionKey(roomCode, playerId));
+    const room = manager.get(roomCode);
+    if (!room) return;
+    const p = room.players.get(playerId);
+    // Si le joueur est revenu (connected=true) ou qu'on n'est plus en lobby,
+    // on laisse tomber ; le cas "en jeu" est déjà géré sans éviction.
+    if (!p || p.connected || (room.phase !== 'lobby' && room.phase !== 'match_final')) return;
+    room.removePlayer(playerId);
+    if (room.players.size === 0) {
+      manager.delete(room.code);
+      return;
+    }
+    if (room.hostId === playerId) room.reassignHost();
+    io.to(room.code).emit('room:player_left', playerId);
+    broadcastRoom(room);
+  }, LOBBY_GRACE_MS);
+  pendingLobbyEvictions.set(evictionKey(roomCode, playerId), t);
 }
 
 function emitGwMasksToPlayer(room: Room, playerId: string) {
@@ -58,6 +121,41 @@ function emitGwMasksToPlayer(room: Room, playerId: string) {
   if (!socketId) return;
   const byTarget = room.gwMasksSnapshot(playerId);
   io.to(socketId).emit('guessWho:masks', { byTarget });
+}
+
+function emitImposterWordToPlayer(room: Room, playerId: string) {
+  if (!room.round || room.round.mode !== 'imposter') return;
+  const socketId = room.socketsByPlayer.get(playerId);
+  if (!socketId) return;
+  const w = room.imWordFor(playerId);
+  if (!w) return;
+  // On n'envoie QUE le mot : le joueur ne doit jamais savoir qu'il est
+  // l'imposteur (il ne le découvre qu'au vote s'il est démasqué).
+  io.to(socketId).emit('imposter:yourWord', { word: w.word });
+}
+
+function broadcastImposterWords(room: Room) {
+  if (!room.round || room.round.mode !== 'imposter') return;
+  for (const p of room.allPlayers()) {
+    emitImposterWordToPlayer(room, p.id);
+  }
+}
+
+function emitCodenamesKeyToPlayer(room: Room, playerId: string) {
+  if (!room.round || room.round.mode !== 'codenames') return;
+  const socketId = room.socketsByPlayer.get(playerId);
+  if (!socketId) return;
+  const payload = room.cnKeyFor(playerId);
+  if (!payload) return;
+  io.to(socketId).emit('codenames:key', payload);
+}
+
+function broadcastCodenamesKeys(room: Room) {
+  if (!room.round || room.round.mode !== 'codenames') return;
+  if (room.round.collect.kind !== 'codenames') return;
+  const { red, blue } = room.round.collect.cn.spymasters;
+  if (red) emitCodenamesKeyToPlayer(room, red);
+  if (blue) emitCodenamesKeyToPlayer(room, blue);
 }
 
 function emitLobbyDrawingSync(
@@ -102,13 +200,41 @@ setInterval(() => {
       broadcastRoom(room);
       continue;
     }
+    // list-turns : si le tour a changé via timeout (eliminated + turn_started),
+    // il faut re-broadcaster le snapshot pour que les clients voient le nouveau
+    // currentPlayerId / endsAt. Sans ça, l'UI reste bloquée sur l'ancien joueur.
+    if (room.round?.mode === 'list-turns' && events.length > 0) {
+      broadcastRoom(room);
+      continue;
+    }
     // Timeout côté parallel (classic, estimation).
     if (room.round && room.round.collect.kind === 'parallel') {
       if (Date.now() >= room.round.collect.endsAt) {
         room.goToReveal();
         if (room.round.reveal) io.to(room.code).emit('round:reveal', room.round.reveal);
         broadcastRoom(room);
+        continue;
       }
+    }
+    // Auto-reveal générique (ex: imposter après sub='done').
+    if (room.shouldAutoReveal()) {
+      room.goToReveal();
+      if (room.round?.reveal) io.to(room.code).emit('round:reveal', room.round.reveal);
+      broadcastRoom(room);
+      continue;
+    }
+    // Rebroadcast si la sous-phase imposter vient de changer (timeout côté serveur).
+    if (room.round?.mode === 'imposter' && room.imPhaseChangedInLastTick) {
+      broadcastRoom(room);
+    }
+    // Rebroadcast si la sous-phase codenames (ou équipe active) a changé.
+    if (room.round?.mode === 'codenames' && room.cnPhaseChangedInLastTick) {
+      broadcastRoom(room);
+    }
+    // Rebroadcast quand hot-potato passe de bid à answer via timeout : sans ça
+    // les joueurs qui n'ont pas misé restent coincés sur l'écran de mise.
+    if (room.round?.mode === 'hot-potato' && room.hpPhaseChangedInLastTick) {
+      broadcastRoom(room);
     }
   }
 }, 500);
@@ -203,6 +329,7 @@ io.on('connection', (socket) => {
     room.socketsByPlayer.set(payload.playerId, socket.id);
     socket.data = { roomCode: room.code, playerId: payload.playerId };
     socket.join(room.code);
+    cancelLobbyEviction(room.code, payload.playerId);
     const hostToken =
       payload.hostToken && verifyHostToken(payload.hostToken, room.code, payload.playerId)
         ? payload.hostToken
@@ -216,10 +343,44 @@ io.on('connection', (socket) => {
     if (room.round?.mode === 'guess-who') {
       emitGwMasksToPlayer(room, payload.playerId);
     }
+    if (room.round?.mode === 'imposter') {
+      emitImposterWordToPlayer(room, payload.playerId);
+    }
+    if (room.round?.mode === 'codenames') {
+      emitCodenamesKeyToPlayer(room, payload.playerId);
+    }
   });
 
   socket.on('room:leave', () => {
     leave(socket);
+  });
+
+  socket.on('lobby:setConfig', (payload, ack) => {
+    const parsed = SetLobbyConfigPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (room.hostId !== playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_HOST, message: 'Seul l’hôte peut modifier la config' });
+    }
+    if (hitRateLimit(`lobby:setConfig:${playerId}`, 40, 5_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de changements' });
+    }
+    try {
+      room.setLobbyConfig(parsed.data.config);
+    } catch {
+      return ack({
+        ok: false,
+        code: ERROR_CODES.ROOM_ALREADY_STARTED,
+        message: 'Configuration impossible à ce stade',
+      });
+    }
+    ack({ ok: true, data: null });
+    broadcastRoom(room);
   });
 
   socket.on('game:start', (payload, ack) => {
@@ -237,6 +398,18 @@ io.on('connection', (socket) => {
     try {
       room.startGame(parsed.data.config);
     } catch (e) {
+      const msg = (e as Error).message;
+      if (msg === 'NOT_ENOUGH_PLAYERS') {
+        const cfg = parsed.data.config;
+        const needsCn = cfg?.modesPool?.includes('codenames');
+        return ack({
+          ok: false,
+          code: ERROR_CODES.INVALID_PAYLOAD,
+          message: needsCn
+            ? 'Il faut au moins 2 joueurs par équipe pour lancer Codenames.'
+            : 'Il faut au moins 3 joueurs pour l’imposteur.',
+        });
+      }
       return ack({
         ok: false,
         code: ERROR_CODES.ROOM_ALREADY_STARTED,
@@ -247,6 +420,8 @@ io.on('connection', (socket) => {
     ack({ ok: true, data: null });
     io.to(room.code).emit('round:started', room.snapshot());
     broadcastRoom(room);
+    if (room.round?.mode === 'imposter') broadcastImposterWords(room);
+    if (room.round?.mode === 'codenames') broadcastCodenamesKeys(room);
   });
 
   socket.on('round:answer', (payload, ack) => {
@@ -263,7 +438,18 @@ io.on('connection', (socket) => {
     }
     try {
       const events = room.submitAnswer(playerId, parsed.data);
-      ack({ ok: true, data: null });
+      // Cherche un feedback "correct" pour le mode speed-elim, qui supporte
+      // plusieurs tentatives par joueur et a besoin d'indiquer au client si
+      // la dernière tentative était bonne ou non.
+      const seEvent = events.find(
+        (ev): ev is Extract<(typeof events)[number], { type: 'speed_elim_attempt' }> =>
+          ev.type === 'speed_elim_attempt',
+      );
+      if (seEvent) {
+        ack({ ok: true, data: { correct: seEvent.correct } });
+      } else {
+        ack({ ok: true, data: null });
+      }
       for (const ev of events) {
         if (ev.type === 'player_answered') {
           io.to(room.code).emit('round:player_answered', { playerId: ev.playerId });
@@ -348,6 +534,8 @@ io.on('connection', (socket) => {
         io.to(room.code).emit('round:started', room.snapshot());
       }
       broadcastRoom(room);
+      if (room.round?.mode === 'imposter') broadcastImposterWords(room);
+      if (room.round?.mode === 'codenames') broadcastCodenamesKeys(room);
       ack({ ok: true, data: null });
       return;
     }
@@ -376,6 +564,43 @@ io.on('connection', (socket) => {
     io.to(room.code).emit('lobby:draw:cleared');
     broadcastRoom(room);
     ack({ ok: true, data: null });
+  });
+
+  /**
+   * Relance immédiatement une nouvelle partie sans repasser par le lobby.
+   * Utile pour les modes "exclusifs" (qui-est-ce, imposter, codenames) pour
+   * lesquels le lobby n'a pas de réglage supplémentaire à faire.
+   */
+  socket.on('match:replay', (...args: unknown[]) => {
+    const ack = (args.find((a) => typeof a === 'function') ?? (() => {})) as (
+      res: unknown,
+    ) => void;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (room.hostId !== playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_HOST, message: 'Seul l’hôte peut relancer' });
+    }
+    if (room.phase !== 'match_final') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Partie non terminée' });
+    }
+    try {
+      // Le startGame remet les scores à 0 et rebâtit la playlist.
+      room.startGame();
+      if (room.round) {
+        io.to(room.code).emit('round:started', room.snapshot());
+      }
+      broadcastRoom(room);
+      ack({ ok: true, data: null });
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
   });
 
   socket.on('guessWho:pickSecret', (payload, ack) => {
@@ -441,7 +666,17 @@ io.on('connection', (socket) => {
       return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
     }
     try {
-      room.gwNextTurn(playerId);
+      const { eliminatedTargetId, revealedAvatar, completed } = room.gwNextTurn(playerId);
+      if (eliminatedTargetId && revealedAvatar) {
+        io.to(room.code).emit('guessWho:playerEliminated', {
+          playerId: eliminatedTargetId,
+          revealedAvatar,
+        });
+      }
+      if (completed) {
+        room.goToReveal();
+        if (room.round?.reveal) io.to(room.code).emit('round:reveal', room.round.reveal);
+      }
       ack({ ok: true, data: null });
       broadcastRoom(room);
     } catch (e) {
@@ -463,17 +698,263 @@ io.on('connection', (socket) => {
       return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
     }
     try {
-      const { revealedAvatar, completed } = room.gwSelfEliminate(playerId);
-      io.to(room.code).emit('guessWho:playerEliminated', {
-        playerId,
-        revealedAvatar,
-      });
+      const { eliminatedTargetId, revealedAvatar, completed } = room.gwSelfEliminate(playerId);
+      if (eliminatedTargetId && revealedAvatar) {
+        io.to(room.code).emit('guessWho:playerEliminated', {
+          playerId: eliminatedTargetId,
+          revealedAvatar,
+        });
+      }
       if (completed) {
         room.goToReveal();
         if (room.round?.reveal) io.to(room.code).emit('round:reveal', room.round.reveal);
       }
       broadcastRoom(room);
       ack({ ok: true, data: null });
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  // `guessWho:guess` : retour 100% privé (via ack). Aucune info leakée côté
+  // public : l'état du serveur change (pendingGuesses + guessBans) mais
+  // l'instantané broadcast ne les expose pas. On s'abstient donc de broadcast
+  // pour éviter le moindre changement observable et économiser du traffic.
+  socket.on('guessWho:guess', (payload, ack) => {
+    const parsed = GuessWhoGuessPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`gwguess:${playerId}`, 10, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de tentatives' });
+    }
+    try {
+      const { correct } = room.gwGuess(playerId, parsed.data.avatarSrc);
+      ack({ ok: true, data: { correct } });
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('imposter:submitClue', (payload, ack) => {
+    const parsed = ImposterSubmitCluePayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`imclue:${playerId}`, 8, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de soumissions' });
+    }
+    try {
+      room.imSubmitClue(playerId, parsed.data.clue);
+      ack({ ok: true, data: null });
+      io.to(room.code).emit('imposter:clueSubmitted', { playerId });
+      maybeAutoReveal(room);
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('imposter:vote', (payload, ack) => {
+    const parsed = ImposterVotePayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`imvote:${playerId}`, 4, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de votes' });
+    }
+    try {
+      room.imVote(playerId, parsed.data.targetId);
+      ack({ ok: true, data: null });
+      io.to(room.code).emit('imposter:voted', { playerId });
+      maybeAutoReveal(room);
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('imposter:guessWord', (payload, ack) => {
+    const parsed = ImposterGuessPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`imguess:${playerId}`, 3, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de tentatives' });
+    }
+    try {
+      room.imSubmitGuess(playerId, parsed.data.guess);
+      ack({ ok: true, data: null });
+      maybeAutoReveal(room);
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('lobby:codenames:setTeam', (payload, ack) => {
+    const parsed = CodenamesSetTeamPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`cnteam:${playerId}`, 20, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de changements' });
+    }
+    try {
+      room.setCnTeam(playerId, parsed.data.team);
+      ack({ ok: true, data: null });
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('lobby:codenames:setSpymaster', (payload, ack) => {
+    const parsed = CodenamesSetSpymasterPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`cnspy:${playerId}`, 20, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de changements' });
+    }
+    try {
+      room.setCnWantsSpymaster(playerId, parsed.data.wants);
+      ack({ ok: true, data: null });
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('codenames:submitClue', (payload, ack) => {
+    const parsed = CodenamesSubmitCluePayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`cnclue:${playerId}`, 10, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de soumissions' });
+    }
+    try {
+      room.cnSubmitClue(playerId, parsed.data.word, parsed.data.count);
+      ack({ ok: true, data: null });
+      maybeAutoReveal(room);
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('codenames:guessTile', (payload, ack) => {
+    const parsed = CodenamesGuessTilePayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`cnguess:${playerId}`, 30, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de clics' });
+    }
+    try {
+      room.cnGuessTile(playerId, parsed.data.index);
+      ack({ ok: true, data: null });
+      maybeAutoReveal(room);
+      broadcastRoom(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('codenames:endTurn', (...args: unknown[]) => {
+    const ack = (args.find((a) => typeof a === 'function') ?? (() => {})) as (
+      res: unknown,
+    ) => void;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`cnend:${playerId}`, 10, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de clics' });
+    }
+    try {
+      room.cnEndTurn(playerId);
+      ack({ ok: true, data: null });
+      maybeAutoReveal(room);
+      broadcastRoom(room);
     } catch (e) {
       const code = (e as Error).message;
       return ack({
@@ -553,8 +1034,29 @@ io.on('connection', (socket) => {
     ack({ ok: true, data: state });
   });
 
+  socket.on('tv:sync', (...args: unknown[]) => {
+    const ack = args[args.length - 1] as (res: unknown) => void;
+    if (typeof ack !== 'function') return;
+    ack({ ok: true, data: tv.getState() });
+  });
+
+  socket.on('tv:skip', (...args: unknown[]) => {
+    const ack = args[args.length - 1] as (res: unknown) => void;
+    if (typeof ack !== 'function') return;
+    if (hitRateLimit(`tv:skip:${socket.id}`, 3, 10_000)) {
+      return ack({
+        ok: false,
+        code: ERROR_CODES.RATE_LIMITED,
+        message: 'Doucement sur le zapping',
+      });
+    }
+    const state = tv.skip();
+    ack({ ok: true, data: state });
+  });
+
   // Push l'état courant aux nouveaux arrivants pour qu'ils se synchronisent.
   socket.emit('radio:state', radio.getState());
+  socket.emit('tv:state', tv.getState());
 
   socket.on('disconnect', () => {
     leave(socket);
@@ -574,22 +1076,16 @@ function leave(socket: { data: SockData; leave: (room: string) => void; id: stri
   if (!roomCode || !playerId) return;
   const room = manager.get(roomCode);
   if (!room) return;
-  // Marque comme déconnecté plutôt que supprimer (permet la reconnexion si en partie).
-  if (room.phase === 'lobby') {
-    room.removePlayer(playerId);
-    if (room.players.size === 0) {
-      manager.delete(room.code);
-      return;
-    }
-    if (room.hostId === playerId) room.reassignHost();
-    io.to(room.code).emit('room:player_left', playerId);
-    broadcastRoom(room);
-  } else {
-    room.setPlayerConnected(playerId, false);
-    if (room.hostId === playerId && !room.activePlayers().some((p) => p.id === playerId)) {
-      room.reassignHost();
-    }
-    broadcastRoom(room);
+  // On ne retire jamais un joueur immédiatement : on le marque déconnecté et
+  // on laisse une période de grâce pour qu'il revienne (changement d'onglet,
+  // écran verrouillé, micro-coupure réseau…).
+  room.setPlayerConnected(playerId, false);
+  if (room.hostId === playerId && !room.activePlayers().some((p) => p.id === playerId)) {
+    room.reassignHost();
+  }
+  broadcastRoom(room);
+  if (room.phase === 'lobby' || room.phase === 'match_final') {
+    scheduleLobbyEviction(room.code, playerId);
   }
   socket.data.roomCode = undefined;
   socket.data.playerId = undefined;

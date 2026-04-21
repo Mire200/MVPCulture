@@ -13,6 +13,7 @@ export const DIFFICULTY_POINTS: Record<Difficulty, number> = {
 
 export const MODE_USES_SPEED: Record<GameModeId, boolean> = {
   classic: false,
+  qcm: false,
   estimation: false,
   'list-turns': false, // utilisée seulement en tie-break
   'hot-potato': true,
@@ -20,6 +21,8 @@ export const MODE_USES_SPEED: Record<GameModeId, boolean> = {
   map: false,
   chronology: false,
   'guess-who': false,
+  imposter: false,
+  codenames: false,
 };
 
 export function classicScore(difficulty: Difficulty, correct: boolean): number {
@@ -37,15 +40,25 @@ export function estimationScores(
   difficulty: Difficulty,
 ): Record<string, number> {
   if (answers.length === 0) return {};
+  const basePool = DIFFICULTY_POINTS[difficulty] * 3;
+  const result: Record<string, number> = {};
   const sorted = [...answers].sort(
     (a, b) => Math.abs(a.value - target) - Math.abs(b.value - target),
   );
-  const basePool = DIFFICULTY_POINTS[difficulty] * 3;
-  const result: Record<string, number> = {};
-  sorted.forEach((entry, index) => {
-    const decay = Math.pow(0.6, index);
+  // Classement "dense" : tous les joueurs à la même distance de la cible
+  // partagent rigoureusement le même score. Deux réponses identiques
+  // (ou équidistantes de part et d'autre) donnent ainsi les mêmes points.
+  let denseRank = 0;
+  let prevDistance: number | null = null;
+  for (const entry of sorted) {
+    const distance = Math.abs(entry.value - target);
+    if (prevDistance !== null && distance !== prevDistance) {
+      denseRank += 1;
+    }
+    prevDistance = distance;
+    const decay = Math.pow(0.6, denseRank);
     result[entry.playerId] = Math.round(basePool * decay);
-  });
+  }
   return result;
 }
 

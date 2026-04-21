@@ -89,24 +89,26 @@ export function gwMasksForPlayer(
 
 export function gwCurrentTargetId(gw: GuessWhoState): string | undefined {
   if (gw.sub !== 'play') return undefined;
+  if (gw.ended) return undefined;
   return gw.turnOrder[gw.currentTargetIndex];
 }
 
 /**
- * Avance l'index courant sur le prochain joueur non éliminé.
- * Retourne `true` si un nouveau target a été trouvé, `false` s'il n'en reste aucun.
+ * Avance l'index courant **en monotone** : chaque joueur est ciblé au plus une
+ * fois par round (la manche dure un cycle complet sur `turnOrder`). On saute
+ * les éliminés et on marque `gw.ended = true` s'il n'y a plus de cible.
+ * Retourne `true` si un nouveau target a été trouvé.
  */
 export function gwAdvanceTurn(gw: GuessWhoState): boolean {
   const n = gw.turnOrder.length;
-  if (n === 0) return false;
-  for (let i = 1; i <= n; i++) {
-    const idx = (gw.currentTargetIndex + i) % n;
+  for (let idx = gw.currentTargetIndex + 1; idx < n; idx++) {
     const candidate = gw.turnOrder[idx]!;
     if (!gw.eliminated.has(candidate)) {
       gw.currentTargetIndex = idx;
       return true;
     }
   }
+  gw.ended = true;
   return false;
 }
 
@@ -132,6 +134,11 @@ export const guessWhoMode: GameMode = {
       masks: new Map(),
       eliminated: new Set(),
       revealed: new Map(),
+      guesses: [],
+      pendingGuesses: [],
+      guessBans: new Map(),
+      turnsPlayed: 0,
+      ended: false,
     };
     return {
       roundIndex: ctx.roundIndex,
@@ -157,10 +164,13 @@ export const guessWhoMode: GameMode = {
     if (state.collect.kind !== 'guess-who') return true;
     const gw = state.collect.gw;
     if (gw.sub !== 'play') return false;
+    // Une manche s'achève quand :
+    // - il ne reste plus qu'un joueur en vie (elim en cascade), OU
+    // - on a bouclé un cycle complet sur l'ordre de passage (`ended`).
+    if (gw.ended) return true;
     const aliveCount = gw.turnOrder.filter((id) => !gw.eliminated.has(id)).length;
     if (aliveCount <= 1) {
-      const winner = gw.turnOrder.find((id) => !gw.eliminated.has(id));
-      if (winner && !gw.winnerId) gw.winnerId = winner;
+      gw.ended = true;
       return true;
     }
     return false;
@@ -168,7 +178,6 @@ export const guessWhoMode: GameMode = {
 
   buildReveal(state, players): RoundReveal {
     const answers: RoundReveal['answers'] = [];
-    let officialAnswer = '';
     if (state.collect.kind === 'guess-who') {
       const gw = state.collect.gw;
       for (const p of players) {
@@ -178,10 +187,6 @@ export const guessWhoMode: GameMode = {
           text: secret ?? '',
         });
       }
-      const winner = gw.winnerId
-        ? players.find((p) => p.id === gw.winnerId)
-        : undefined;
-      officialAnswer = winner ? `Vainqueur : ${winner.nickname}` : 'Aucun vainqueur';
     }
     return {
       roundIndex: state.roundIndex,
@@ -192,28 +197,36 @@ export const guessWhoMode: GameMode = {
         state.collect.kind === 'guess-who'
           ? [...state.collect.gw.eliminated]
           : undefined,
-      // officialAnswer n'est pas dans RoundReveal mais dans RoundScoring
     };
   },
 
   computeScores(state, players): RoundScoring {
+    // +1 par guess correct posé par un joueur durant le round. Plusieurs
+    // joueurs peuvent marquer, et un même joueur peut marquer plusieurs fois
+    // (une par cible au plus).
     const deltas: Record<string, number> = {};
     const totals: Record<string, number> = {};
-    let winnerId: string | undefined;
-    let officialAnswer = 'Aucun vainqueur';
+    const correctByPlayer = new Map<string, number>();
+    let officialAnswer = 'Personne n’a trouvé';
     if (state.collect.kind === 'guess-who') {
       const gw = state.collect.gw;
-      winnerId =
-        gw.winnerId ?? gw.turnOrder.find((id) => !gw.eliminated.has(id));
-      const winnerPlayer = winnerId
-        ? players.find((p) => p.id === winnerId)
-        : undefined;
-      officialAnswer = winnerPlayer
-        ? `Vainqueur : ${winnerPlayer.nickname}`
-        : 'Aucun vainqueur';
+      for (const g of gw.guesses) {
+        if (!g.correct) continue;
+        correctByPlayer.set(g.playerId, (correctByPlayer.get(g.playerId) ?? 0) + 1);
+      }
+      const winners = [...correctByPlayer.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .map(([id, n]) => {
+          const p = players.find((pl) => pl.id === id);
+          return p ? `${p.nickname} (+${n})` : null;
+        })
+        .filter((s): s is string => s !== null);
+      if (winners.length > 0) {
+        officialAnswer = `Bien deviné : ${winners.join(', ')}`;
+      }
     }
     for (const p of players) {
-      const delta = p.id === winnerId ? 1 : 0;
+      const delta = correctByPlayer.get(p.id) ?? 0;
       deltas[p.id] = delta;
       totals[p.id] = p.score + delta;
     }

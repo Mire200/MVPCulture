@@ -8,18 +8,49 @@ import {
 } from '@mvpc/shared';
 import type { AcceptAnswerResult, GameMode, GameModeContext, RoundState } from '../types.js';
 
+function hashStr(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  return h >>> 0;
+}
+
+function mulberry32(seed: number) {
+  return function () {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/** Mélange déterministe : même question + même manche → même ordre d’affichage pour tous les clients. */
+function shuffleEventOrder<T extends { id: string; label: string }>(
+  items: T[],
+  seedKey: string,
+  roundIndex: number,
+): T[] {
+  const arr = [...items];
+  const rng = mulberry32(hashStr(seedKey) ^ ((roundIndex + 1) * 0x9e3779b9));
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 export const chronologyMode: GameMode = {
   id: 'chronology',
 
   prepare(ctx: GameModeContext, defaultSeconds: number): RoundState {
     const q = ctx.question as ChronologyQuestion;
+    const shuffled = shuffleEventOrder(q.events, q.id, ctx.roundIndex);
     const publicQuestion: PublicQuestion = {
       id: q.id,
       mode: 'chronology',
       difficulty: q.difficulty,
       category: q.category,
       prompt: q.prompt,
-      events: q.events.map((e) => ({ id: e.id, label: e.label })),
+      events: shuffled.map((e) => ({ id: e.id, label: e.label })),
     };
     return {
       roundIndex: ctx.roundIndex,

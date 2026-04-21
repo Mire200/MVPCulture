@@ -1,7 +1,7 @@
 'use client';
 import { useGameStore } from '@/store/gameStore';
 import { AvatarBadge } from '@/components/AvatarPicker';
-import { Copy, Check, Crown, Play, Settings2, Tags, Eraser } from 'lucide-react';
+import { Copy, Check, Crown, Play, Settings2, Tags, Eraser, Grid3x3 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { getSocket } from '@/lib/socket';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,9 +14,12 @@ import {
   readStoredPenWidthNorm,
   DEFAULT_PEN_WIDTH_NORM,
 } from './LobbyDrawingCanvas';
+import { CodenamesLobbyPanel } from './CodenamesLobbyPanel';
+import { TvPlayer } from '@/components/TvPlayer';
 
 const MODE_LABELS: Record<string, string> = {
   classic: 'Classique',
+  qcm: 'QCM',
   estimation: 'Estimation',
   'list-turns': 'Liste',
   'hot-potato': 'Patate',
@@ -24,10 +27,13 @@ const MODE_LABELS: Record<string, string> = {
   map: 'Carte',
   chronology: 'Chrono',
   'guess-who': 'Qui est-ce ?',
+  imposter: 'Imposteur',
+  codenames: 'Codenames',
 };
 
 const ALL_MODE_IDS: GameModeId[] = [
   'classic',
+  'qcm',
   'estimation',
   'list-turns',
   'hot-potato',
@@ -35,30 +41,67 @@ const ALL_MODE_IDS: GameModeId[] = [
   'map',
   'chronology',
   'guess-who',
+  'imposter',
+  'codenames',
 ];
+
+const EXCLUSIVE_MODES = new Set<GameModeId>(['guess-who', 'imposter', 'codenames']);
 
 export function LobbyView() {
   const snapshot = useGameStore((s) => s.snapshot);
   const myId = useGameStore((s) => s.playerId);
   const [copied, setCopied] = useState(false);
-  const [rounds, setRounds] = useState(snapshot?.config.rounds ?? 8);
-  const [modesPool, setModesPool] = useState<GameModeId[]>(
-    (snapshot?.config.modesPool as GameModeId[]) ?? ['classic', 'estimation', 'list-turns'],
-  );
-  const [categoriesPool, setCategoriesPool] = useState<string[]>(
-    snapshot?.config.categoriesPool ?? [],
-  );
   const [penWidthNorm, setPenWidthNorm] = useState(DEFAULT_PEN_WIDTH_NORM);
+  // Valeur locale du slider manches pour une UX fluide ; on debounce
+  // l'émission vers le serveur afin d'éviter de spammer lobby:setConfig.
+  const [roundsLocal, setRoundsLocal] = useState<number | null>(null);
 
   useEffect(() => {
     setPenWidthNorm(readStoredPenWidthNorm());
   }, []);
+
+  // Reset local override pour les manches dès que la valeur serveur rattrape
+  // (évite de garder un ancien override visuel si un autre client change).
+  useEffect(() => {
+    if (roundsLocal !== null && snapshot?.config.rounds === roundsLocal) {
+      setRoundsLocal(null);
+    }
+  }, [snapshot?.config.rounds, roundsLocal]);
 
   if (!snapshot) return null;
   const isHost = snapshot.hostId === myId;
   const myPenColor = lobbyPenColorForPlayer(snapshot.players, myId);
   const inviteUrl =
     typeof window !== 'undefined' ? `${window.location.origin}/r/${snapshot.code}` : '';
+
+  // La config est la source de vérité côté serveur : tous les clients
+  // (y compris non-hôte) affichent donc la même sélection et peuvent
+  // agir en conséquence (ex. voir le panel Codenames).
+  const modesPool = (snapshot.config.modesPool as GameModeId[]) ?? [];
+  const categoriesPool = snapshot.config.categoriesPool ?? [];
+  const roundsFromSnap = snapshot.config.rounds ?? 8;
+  const rounds = roundsLocal ?? roundsFromSnap;
+
+  const isGuessWho = modesPool.length === 1 && modesPool[0] === 'guess-who';
+  const isImposter = modesPool.length === 1 && modesPool[0] === 'imposter';
+  const isCodenames = modesPool.length === 1 && modesPool[0] === 'codenames';
+  const isSoloMode = isGuessWho || isImposter || isCodenames;
+  const notEnoughForImposter = isImposter && snapshot.players.length < 3;
+  const redCount = snapshot.players.filter((p) => p.cnTeam === 'red').length;
+  const blueCount = snapshot.players.filter((p) => p.cnTeam === 'blue').length;
+  const notEnoughForCodenames =
+    isCodenames && (redCount < 2 || blueCount < 2);
+
+  const emitConfig = (partial: {
+    rounds?: number;
+    modesPool?: GameModeId[];
+    categoriesPool?: string[];
+  }) => {
+    const sock = getSocket();
+    sock.emit('lobby:setConfig', { config: partial }, (res) => {
+      if (!res.ok) alert(res.message);
+    });
+  };
 
   const copyLink = async () => {
     await navigator.clipboard.writeText(inviteUrl);
@@ -70,7 +113,7 @@ export function LobbyView() {
   const start = () => {
     mvpSound.whoosh();
     const sock = getSocket();
-    const effectiveRounds = isGuessWho ? 1 : rounds;
+    const effectiveRounds = isSoloMode ? 1 : rounds;
     sock.emit(
       'game:start',
       { config: { rounds: effectiveRounds, modesPool, categoriesPool } },
@@ -81,22 +124,35 @@ export function LobbyView() {
   };
 
   const toggleMode = (id: GameModeId) => {
-    setModesPool((prev) => {
-      const has = prev.includes(id);
-      if (id === 'guess-who') {
-        return has ? [] : ['guess-who'];
-      }
-      if (has) return prev.filter((m) => m !== id);
-      return [...prev.filter((m) => m !== 'guess-who'), id];
-    });
+    if (!isHost) return;
+    const has = modesPool.includes(id);
+    let next: GameModeId[];
+    if (EXCLUSIVE_MODES.has(id)) {
+      next = has ? [] : [id];
+    } else {
+      const cleaned = modesPool.filter((m) => !EXCLUSIVE_MODES.has(m));
+      next = has ? cleaned.filter((m) => m !== id) : [...cleaned, id];
+    }
+    emitConfig({ modesPool: next });
   };
 
-  const isGuessWho = modesPool.length === 1 && modesPool[0] === 'guess-who';
-
   const toggleCategory = (cat: string) => {
-    setCategoriesPool((prev) =>
-      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat],
-    );
+    if (!isHost) return;
+    const next = categoriesPool.includes(cat)
+      ? categoriesPool.filter((c) => c !== cat)
+      : [...categoriesPool, cat];
+    emitConfig({ categoriesPool: next });
+  };
+
+  const changeRounds = (n: number) => {
+    if (!isHost) return;
+    setRoundsLocal(n);
+    emitConfig({ rounds: n });
+  };
+
+  const resetCategories = () => {
+    if (!isHost) return;
+    emitConfig({ categoriesPool: [] });
   };
 
   const clearLobbyCanvas = () => {
@@ -265,13 +321,13 @@ export function LobbyView() {
               type="range"
               min={3}
               max={20}
-              value={isGuessWho ? 1 : rounds}
-              onChange={(e) => setRounds(parseInt(e.target.value, 10))}
-              disabled={!isHost || isGuessWho}
+              value={isSoloMode ? 1 : rounds}
+              onChange={(e) => changeRounds(parseInt(e.target.value, 10))}
+              disabled={!isHost || isSoloMode}
               className="w-full accent-neon-cyan disabled:opacity-50"
             />
             <div className="text-right text-neon-cyan font-mono font-bold">
-              {isGuessWho ? 'Partie unique' : `${rounds} manches`}
+              {isSoloMode ? 'Partie unique' : `${rounds} manches`}
             </div>
           </div>
 
@@ -314,7 +370,7 @@ export function LobbyView() {
               {isHost && categoriesPool.length > 0 && (
                 <button
                   type="button"
-                  onClick={() => setCategoriesPool([])}
+                  onClick={resetCategories}
                   className="text-[10px] text-text-dim hover:text-neon-magenta uppercase tracking-wider"
                 >
                   réinitialiser
@@ -347,10 +403,46 @@ export function LobbyView() {
             )}
           </div>
 
+          {isImposter && (
+            <div
+              className={`text-xs px-3 py-2 rounded-lg border ${
+                notEnoughForImposter
+                  ? 'border-neon-rose/40 bg-neon-rose/5 text-neon-rose'
+                  : 'border-neon-violet/30 bg-neon-violet/5 text-text-muted'
+              }`}
+            >
+              {notEnoughForImposter
+                ? 'Il faut au moins 3 joueurs pour l’imposteur.'
+                : 'Mode imposteur : 1 imposteur, 2 tours d’indices, vote puis scoring riche.'}
+            </div>
+          )}
+
+          {isCodenames && (
+            <div
+              className={`text-xs px-3 py-2 rounded-lg border flex items-start gap-2 ${
+                notEnoughForCodenames
+                  ? 'border-neon-rose/40 bg-neon-rose/5 text-neon-rose'
+                  : 'border-neon-cyan/30 bg-neon-cyan/5 text-text-muted'
+              }`}
+            >
+              <Grid3x3 className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+              <span>
+                {notEnoughForCodenames
+                  ? 'Chaque équipe doit avoir au moins 2 joueurs.'
+                  : 'Codenames : 2 équipes avec 1 spymaster chacune. Partie unique.'}
+              </span>
+            </div>
+          )}
+
           {isHost ? (
             <motion.button
               whileTap={{ scale: 0.97 }}
-              disabled={modesPool.length === 0 || snapshot.players.length < 1}
+              disabled={
+                modesPool.length === 0 ||
+                snapshot.players.length < 1 ||
+                notEnoughForImposter ||
+                notEnoughForCodenames
+              }
               onClick={start}
               className="btn-primary w-full text-lg py-4 disabled:opacity-50"
             >
@@ -364,6 +456,15 @@ export function LobbyView() {
           )}
         </div>
       </div>
+
+      {isCodenames && (
+        <CodenamesLobbyPanel
+          players={snapshot.players}
+          myId={myId}
+        />
+      )}
+
+      <TvPlayer />
     </main>
   );
 }

@@ -70,12 +70,13 @@ export const hotPotatoMode: GameMode = {
       return { ok: false, code: 'UNKNOWN_PLAYER', message: 'Joueur inconnu' };
     }
 
-    if (hp.phase === 'bid') {
-      if (typeof payload.bid !== 'number') {
-        return { ok: false, code: 'INVALID_PAYLOAD', message: 'Bid requis' };
-      }
-      if (player.bid !== undefined) {
-        return { ok: false, code: 'ALREADY_BID', message: 'Mise déjà posée' };
+    // Si on reçoit un bid : on accepte tant qu'on est en phase bid ET qu'il n'a
+    // pas déjà été posé. Dans tous les autres cas (bid en retard alors que le
+    // serveur a déjà basculé en answer, ou bid déjà enregistré) on répond ok
+    // avec events vides pour éviter les alertes inutiles côté client.
+    if (typeof payload.bid === 'number') {
+      if (hp.phase !== 'bid' || player.bid !== undefined) {
+        return { ok: true, roundState: state, events: [] };
       }
       const bid = Math.max(1, Math.min(q.maxBid, Math.round(payload.bid)));
       player.bid = bid;
@@ -86,9 +87,15 @@ export const hotPotatoMode: GameMode = {
       };
     }
 
+    if (hp.phase === 'bid') {
+      // Pas de bid dans le payload alors qu'on est en phase bid : rien à faire.
+      return { ok: false, code: 'INVALID_PAYLOAD', message: 'Bid requis' };
+    }
+
     if (hp.phase === 'answer') {
       if (player.done) {
-        return { ok: false, code: 'DONE', message: 'Joueur terminé' };
+        // Joueur hors-jeu (temps écoulé ou objectif atteint) : ignorer en douceur.
+        return { ok: true, roundState: state, events: [] };
       }
       const raw = payload.listItem?.trim();
       if (!raw) {

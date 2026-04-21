@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import {
   AvatarSchema,
+  CodenamesTeamSchema,
   GameConfigSchema,
   type HostValidation,
   type LobbyDrawStroke,
@@ -10,6 +11,7 @@ import {
   type RoundScoring,
 } from './types.js';
 import type { RadioStatePayload } from './radio.js';
+import type { TvStatePayload } from './tv.js';
 
 export const CreateRoomPayloadSchema = z.object({
   nickname: z.string().trim().min(1).max(20),
@@ -31,6 +33,16 @@ export const StartGamePayloadSchema = z.object({
   config: GameConfigSchema.partial().optional(),
 });
 export type StartGamePayload = z.infer<typeof StartGamePayloadSchema>;
+
+/**
+ * L'hôte met à jour la config du lobby en temps réel. Utile pour que les
+ * non-hôtes voient les changements de modes / manches / catégories
+ * (notamment pour afficher le panel d'équipes Codenames).
+ */
+export const SetLobbyConfigPayloadSchema = z.object({
+  config: GameConfigSchema.partial(),
+});
+export type SetLobbyConfigPayload = z.infer<typeof SetLobbyConfigPayloadSchema>;
 
 export const AnswerPayloadSchema = z.object({
   text: z.string().trim().max(200).optional(),
@@ -66,6 +78,61 @@ export const GuessWhoToggleMaskPayloadSchema = z.object({
 });
 export type GuessWhoToggleMaskPayload = z.infer<typeof GuessWhoToggleMaskPayloadSchema>;
 
+export const GuessWhoGuessPayloadSchema = z.object({
+  avatarSrc: z.string().min(1).max(200),
+});
+export type GuessWhoGuessPayload = z.infer<typeof GuessWhoGuessPayloadSchema>;
+
+export const ImposterSubmitCluePayloadSchema = z.object({
+  clue: z.string().trim().min(1).max(40),
+});
+export type ImposterSubmitCluePayload = z.infer<typeof ImposterSubmitCluePayloadSchema>;
+
+export const ImposterVotePayloadSchema = z.object({
+  targetId: z.string().min(1).max(50),
+});
+export type ImposterVotePayload = z.infer<typeof ImposterVotePayloadSchema>;
+
+export const ImposterGuessPayloadSchema = z.object({
+  guess: z.string().trim().min(1).max(60),
+});
+export type ImposterGuessPayload = z.infer<typeof ImposterGuessPayloadSchema>;
+
+/**
+ * Mot privé envoyé à chaque joueur. On n'expose JAMAIS au client s'il est
+ * l'imposteur : il joue "à l'aveugle" et ne le découvre qu'au vote final
+ * (s'il est démasqué) ou à la révélation.
+ */
+export type ImposterYourWordPayload = {
+  word: string;
+};
+
+export const CodenamesSetTeamPayloadSchema = z.object({
+  team: CodenamesTeamSchema,
+});
+export type CodenamesSetTeamPayload = z.infer<typeof CodenamesSetTeamPayloadSchema>;
+
+export const CodenamesSetSpymasterPayloadSchema = z.object({
+  wants: z.boolean(),
+});
+export type CodenamesSetSpymasterPayload = z.infer<typeof CodenamesSetSpymasterPayloadSchema>;
+
+export const CodenamesSubmitCluePayloadSchema = z.object({
+  word: z.string().trim().min(1).max(40),
+  count: z.number().int().min(0).max(9),
+});
+export type CodenamesSubmitCluePayload = z.infer<typeof CodenamesSubmitCluePayloadSchema>;
+
+export const CodenamesGuessTilePayloadSchema = z.object({
+  index: z.number().int().min(0).max(24),
+});
+export type CodenamesGuessTilePayload = z.infer<typeof CodenamesGuessTilePayloadSchema>;
+
+/** Clé privée envoyée au spymaster : 25 couleurs, une par tuile. */
+export type CodenamesKeyPayload = {
+  key: Array<'red' | 'blue' | 'neutral' | 'assassin'>;
+};
+
 export const LobbyDrawStrokePayloadSchema = z.object({
   widthNorm: z.number().min(0.004).max(0.12),
   points: z
@@ -84,10 +151,23 @@ export type ClientToServerEvents = {
     ack: (res: AckResult<JoinRoomResult>) => void,
   ) => void;
   'game:start': (payload: StartGamePayload, ack: (res: AckResult<null>) => void) => void;
-  'round:answer': (payload: AnswerPayload, ack: (res: AckResult<null>) => void) => void;
+  'lobby:setConfig': (
+    payload: SetLobbyConfigPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'round:answer': (
+    payload: AnswerPayload,
+    ack: (res: AckResult<{ correct?: boolean } | null>) => void,
+  ) => void;
   'round:validate': (payload: ValidatePayload, ack: (res: AckResult<null>) => void) => void;
   'round:advance': (ack: (res: AckResult<null>) => void) => void;
   'match:rematch': (ack: (res: AckResult<null>) => void) => void;
+  /**
+   * Relance immédiatement une nouvelle partie avec la même config, sans
+   * repasser par le lobby. Réservé aux modes à 1 partie = 1 match
+   * (qui-est-ce / imposter / codenames).
+   */
+  'match:replay': (ack: (res: AckResult<null>) => void) => void;
   'guessWho:pickSecret': (
     payload: GuessWhoPickSecretPayload,
     ack: (res: AckResult<null>) => void,
@@ -98,8 +178,43 @@ export type ClientToServerEvents = {
   ) => void;
   'guessWho:nextTurn': (ack: (res: AckResult<null>) => void) => void;
   'guessWho:selfEliminate': (ack: (res: AckResult<null>) => void) => void;
+  'guessWho:guess': (
+    payload: GuessWhoGuessPayload,
+    ack: (res: AckResult<{ correct: boolean }>) => void,
+  ) => void;
+  'imposter:submitClue': (
+    payload: ImposterSubmitCluePayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'imposter:vote': (
+    payload: ImposterVotePayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'imposter:guessWord': (
+    payload: ImposterGuessPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'lobby:codenames:setTeam': (
+    payload: CodenamesSetTeamPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'lobby:codenames:setSpymaster': (
+    payload: CodenamesSetSpymasterPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'codenames:submitClue': (
+    payload: CodenamesSubmitCluePayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'codenames:guessTile': (
+    payload: CodenamesGuessTilePayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'codenames:endTurn': (ack: (res: AckResult<null>) => void) => void;
   'radio:sync': (ack: (res: AckResult<RadioStatePayload>) => void) => void;
   'radio:skip': (ack: (res: AckResult<RadioStatePayload>) => void) => void;
+  'tv:sync': (ack: (res: AckResult<TvStatePayload>) => void) => void;
+  'tv:skip': (ack: (res: AckResult<TvStatePayload>) => void) => void;
   'lobby:draw:stroke': (payload: LobbyDrawStrokePayload, ack: (res: AckResult<null>) => void) => void;
   'lobby:draw:clear': (ack: (res: AckResult<null>) => void) => void;
   'lobby:drawing:request': (ack: (res: AckResult<{ strokes: LobbyDrawStroke[] }>) => void) => void;
@@ -121,7 +236,12 @@ export type ServerToClientEvents = {
   'error': (payload: { code: string; message: string }) => void;
   'guessWho:masks': (payload: { byTarget: Record<string, string[]> }) => void;
   'guessWho:playerEliminated': (payload: { playerId: string; revealedAvatar: string }) => void;
+  'imposter:yourWord': (payload: ImposterYourWordPayload) => void;
+  'imposter:clueSubmitted': (payload: { playerId: string }) => void;
+  'imposter:voted': (payload: { playerId: string }) => void;
+  'codenames:key': (payload: CodenamesKeyPayload) => void;
   'radio:state': (state: RadioStatePayload) => void;
+  'tv:state': (state: TvStatePayload) => void;
   'lobby:draw:stroke': (stroke: LobbyDrawStroke) => void;
   'lobby:draw:cleared': () => void;
   'lobby:drawing:sync': (payload: { strokes: LobbyDrawStroke[] }) => void;

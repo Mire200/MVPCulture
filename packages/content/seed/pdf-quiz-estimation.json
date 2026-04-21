@@ -1,0 +1,444 @@
+[
+  {
+    "id": "pdf-cg-057",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "On situe l'apparition de l’homme a:",
+    "numericAnswer": 3,
+    "unit": "millions d'années av. J.-C.",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-089",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La Première Guerre mondiale a fait :",
+    "numericAnswer": 9,
+    "unit": "millions",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-090",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Les Années folles font référence à une période s’étendant de :",
+    "numericAnswer": 1919,
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-123",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Combien de citoyens l’Europe compte-t-elle ?",
+    "numericAnswer": 500,
+    "unit": "millions",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-128",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La superficie de la France est de :",
+    "numericAnswer": 600000,
+    "unit": "km",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-141",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "La longueur du réseau routier français en métropole est de :",
+    "numericAnswer": 1,
+    "unit": "millions de km",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-186",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Dans le monde, le nombre d'hommes et de femmes analphabètes s'élève a:",
+    "numericAnswer": 775,
+    "unit": "millions",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-193",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Quel pourcentage de la population française a la grosse tête, avec un QI supérieur à 130?",
+    "numericAnswer": 3,
+    "unit": "%",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-204",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Combien de personnes souffrent de la faim dans le monde?",
+    "numericAnswer": 1,
+    "unit": "milliards de personnes",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-205",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien d'hommes dans le monde vivent avec moins de 1,25 dollar par jour, considéré comme le seuil de pauvreté ?",
+    "numericAnswer": 1.4,
+    "unit": "milliards",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-214",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "En matière de bruit, le seuil de danger est fixé à :",
+    "numericAnswer": 90,
+    "unit": "décibels",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-218",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien de personnes dans le monde vivent avec le VIH, le virus de ’immunodéficience humaine ?",
+    "numericAnswer": 40,
+    "unit": "millions de personnes",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-219",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Selon l'Organisation internationale du travail, combien d'enfants travaillent dans le monde?",
+    "numericAnswer": 218,
+    "unit": "millions",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-220",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "En France, combien de personnes vivent sous le seuil de pauvreté ?",
+    "numericAnswer": 3.7,
+    "unit": "millions de personnes",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-221",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien de Français sont propriétaires de leur logement ?",
+    "numericAnswer": 58,
+    "unit": "%",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-223",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien la France compte-t-elle d'ouvriers ?",
+    "numericAnswer": 6,
+    "unit": "millions",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-230",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Le nombre de mal-logés en France est estimé à :",
+    "numericAnswer": 3,
+    "unit": "millions",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-233",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien de permis de conduire sont délivrés chaque année en France?",
+    "numericAnswer": 750000,
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-246",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Combien de Français partent aux sports d'hiver ?",
+    "numericAnswer": 10,
+    "unit": "%",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-263",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Les coffres de la Banque de France contiennent les réserves d’or du pays, qui s'élèvent à :",
+    "numericAnswer": 3000,
+    "unit": "tonnes",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-291",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Le tunnel sous la Manche est le plus long tunnel sous-marin au monde, avec ses :",
+    "numericAnswer": 50,
+    "unit": "km",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-297",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Nous avons en moyenne dans notre corps :",
+    "numericAnswer": 5,
+    "unit": "litres",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-299",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel pourcentage de notre corps est constitué d’eau ?",
+    "numericAnswer": 60,
+    "unit": "%",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-301",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "De combien de cellules est composé l’homme ?",
+    "numericAnswer": 600000,
+    "unit": "milliards",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-305",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Lorsque l’on éternue, on projette nos microbes à une vitesse de :",
+    "numericAnswer": 150,
+    "unit": "km/h",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-319",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La hauteur d’un nuage peut atteindre :",
+    "numericAnswer": 10,
+    "unit": "km",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-321",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Un nuage peut contenir jusqu’à :",
+    "numericAnswer": 4000,
+    "unit": "tonnes",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-322",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "On parle d’ouragan lorsque le vent atteint une vitesse supérieure a :",
+    "numericAnswer": 117,
+    "unit": "km/h",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-328",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La consommation d’eau moyenne d’un Français est de :",
+    "numericAnswer": 140,
+    "unit": "litres",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-329",
+    "mode": "estimation",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "En 1760, notre consommation moyenne d’eau n’était que de :",
+    "numericAnswer": 20,
+    "unit": "litres",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-331",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien de litres d’eau économise-t-on en fermant le robinet lorsque l’on se brosse les dents ?",
+    "numericAnswer": 15,
+    "unit": "litres",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-332",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La consommation moyenne d’une douche de quatre minutes est de :",
+    "numericAnswer": 60,
+    "unit": "litres",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-339",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "La lumière du Soleil met huit minutes dix-huit secondes pour arriver jusqu’à nous. Quelle distance sépare la Terre du Soleil?",
+    "numericAnswer": 150,
+    "unit": "millions de km",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-341",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "L'hydraulique est l’une des premières énergies domestiquées par l’homme. Aujourd’hui, quelle part des besoins de la France en électricité les grands barrages fournissent-ils ?",
+    "numericAnswer": 13,
+    "unit": "%",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-344",
+    "mode": "estimation",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel pourcentage de la consommation mondiale d'électricité les énergies renouvelables couvrent-elles ?",
+    "numericAnswer": 20,
+    "unit": "%",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-345",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Sur les 13000 millions d’hectares de terres qui constituent notre planète, quelle est la proportion de forêts ?",
+    "numericAnswer": 30,
+    "unit": "%",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-348",
+    "mode": "estimation",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quand un avion franchit le mur du son, on entend un « bang » qui indique que l’on dépasse la vitesse du son, fixée a:",
+    "numericAnswer": 1235,
+    "unit": "km/h",
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  }
+]

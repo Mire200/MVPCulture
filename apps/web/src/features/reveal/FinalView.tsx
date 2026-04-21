@@ -2,11 +2,14 @@
 import { useGameStore } from '@/store/gameStore';
 import { AvatarBadge } from '@/components/AvatarPicker';
 import { motion } from 'framer-motion';
-import { Repeat } from 'lucide-react';
+import { Repeat, Zap, Trophy } from 'lucide-react';
 import { getSocket } from '@/lib/socket';
 import { useEffect } from 'react';
 import { mvpConfetti } from '@/lib/confetti';
 import { mvpSound } from '@/lib/sound';
+import type { GameModeId } from '@mvpc/shared';
+
+const REPLAY_DIRECTLY_MODES: GameModeId[] = ['guess-who', 'imposter', 'codenames'];
 
 export function FinalView() {
   const snapshot = useGameStore((s) => s.snapshot);
@@ -47,6 +50,29 @@ export function FinalView() {
     const sock = getSocket();
     sock.emit('match:rematch', () => {});
   };
+
+  const replayDirectly = () => {
+    mvpSound.click();
+    const sock = getSocket();
+    sock.emit('match:replay', (res) => {
+      if (res && !res.ok) {
+        alert(res.message);
+      }
+    });
+  };
+
+  /**
+   * On propose un bouton "Rejouer directement" uniquement pour les modes
+   * à 1 partie = 1 match où il n'y a pas de réglage supplémentaire à faire
+   * dans le lobby (qui-est-ce, imposter, codenames).
+   */
+  const exclusiveMode = (() => {
+    const pool = snapshot?.config.modesPool ?? [];
+    if (pool.length === 1 && REPLAY_DIRECTLY_MODES.includes(pool[0]!)) {
+      return pool[0]!;
+    }
+    return undefined;
+  })();
 
   if (!standings.length) return null;
 
@@ -135,15 +161,37 @@ export function FinalView() {
       )}
 
       {isHost ? (
-        <motion.button
-          whileTap={{ scale: 0.97 }}
-          onClick={rematch}
-          className="btn-primary mx-auto block text-lg py-4"
-          style={{ maxWidth: 340, width: '100%' }}
-        >
-          <Repeat className="w-5 h-5" />
-          Rejouer une partie
-        </motion.button>
+        <div className="mx-auto flex flex-col gap-3" style={{ maxWidth: 360 }}>
+          {exclusiveMode && (
+            <motion.button
+              whileTap={{ scale: 0.97 }}
+              onClick={replayDirectly}
+              className="btn-primary block text-lg py-4"
+              style={{ width: '100%' }}
+            >
+              <Zap className="w-5 h-5" />
+              Rejouer directement
+            </motion.button>
+          )}
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={rematch}
+            className={exclusiveMode ? 'btn-secondary block text-base py-3' : 'btn-primary block text-lg py-4'}
+            style={{ width: '100%' }}
+          >
+            {exclusiveMode ? (
+              <>
+                <Trophy className="w-4 h-4" />
+                Retour au lobby
+              </>
+            ) : (
+              <>
+                <Repeat className="w-5 h-5" />
+                Rejouer une partie
+              </>
+            )}
+          </motion.button>
+        </div>
       ) : (
         <div className="text-text-muted text-center text-sm">
           En attente de l'hôte pour la revanche…

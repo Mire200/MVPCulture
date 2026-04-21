@@ -11,3 +11,6 @@ coverage
 .env.*.local
 pnpm-lock.yaml.bak
 .pnpm-store
+.tmp_quiz_ocr/
+tmp_test.png
+*.tsbuildinfo

@@ -1,742 +1,5820 @@
 [
   {
-    "id": "c-geo-001",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Géographie",
-    "prompt": "Quelle est la capitale de l'Australie ?",
-    "answer": "Canberra",
-    "aliases": ["canberra"],
-    "source": "Wikipedia:Australia"
-  },
-  {
-    "id": "c-geo-002",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Géographie",
-    "prompt": "Quel est le plus long fleuve du monde ?",
-    "answer": "Nil",
-    "aliases": ["le nil", "nile"],
-    "source": "Wikipedia:Nile"
-  },
-  {
-    "id": "c-geo-003",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Géographie",
-    "prompt": "Quel pays compte le plus grand nombre de fuseaux horaires ?",
-    "answer": "France",
-    "aliases": ["la france"],
-    "source": "Wikipedia:Time_zones"
-  },
-  {
-    "id": "c-geo-004",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Géographie",
-    "prompt": "Quelle est la capitale du Kazakhstan depuis 2019 ?",
-    "answer": "Astana",
-    "aliases": ["noursoultan", "nur-sultan"],
-    "source": "Wikipedia:Astana"
-  },
-  {
-    "id": "c-geo-005",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Géographie",
-    "prompt": "Dans quelle mer se jette le Rhône ?",
-    "answer": "Méditerranée",
-    "aliases": ["mer méditerranée", "mediterranee"],
-    "source": "Wikipedia:Rhône"
-  },
-  {
-    "id": "c-his-001",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Histoire",
-    "prompt": "En quelle année a eu lieu la Révolution française ?",
-    "answer": "1789",
-    "aliases": [],
-    "source": "Wikipedia:French_Revolution"
-  },
-  {
-    "id": "c-his-002",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Histoire",
-    "prompt": "Qui était le premier empereur romain ?",
-    "answer": "Auguste",
-    "aliases": ["octave", "augustus"],
-    "source": "Wikipedia:Augustus"
-  },
-  {
-    "id": "c-his-003",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Histoire",
-    "prompt": "Quel traité mit fin à la Première Guerre mondiale en 1919 ?",
-    "answer": "Traité de Versailles",
-    "aliases": ["versailles"],
-    "source": "Wikipedia:Treaty_of_Versailles"
-  },
-  {
-    "id": "c-his-004",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Histoire",
-    "prompt": "Qui a peint la Joconde ?",
-    "answer": "Léonard de Vinci",
-    "aliases": ["leonard de vinci", "da vinci", "leonardo da vinci"],
-    "source": "Wikipedia:Mona_Lisa"
-  },
-  {
-    "id": "c-his-005",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Histoire",
-    "prompt": "En quelle année Constantinople est-elle tombée ?",
-    "answer": "1453",
-    "aliases": [],
-    "source": "Wikipedia:Fall_of_Constantinople"
-  },
-  {
-    "id": "c-sci-001",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Sciences",
-    "prompt": "Quel est le symbole chimique de l'or ?",
-    "answer": "Au",
-    "aliases": ["au"],
-    "source": "Wikipedia:Gold"
-  },
-  {
-    "id": "c-sci-002",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Sciences",
-    "prompt": "Quelle particule subatomique a une charge négative ?",
-    "answer": "Électron",
-    "aliases": ["electron"],
-    "source": "Wikipedia:Electron"
-  },
-  {
-    "id": "c-sci-003",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Sciences",
-    "prompt": "Quel est l'élément chimique de numéro atomique 79 ?",
-    "answer": "Or",
-    "aliases": ["gold", "aurum"],
-    "source": "Wikipedia:Gold"
-  },
-  {
-    "id": "c-sci-004",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Sciences",
-    "prompt": "Qui a formulé la théorie de la relativité restreinte ?",
-    "answer": "Albert Einstein",
-    "aliases": ["einstein"],
-    "source": "Wikipedia:Albert_Einstein"
-  },
-  {
-    "id": "c-sci-005",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Sciences",
-    "prompt": "Combien de planètes compte notre système solaire ?",
-    "answer": "8",
-    "aliases": ["huit"],
-    "source": "Wikipedia:Solar_System"
-  },
-  {
     "id": "c-cin-001",
     "mode": "classic",
     "difficulty": "easy",
     "category": "Cinéma",
-    "prompt": "Qui a réalisé le film Pulp Fiction ?",
-    "answer": "Quentin Tarantino",
-    "aliases": ["tarantino"],
-    "source": "Wikipedia:Pulp_Fiction"
+    "prompt": "Dans quel film une jeune femme met-elle un verre de lait au réfrigérateur avec la réplique « I'll be back » prononcée par un cyborg ?",
+    "answer": "Terminator",
+    "aliases": [
+      "the terminator",
+      "terminator 1"
+    ],
+    "tags": [
+      "annees-80",
+      "culte"
+    ]
   },
   {
     "id": "c-cin-002",
     "mode": "classic",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "category": "Cinéma",
-    "prompt": "Dans quel film dit-on 'Je suis ton père' ?",
-    "answer": "Star Wars",
-    "aliases": ["l'empire contre-attaque", "star wars: l'empire contre-attaque"],
-    "source": "Wikipedia:The_Empire_Strikes_Back"
+    "prompt": "Quel film de Pixar met en scène un rat qui veut devenir chef cuisinier à Paris ?",
+    "answer": "Ratatouille",
+    "aliases": [],
+    "tags": [
+      "pixar",
+      "animation"
+    ]
   },
   {
     "id": "c-cin-003",
     "mode": "classic",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "Cinéma",
-    "prompt": "Quel film a remporté la Palme d'or en 2019 ?",
-    "answer": "Parasite",
-    "aliases": [],
-    "source": "Wikipedia:Parasite_(2019_film)"
+    "prompt": "Quel acteur a joué à la fois Batman, Birdman et Beetlejuice ?",
+    "answer": "Michael Keaton",
+    "aliases": [
+      "keaton"
+    ]
   },
   {
     "id": "c-cin-004",
     "mode": "classic",
     "difficulty": "medium",
     "category": "Cinéma",
-    "prompt": "Qui a joué Jack Dawson dans Titanic ?",
-    "answer": "Leonardo DiCaprio",
-    "aliases": ["dicaprio", "leo dicaprio"],
-    "source": "Wikipedia:Titanic_(1997_film)"
+    "prompt": "Dans Pulp Fiction, quel est le nom du restaurant où Vincent et Mia dansent ?",
+    "answer": "Jack Rabbit Slim's",
+    "aliases": [
+      "jack rabbit slims",
+      "jackrabbit slims"
+    ]
   },
   {
     "id": "c-cin-005",
     "mode": "classic",
     "difficulty": "hard",
     "category": "Cinéma",
-    "prompt": "Quel est le prénom du réalisateur Kubrick ?",
-    "answer": "Stanley",
-    "aliases": [],
-    "source": "Wikipedia:Stanley_Kubrick"
+    "prompt": "Quel est le seul film muet à avoir remporté l'Oscar du meilleur film depuis 1929 ?",
+    "answer": "The Artist",
+    "aliases": [
+      "the artist",
+      "artist"
+    ],
+    "tags": [
+      "oscars"
+    ]
+  },
+  {
+    "id": "c-cin-006",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Dans Le Roi Lion, quel est le nom du phacochère ?",
+    "answer": "Pumbaa",
+    "aliases": [
+      "pumba"
+    ]
+  },
+  {
+    "id": "c-cin-007",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Qui réalise la trilogie « Cornetto » (Shaun of the Dead, Hot Fuzz, Le Dernier Pub) ?",
+    "answer": "Edgar Wright",
+    "aliases": [
+      "wright"
+    ]
+  },
+  {
+    "id": "c-cin-008",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Quel film français de 2001 a été le premier à rendre l'étoile de Montmartre mondialement célèbre avec un gnome en voyage ?",
+    "answer": "Le Fabuleux Destin d'Amélie Poulain",
+    "aliases": [
+      "amélie",
+      "amelie",
+      "amélie poulain",
+      "amelie poulain"
+    ]
+  },
+  {
+    "id": "c-cin-009",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel acteur décédé avant la sortie du film a été terminé numériquement dans Fast & Furious 7 ?",
+    "answer": "Paul Walker",
+    "aliases": [
+      "walker"
+    ]
+  },
+  {
+    "id": "c-cin-010",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Quelle boisson James Bond commande-t-il « au shaker, pas à la cuillère » ?",
+    "answer": "Martini",
+    "aliases": [
+      "dry martini",
+      "vodka martini",
+      "vesper"
+    ]
+  },
+  {
+    "id": "c-ser-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Séries",
+    "prompt": "Dans Breaking Bad, quel est le surnom méthylamphétaminique de Walter White ?",
+    "answer": "Heisenberg",
+    "aliases": [
+      "heisenberg"
+    ]
+  },
+  {
+    "id": "c-ser-002",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Séries",
+    "prompt": "Dans Friends, quel est le métier de Ross ?",
+    "answer": "Paléontologue",
+    "aliases": [
+      "paleontologue",
+      "paleontologist"
+    ]
+  },
+  {
+    "id": "c-ser-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Séries",
+    "prompt": "Dans Game of Thrones, quel est le nom de l'épée de Jon Snow ?",
+    "answer": "Grand-Griffe",
+    "aliases": [
+      "longclaw",
+      "grand griffe",
+      "grandgriffe"
+    ]
+  },
+  {
+    "id": "c-ser-004",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Séries",
+    "prompt": "Quelle série suit les aventures d'un lycéen qui devient trafiquant de méthamphétamine dans le Nouveau-Mexique ?",
+    "answer": "Breaking Bad",
+    "aliases": []
+  },
+  {
+    "id": "c-ser-005",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Séries",
+    "prompt": "Dans The Office (US), comment s'appelle le patron interprété par Steve Carell ?",
+    "answer": "Michael Scott",
+    "aliases": [
+      "michael scott"
+    ]
+  },
+  {
+    "id": "c-ser-006",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Séries",
+    "prompt": "Dans Lost, quelle suite de chiffres maudits Hurley doit-il saisir toutes les 108 minutes ?",
+    "answer": "4 8 15 16 23 42",
+    "aliases": [
+      "4-8-15-16-23-42",
+      "4,8,15,16,23,42"
+    ]
+  },
+  {
+    "id": "c-ser-007",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Séries",
+    "prompt": "Dans Stranger Things, quel est le nom de la dimension parallèle ?",
+    "answer": "Upside Down",
+    "aliases": [
+      "le monde à l'envers",
+      "upside-down"
+    ]
+  },
+  {
+    "id": "c-ser-008",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Séries",
+    "prompt": "Dans la série Sherlock de la BBC, qui joue John Watson ?",
+    "answer": "Martin Freeman",
+    "aliases": [
+      "freeman"
+    ]
   },
   {
     "id": "c-mus-001",
     "mode": "classic",
     "difficulty": "easy",
     "category": "Musique",
-    "prompt": "Quel groupe a sorti l'album 'The Dark Side of the Moon' ?",
-    "answer": "Pink Floyd",
-    "aliases": [],
-    "source": "Wikipedia:The_Dark_Side_of_the_Moon"
+    "prompt": "Quel groupe de Liverpool a sorti l'album Abbey Road en 1969 ?",
+    "answer": "The Beatles",
+    "aliases": [
+      "beatles",
+      "les beatles"
+    ]
   },
   {
     "id": "c-mus-002",
     "mode": "classic",
     "difficulty": "medium",
     "category": "Musique",
-    "prompt": "Quel compositeur a écrit 'Les Quatre Saisons' ?",
-    "answer": "Vivaldi",
-    "aliases": ["antonio vivaldi"],
-    "source": "Wikipedia:The_Four_Seasons_(Vivaldi)"
+    "prompt": "Quel artiste a été surnommé « The King of Pop » ?",
+    "answer": "Michael Jackson",
+    "aliases": [
+      "jackson"
+    ]
   },
   {
     "id": "c-mus-003",
     "mode": "classic",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "Musique",
-    "prompt": "Quel chanteur français a composé 'La Javanaise' ?",
-    "answer": "Serge Gainsbourg",
-    "aliases": ["gainsbourg"],
-    "source": "Wikipedia:Serge_Gainsbourg"
+    "prompt": "Dans quelle chanson Queen chante-t-il « Is this the real life? Is this just fantasy? » ?",
+    "answer": "Bohemian Rhapsody",
+    "aliases": []
   },
   {
     "id": "c-mus-004",
     "mode": "classic",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "category": "Musique",
-    "prompt": "Combien de membres composaient les Beatles ?",
-    "answer": "4",
-    "aliases": ["quatre"],
-    "source": "Wikipedia:The_Beatles"
-  },
-  {
-    "id": "c-lit-001",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Littérature",
-    "prompt": "Qui a écrit 'Les Misérables' ?",
-    "answer": "Victor Hugo",
-    "aliases": ["hugo"],
-    "source": "Wikipedia:Les_Misérables"
-  },
-  {
-    "id": "c-lit-002",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Littérature",
-    "prompt": "Dans quel pays se déroule le roman 'Cent ans de solitude' ?",
-    "answer": "Colombie",
-    "aliases": ["colombia"],
-    "source": "Wikipedia:One_Hundred_Years_of_Solitude"
-  },
-  {
-    "id": "c-lit-003",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Littérature",
-    "prompt": "Quel auteur a créé le personnage de Sherlock Holmes ?",
-    "answer": "Arthur Conan Doyle",
-    "aliases": ["conan doyle", "doyle"],
-    "source": "Wikipedia:Sherlock_Holmes"
-  },
-  {
-    "id": "c-spo-001",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Sport",
-    "prompt": "Quel pays a gagné la Coupe du monde de football 2018 ?",
-    "answer": "France",
-    "aliases": ["la france"],
-    "source": "Wikipedia:2018_FIFA_World_Cup"
-  },
-  {
-    "id": "c-spo-002",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Sport",
-    "prompt": "Combien de fois Rafael Nadal a-t-il gagné Roland Garros (jusqu'à 2022) ?",
-    "answer": "14",
-    "aliases": ["quatorze"],
-    "source": "Wikipedia:Rafael_Nadal"
-  },
-  {
-    "id": "c-spo-003",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Sport",
-    "prompt": "Quel pilote détient le record de titres de champion du monde de F1 (partagé) ?",
-    "answer": "Michael Schumacher",
-    "aliases": ["schumacher", "lewis hamilton", "hamilton"],
-    "source": "Wikipedia:Formula_One"
-  },
-  {
-    "id": "c-ani-001",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Animaux",
-    "prompt": "Quel est le plus grand animal terrestre vivant ?",
-    "answer": "Éléphant d'Afrique",
-    "aliases": ["elephant", "éléphant", "éléphant d'afrique"],
-    "source": "Wikipedia:African_elephant"
-  },
-  {
-    "id": "c-ani-002",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Animaux",
-    "prompt": "Combien de cœurs possède une pieuvre ?",
-    "answer": "3",
-    "aliases": ["trois"],
-    "source": "Wikipedia:Octopus"
-  },
-  {
-    "id": "c-tec-001",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Technologie",
-    "prompt": "Qui a co-fondé Apple avec Steve Jobs ?",
-    "answer": "Steve Wozniak",
-    "aliases": ["wozniak"],
-    "source": "Wikipedia:Apple_Inc."
-  },
-  {
-    "id": "c-tec-002",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Technologie",
-    "prompt": "Quel langage Guido van Rossum a-t-il créé ?",
-    "answer": "Python",
-    "aliases": [],
-    "source": "Wikipedia:Python_(programming_language)"
-  },
-  {
-    "id": "c-tec-003",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Technologie",
-    "prompt": "En quelle année le World Wide Web a-t-il été inventé ?",
-    "answer": "1989",
-    "aliases": [],
-    "source": "Wikipedia:World_Wide_Web"
-  },
-  {
-    "id": "c-art-001",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Arts",
-    "prompt": "Qui a sculpté 'Le Penseur' ?",
-    "answer": "Auguste Rodin",
-    "aliases": ["rodin"],
-    "source": "Wikipedia:The_Thinker"
-  },
-  {
-    "id": "c-art-002",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Arts",
-    "prompt": "Quel mouvement artistique est associé à Kandinsky ?",
-    "answer": "Abstraction",
-    "aliases": ["art abstrait", "abstraction lyrique"],
-    "source": "Wikipedia:Wassily_Kandinsky"
-  },
-  {
-    "id": "c-gas-001",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Gastronomie",
-    "prompt": "De quel pays la pizza est-elle originaire ?",
-    "answer": "Italie",
-    "aliases": ["italia"],
-    "source": "Wikipedia:Pizza"
-  },
-  {
-    "id": "c-gas-002",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Gastronomie",
-    "prompt": "Quelle épice est la plus chère au monde au poids ?",
-    "answer": "Safran",
-    "aliases": [],
-    "source": "Wikipedia:Saffron"
-  },
-  {
-    "id": "c-cin-006",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Cinéma",
-    "prompt": "Dans Matrix, quelle pilule choisit Neo ?",
-    "answer": "Rouge",
-    "aliases": ["la rouge", "pilule rouge"],
-    "source": "Wikipedia:The_Matrix"
-  },
-  {
-    "id": "c-geo-006",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Géographie",
-    "prompt": "Quel est le plus petit pays du monde ?",
-    "answer": "Vatican",
-    "aliases": ["cité du vatican", "cite du vatican"],
-    "source": "Wikipedia:Vatican_City"
-  },
-  {
-    "id": "c-geo-007",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Géographie",
-    "prompt": "Quelle ville abrite la statue du Christ Rédempteur ?",
-    "answer": "Rio de Janeiro",
-    "aliases": ["rio"],
-    "source": "Wikipedia:Christ_the_Redeemer"
-  },
-  {
-    "id": "c-geo-008",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Géographie",
-    "prompt": "Dans quel pays se trouve la ville de Machu Picchu ?",
-    "answer": "Pérou",
-    "aliases": ["perou", "peru"],
-    "source": "Wikipedia:Machu_Picchu"
-  },
-  {
-    "id": "c-geo-009",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Géographie",
-    "prompt": "Quel est le plus grand désert du monde ?",
-    "answer": "Antarctique",
-    "aliases": ["desert d'antarctique", "désert d'antarctique"],
-    "source": "Wikipedia:Desert"
-  },
-  {
-    "id": "c-geo-010",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Géographie",
-    "prompt": "Quel pays compte le plus grand nombre d'îles ?",
-    "answer": "Suède",
-    "aliases": ["suede", "sweden"],
-    "source": "Wikipedia:Sweden"
-  },
-  {
-    "id": "c-his-006",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Histoire",
-    "prompt": "Quel roi de France fut surnommé 'le Roi-Soleil' ?",
-    "answer": "Louis XIV",
-    "aliases": ["louis 14", "louis quatorze"],
-    "source": "Wikipedia:Louis_XIV"
-  },
-  {
-    "id": "c-his-007",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Histoire",
-    "prompt": "Quelle reine est décapitée en 1793 à Paris ?",
-    "answer": "Marie-Antoinette",
-    "aliases": ["marie antoinette"],
-    "source": "Wikipedia:Marie_Antoinette"
-  },
-  {
-    "id": "c-his-008",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Histoire",
-    "prompt": "En quelle année a eu lieu la bataille de Marignan ?",
-    "answer": "1515",
-    "aliases": [],
-    "source": "Wikipedia:Battle_of_Marignano"
-  },
-  {
-    "id": "c-his-009",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Histoire",
-    "prompt": "Qui a prononcé le discours 'I have a dream' en 1963 ?",
-    "answer": "Martin Luther King",
-    "aliases": ["mlk", "king"],
-    "source": "Wikipedia:I_Have_a_Dream"
-  },
-  {
-    "id": "c-sci-006",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Sciences",
-    "prompt": "Quel est le plus grand organe du corps humain ?",
-    "answer": "Peau",
-    "aliases": ["la peau"],
-    "source": "Wikipedia:Skin"
-  },
-  {
-    "id": "c-sci-007",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Sciences",
-    "prompt": "Qui a découvert la pénicilline ?",
-    "answer": "Alexander Fleming",
-    "aliases": ["fleming"],
-    "source": "Wikipedia:Penicillin"
-  },
-  {
-    "id": "c-sci-008",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Sciences",
-    "prompt": "Quelle est l'unité SI de la force ?",
-    "answer": "Newton",
-    "aliases": ["n"],
-    "source": "Wikipedia:Newton_(unit)"
-  },
-  {
-    "id": "c-sci-009",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Sciences",
-    "prompt": "Quel gaz les plantes absorbent-elles principalement pour la photosynthèse ?",
-    "answer": "Dioxyde de carbone",
-    "aliases": ["co2", "gaz carbonique"],
-    "source": "Wikipedia:Photosynthesis"
-  },
-  {
-    "id": "c-sci-010",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Sciences",
-    "prompt": "Qui a découvert la structure en double hélice de l'ADN ?",
-    "answer": "Watson et Crick",
-    "aliases": ["watson crick", "crick watson"],
-    "source": "Wikipedia:Francis_Crick"
-  },
-  {
-    "id": "c-cin-007",
-    "mode": "classic",
-    "difficulty": "easy",
-    "category": "Cinéma",
-    "prompt": "Dans Le Seigneur des Anneaux, qui porte l'anneau jusqu'à la Montagne du Destin ?",
-    "answer": "Frodon",
-    "aliases": ["frodon sacquet", "frodo", "frodo baggins"],
-    "source": "Wikipedia:Frodo_Baggins"
-  },
-  {
-    "id": "c-cin-008",
-    "mode": "classic",
-    "difficulty": "medium",
-    "category": "Cinéma",
-    "prompt": "Quel film met en scène Andy Dufresne dans une prison ?",
-    "answer": "Les Évadés",
-    "aliases": ["les evades", "the shawshank redemption", "shawshank"],
-    "source": "Wikipedia:The_Shawshank_Redemption"
-  },
-  {
-    "id": "c-cin-009",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Cinéma",
-    "prompt": "Qui a réalisé 'La Dolce Vita' ?",
-    "answer": "Federico Fellini",
-    "aliases": ["fellini"],
-    "source": "Wikipedia:La_Dolce_Vita"
+    "prompt": "Quel compositeur est devenu sourd avant de composer sa 9ᵉ symphonie ?",
+    "answer": "Beethoven",
+    "aliases": [
+      "ludwig van beethoven"
+    ]
   },
   {
     "id": "c-mus-005",
     "mode": "classic",
     "difficulty": "medium",
     "category": "Musique",
-    "prompt": "Quel compositeur allemand est devenu sourd à la fin de sa vie ?",
-    "answer": "Beethoven",
-    "aliases": ["ludwig van beethoven"],
-    "source": "Wikipedia:Ludwig_van_Beethoven"
+    "prompt": "Quelle chanteuse britannique a sorti les albums 19, 21, 25 et 30 ?",
+    "answer": "Adele",
+    "aliases": [
+      "adèle"
+    ]
   },
   {
     "id": "c-mus-006",
     "mode": "classic",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Quel rappeur a fondé la marque Yeezy et s'est marié avec Kim Kardashian ?",
+    "answer": "Kanye West",
+    "aliases": [
+      "kanye",
+      "ye",
+      "west"
+    ]
+  },
+  {
+    "id": "c-mus-007",
+    "mode": "classic",
     "difficulty": "hard",
     "category": "Musique",
-    "prompt": "Dans quelle ville américaine est né le jazz ?",
-    "answer": "La Nouvelle-Orléans",
-    "aliases": ["nouvelle-orleans", "new orleans", "la nouvelle orleans"],
-    "source": "Wikipedia:Jazz"
+    "prompt": "Quel pianiste canadien est célèbre pour ses interprétations des Variations Goldberg ?",
+    "answer": "Glenn Gould",
+    "aliases": [
+      "gould"
+    ]
+  },
+  {
+    "id": "c-mus-008",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Quelle chanson des Daft Punk a relancé la carrière de Pharrell Williams en 2013 ?",
+    "answer": "Get Lucky",
+    "aliases": []
+  },
+  {
+    "id": "c-jv-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Quel studio japonais a créé The Legend of Zelda ?",
+    "answer": "Nintendo",
+    "aliases": [
+      "nintendo",
+      "nintendo ead"
+    ]
+  },
+  {
+    "id": "c-jv-004",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Dans GTA V, quelle ville fictive s'inspire de Los Angeles ?",
+    "answer": "Los Santos",
+    "aliases": []
+  },
+  {
+    "id": "c-jv-005",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Jeux vidéo",
+    "prompt": "Quel est le prénom de l'héroïne silencieuse de Half-Life, fille du Dr Eli Vance ?",
+    "answer": "Alyx",
+    "aliases": [
+      "alyx vance"
+    ]
+  },
+  {
+    "id": "c-jv-007",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Quel personnage de Street Fighter lance des boules de feu en criant « Hadouken » ?",
+    "answer": "Ryu",
+    "aliases": []
+  },
+  {
+    "id": "c-jv-008",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Jeux vidéo",
+    "prompt": "Quel jeu de FromSoftware sorti en 2022 a remporté le Game of the Year ?",
+    "answer": "Elden Ring",
+    "aliases": []
+  },
+  {
+    "id": "c-his-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quel roi français est surnommé « le Roi Soleil » ?",
+    "answer": "Louis XIV",
+    "aliases": [
+      "louis 14"
+    ]
+  },
+  {
+    "id": "c-his-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel navire de la White Star Line a sombré lors de son voyage inaugural en avril 1912 ?",
+    "answer": "Titanic",
+    "aliases": [
+      "rms titanic"
+    ]
+  },
+  {
+    "id": "c-his-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle reine d'Égypte a séduit successivement Jules César et Marc Antoine ?",
+    "answer": "Cléopâtre",
+    "aliases": [
+      "cleopatre",
+      "cléopâtre vii"
+    ]
+  },
+  {
+    "id": "c-his-004",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quelle cité antique a été détruite par l'éruption du Vésuve en 79 après J.-C. ?",
+    "answer": "Pompéi",
+    "aliases": [
+      "pompei"
+    ]
+  },
+  {
+    "id": "c-his-005",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel explorateur italien est revenu de Chine avec des récits popularisés au XIIIᵉ siècle ?",
+    "answer": "Marco Polo",
+    "aliases": [
+      "polo"
+    ]
+  },
+  {
+    "id": "c-his-006",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Qui a prononcé le discours « I have a dream » en 1963 ?",
+    "answer": "Martin Luther King",
+    "aliases": [
+      "mlk",
+      "martin luther king jr",
+      "king"
+    ]
+  },
+  {
+    "id": "c-his-007",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quelle affaire de faux télégramme a déchiré la France de 1894 à 1906 ?",
+    "answer": "Affaire Dreyfus",
+    "aliases": [
+      "dreyfus"
+    ]
+  },
+  {
+    "id": "c-his-008",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle femme a découvert le polonium et le radium avec son mari ?",
+    "answer": "Marie Curie",
+    "aliases": [
+      "curie",
+      "maria sklodowska"
+    ]
+  },
+  {
+    "id": "c-sci-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel organe humain filtre le sang pour produire l'urine ?",
+    "answer": "Rein",
+    "aliases": [
+      "reins",
+      "les reins"
+    ]
+  },
+  {
+    "id": "c-sci-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel scientifique a proposé la théorie de l'évolution par sélection naturelle ?",
+    "answer": "Charles Darwin",
+    "aliases": [
+      "darwin"
+    ]
+  },
+  {
+    "id": "c-sci-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle particule élémentaire est échangée entre les atomes pour former un courant électrique ?",
+    "answer": "Électron",
+    "aliases": [
+      "electron",
+      "les électrons",
+      "les electrons"
+    ]
+  },
+  {
+    "id": "c-sci-004",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel astronome danois a perdu son nez dans un duel et observé pendant des années l'étoile Tycho ?",
+    "answer": "Tycho Brahe",
+    "aliases": [
+      "brahe"
+    ]
+  },
+  {
+    "id": "c-sci-005",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel est le nom du trou noir au centre de notre galaxie ?",
+    "answer": "Sagittarius A*",
+    "aliases": [
+      "sagittarius a",
+      "sgr a*",
+      "sgr a"
+    ]
+  },
+  {
+    "id": "c-sci-006",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Combien de chromosomes possède une cellule humaine normale ?",
+    "answer": "46",
+    "aliases": [
+      "quarante-six",
+      "23 paires"
+    ]
+  },
+  {
+    "id": "c-sci-007",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quelle énigme mathématique a été prouvée par Andrew Wiles en 1994 ?",
+    "answer": "Dernier théorème de Fermat",
+    "aliases": [
+      "théorème de fermat",
+      "theoreme de fermat",
+      "fermat"
+    ]
+  },
+  {
+    "id": "c-lit-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Dans Les Misérables, quel est le numéro de matricule de Jean Valjean ?",
+    "answer": "24601",
+    "aliases": []
+  },
+  {
+    "id": "c-lit-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Quel roman russe suit Raskolnikov, un étudiant qui tue une usurière ?",
+    "answer": "Crime et Châtiment",
+    "aliases": [
+      "crime et chatiment"
+    ]
   },
   {
     "id": "c-lit-004",
     "mode": "classic",
     "difficulty": "medium",
     "category": "Littérature",
-    "prompt": "Qui a écrit 'L'Étranger' ?",
-    "answer": "Albert Camus",
-    "aliases": ["camus"],
-    "source": "Wikipedia:The_Stranger_(Camus_novel)"
+    "prompt": "Dans 1984, quel est le nom du dictateur fictif représenté partout ?",
+    "answer": "Big Brother",
+    "aliases": []
   },
   {
     "id": "c-lit-005",
     "mode": "classic",
-    "difficulty": "hard",
+    "difficulty": "easy",
     "category": "Littérature",
-    "prompt": "Quel est le prénom du monstre créé par Frankenstein dans le roman ?",
-    "answer": "Il n'a pas de prénom",
-    "aliases": ["aucun", "pas de nom", "aucun prenom", "créature", "creature"],
-    "source": "Wikipedia:Frankenstein"
+    "prompt": "Quel dragon Bilbo Baggins rencontre-t-il dans Le Hobbit ?",
+    "answer": "Smaug",
+    "aliases": []
+  },
+  {
+    "id": "c-lit-006",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Quel auteur britannique a écrit « Orgueil et Préjugés » ?",
+    "answer": "Jane Austen",
+    "aliases": [
+      "austen"
+    ]
+  },
+  {
+    "id": "c-spo-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Dans quel sport trouve-t-on un « birdie » et un « bogey » ?",
+    "answer": "Golf",
+    "aliases": []
+  },
+  {
+    "id": "c-spo-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel coureur jamaïcain détient le record du monde du 100 m (9,58 s) ?",
+    "answer": "Usain Bolt",
+    "aliases": [
+      "bolt"
+    ]
+  },
+  {
+    "id": "c-spo-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quelle équipe de football a gagné la Coupe du monde 1998 ?",
+    "answer": "France",
+    "aliases": [
+      "la france"
+    ]
   },
   {
     "id": "c-spo-004",
     "mode": "classic",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "category": "Sport",
-    "prompt": "Quel joueur a marqué un but de la main surnommé 'la main de Dieu' ?",
-    "answer": "Diego Maradona",
-    "aliases": ["maradona"],
-    "source": "Wikipedia:Hand_of_God_goal"
+    "prompt": "Quel joueur américain détient le record de points marqués en une saison NBA (81 en un match) ?",
+    "answer": "Kobe Bryant",
+    "aliases": [
+      "kobe",
+      "bryant"
+    ]
   },
   {
     "id": "c-spo-005",
     "mode": "classic",
-    "difficulty": "hard",
+    "difficulty": "easy",
     "category": "Sport",
-    "prompt": "Dans quel sport s'affrontent les Silver Ferns ?",
-    "answer": "Netball",
-    "aliases": ["netball"],
-    "source": "Wikipedia:New_Zealand_national_netball_team"
+    "prompt": "Quel sport se pratique avec une perche, un cheval d'arçon et des anneaux ?",
+    "answer": "Gymnastique",
+    "aliases": []
   },
   {
-    "id": "c-ani-003",
+    "id": "c-nat-002",
     "mode": "classic",
     "difficulty": "medium",
     "category": "Animaux",
-    "prompt": "Quel animal est à l'origine du prosciutto ?",
-    "answer": "Cochon",
-    "aliases": ["porc", "cochon"],
-    "source": "Wikipedia:Prosciutto"
+    "prompt": "Quel oiseau incapable de voler est le symbole national de la Nouvelle-Zélande ?",
+    "answer": "Kiwi",
+    "aliases": []
   },
   {
-    "id": "c-ani-004",
+    "id": "c-nat-003",
     "mode": "classic",
     "difficulty": "hard",
     "category": "Animaux",
-    "prompt": "Quel est le seul mammifère capable de voler ?",
-    "answer": "Chauve-souris",
-    "aliases": ["chauve souris", "chauves-souris"],
-    "source": "Wikipedia:Bat"
+    "prompt": "Quel céphalopode peut changer de couleur en une seconde et possède trois cœurs ?",
+    "answer": "Poulpe",
+    "aliases": [
+      "pieuvre",
+      "octopus",
+      "poulpes"
+    ]
   },
   {
-    "id": "c-tec-004",
+    "id": "c-gas-001",
     "mode": "classic",
     "difficulty": "easy",
-    "category": "Technologie",
-    "prompt": "Qui a fondé Tesla ?",
-    "answer": "Martin Eberhard",
-    "aliases": ["eberhard", "elon musk", "musk"],
-    "source": "Wikipedia:Tesla,_Inc."
+    "category": "Gastronomie",
+    "prompt": "Quel fromage italien est l'ingrédient principal du tiramisu ?",
+    "answer": "Mascarpone",
+    "aliases": []
   },
   {
-    "id": "c-tec-005",
+    "id": "c-gas-002",
     "mode": "classic",
     "difficulty": "medium",
-    "category": "Technologie",
-    "prompt": "Quelle société est à l'origine du moteur de recherche Bing ?",
-    "answer": "Microsoft",
-    "aliases": ["microsoft"],
-    "source": "Wikipedia:Bing_(search_engine)"
-  },
-  {
-    "id": "c-tec-006",
-    "mode": "classic",
-    "difficulty": "hard",
-    "category": "Technologie",
-    "prompt": "Quel système d'exploitation mobile est basé sur le noyau Linux ?",
-    "answer": "Android",
-    "aliases": ["android"],
-    "source": "Wikipedia:Android_(operating_system)"
+    "category": "Gastronomie",
+    "prompt": "Quelle région française revendique l'invention de la bouillabaisse ?",
+    "answer": "Provence",
+    "aliases": [
+      "marseille",
+      "provence-alpes-cote d'azur"
+    ]
   },
   {
     "id": "c-gas-003",
     "mode": "classic",
-    "difficulty": "medium",
-    "category": "Gastronomie",
-    "prompt": "Quel ingrédient principal entre dans la composition du guacamole ?",
-    "answer": "Avocat",
-    "aliases": ["avocat"],
-    "source": "Wikipedia:Guacamole"
-  },
-  {
-    "id": "c-gas-004",
-    "mode": "classic",
     "difficulty": "hard",
     "category": "Gastronomie",
-    "prompt": "D'où est originaire le fromage Gruyère (pays) ?",
-    "answer": "Suisse",
-    "aliases": ["suisse"],
-    "source": "Wikipedia:Gruyère_cheese"
+    "prompt": "Quel chef français est célèbre pour avoir rendu son étoile Michelin afin d'échapper à la pression ?",
+    "answer": "Sébastien Bras",
+    "aliases": [
+      "sebastien bras",
+      "bras"
+    ]
+  },
+  {
+    "id": "c-art-001",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Art",
+    "prompt": "Qui a peint La Joconde ?",
+    "answer": "Léonard de Vinci",
+    "aliases": [
+      "leonard de vinci",
+      "da vinci",
+      "leonardo da vinci"
+    ]
+  },
+  {
+    "id": "c-art-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Art",
+    "prompt": "Quel peintre néerlandais s'est coupé l'oreille à Arles en 1888 ?",
+    "answer": "Vincent van Gogh",
+    "aliases": [
+      "van gogh",
+      "vincent van gogh"
+    ]
   },
   {
     "id": "c-art-003",
     "mode": "classic",
-    "difficulty": "easy",
-    "category": "Arts",
-    "prompt": "Quel peintre s'est coupé l'oreille ?",
-    "answer": "Van Gogh",
-    "aliases": ["vincent van gogh", "vangogh"],
-    "source": "Wikipedia:Vincent_van_Gogh"
+    "difficulty": "hard",
+    "category": "Art",
+    "prompt": "Quel street artist britannique anonyme a autodétruit sa toile « Girl with Balloon » aux enchères ?",
+    "answer": "Banksy",
+    "aliases": []
   },
   {
     "id": "c-art-004",
     "mode": "classic",
     "difficulty": "medium",
-    "category": "Arts",
-    "prompt": "Dans quel musée se trouve la Joconde ?",
-    "answer": "Louvre",
-    "aliases": ["musée du louvre", "musee du louvre", "le louvre"],
-    "source": "Wikipedia:Mona_Lisa"
+    "category": "Art",
+    "prompt": "Quelle œuvre cubiste de Picasso représente le bombardement d'une ville basque en 1937 ?",
+    "answer": "Guernica",
+    "aliases": []
   },
   {
-    "id": "c-div-001",
+    "id": "c-pop-001",
     "mode": "classic",
     "difficulty": "easy",
-    "category": "Divers",
-    "prompt": "Quelle couleur obtient-on en mélangeant du bleu et du jaune ?",
-    "answer": "Vert",
-    "aliases": ["vert"],
-    "source": "Wikipedia:Color_mixing"
+    "category": "Pop culture",
+    "prompt": "Dans Harry Potter, quelle est la maison de Hermione ?",
+    "answer": "Gryffondor",
+    "aliases": [
+      "gryffindor"
+    ]
   },
   {
-    "id": "c-div-002",
+    "id": "c-pop-002",
     "mode": "classic",
     "difficulty": "medium",
-    "category": "Divers",
-    "prompt": "Combien de faces a un dodécaèdre régulier ?",
-    "answer": "12",
-    "aliases": ["douze"],
-    "source": "Wikipedia:Dodecahedron"
+    "category": "Pop culture",
+    "prompt": "Dans Star Wars, quelle planète désertique voit grandir Luke Skywalker ?",
+    "answer": "Tatooine",
+    "aliases": [
+      "tatoïne"
+    ]
+  },
+  {
+    "id": "c-pop-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Pop culture",
+    "prompt": "Dans le MCU, comment s'appelle le gant qui permet à Thanos de contrôler les pierres d'infinité ?",
+    "answer": "Gantelet de l'infini",
+    "aliases": [
+      "infinity gauntlet",
+      "gantelet d'infinité"
+    ]
+  },
+  {
+    "id": "c-pop-005",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Pop culture",
+    "prompt": "Dans Squid Game, quel est le numéro du personnage principal ?",
+    "answer": "456",
+    "aliases": [
+      "quatre cent cinquante-six"
+    ]
+  },
+  {
+    "id": "c-geo-001",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays compte le plus grand nombre de fuseaux horaires au monde ?",
+    "answer": "France",
+    "aliases": [
+      "la france"
+    ],
+    "tags": [
+      "piege"
+    ]
+  },
+  {
+    "id": "c-geo-002",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quel est le seul pays à posséder à la fois une frontière avec la France et une frontière avec l'Espagne ?",
+    "answer": "Andorre",
+    "aliases": [
+      "l'andorre"
+    ]
+  },
+  {
+    "id": "c-geo-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Dans quelle mer se jette le Rhône ?",
+    "answer": "Méditerranée",
+    "aliases": [
+      "mer méditerranée",
+      "mediterranee"
+    ]
+  },
+  {
+    "id": "c-geo-004",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quel détroit sépare l'Europe de l'Afrique sur 14 km ?",
+    "answer": "Détroit de Gibraltar",
+    "aliases": [
+      "gibraltar",
+      "detroit de gibraltar"
+    ]
+  },
+  {
+    "id": "c-geo-005",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays africain a le plus grand nombre de pyramides au monde (plus que l'Égypte) ?",
+    "answer": "Soudan",
+    "aliases": [
+      "le soudan"
+    ],
+    "tags": [
+      "piege"
+    ]
+  },
+  {
+    "id": "c-cg100-001",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel empire a utilisé un système de relais postaux très efficace appelé le yam ?",
+    "answer": "L'Empire mongol",
+    "aliases": [
+      "empire mongol",
+      "mongols",
+      "mongolie"
+    ]
+  },
+  {
+    "id": "c-cg100-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle civilisation précolombienne utilisait des cordelettes à nœuds appelées quipus pour enregistrer des informations ?",
+    "answer": "Les Incas",
+    "aliases": [
+      "inca",
+      "civilisation inca",
+      "empire inca"
+    ]
+  },
+  {
+    "id": "c-cg100-003",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quelle ville fut brièvement la capitale de l’Empire romain d’Occident avant sa chute ?",
+    "answer": "Ravenne",
+    "aliases": [
+      "ravenna",
+      "médiolanum",
+      "milan"
+    ]
+  },
+  {
+    "id": "c-cg100-004",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel événement de 1525 a profondément affaibli la monarchie française face aux Habsbourg ?",
+    "answer": "La bataille de Pavie",
+    "aliases": [
+      "bataille de pavie",
+      "pavie"
+    ]
+  },
+  {
+    "id": "c-cg100-005",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel royaume africain médiéval était célèbre pour la richesse de son empereur Mansa Moussa ?",
+    "answer": "Le Mali",
+    "aliases": [
+      "mali",
+      "empire du mali",
+      "royaume du mali"
+    ]
+  },
+  {
+    "id": "c-cg100-006",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle réforme administrative napoléonienne structure encore largement le territoire français ?",
+    "answer": "Le découpage en départements (et le réseau préfectoral)",
+    "aliases": [
+      "départements",
+      "departements",
+      "préfectures",
+      "prefectures",
+      "découpage départemental"
+    ]
+  },
+  {
+    "id": "c-cg100-007",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quel philosophe antique a été condamné à boire la ciguë ?",
+    "answer": "Socrate",
+    "aliases": [
+      "socrates"
+    ]
+  },
+  {
+    "id": "c-cg100-008",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel pays européen a connu la « Révolution des Œillets » en 1974 ?",
+    "answer": "Le Portugal",
+    "aliases": [
+      "portugal"
+    ]
+  },
+  {
+    "id": "c-cg100-009",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel traité de 1494 a partagé le « Nouveau Monde » entre l’Espagne et le Portugal ?",
+    "answer": "Le traité de Tordesillas",
+    "aliases": [
+      "tordesillas",
+      "traité de tordesillas"
+    ]
+  },
+  {
+    "id": "c-cg100-010",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle invention chinoise a transformé l’administration, le commerce et la diffusion du savoir bien avant l’Europe ?",
+    "answer": "Le papier",
+    "aliases": [
+      "papier",
+      "l'imprimerie",
+      "imprimerie"
+    ]
+  },
+  {
+    "id": "c-cg100-011",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays possède trois capitales officielles ?",
+    "answer": "L'Afrique du Sud",
+    "aliases": [
+      "afrique du sud",
+      "south africa",
+      "rsa"
+    ]
+  },
+  {
+    "id": "c-cg100-012",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel détroit sépare l’Asie de l’Amérique du Nord ?",
+    "answer": "Le détroit de Béring",
+    "aliases": [
+      "détroit de béring",
+      "bering",
+      "béring"
+    ]
+  },
+  {
+    "id": "c-cg100-013",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel pays est presque entièrement enclavé dans l’Afrique du Sud ?",
+    "answer": "Le Lesotho",
+    "aliases": [
+      "lesotho"
+    ]
+  },
+  {
+    "id": "c-cg100-014",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quelle mer est en réalité le plus grand lac salé du monde ?",
+    "answer": "La mer Caspienne",
+    "aliases": [
+      "mer caspienne",
+      "caspienne",
+      "lac caspien"
+    ]
+  },
+  {
+    "id": "c-cg100-015",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel État insulaire risque particulièrement d’être menacé par la montée du niveau des océans ?",
+    "answer": "Les Maldives",
+    "aliases": [
+      "maldives",
+      "tuvalu",
+      "kiribati"
+    ]
+  },
+  {
+    "id": "c-cg100-016",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle ville est située sur deux continents ?",
+    "answer": "Istanbul",
+    "aliases": [
+      "constantinople"
+    ]
+  },
+  {
+    "id": "c-cg100-017",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays possède le plus grand nombre de fuseaux horaires, grâce à ses territoires d’outre-mer ?",
+    "answer": "La France",
+    "aliases": [
+      "france"
+    ]
+  },
+  {
+    "id": "c-cg100-018",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel fleuve traverse Bagdad ?",
+    "answer": "Le Tigre",
+    "aliases": [
+      "tigre",
+      "tigris"
+    ]
+  },
+  {
+    "id": "c-cg100-019",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle région du monde est appelée le « Croissant fertile » ?",
+    "answer": "Le Moyen-Orient (Mésopotamie et Levant)",
+    "aliases": [
+      "moyen-orient",
+      "proche-orient",
+      "mésopotamie",
+      "levant",
+      "croissant fertile"
+    ]
+  },
+  {
+    "id": "c-cg100-020",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel pays a déplacé sa capitale de Lagos à Abuja ?",
+    "answer": "Le Nigeria",
+    "aliases": [
+      "nigeria",
+      "nigéria"
+    ]
+  },
+  {
+    "id": "c-cg100-021",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel animal peut régénérer une partie de son cerveau et de son cœur ?",
+    "answer": "L'axolotl",
+    "aliases": [
+      "axolotl",
+      "ambystome"
+    ]
+  },
+  {
+    "id": "c-cg100-022",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle particule est souvent associée au boson de Higgs ?",
+    "answer": "Le boson de Higgs (particule élémentaire du modèle standard)",
+    "aliases": [
+      "boson de higgs",
+      "higgs",
+      "particule de higgs"
+    ]
+  },
+  {
+    "id": "c-cg100-023",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel métal est liquide à température ambiante ?",
+    "answer": "Le mercure",
+    "aliases": [
+      "mercure",
+      "mercury",
+      "hg"
+    ]
+  },
+  {
+    "id": "c-cg100-024",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Pourquoi les flamants roses sont-ils roses ?",
+    "answer": "À cause des caroténoïdes présents dans leur alimentation",
+    "aliases": [
+      "caroténoïdes",
+      "pigments",
+      "leur nourriture",
+      "alimentation"
+    ]
+  },
+  {
+    "id": "c-cg100-025",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle espèce animale est connue pour utiliser des outils afin d’ouvrir des coquillages ?",
+    "answer": "La loutre de mer",
+    "aliases": [
+      "loutre de mer",
+      "loutre",
+      "loutres marines"
+    ]
+  },
+  {
+    "id": "c-cg100-026",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel phénomène explique que certaines méduses semblent biologiquement « immortelles » ?",
+    "answer": "La transdifférenciation cellulaire (ex. Turritopsis dohrnii)",
+    "aliases": [
+      "turritopsis",
+      "transdifférenciation",
+      "régénération"
+    ]
+  },
+  {
+    "id": "c-cg100-027",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle est la particularité du tardigrade ?",
+    "answer": "Une résistance extrême aux conditions extrêmes (vide, radiations, déshydratation)",
+    "aliases": [
+      "tardigrade",
+      "résistance extrême",
+      "extrêmophile",
+      "ourson d'eau"
+    ]
+  },
+  {
+    "id": "c-cg100-028",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel gaz est principalement responsable de l’odeur des œufs pourris ?",
+    "answer": "L'hydrogène sulfuré",
+    "aliases": [
+      "hydrogène sulfuré",
+      "h2s",
+      "sulfure d'hydrogène"
+    ]
+  },
+  {
+    "id": "c-cg100-029",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quelle théorie explique le déplacement des continents ?",
+    "answer": "La tectonique des plaques",
+    "aliases": [
+      "tectonique des plaques",
+      "dérive des continents",
+      "wegener",
+      "plaques"
+    ]
+  },
+  {
+    "id": "c-cg100-030",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel organe humain consomme environ 20 % de l’énergie du corps au repos ?",
+    "answer": "Le cerveau",
+    "aliases": [
+      "cerveau",
+      "brain"
+    ]
+  },
+  {
+    "id": "c-cg100-031",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Quel langage de programmation a été créé à l’origine pour rendre les pages web interactives ?",
+    "answer": "JavaScript",
+    "aliases": [
+      "javascript",
+      "js",
+      "ecmascript"
+    ]
+  },
+  {
+    "id": "c-cg100-032",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Quel système d’exploitation libre a été lancé par Linus Torvalds ?",
+    "answer": "Linux",
+    "aliases": [
+      "linux",
+      "noyau linux",
+      "gnu linux"
+    ]
+  },
+  {
+    "id": "c-cg100-033",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Que signifie le sigle « URL » ?",
+    "answer": "Uniform Resource Locator",
+    "aliases": [
+      "uniform resource locator",
+      "localisateur uniforme de ressource"
+    ]
+  },
+  {
+    "id": "c-cg100-034",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Quelle entreprise a popularisé le smartphone moderne avec l’iPhone ?",
+    "answer": "Apple",
+    "aliases": [
+      "apple",
+      "apple inc"
+    ]
+  },
+  {
+    "id": "c-cg100-035",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Quel protocole permet l’envoi d’e-mails ?",
+    "answer": "SMTP",
+    "aliases": [
+      "smtp",
+      "simple mail transfer protocol"
+    ]
+  },
+  {
+    "id": "c-cg100-036",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Quel terme désigne une chaîne de blocs décentralisée utilisée notamment pour les cryptomonnaies ?",
+    "answer": "La blockchain",
+    "aliases": [
+      "blockchain",
+      "chaîne de blocs"
+    ]
+  },
+  {
+    "id": "c-cg100-037",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Quel algorithme est souvent utilisé pour classer les pages web selon leur importance ?",
+    "answer": "PageRank",
+    "aliases": [
+      "pagerank",
+      "page rank"
+    ]
+  },
+  {
+    "id": "c-cg100-038",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Quel appareil a précédé le smartphone comme assistant numérique personnel dans les années 1990-2000 ?",
+    "answer": "Le PDA (assistant personnel)",
+    "aliases": [
+      "pda",
+      "palm pilot",
+      "palm",
+      "assistant personnel"
+    ]
+  },
+  {
+    "id": "c-cg100-039",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Quelle technologie permet de créer des objets physiques à partir d’un modèle numérique ?",
+    "answer": "L'impression 3D",
+    "aliases": [
+      "impression 3d",
+      "fabrication additive",
+      "3d printing"
+    ]
+  },
+  {
+    "id": "c-cg100-040",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Quel réseau social était initialement limité aux étudiants de Harvard ?",
+    "answer": "Facebook",
+    "aliases": [
+      "facebook",
+      "thefacebook"
+    ]
+  },
+  {
+    "id": "c-cg100-041",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel économiste a popularisé l’idée de « destruction créatrice » ?",
+    "answer": "Joseph Schumpeter",
+    "aliases": [
+      "schumpeter",
+      "joseph schumpeter"
+    ]
+  },
+  {
+    "id": "c-cg100-042",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Que mesure approximativement le coefficient de Gini ?",
+    "answer": "Les inégalités de distribution des revenus (ou de richesse)",
+    "aliases": [
+      "inégalités",
+      "inegalites",
+      "revenus",
+      "distribution"
+    ]
+  },
+  {
+    "id": "c-cg100-043",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quelle organisation internationale publie régulièrement un indice de développement humain ?",
+    "answer": "Le PNUD (Programme des Nations unies pour le développement)",
+    "aliases": [
+      "pnud",
+      "undp",
+      "nations unies",
+      "programme des nations unies"
+    ]
+  },
+  {
+    "id": "c-cg100-044",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Économie",
+    "prompt": "Quelle monnaie a précédé l’euro en Allemagne ?",
+    "answer": "Le Deutsche Mark",
+    "aliases": [
+      "deutsche mark",
+      "mark",
+      "dm"
+    ]
+  },
+  {
+    "id": "c-cg100-045",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel pays est souvent associé au modèle de « flexisécurité » sur le marché du travail ?",
+    "answer": "Le Danemark",
+    "aliases": [
+      "danemark",
+      "denmark"
+    ]
+  },
+  {
+    "id": "c-cg100-046",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Qu’est-ce qu’un paradis fiscal ?",
+    "answer": "Un pays ou territoire offrant une fiscalité très avantageuse pour attirer capitaux et entreprises",
+    "aliases": [
+      "paradis fiscal",
+      "juridiction à fiscalité avantageuse",
+      "havre fiscal"
+    ]
+  },
+  {
+    "id": "c-cg100-047",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Économie",
+    "prompt": "Quelle institution européenne siège principalement à Strasbourg ?",
+    "answer": "Le Parlement européen",
+    "aliases": [
+      "parlement européen",
+      "parlement europeen",
+      "pe"
+    ]
+  },
+  {
+    "id": "c-cg100-048",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Que désigne le terme « soft power » ?",
+    "answer": "L’influence par l’attrait culturel, politique ou idéologique plutôt que par la coercition",
+    "aliases": [
+      "soft power",
+      "puissance douce",
+      "influence culturelle"
+    ]
+  },
+  {
+    "id": "c-cg100-049",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel pays a été le premier à accorder le droit de vote aux femmes au niveau national ?",
+    "answer": "La Nouvelle-Zélande",
+    "aliases": [
+      "nouvelle-zélande",
+      "nouvelle zelande",
+      "new zealand"
+    ]
+  },
+  {
+    "id": "c-cg100-050",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel accord économique nord-américain a été remplacé par l’ACEUM/USMCA ?",
+    "answer": "L’ALENA (NAFTA)",
+    "aliases": [
+      "nafta",
+      "alena",
+      "accord de libre-échange nord-américain"
+    ]
+  },
+  {
+    "id": "c-cg100-051",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel film de science-fiction de 1982, réalisé par Ridley Scott, est devenu culte malgré un accueil initial mitigé ?",
+    "answer": "Blade Runner",
+    "aliases": [
+      "blade runner"
+    ]
+  },
+  {
+    "id": "c-cg100-052",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Quel groupe a sorti l’album OK Computer ?",
+    "answer": "Radiohead",
+    "aliases": [
+      "radiohead"
+    ]
+  },
+  {
+    "id": "c-cg100-053",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Dans quel film entend-on la réplique « I'm walking here! » ?",
+    "answer": "Midnight Cowboy",
+    "aliases": [
+      "midnight cowboy",
+      "macadam cowboy"
+    ]
+  },
+  {
+    "id": "c-cg100-054",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Quel réalisateur japonais est connu pour Le Voyage de Chihiro ?",
+    "answer": "Hayao Miyazaki",
+    "aliases": [
+      "miyazaki",
+      "hayao miyazaki"
+    ]
+  },
+  {
+    "id": "c-cg100-055",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Quel genre musical est né dans le Bronx dans les années 1970 ?",
+    "answer": "Le hip-hop",
+    "aliases": [
+      "hip-hop",
+      "hip hop",
+      "rap"
+    ]
+  },
+  {
+    "id": "c-cg100-056",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Quel personnage de fiction possède un sabre laser vert dans Le Retour du Jedi ?",
+    "answer": "Luke Skywalker",
+    "aliases": [
+      "luke",
+      "luke skywalker"
+    ]
+  },
+  {
+    "id": "c-cg100-057",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Séries TV",
+    "prompt": "Quelle série a popularisé le personnage d’Omar Little ?",
+    "answer": "The Wire",
+    "aliases": [
+      "the wire",
+      "sur écoute",
+      "sur ecoute"
+    ]
+  },
+  {
+    "id": "c-cg100-058",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Quel album de Kendrick Lamar a reçu le prix Pulitzer de musique ?",
+    "answer": "DAMN.",
+    "aliases": [
+      "damn",
+      "damn."
+    ]
+  },
+  {
+    "id": "c-cg100-059",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Quel cinéaste est associé aux films Pulp Fiction et Kill Bill ?",
+    "answer": "Quentin Tarantino",
+    "aliases": [
+      "tarantino",
+      "quentin tarantino"
+    ]
+  },
+  {
+    "id": "c-cg100-060",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Quel jeu vidéo de 1998 sur Nintendo 64 est souvent cité comme l’un des meilleurs jeux de tous les temps ?",
+    "answer": "The Legend of Zelda: Ocarina of Time",
+    "aliases": [
+      "ocarina of time",
+      "zelda ocarina",
+      "zelda ocarina of time"
+    ]
+  },
+  {
+    "id": "c-cg100-061",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel pays a remporté la Coupe du monde de rugby 1995, symbole fort de l’après-apartheid ?",
+    "answer": "L'Afrique du Sud",
+    "aliases": [
+      "afrique du sud",
+      "south africa",
+      "springboks"
+    ]
+  },
+  {
+    "id": "c-cg100-062",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel joueur NBA est surnommé « The Dream » ?",
+    "answer": "Hakeem Olajuwon",
+    "aliases": [
+      "olajuwon",
+      "hakeem olajuwon",
+      "akeem olajuwon"
+    ]
+  },
+  {
+    "id": "c-cg100-063",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Quelle ville a accueilli les Jeux olympiques d’été de 1992 ?",
+    "answer": "Barcelone",
+    "aliases": [
+      "barcelona",
+      "barcelone"
+    ]
+  },
+  {
+    "id": "c-cg100-064",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Quel club italien est surnommé « la Vieille Dame » ?",
+    "answer": "La Juventus",
+    "aliases": [
+      "juventus",
+      "juve",
+      "juventus turin"
+    ]
+  },
+  {
+    "id": "c-cg100-065",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel tennisman suédois a dominé Roland-Garros à la fin des années 1970 et au début des années 1980 ?",
+    "answer": "Björn Borg",
+    "aliases": [
+      "bjorn borg",
+      "björn borg",
+      "borg"
+    ]
+  },
+  {
+    "id": "c-cg100-066",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Quel sport utilise les termes « try », « scrum » et « line-out » ?",
+    "answer": "Le rugby",
+    "aliases": [
+      "rugby",
+      "rugby à xv",
+      "rugby a xv"
+    ]
+  },
+  {
+    "id": "c-cg100-067",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Quel athlète jamaïcain détient les records du monde du 100 m et du 200 m ?",
+    "answer": "Usain Bolt",
+    "aliases": [
+      "bolt",
+      "usain bolt"
+    ]
+  },
+  {
+    "id": "c-cg100-068",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Quel pays est célèbre pour les All Blacks ?",
+    "answer": "La Nouvelle-Zélande",
+    "aliases": [
+      "nouvelle-zélande",
+      "new zealand"
+    ]
+  },
+  {
+    "id": "c-cg100-069",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Dans quel sport Magnus Carlsen est-il devenu champion du monde ?",
+    "answer": "Les échecs",
+    "aliases": [
+      "échecs",
+      "echecs",
+      "chess"
+    ]
+  },
+  {
+    "id": "c-cg100-070",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Quelle équipe NBA a gagné 73 matchs en saison régulière en 2015-2016 ?",
+    "answer": "Les Golden State Warriors",
+    "aliases": [
+      "golden state warriors",
+      "warriors",
+      "gsw"
+    ]
+  },
+  {
+    "id": "c-cg100-071",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Religion",
+    "prompt": "Quel dieu égyptien est souvent représenté avec une tête de faucon ?",
+    "answer": "Horus",
+    "aliases": [
+      "horus",
+      "hor"
+    ]
+  },
+  {
+    "id": "c-cg100-072",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Mythologie",
+    "prompt": "Dans la mythologie grecque, qui vole le feu aux dieux pour le donner aux humains ?",
+    "answer": "Prométhée",
+    "aliases": [
+      "prométhée",
+      "prometheus",
+      "promethee"
+    ]
+  },
+  {
+    "id": "c-cg100-073",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Religion",
+    "prompt": "Quel texte sacré est central dans l’islam ?",
+    "answer": "Le Coran",
+    "aliases": [
+      "coran",
+      "quran",
+      "kuran"
+    ]
+  },
+  {
+    "id": "c-cg100-074",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Religion",
+    "prompt": "Quel symbole religieux représente une roue à huit rayons dans le bouddhisme ?",
+    "answer": "La roue du Dharma",
+    "aliases": [
+      "roue du dharma",
+      "dharmachakra",
+      "dharma"
+    ]
+  },
+  {
+    "id": "c-cg100-075",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Religion",
+    "prompt": "Quelle ville est considérée comme sacrée par les trois grands monothéismes ?",
+    "answer": "Jérusalem",
+    "aliases": [
+      "jerusalem",
+      "jérusalem"
+    ]
+  },
+  {
+    "id": "c-cg100-076",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Mythologie",
+    "prompt": "Quel dieu nordique est associé au marteau Mjöllnir ?",
+    "answer": "Thor",
+    "aliases": [
+      "thor"
+    ]
+  },
+  {
+    "id": "c-cg100-077",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Religion",
+    "prompt": "Dans la Bible, quel personnage construit une arche ?",
+    "answer": "Noé",
+    "aliases": [
+      "noé",
+      "noah"
+    ]
+  },
+  {
+    "id": "c-cg100-078",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Religion",
+    "prompt": "Quel concept hindou désigne le cycle des renaissances ?",
+    "answer": "Le samsara",
+    "aliases": [
+      "samsara",
+      "saṃsāra"
+    ]
+  },
+  {
+    "id": "c-cg100-079",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Religion",
+    "prompt": "Quel animal est associé à Ganesh ?",
+    "answer": "L’éléphant (tête d’éléphant ; monture le rat)",
+    "aliases": [
+      "éléphant",
+      "elephant",
+      "rat",
+      "souris"
+    ]
+  },
+  {
+    "id": "c-cg100-080",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Quel héros mésopotamien est au centre d’une des plus anciennes épopées connues ?",
+    "answer": "Gilgamesh",
+    "aliases": [
+      "gilgamesh",
+      "gilgameš"
+    ]
+  },
+  {
+    "id": "c-cg100-081",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Quel mot japonais désigne une amélioration continue, souvent utilisé en management ?",
+    "answer": "Kaizen",
+    "aliases": [
+      "kaizen"
+    ]
+  },
+  {
+    "id": "c-cg100-082",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Langues",
+    "prompt": "Quelle langue européenne utilise l’alphabet grec ?",
+    "answer": "Le grec",
+    "aliases": [
+      "grec",
+      "greek",
+      "grec moderne",
+      "grec ancien"
+    ]
+  },
+  {
+    "id": "c-cg100-083",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Que signifie littéralement « philosophie » en grec ancien ?",
+    "answer": "L’amour de la sagesse",
+    "aliases": [
+      "amour de la sagesse",
+      "philo sophia",
+      "φιλοσοφία"
+    ]
+  },
+  {
+    "id": "c-cg100-084",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Langues",
+    "prompt": "Quel mot allemand désigne la « joie mauvaise » face au malheur d’autrui ?",
+    "answer": "Schadenfreude",
+    "aliases": [
+      "schadenfreude"
+    ]
+  },
+  {
+    "id": "c-cg100-085",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Langues",
+    "prompt": "Quelle langue ancienne est à l’origine de nombreuses langues romanes ?",
+    "answer": "Le latin",
+    "aliases": [
+      "latin"
+    ]
+  },
+  {
+    "id": "c-cg100-086",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Quel terme désigne un mot inventé à partir des initiales de plusieurs mots ?",
+    "answer": "Un sigle (ou acronyme, selon la prononciation)",
+    "aliases": [
+      "sigle",
+      "acronyme",
+      "acronym"
+    ]
+  },
+  {
+    "id": "c-cg100-087",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Langues",
+    "prompt": "Quelle langue est majoritairement parlée au Brésil ?",
+    "answer": "Le portugais",
+    "aliases": [
+      "portugais",
+      "portuguese"
+    ]
+  },
+  {
+    "id": "c-cg100-088",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Langues",
+    "prompt": "Quel alphabet est utilisé pour écrire le russe ?",
+    "answer": "L’alphabet cyrillique",
+    "aliases": [
+      "cyrillique",
+      "cyrillic"
+    ]
+  },
+  {
+    "id": "c-cg100-089",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Quel mot anglais désigne un faux ami linguistique ?",
+    "answer": "False friend",
+    "aliases": [
+      "false friend",
+      "faux ami"
+    ]
+  },
+  {
+    "id": "c-cg100-090",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Langues",
+    "prompt": "Quel terme désigne l’étude scientifique des noms de lieux ?",
+    "answer": "La toponymie",
+    "aliases": [
+      "toponymie",
+      "toponomastique"
+    ]
+  },
+  {
+    "id": "c-cg100-091",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Quotidien",
+    "prompt": "Quel objet du quotidien a été popularisé par la NASA avec le système Velcro, même si elle ne l’a pas inventé ?",
+    "answer": "Le Velcro (scratch agrippant)",
+    "aliases": [
+      "velcro",
+      "scratch",
+      "agrippant"
+    ]
+  },
+  {
+    "id": "c-cg100-092",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Quotidien",
+    "prompt": "Quelle boisson gazeuse a été inventée à l’origine comme remède pharmaceutique ?",
+    "answer": "Le Coca-Cola",
+    "aliases": [
+      "coca-cola",
+      "coca cola",
+      "coca"
+    ]
+  },
+  {
+    "id": "c-cg100-093",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Quotidien",
+    "prompt": "Quel pays est souvent associé à l’invention du sauna ?",
+    "answer": "La Finlande",
+    "aliases": [
+      "finlande",
+      "finland"
+    ]
+  },
+  {
+    "id": "c-cg100-094",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel instrument sert à mesurer la pression atmosphérique ?",
+    "answer": "Le baromètre",
+    "aliases": [
+      "barometre",
+      "baromètre"
+    ]
+  },
+  {
+    "id": "c-cg100-095",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quelle unité mesure l’intensité sonore ?",
+    "answer": "Le décibel",
+    "aliases": [
+      "decibel",
+      "db",
+      "décibel"
+    ]
+  },
+  {
+    "id": "c-cg100-096",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Quotidien",
+    "prompt": "Quel aliment est produit par fermentation de lait ?",
+    "answer": "Le yaourt",
+    "aliases": [
+      "yaourt",
+      "yogourt",
+      "fromage frais",
+      "kéfir",
+      "kefir"
+    ]
+  },
+  {
+    "id": "c-cg100-097",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Quotidien",
+    "prompt": "Quelle ville est associée à l’origine du jean denim ?",
+    "answer": "Gênes (toile de Nîmes → denim)",
+    "aliases": [
+      "gênes",
+      "genes",
+      "genoa",
+      "nîmes",
+      "nimes"
+    ]
+  },
+  {
+    "id": "c-cg100-098",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel objet permettait aux marins de mesurer la latitude grâce aux astres ?",
+    "answer": "Le sextant (ou l’astrolabe nautique)",
+    "aliases": [
+      "sextant",
+      "astrolabe"
+    ]
+  },
+  {
+    "id": "c-cg100-099",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel fruit flotte parce qu’il contient environ 25 % d’air ?",
+    "answer": "La noix de coco",
+    "aliases": [
+      "noix de coco",
+      "coco",
+      "coconut"
+    ]
+  },
+  {
+    "id": "c-cg100-100",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel matériau ancien, inventé en Mésopotamie, a permis de construire durablement dans les régions sans pierre abondante ?",
+    "answer": "La brique (cuite ou crue en terre)",
+    "aliases": [
+      "brique",
+      "briques",
+      "brique crue",
+      "adobe"
+    ]
+  },
+  {
+    "id": "c-cg101-001",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel empire utilisait des coureurs appelés chasquis pour transmettre des messages à travers les Andes ?",
+    "answer": "L’Empire inca",
+    "aliases": [
+      "inca",
+      "empire inca",
+      "les incas"
+    ]
+  },
+  {
+    "id": "c-cg101-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle guerre européenne a commencé par une défenestration à Prague ?",
+    "answer": "La guerre de Trente Ans",
+    "aliases": [
+      "guerre de trente ans",
+      "30 ans",
+      "trente ans"
+    ]
+  },
+  {
+    "id": "c-cg101-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel souverain africain du XIVe siècle aurait tellement distribué d’or au Caire qu’il aurait perturbé l’économie locale ?",
+    "answer": "Mansa Moussa",
+    "aliases": [
+      "mansa moussa",
+      "kankou moussa",
+      "mali"
+    ]
+  },
+  {
+    "id": "c-cg101-004",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel État médiéval indien a construit une flotte puissante pour contrôler le commerce dans l’océan Indien ?",
+    "answer": "L’empire chola",
+    "aliases": [
+      "chola",
+      "cholas",
+      "empire des chola",
+      "royaume chola"
+    ]
+  },
+  {
+    "id": "c-cg101-005",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quelle ville fut détruite par les Mongols en 1258, marquant un choc majeur pour le monde islamique ?",
+    "answer": "Bagdad",
+    "aliases": [
+      "baghdad",
+      "bagdad"
+    ]
+  },
+  {
+    "id": "c-cg101-006",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel peuple de navigateurs a colonisé Madagascar depuis l’Asie du Sud-Est ?",
+    "answer": "Les Austronésiens",
+    "aliases": [
+      "austronésiens",
+      "austronesiens",
+      "malayo-polynésiens",
+      "vahoaka"
+    ]
+  },
+  {
+    "id": "c-cg101-007",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel royaume chrétien africain a longtemps résisté à l’expansion musulmane dans la vallée du Nil ?",
+    "answer": "Le royaume de Makurie",
+    "aliases": [
+      "makurie",
+      "makuria",
+      "nubie",
+      "nubiens"
+    ]
+  },
+  {
+    "id": "c-cg101-008",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quelle révolte d’esclaves en Irak abbasside dura près de quinze ans au IXe siècle ?",
+    "answer": "La révolte des Zanj",
+    "aliases": [
+      "zanj",
+      "zinj",
+      "révolte des zanj",
+      "esclaves zanj"
+    ]
+  },
+  {
+    "id": "c-cg101-009",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quelle puissance européenne a contrôlé l’Indonésie pendant plusieurs siècles ?",
+    "answer": "Les Pays-Bas",
+    "aliases": [
+      "hollande",
+      "néerlandais",
+      "compagnie néerlandaise des indes orientales",
+      "voc"
+    ]
+  },
+  {
+    "id": "c-cg101-010",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel empire africain utilisait des amazones comme corps militaire d’élite ?",
+    "answer": "Le royaume du Dahomey",
+    "aliases": [
+      "dahomey",
+      "bénin",
+      "amazones du dahomey",
+      "mino"
+    ]
+  },
+  {
+    "id": "c-cg101-011",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays possède une capitale administrative qui n’est pas sa plus grande ville, ni son principal centre économique ?",
+    "answer": "L’Australie (Canberra)",
+    "aliases": [
+      "australie",
+      "canberra",
+      "le canada",
+      "ottawa",
+      "le brésil",
+      "brasilia",
+      "les pays-bas",
+      "la haye"
+    ]
+  },
+  {
+    "id": "c-cg101-012",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quel territoire a pour particularité d’être à la fois en Europe géographique et politiquement rattaché à un pays nord-américain ?",
+    "answer": "Saint-Pierre-et-Miquelon",
+    "aliases": [
+      "saint-pierre et miquelon",
+      "saint pierre et miquelon",
+      "spm"
+    ]
+  },
+  {
+    "id": "c-cg101-013",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle mer est en train de disparaître à cause de détournements massifs de fleuves pour l’irrigation ?",
+    "answer": "La mer d’Aral",
+    "aliases": [
+      "mer d'aral",
+      "aral"
+    ]
+  },
+  {
+    "id": "c-cg101-014",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quel pays est presque entièrement entouré par un seul autre pays, sauf par une petite ouverture maritime ?",
+    "answer": "La Gambie",
+    "aliases": [
+      "gambie",
+      "gambia"
+    ]
+  },
+  {
+    "id": "c-cg101-015",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle île africaine est l’un des plus grands foyers mondiaux d’endémisme biologique ?",
+    "answer": "Madagascar",
+    "aliases": [
+      "madagascar"
+    ]
+  },
+  {
+    "id": "c-cg101-016",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quel pays possède une exclave appelée Nakhitchevan ?",
+    "answer": "L’Azerbaïdjan",
+    "aliases": [
+      "azerbaïdjan",
+      "azerbaidjan",
+      "azerbaijan"
+    ]
+  },
+  {
+    "id": "c-cg101-017",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle ville est considérée comme l’une des plus anciennes villes habitées en continu au monde ?",
+    "answer": "Damas",
+    "aliases": [
+      "damascus",
+      "jéricho",
+      "jericho",
+      "alep",
+      "byblos"
+    ]
+  },
+  {
+    "id": "c-cg101-018",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays compte plus de moutons que d’habitants et utilise souvent cet argument dans son image nationale ?",
+    "answer": "La Nouvelle-Zélande",
+    "aliases": [
+      "nouvelle-zélande",
+      "nouvelle zelande",
+      "new zealand"
+    ]
+  },
+  {
+    "id": "c-cg101-019",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle région autonome chinoise est au cœur de tensions liées aux Ouïghours ?",
+    "answer": "Le Xinjiang",
+    "aliases": [
+      "xinjiang",
+      "ouïgour",
+      "ouighour",
+      "région autonome du xinjiang"
+    ]
+  },
+  {
+    "id": "c-cg101-020",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quel désert côtier reçoit très peu de pluie mais capte l’humidité grâce au brouillard ?",
+    "answer": "Le désert du Namib",
+    "aliases": [
+      "namib",
+      "désert du namib",
+      "atacama"
+    ]
+  },
+  {
+    "id": "c-cg101-021",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel animal peut survivre congelé plusieurs mois puis reprendre son activité après dégel ?",
+    "answer": "La grenouille des bois",
+    "aliases": [
+      "grenouille des bois",
+      "rana sylvatica",
+      "grenouille arctique"
+    ]
+  },
+  {
+    "id": "c-cg101-022",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle plante carnivore se referme grâce à un mécanisme électrique comparable à un signal nerveux ?",
+    "answer": "La dionée attrape-mouche",
+    "aliases": [
+      "dionée",
+      "dionaea muscipula",
+      "attrape-mouche"
+    ]
+  },
+  {
+    "id": "c-cg101-023",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel organisme vivant est souvent présenté comme le plus grand du monde car il forme un immense réseau souterrain ?",
+    "answer": "Un champignon armillaire (Armillaria ostoyae)",
+    "aliases": [
+      "armillaire",
+      "armillaria",
+      "champignon armillaire",
+      "champignon géant"
+    ]
+  },
+  {
+    "id": "c-cg101-024",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel animal pratique une forme de « photosynthèse indirecte » en intégrant des algues dans ses tissus ?",
+    "answer": "Certaines limaces de mer (ex. Elysia)",
+    "aliases": [
+      "elysia",
+      "limace de mer",
+      "sacoglosses"
+    ]
+  },
+  {
+    "id": "c-cg101-025",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel phénomène explique que des arbres communiquent chimiquement entre eux via des réseaux de champignons ?",
+    "answer": "Le réseau mycorhizien (Wood Wide Web)",
+    "aliases": [
+      "mycorhizes",
+      "réseau mycorhizien",
+      "wood wide web"
+    ]
+  },
+  {
+    "id": "c-cg101-026",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quelle particule hypothétique est souvent proposée comme candidate pour expliquer la matière noire ?",
+    "answer": "L’axion",
+    "aliases": [
+      "axion",
+      "wimp",
+      "neutralino"
+    ]
+  },
+  {
+    "id": "c-cg101-027",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel phénomène rend certains animaux visibles sous lumière ultraviolette alors qu’ils paraissent ordinaires à l’œil nu ?",
+    "answer": "La fluorescence (biofluorescence)",
+    "aliases": [
+      "fluorescence",
+      "biofluorescence"
+    ]
+  },
+  {
+    "id": "c-cg101-028",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel métal est si réactif qu’il peut s’enflammer spontanément au contact de l’air sous forme divisée ?",
+    "answer": "Le césium (ou le sodium, en poudre fine)",
+    "aliases": [
+      "césium",
+      "cesium",
+      "sodium",
+      "pyrophorique",
+      "plutonium"
+    ]
+  },
+  {
+    "id": "c-cg101-029",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quelle expérience de pensée illustre le paradoxe de la mécanique quantique avec un animal enfermé dans une boîte ?",
+    "answer": "Le chat de Schrödinger",
+    "aliases": [
+      "chat de schrödinger",
+      "schrodinger",
+      "schrödinger"
+    ]
+  },
+  {
+    "id": "c-cg101-030",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel animal est capable de se reproduire sans mâle dans certains cas, phénomène appelé parthénogenèse ?",
+    "answer": "Le requin-marteau tiburo (exemple documenté), ou certains lézards",
+    "aliases": [
+      "requin tête-en-masse",
+      "bonnethead",
+      "lézards whiptail",
+      "aspidoscelis",
+      "parthénogenèse"
+    ]
+  },
+  {
+    "id": "c-cg101-031",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sociologie",
+    "prompt": "Quel sociologue a développé les concepts de « capital culturel » et de « violence symbolique » ?",
+    "answer": "Pierre Bourdieu",
+    "aliases": [
+      "bourdieu"
+    ]
+  },
+  {
+    "id": "c-cg101-032",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sociologie",
+    "prompt": "Quel effet psychologique décrit le fait que les individus surestiment les opinions majoritaires lorsqu’ils croient être minoritaires ?",
+    "answer": "La méconnaissance pluraliste (pluralistic ignorance)",
+    "aliases": [
+      "méconnaissance pluraliste",
+      "pluralistic ignorance",
+      "faux consensus"
+    ]
+  },
+  {
+    "id": "c-cg101-033",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sociologie",
+    "prompt": "Quel concept désigne la tendance des médias à influencer non pas ce que les gens pensent, mais les sujets auxquels ils pensent ?",
+    "answer": "La mise à l’agenda (agenda-setting)",
+    "aliases": [
+      "agenda setting",
+      "mise à l'agenda",
+      "théorie de l'agenda"
+    ]
+  },
+  {
+    "id": "c-cg101-034",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sociologie",
+    "prompt": "Quel sociologue a étudié le suicide comme fait social plutôt que comme simple acte individuel ?",
+    "answer": "Émile Durkheim",
+    "aliases": [
+      "durkheim",
+      "emile durkheim"
+    ]
+  },
+  {
+    "id": "c-cg101-035",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sociologie",
+    "prompt": "Quelle notion décrit la manière dont une société classe certaines pratiques comme normales et d’autres comme déviantes ?",
+    "answer": "La déviance (et les normes sociales)",
+    "aliases": [
+      "déviance",
+      "deviance",
+      "normes sociales"
+    ]
+  },
+  {
+    "id": "c-cg101-036",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sociologie",
+    "prompt": "Quel concept marxiste désigne la séparation du travailleur d’avec le produit de son travail ?",
+    "answer": "L’aliénation",
+    "aliases": [
+      "aliénation",
+      "alienation"
+    ]
+  },
+  {
+    "id": "c-cg101-037",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sociologie",
+    "prompt": "Quel auteur a analysé la prison, l’école ou l’hôpital comme des institutions disciplinaires ?",
+    "answer": "Michel Foucault",
+    "aliases": [
+      "foucault"
+    ]
+  },
+  {
+    "id": "c-cg101-038",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sociologie",
+    "prompt": "Quelle expression désigne la tendance des plateformes à enfermer les utilisateurs dans des contenus similaires à ceux qu’ils consomment déjà ?",
+    "answer": "La bulle de filtres (filter bubble)",
+    "aliases": [
+      "bulle de filtres",
+      "filter bubble",
+      "chambre d'écho",
+      "echo chamber"
+    ]
+  },
+  {
+    "id": "c-cg101-039",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sociologie",
+    "prompt": "Quel phénomène social décrit l’écart entre la perception médiatique d’un danger et sa réalité statistique ?",
+    "answer": "La distorsion de la perception des risques (ou syndrome du monde hostile, théorie de la cultureisation)",
+    "aliases": [
+      "syndrome du monde hostile",
+      "cultivation",
+      "gerbner",
+      "risque perçu"
+    ]
+  },
+  {
+    "id": "c-cg101-040",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sociologie",
+    "prompt": "Quel sociologue allemand a opposé éthique de conviction et éthique de responsabilité ?",
+    "answer": "Max Weber",
+    "aliases": [
+      "weber",
+      "max weber"
+    ]
+  },
+  {
+    "id": "c-cg101-041",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Quotidien",
+    "prompt": "Quel objet utilisé pour fermer les vêtements a d’abord eu du mal à s’imposer car il était jugé peu fiable ?",
+    "answer": "La fermeture éclair (zip)",
+    "aliases": [
+      "fermeture éclair",
+      "zip",
+      "curseur"
+    ]
+  },
+  {
+    "id": "c-cg101-042",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quel matériau ancien, utilisé pour écrire en Égypte, était fabriqué à partir d’une plante du Nil ?",
+    "answer": "Le papyrus",
+    "aliases": [
+      "papyrus"
+    ]
+  },
+  {
+    "id": "c-cg101-043",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Quotidien",
+    "prompt": "Quel objet de bureau a été inventé pour empêcher l’encre de couler sur les doigts avant l’usage massif du stylo moderne ?",
+    "answer": "Les protège-doigts / manchons pour porte-plume",
+    "aliases": [
+      "protège-doigts",
+      "manche de plume",
+      "doigtier"
+    ]
+  },
+  {
+    "id": "c-cg101-044",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Quotidien",
+    "prompt": "Quel système de fermeture textile a été inspiré par des plantes qui s’accrochent aux vêtements et aux poils d’animaux ?",
+    "answer": "Le Velcro (scratch)",
+    "aliases": [
+      "velcro",
+      "scratch",
+      "agrippant"
+    ]
+  },
+  {
+    "id": "c-cg101-045",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel aliment a été popularisé en Europe après la conquête des Amériques mais fut d’abord regardé avec méfiance ?",
+    "answer": "La pomme de terre",
+    "aliases": [
+      "pomme de terre",
+      "patate"
+    ]
+  },
+  {
+    "id": "c-cg101-046",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel récipient isotherme porte le nom d’un physicien écossais même si son usage commercial est venu plus tard ?",
+    "answer": "Le vase de Dewar (thermos)",
+    "aliases": [
+      "dewar",
+      "vase dewar",
+      "thermos"
+    ]
+  },
+  {
+    "id": "c-cg101-047",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Quotidien",
+    "prompt": "Quelle invention a longtemps été vendue comme remède médical avant de devenir une boisson de consommation courante ?",
+    "answer": "Le Coca-Cola",
+    "aliases": [
+      "coca-cola",
+      "coca cola"
+    ]
+  },
+  {
+    "id": "c-cg101-048",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quel instrument de navigation permettait de calculer la latitude avant le GPS en mesurant la hauteur d’un astre ?",
+    "answer": "Le sextant",
+    "aliases": [
+      "sextant",
+      "octant"
+    ]
+  },
+  {
+    "id": "c-cg101-049",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Quotidien",
+    "prompt": "Quel jouet, inventé par accident lors de recherches sur les ressorts, descend les escaliers tout seul ?",
+    "answer": "Le Slinky",
+    "aliases": [
+      "slinky",
+      "ressort magique"
+    ]
+  },
+  {
+    "id": "c-cg101-050",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Quotidien",
+    "prompt": "Quel objet associé aux écoliers français vient à l’origine d’un instrument utilisé pour gratter l’encre ?",
+    "answer": "La raclette à encre (grattoir), ancêtre des accessoires d’écriture",
+    "aliases": [
+      "grattoir",
+      "raclette à encre",
+      "grattoir à encre"
+    ]
+  },
+  {
+    "id": "c-cg101-051",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Culture",
+    "prompt": "Quel manga a popularisé massivement l’idée du « death game » bien avant Squid Game dans la culture japonaise contemporaine ?",
+    "answer": "Battle Royale (manga de Koushun Takami)",
+    "aliases": [
+      "battle royale",
+      "takami"
+    ]
+  },
+  {
+    "id": "c-cg101-052",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Quel film d’animation français de 1973 est devenu culte pour son univers étrange de science-fiction ?",
+    "answer": "La Planète sauvage",
+    "aliases": [
+      "planète sauvage",
+      "fantastic planet"
+    ]
+  },
+  {
+    "id": "c-cg101-053",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Quel jeu vidéo indépendant met en scène un enfant tombé dans un monde souterrain où l’on peut épargner les ennemis ?",
+    "answer": "Undertale",
+    "aliases": [
+      "undertale"
+    ]
+  },
+  {
+    "id": "c-cg101-054",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Séries TV",
+    "prompt": "Quelle série a fait connaître le concept de « bottle episode » au grand public avec des épisodes tournés presque entièrement dans un seul lieu ?",
+    "answer": "Community",
+    "aliases": [
+      "community"
+    ]
+  },
+  {
+    "id": "c-cg101-055",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel réalisateur coréen a réalisé Memories of Murder avant Parasite ?",
+    "answer": "Bong Joon-ho",
+    "aliases": [
+      "bong joon ho",
+      "bong joon-ho"
+    ]
+  },
+  {
+    "id": "c-cg101-056",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Quel album de hip-hop expérimental de Death Grips est célèbre pour sa pochette volontairement provocatrice ?",
+    "answer": "No Love Deep Web",
+    "aliases": [
+      "no love deep web",
+      "nldw"
+    ]
+  },
+  {
+    "id": "c-cg101-057",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Quel film de 1995 de Mathieu Kassovitz suit trois jeunes de banlieue après une nuit d’émeutes ?",
+    "answer": "La Haine",
+    "aliases": [
+      "la haine",
+      "haine"
+    ]
+  },
+  {
+    "id": "c-cg101-058",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Séries TV",
+    "prompt": "Quel personnage de The Wire est connu pour siffler « The Farmer in the Dell » avant d’attaquer ?",
+    "answer": "Snoop (Felicia Pearson)",
+    "aliases": [
+      "snoop",
+      "felicia pearson"
+    ]
+  },
+  {
+    "id": "c-cg101-059",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Jeux vidéo",
+    "prompt": "Quel jeu vidéo a popularisé le terme « walking simulator » malgré les débats sur cette étiquette ?",
+    "answer": "Dear Esther",
+    "aliases": [
+      "dear esther",
+      "gone home"
+    ]
+  },
+  {
+    "id": "c-cg101-060",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Séries TV",
+    "prompt": "Quelle série animée américaine met en scène un cheval anthropomorphe ancien acteur dépressif ?",
+    "answer": "BoJack Horseman",
+    "aliases": [
+      "bojack horseman",
+      "bojack"
+    ]
+  },
+  {
+    "id": "c-cg101-061",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Quel mot désigne une langue simplifiée servant à communiquer entre groupes ne partageant pas la même langue maternelle ?",
+    "answer": "Un pidgin",
+    "aliases": [
+      "pidgin",
+      "pigeon"
+    ]
+  },
+  {
+    "id": "c-cg101-062",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Langues",
+    "prompt": "Quelle écriture ancienne mésopotamienne utilise des signes en forme de coins ?",
+    "answer": "L’écriture cunéiforme",
+    "aliases": [
+      "cunéiforme",
+      "cuneiforme"
+    ]
+  },
+  {
+    "id": "c-cg101-063",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Quel alphabet est utilisé pour écrire le serbe, mais aussi le latin selon les contextes ?",
+    "answer": "Le cyrillique (et le latin)",
+    "aliases": [
+      "cyrillique",
+      "latin",
+      "serbe"
+    ]
+  },
+  {
+    "id": "c-cg101-064",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Quel mot français vient du nom d’un ministre des Finances connu pour ses découpages de profils en papier ?",
+    "answer": "Silhouette",
+    "aliases": [
+      "silhouette",
+      "de silhouette"
+    ]
+  },
+  {
+    "id": "c-cg101-065",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Langues",
+    "prompt": "Quel terme désigne un mot qui se lit de la même manière dans les deux sens ?",
+    "answer": "Un palindrome",
+    "aliases": [
+      "palindrome"
+    ]
+  },
+  {
+    "id": "c-cg101-066",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Langues",
+    "prompt": "Quelle langue construite a été créée pour faciliter la communication internationale ?",
+    "answer": "L’espéranto",
+    "aliases": [
+      "espéranto",
+      "esperanto"
+    ]
+  },
+  {
+    "id": "c-cg101-067",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Langues",
+    "prompt": "Quel phénomène linguistique explique que « ne… pas » ait évolué d’un mot concret signifiant « pas » vers une négation grammaticale ?",
+    "answer": "La grammaticalisation",
+    "aliases": [
+      "grammaticalisation"
+    ]
+  },
+  {
+    "id": "c-cg101-068",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Langues",
+    "prompt": "Quel mot japonais désigne l’accumulation de livres qu’on achète sans les lire ?",
+    "answer": "Tsundoku",
+    "aliases": [
+      "tsundoku"
+    ]
+  },
+  {
+    "id": "c-cg101-069",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Quel alphabet ancien est à l’origine de nombreux alphabets méditerranéens, dont le grec et le latin ?",
+    "answer": "L’alphabet phénicien",
+    "aliases": [
+      "phénicien",
+      "phenicien",
+      "phoenician"
+    ]
+  },
+  {
+    "id": "c-cg101-070",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Langues",
+    "prompt": "Quel terme désigne le fait qu’une marque devienne un nom commun, comme « frigidaire » ou « kleenex » ?",
+    "answer": "Le généricide (ou antonomase de marque)",
+    "aliases": [
+      "généricide",
+      "genericide",
+      "antonomase"
+    ]
+  },
+  {
+    "id": "c-cg101-071",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel trouble neurologique peut empêcher une personne de reconnaître les visages ?",
+    "answer": "La prosopagnosie",
+    "aliases": [
+      "prosopagnosie"
+    ]
+  },
+  {
+    "id": "c-cg101-072",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel phénomène explique qu’on entende parfois son prénom dans une conversation bruyante ?",
+    "answer": "L’effet cocktail (cocktail party effect)",
+    "aliases": [
+      "effet cocktail",
+      "cocktail party"
+    ]
+  },
+  {
+    "id": "c-cg101-073",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle illusion donne l’impression qu’une main en caoutchouc fait partie de son propre corps ?",
+    "answer": "L’illusion de la main en caoutchouc",
+    "aliases": [
+      "main en caoutchouc",
+      "rubber hand"
+    ]
+  },
+  {
+    "id": "c-cg101-074",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel sens, souvent oublié, permet de percevoir la position de son corps dans l’espace ?",
+    "answer": "La proprioception",
+    "aliases": [
+      "proprioception",
+      "kinésithésie"
+    ]
+  },
+  {
+    "id": "c-cg101-075",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel effet psychologique décrit la tendance à mieux se souvenir des tâches inachevées que des tâches terminées ?",
+    "answer": "L’effet Zeigarnik",
+    "aliases": [
+      "zeigarnik",
+      "effet zeigarnik"
+    ]
+  },
+  {
+    "id": "c-cg101-076",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel phénomène explique que l’on puisse ne pas voir un élément évident si l’attention est focalisée ailleurs ?",
+    "answer": "L’aveuglement inattentionnel",
+    "aliases": [
+      "cécité d'inattention",
+      "inattentional blindness",
+      "gorille invisible"
+    ]
+  },
+  {
+    "id": "c-cg101-077",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle condition rare fait percevoir des lettres ou des nombres associés à des couleurs ?",
+    "answer": "La synesthésie",
+    "aliases": [
+      "synesthésie",
+      "synesthesie"
+    ]
+  },
+  {
+    "id": "c-cg101-078",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel biais cognitif désigne la tendance à chercher surtout les informations qui confirment ce qu’on pense déjà ?",
+    "answer": "Le biais de confirmation",
+    "aliases": [
+      "biais de confirmation",
+      "confirmation bias"
+    ]
+  },
+  {
+    "id": "c-cg101-079",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel terme désigne la peur ou le malaise face aux amas de petits trous ?",
+    "answer": "La trypophobie",
+    "aliases": [
+      "trypophobie",
+      "trypophobia"
+    ]
+  },
+  {
+    "id": "c-cg101-080",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel effet décrit l’impression qu’un événement déjà vécu se répète alors qu’il est nouveau ?",
+    "answer": "Le déjà-vu",
+    "aliases": [
+      "déjà-vu",
+      "deja vu"
+    ]
+  },
+  {
+    "id": "c-cg101-081",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel système de production japonais repose sur l’idée de réduire les stocks au minimum ?",
+    "answer": "Le juste-à-temps (JIT) / Kanban",
+    "aliases": [
+      "juste à temps",
+      "jit",
+      "kanban",
+      "toyota production system"
+    ]
+  },
+  {
+    "id": "c-cg101-082",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel indicateur économique ignore largement le travail domestique non rémunéré ?",
+    "answer": "Le PIB",
+    "aliases": [
+      "pib",
+      "produit intérieur brut",
+      "gdp"
+    ]
+  },
+  {
+    "id": "c-cg101-083",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Économie",
+    "prompt": "Quel terme désigne le travail gratuit effectué par les utilisateurs lorsqu’ils produisent des données pour les plateformes ?",
+    "answer": "Le travail immatériel des utilisateurs (digital labor)",
+    "aliases": [
+      "digital labor",
+      "travail gratuit",
+      "prosomption"
+    ]
+  },
+  {
+    "id": "c-cg101-084",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Économie",
+    "prompt": "Quelle monnaie locale suisse fondée dans les années 1930 existe encore comme système complémentaire entre entreprises ?",
+    "answer": "Le WIR",
+    "aliases": [
+      "wir",
+      "monnaie wir",
+      "wir bank"
+    ]
+  },
+  {
+    "id": "c-cg101-085",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Économie",
+    "prompt": "Quel phénomène décrit la baisse du coût unitaire quand la production augmente ?",
+    "answer": "Les économies d’échelle",
+    "aliases": [
+      "économies d'échelle",
+      "economies d'echelle"
+    ]
+  },
+  {
+    "id": "c-cg101-086",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel concept désigne la transformation d’un bien ou service en marchandise échangeable sur un marché ?",
+    "answer": "La marchandisation (commodification)",
+    "aliases": [
+      "marchandisation",
+      "commodification"
+    ]
+  },
+  {
+    "id": "c-cg101-087",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Économie",
+    "prompt": "Quel économiste a théorisé les « biens positionnels », dont la valeur dépend du rang social qu’ils procurent ?",
+    "answer": "Fred Hirsch",
+    "aliases": [
+      "fred hirsch",
+      "hirsch"
+    ]
+  },
+  {
+    "id": "c-cg101-088",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel terme décrit l’économie fondée sur des petits contrats courts via plateformes numériques ?",
+    "answer": "L’économie de la gig (uberisation)",
+    "aliases": [
+      "gig economy",
+      "uberisation",
+      "économie à la tâche"
+    ]
+  },
+  {
+    "id": "c-cg101-089",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel paradoxe montre qu’une ressource plus efficace peut conduire à une hausse de sa consommation totale ?",
+    "answer": "Le paradoxe de Jevons (effet rebond)",
+    "aliases": [
+      "jevons",
+      "paradoxe de jevons",
+      "effet rebond"
+    ]
+  },
+  {
+    "id": "c-cg101-090",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel système de notation permet aux agences comme Moody’s ou S&P d’évaluer la solvabilité d’un emprunteur ?",
+    "answer": "La notation de crédit",
+    "aliases": [
+      "notation de crédit",
+      "credit rating",
+      "rating"
+    ]
+  },
+  {
+    "id": "c-cg101-091",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quel aliment courant a été au cœur d’une crise majeure en Irlande au XIXe siècle ?",
+    "answer": "La pomme de terre",
+    "aliases": [
+      "pomme de terre",
+      "patate"
+    ]
+  },
+  {
+    "id": "c-cg101-092",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Culture",
+    "prompt": "Quel animal est à la fois symbole national d’un pays et espèce invasive destructrice dans d’autres régions ?",
+    "answer": "L’oie du Canada",
+    "aliases": [
+      "bernache du canada",
+      "canada goose",
+      "branta canadensis"
+    ]
+  },
+  {
+    "id": "c-cg101-093",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle couleur était si difficile à produire dans l’Antiquité qu’elle devint associée au pouvoir impérial ?",
+    "answer": "La pourpre tyrienne",
+    "aliases": [
+      "pourpre",
+      "tyrienne",
+      "pourpre romaine"
+    ]
+  },
+  {
+    "id": "c-cg101-094",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel matériau a révolutionné la conservation des aliments au XIXe siècle mais a aussi posé des problèmes de santé publique ?",
+    "answer": "La boîte de conserve (étain / soudure au plomb)",
+    "aliases": [
+      "conserve",
+      "étain",
+      "boîte métallique"
+    ]
+  },
+  {
+    "id": "c-cg101-095",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sociologie",
+    "prompt": "Quel objet domestique a transformé l’organisation du temps féminin au XXe siècle, sans forcément réduire la charge domestique ?",
+    "answer": "La machine à laver",
+    "aliases": [
+      "machine à laver",
+      "lave-linge"
+    ]
+  },
+  {
+    "id": "c-cg101-096",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel empire a laissé des routes encore visibles dans les Andes sans utiliser la roue pour le transport ?",
+    "answer": "L’Empire inca",
+    "aliases": [
+      "inca",
+      "empire inca"
+    ]
+  },
+  {
+    "id": "c-cg101-097",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel animal a contribué à l’expansion humaine dans les steppes en transformant guerre, commerce et mobilité ?",
+    "answer": "Le cheval",
+    "aliases": [
+      "cheval",
+      "équidés"
+    ]
+  },
+  {
+    "id": "c-cg101-098",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel produit colonial a fortement modifié les habitudes de consommation européennes en créant de nouveaux rituels sociaux ?",
+    "answer": "Le thé (ou le café, le sucre, le tabac)",
+    "aliases": [
+      "thé",
+      "café",
+      "sucre",
+      "tabac",
+      "chocolat"
+    ]
+  },
+  {
+    "id": "c-cg101-099",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sociologie",
+    "prompt": "Quel phénomène urbain désigne l’arrivée de populations plus aisées dans un quartier populaire, provoquant souvent une hausse des loyers ?",
+    "answer": "La gentrification",
+    "aliases": [
+      "gentrification",
+      "embourgeoisement"
+    ]
+  },
+  {
+    "id": "c-cg101-100",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sociologie",
+    "prompt": "Quel concept désigne la tendance à croire qu’une technologie résoudra un problème social sans changer les rapports sociaux qui le produisent ?",
+    "answer": "Le solutionnisme technologique",
+    "aliases": [
+      "solutionnisme",
+      "techno-solutionnisme",
+      "technological fix"
+    ]
+  },
+  {
+    "id": "c-cg102-001",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Art",
+    "prompt": "Qui a peint « Les Demoiselles d’Avignon » ?",
+    "answer": "Pablo Picasso",
+    "aliases": [
+      "picasso",
+      "pablo picasso"
+    ]
+  },
+  {
+    "id": "c-cg102-002",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Littérature",
+    "prompt": "Quel roman de Victor Hugo se déroule autour de la cathédrale Notre-Dame de Paris ?",
+    "answer": "Notre-Dame de Paris",
+    "aliases": [
+      "notre dame de paris",
+      "nddp"
+    ]
+  },
+  {
+    "id": "c-cg102-003",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel pays affiche la devise « Ordem e progresso » sur son drapeau ?",
+    "answer": "Le Brésil",
+    "aliases": [
+      "brésil",
+      "brazil",
+      "brasil"
+    ]
+  },
+  {
+    "id": "c-cg102-004",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Quelle est la plus petite unité élémentaire d’information en informatique ?",
+    "answer": "Le bit",
+    "aliases": [
+      "bit"
+    ]
+  },
+  {
+    "id": "c-cg102-005",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel gaz compose environ 78 % de l’air que nous respirons ?",
+    "answer": "L’azote",
+    "aliases": [
+      "azote",
+      "nitrogen",
+      "n2"
+    ]
+  },
+  {
+    "id": "c-cg102-006",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel organite des cellules eucaryotes est souvent surnommé la « centrale énergétique » de la cellule ?",
+    "answer": "La mitochondrie",
+    "aliases": [
+      "mitochondrie",
+      "mitochondries"
+    ]
+  },
+  {
+    "id": "c-cg102-007",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel océan est le plus vaste du globe ?",
+    "answer": "L’océan Pacifique",
+    "aliases": [
+      "pacifique",
+      "ocean pacifique"
+    ]
+  },
+  {
+    "id": "c-cg102-008",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle est la capitale de l’Australie ?",
+    "answer": "Canberra",
+    "aliases": [
+      "canberra"
+    ]
+  },
+  {
+    "id": "c-cg102-009",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays est traditionnellement le premier producteur mondial de café ?",
+    "answer": "Le Brésil",
+    "aliases": [
+      "brésil",
+      "brazil"
+    ]
+  },
+  {
+    "id": "c-cg102-010",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "En quelle année est tombé le mur de Berlin ?",
+    "answer": "1989",
+    "aliases": [
+      "89"
+    ]
+  },
+  {
+    "id": "c-cg102-011",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Littérature",
+    "prompt": "Qui a écrit le roman « L’Étranger » ?",
+    "answer": "Albert Camus",
+    "aliases": [
+      "camus",
+      "albert camus"
+    ]
+  },
+  {
+    "id": "c-cg102-012",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Qui a composé l’opéra « La Flûte enchantée » ?",
+    "answer": "Wolfgang Amadeus Mozart",
+    "aliases": [
+      "mozart",
+      "wolfgang amadeus mozart"
+    ]
+  },
+  {
+    "id": "c-cg102-013",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Art",
+    "prompt": "Quel peintre néerlandais s’est coupé une partie de l’oreille ?",
+    "answer": "Vincent van Gogh",
+    "aliases": [
+      "van gogh",
+      "gogh",
+      "vincent van gogh"
+    ]
+  },
+  {
+    "id": "c-cg102-014",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle bataille de 1066 a conduit Guillaume le Conquérant sur le trône d’Angleterre ?",
+    "answer": "La bataille d’Hastings",
+    "aliases": [
+      "hastings",
+      "bataille d'hastings"
+    ]
+  },
+  {
+    "id": "c-cg102-015",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Qui fut le premier empereur unificateur de la Chine (dynastie Qin) ?",
+    "answer": "Qin Shi Huang",
+    "aliases": [
+      "qin shi huangdi",
+      "shi huangdi",
+      "empereur qin"
+    ]
+  },
+  {
+    "id": "c-cg102-016",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Comment s’appelait la capitale de l’Empire byzantin avant sa conquête ottomane ?",
+    "answer": "Constantinople",
+    "aliases": [
+      "constantinople",
+      "byzance"
+    ]
+  },
+  {
+    "id": "c-cg102-017",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel traité de paix, signé en 1919, sanctionne officiellement la défaite allemande ?",
+    "answer": "Le traité de Versailles",
+    "aliases": [
+      "traité de versailles",
+      "versailles"
+    ]
+  },
+  {
+    "id": "c-cg102-018",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Littérature",
+    "prompt": "Qui a écrit « Les Misérables » ?",
+    "answer": "Victor Hugo",
+    "aliases": [
+      "victor hugo",
+      "hugo"
+    ]
+  },
+  {
+    "id": "c-cg102-019",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Quel poète français a écrit « Le Dormeur du val » ?",
+    "answer": "Arthur Rimbaud",
+    "aliases": [
+      "rimbaud",
+      "arthur rimbaud"
+    ]
+  },
+  {
+    "id": "c-cg102-020",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Quel est le premier volet de « La Divine Comédie » de Dante ?",
+    "answer": "L’Enfer",
+    "aliases": [
+      "inferno",
+      "enfer"
+    ]
+  },
+  {
+    "id": "c-cg102-021",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Philosophie",
+    "prompt": "Qui a écrit « Le Léviathan », ouvrage majeur de la philosophie politique ?",
+    "answer": "Thomas Hobbes",
+    "aliases": [
+      "hobbes",
+      "thomas hobbes"
+    ]
+  },
+  {
+    "id": "c-cg102-022",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Philosophie",
+    "prompt": "Quel philosophe grec a fondé l’Académie d’Athènes ?",
+    "answer": "Platon",
+    "aliases": [
+      "platon",
+      "plato"
+    ]
+  },
+  {
+    "id": "c-cg102-023",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quelle planète est surnommée la « planète rouge » ?",
+    "answer": "Mars",
+    "aliases": [
+      "mars"
+    ]
+  },
+  {
+    "id": "c-cg102-024",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel est le symbole chimique de l’or ?",
+    "answer": "Au",
+    "aliases": [
+      "au"
+    ]
+  },
+  {
+    "id": "c-cg102-025",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle maladie infectieuse est causée par le bacille de Koch ?",
+    "answer": "La tuberculose",
+    "aliases": [
+      "tuberculose",
+      "tb"
+    ]
+  },
+  {
+    "id": "c-cg102-026",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel scientifique a proposé la théorie de la relativité générale ?",
+    "answer": "Albert Einstein",
+    "aliases": [
+      "einstein",
+      "albert einstein"
+    ]
+  },
+  {
+    "id": "c-cg102-027",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Combien de paires de chromosomes possède une cellule humaine diploïde typique ?",
+    "answer": "23 paires",
+    "aliases": [
+      "23",
+      "vingt-trois paires",
+      "46 chromosomes"
+    ]
+  },
+  {
+    "id": "c-cg102-028",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel physicien a mis en équation l’incertitude sur la position et la quantité de mouvement ?",
+    "answer": "Werner Heisenberg",
+    "aliases": [
+      "heisenberg",
+      "werner heisenberg"
+    ]
+  },
+  {
+    "id": "c-cg102-029",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Astronomie",
+    "prompt": "Quel est le nom du trou noir supermassif au centre de la Voie lactée ?",
+    "answer": "Sagittarius A*",
+    "aliases": [
+      "sagittarius a",
+      "sgr a",
+      "sagittarius a*"
+    ]
+  },
+  {
+    "id": "c-cg102-030",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Astronomie",
+    "prompt": "Quelle planète du système solaire possède le plus grand nombre de satellites naturels connus ?",
+    "answer": "Saturne",
+    "aliases": [
+      "saturne",
+      "saturn"
+    ]
+  },
+  {
+    "id": "c-cg102-031",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel film d’Alfred Hitchcock se déroule en majeure partie dans une chambre d’hôtel avec vue sur un patio ?",
+    "answer": "Fenêtre sur cour",
+    "aliases": [
+      "rear window",
+      "fenetre sur cour"
+    ]
+  },
+  {
+    "id": "c-cg102-032",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Quel réalisateur japonais a réalisé « Les Sept Samouraïs » ?",
+    "answer": "Akira Kurosawa",
+    "aliases": [
+      "kurosawa",
+      "akira kurosawa"
+    ]
+  },
+  {
+    "id": "c-cg102-033",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel acteur incarne Indiana Jones au cinéma ?",
+    "answer": "Harrison Ford",
+    "aliases": [
+      "harrison ford",
+      "ford"
+    ]
+  },
+  {
+    "id": "c-cg102-034",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Dans quel film entend-on « May the Force be with you » ?",
+    "answer": "Star Wars",
+    "aliases": [
+      "star wars",
+      "la guerre des étoiles"
+    ]
+  },
+  {
+    "id": "c-cg102-035",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Quel film de 1927 de Fritz Lang est un pilier du cinéma expressionniste allemand ?",
+    "answer": "Metropolis",
+    "aliases": [
+      "metropolis"
+    ]
+  },
+  {
+    "id": "c-cg102-036",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Quel compositeur est devenu sourd mais a continué à composer des symphonies ?",
+    "answer": "Ludwig van Beethoven",
+    "aliases": [
+      "beethoven",
+      "ludwig van beethoven"
+    ]
+  },
+  {
+    "id": "c-cg102-037",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Quel groupe britannique a sorti l’album « Abbey Road » ?",
+    "answer": "The Beatles",
+    "aliases": [
+      "beatles",
+      "the beatles",
+      "les beatles"
+    ]
+  },
+  {
+    "id": "c-cg102-038",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Quelle chanteuse barbadienne a popularisé « Umbrella » ?",
+    "answer": "Rihanna",
+    "aliases": [
+      "rihanna"
+    ]
+  },
+  {
+    "id": "c-cg102-039",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Quel compositeur russe du « Sacre du printemps » a choqué le public parisien en 1913 ?",
+    "answer": "Igor Stravinsky",
+    "aliases": [
+      "stravinsky",
+      "stravinski",
+      "igor stravinsky"
+    ]
+  },
+  {
+    "id": "c-cg102-040",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Dans quel sport se dispute le trophée Webb Ellis ?",
+    "answer": "Le rugby",
+    "aliases": [
+      "rugby",
+      "rugby à xv"
+    ]
+  },
+  {
+    "id": "c-cg102-041",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Quel pays a remporté la Coupe du monde de football en 2018 ?",
+    "answer": "La France",
+    "aliases": [
+      "france",
+      "les bleus"
+    ]
+  },
+  {
+    "id": "c-cg102-042",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel cycliste belge, surnommé « la Cannibale », domina le cyclisme dans les années 1960-1970 ?",
+    "answer": "Eddy Merckx",
+    "aliases": [
+      "merckx",
+      "eddy merckx"
+    ]
+  },
+  {
+    "id": "c-cg102-043",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Combien de joueurs sur le terrain compte une équipe de football en match officiel ?",
+    "answer": "Onze",
+    "aliases": [
+      "11",
+      "onze joueurs"
+    ]
+  },
+  {
+    "id": "c-cg102-044",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel pays organise les Jeux olympiques d’été de 2024 ?",
+    "answer": "La France",
+    "aliases": [
+      "france",
+      "paris"
+    ]
+  },
+  {
+    "id": "c-cg102-045",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Gastronomie",
+    "prompt": "Quel fromage français est protégé par une appellation d’origine contrôlée et fabriqué en Normandie ?",
+    "answer": "Le camembert",
+    "aliases": [
+      "camembert"
+    ]
+  },
+  {
+    "id": "c-cg102-046",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "Quelle sauce classique associe jaune d’œuf, moutarde, huile et vinaigre ?",
+    "answer": "La mayonnaise",
+    "aliases": [
+      "mayonnaise",
+      "mayo"
+    ]
+  },
+  {
+    "id": "c-cg102-047",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Gastronomie",
+    "prompt": "Quel chef français a popularisé la cuisine minceur et tient trois étoiles Michelin à Monaco ?",
+    "answer": "Alain Ducasse",
+    "aliases": [
+      "ducasse",
+      "alain ducasse"
+    ]
+  },
+  {
+    "id": "c-cg102-048",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "Quel pays est d’origine du plat national appelé « paella » ?",
+    "answer": "L’Espagne",
+    "aliases": [
+      "espagne",
+      "spain"
+    ]
+  },
+  {
+    "id": "c-cg102-049",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Nature",
+    "prompt": "Quel mammifère marin est le plus grand animal connu à avoir jamais vécu ?",
+    "answer": "La baleine bleue",
+    "aliases": [
+      "baleine bleue",
+      "rorqual bleu",
+      "blue whale"
+    ]
+  },
+  {
+    "id": "c-cg102-050",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Nature",
+    "prompt": "Quel oiseau ne vole pas et est emblème de la Nouvelle-Zélande ?",
+    "answer": "Le kiwi",
+    "aliases": [
+      "kiwi"
+    ]
+  },
+  {
+    "id": "c-cg102-051",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Nature",
+    "prompt": "Quel gaz est libéré par les plantes lors de la photosynthèse ?",
+    "answer": "L’oxygène",
+    "aliases": [
+      "oxygene",
+      "o2"
+    ]
+  },
+  {
+    "id": "c-cg102-052",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Nature",
+    "prompt": "Quel ordre d’insectes regroupe papillons et papillons de nuit ?",
+    "answer": "Les lépidoptères",
+    "aliases": [
+      "lépidoptères",
+      "lepidopteres"
+    ]
+  },
+  {
+    "id": "c-cg102-053",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel roi de France est surnommé le Roi-Soleil ?",
+    "answer": "Louis XIV",
+    "aliases": [
+      "louis 14",
+      "louis xiv",
+      "louis quatorze"
+    ]
+  },
+  {
+    "id": "c-cg102-054",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle reine d’Égypte est associée à Jules César et Marc Antoine ?",
+    "answer": "Cléopâtre VII",
+    "aliases": [
+      "cléopâtre",
+      "cleopatre",
+      "cleopatra"
+    ]
+  },
+  {
+    "id": "c-cg102-055",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Qui a peint la chapelle Sixtine au Vatican (plafond) ?",
+    "answer": "Michel-Ange",
+    "aliases": [
+      "michel-ange",
+      "michelangelo",
+      "michel ange"
+    ]
+  },
+  {
+    "id": "c-cg102-056",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel empereur romain a divisé l’Empire en deux parties administratives ?",
+    "answer": "Dioclétien",
+    "aliases": [
+      "diocletien",
+      "diocletian"
+    ]
+  },
+  {
+    "id": "c-cg102-057",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "En quelle année a été abolie l’esclavage en France métropolitaine (décret d’abolition) ?",
+    "answer": "1848",
+    "aliases": [
+      "1848"
+    ]
+  },
+  {
+    "id": "c-cg102-058",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel désert d’Afrique est le plus chaud et l’un des plus arides ?",
+    "answer": "Le désert du Sahara",
+    "aliases": [
+      "sahara"
+    ]
+  },
+  {
+    "id": "c-cg102-059",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel fleuve traverse l’Égypte du sud au nord ?",
+    "answer": "Le Nil",
+    "aliases": [
+      "nil",
+      "nile"
+    ]
+  },
+  {
+    "id": "c-cg102-060",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle chaîne de montagnes sépare l’Europe de l’Asie en Russie ?",
+    "answer": "Les monts Oural",
+    "aliases": [
+      "oural",
+      "ural",
+      "monts ourals"
+    ]
+  },
+  {
+    "id": "c-cg102-061",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle est la monnaie officielle du Japon ?",
+    "answer": "Le yen",
+    "aliases": [
+      "yen",
+      "jpy"
+    ]
+  },
+  {
+    "id": "c-cg102-062",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel micro-État enclavé dans Rome abrite le Vatican ?",
+    "answer": "Le Vatican",
+    "aliases": [
+      "vatican",
+      "cité du vatican"
+    ]
+  },
+  {
+    "id": "c-cg102-063",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Qui est le cofondateur de Microsoft avec Bill Gates ?",
+    "answer": "Paul Allen",
+    "aliases": [
+      "paul allen",
+      "allen"
+    ]
+  },
+  {
+    "id": "c-cg102-064",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Technologie",
+    "prompt": "Que signifie l’acronyme « HTML » ?",
+    "answer": "HyperText Markup Language",
+    "aliases": [
+      "hypertext markup language"
+    ]
+  },
+  {
+    "id": "c-cg102-065",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Technologie",
+    "prompt": "Quelle entreprise a développé le moteur de recherche Chrome et le navigateur du même nom ?",
+    "answer": "Google",
+    "aliases": [
+      "google",
+      "alphabet"
+    ]
+  },
+  {
+    "id": "c-cg102-066",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Technologie",
+    "prompt": "Quel scientifique britannique est considéré comme le père de l’informatique moderne ?",
+    "answer": "Alan Turing",
+    "aliases": [
+      "turing",
+      "alan turing"
+    ]
+  },
+  {
+    "id": "c-cg102-067",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Droit",
+    "prompt": "Quel texte fondamental organise les institutions de la Cinquième République en France ?",
+    "answer": "La Constitution de 1958",
+    "aliases": [
+      "constitution",
+      "constitution de 1958",
+      "constitution française"
+    ]
+  },
+  {
+    "id": "c-cg102-068",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Droit",
+    "prompt": "Quelle cour européenne veille au respect des droits de l’homme par les États membres ?",
+    "answer": "La Cour européenne des droits de l’homme",
+    "aliases": [
+      "cedh",
+      "cour edh",
+      "strasbourg cedh"
+    ]
+  },
+  {
+    "id": "c-cg102-069",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Mythologie",
+    "prompt": "Dans la mythologie grecque, qui est le roi des dieux ?",
+    "answer": "Zeus",
+    "aliases": [
+      "zeus",
+      "jupiter"
+    ]
+  },
+  {
+    "id": "c-cg102-070",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Mythologie",
+    "prompt": "Quelle héroïne grecque est la mère d’Œdipe ?",
+    "answer": "Jocaste",
+    "aliases": [
+      "jocaste",
+      "iocaste"
+    ]
+  },
+  {
+    "id": "c-cg102-071",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Religion",
+    "prompt": "Quelle ville est le lieu saint de l’islam vers lequel les musulmans se tournent pour prier ?",
+    "answer": "La Mecque",
+    "aliases": [
+      "mecque",
+      "mecca"
+    ]
+  },
+  {
+    "id": "c-cg102-072",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Religion",
+    "prompt": "Quel évangéliste est symboliquement associé à un lion dans l’iconographie chrétienne ?",
+    "answer": "Marc",
+    "aliases": [
+      "saint marc",
+      "marc"
+    ]
+  },
+  {
+    "id": "c-cg102-073",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Art",
+    "prompt": "Quel mouvement artistique est associé à Marcel Duchamp et au « ready-made » ?",
+    "answer": "Le dadaïsme",
+    "aliases": [
+      "dadaïsme",
+      "dadaisme",
+      "dada"
+    ]
+  },
+  {
+    "id": "c-cg102-074",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Art",
+    "prompt": "Quel peintre espagnol du XVIIe siècle a peint « Les Ménines » ?",
+    "answer": "Diego Vélasquez",
+    "aliases": [
+      "vélasquez",
+      "velasquez",
+      "diego velázquez"
+    ]
+  },
+  {
+    "id": "c-cg102-075",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Art",
+    "prompt": "Quel sculpteur français a créé « Le Penseur » ?",
+    "answer": "Auguste Rodin",
+    "aliases": [
+      "rodin",
+      "auguste rodin"
+    ]
+  },
+  {
+    "id": "c-cg102-076",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Architecture",
+    "prompt": "Quel architecte français a conçu la villa Savoye ?",
+    "answer": "Le Corbusier",
+    "aliases": [
+      "le corbusier",
+      "corbusier",
+      "charles-édouard jeanneret"
+    ]
+  },
+  {
+    "id": "c-cg102-077",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Architecture",
+    "prompt": "Quel ingénieur français a conçu la tour Eiffel ?",
+    "answer": "Gustave Eiffel",
+    "aliases": [
+      "eiffel",
+      "gustave eiffel"
+    ]
+  },
+  {
+    "id": "c-cg102-078",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quel économiste a écrit « La Richesse des nations » ?",
+    "answer": "Adam Smith",
+    "aliases": [
+      "adam smith",
+      "smith"
+    ]
+  },
+  {
+    "id": "c-cg102-079",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Économie",
+    "prompt": "Quelle banque centrale émet l’euro pour la zone euro ?",
+    "answer": "La Banque centrale européenne",
+    "aliases": [
+      "bce",
+      "ecb",
+      "banque centrale europeenne"
+    ]
+  },
+  {
+    "id": "c-cg102-080",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Économie",
+    "prompt": "Que mesure le PIB ?",
+    "answer": "La valeur ajoutée produite sur un territoire sur une période",
+    "aliases": [
+      "produit intérieur brut",
+      "richesse produite",
+      "valeur des biens et services"
+    ]
+  },
+  {
+    "id": "c-cg102-081",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Qui a écrit « À la recherche du temps perdu » ?",
+    "answer": "Marcel Proust",
+    "aliases": [
+      "proust",
+      "marcel proust"
+    ]
+  },
+  {
+    "id": "c-cg102-082",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Quel auteur américain a écrit « Moby-Dick » ?",
+    "answer": "Herman Melville",
+    "aliases": [
+      "melville",
+      "herman melville"
+    ]
+  },
+  {
+    "id": "c-cg102-083",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Quel poète portugais a écrit « Le Livre de l’intranquillité » ?",
+    "answer": "Fernando Pessoa",
+    "aliases": [
+      "pessoa",
+      "fernando pessoa"
+    ]
+  },
+  {
+    "id": "c-cg102-084",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Littérature",
+    "prompt": "Qui a écrit « Le Petit Prince » ?",
+    "answer": "Antoine de Saint-Exupéry",
+    "aliases": [
+      "saint-exupéry",
+      "saint exupery",
+      "exupery"
+    ]
+  },
+  {
+    "id": "c-cg102-085",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel congrès international a réorganisé l’Europe après la chute de Napoléon ?",
+    "answer": "Le congrès de Vienne",
+    "aliases": [
+      "congrès de vienne",
+      "congres de vienne",
+      "congress of vienna"
+    ]
+  },
+  {
+    "id": "c-cg102-086",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Qui fut le dernier tsar de Russie ?",
+    "answer": "Nicolas II",
+    "aliases": [
+      "nicolas ii",
+      "nicholas ii",
+      "nikolai ii"
+    ]
+  },
+  {
+    "id": "c-cg102-087",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quelle bataille navale de 1805 a confirmé la suprématie maritime britannique ?",
+    "answer": "Trafalgar",
+    "aliases": [
+      "trafalgar",
+      "bataille de trafalgar"
+    ]
+  },
+  {
+    "id": "c-cg102-088",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel est le pH neutre de l’eau pure à 25 °C ?",
+    "answer": "7",
+    "aliases": [
+      "sept",
+      "ph 7"
+    ]
+  },
+  {
+    "id": "c-cg102-089",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle loi relie la tension, l’intensité et la résistance dans un conducteur ohmique ?",
+    "answer": "La loi d’Ohm",
+    "aliases": [
+      "ohm",
+      "loi d'ohm"
+    ]
+  },
+  {
+    "id": "c-cg102-090",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel est le point de fusion approximatif de la glace à pression atmosphérique normale (en °C) ?",
+    "answer": "0 °C",
+    "aliases": [
+      "0",
+      "zero",
+      "zéro degré",
+      "0 celsius"
+    ]
+  },
+  {
+    "id": "c-cg102-091",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle est la plus grande île du monde ?",
+    "answer": "Le Groenland",
+    "aliases": [
+      "groenland",
+      "greenland"
+    ]
+  },
+  {
+    "id": "c-cg102-092",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel pays d’Amérique du Sud a pour capitale Asunción ?",
+    "answer": "Le Paraguay",
+    "aliases": [
+      "paraguay"
+    ]
+  },
+  {
+    "id": "c-cg102-093",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Quelle mer intérieure est la plus salée de la Terre ?",
+    "answer": "La mer Morte",
+    "aliases": [
+      "mer morte",
+      "dead sea"
+    ]
+  },
+  {
+    "id": "c-cg102-094",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel film a remporté le premier Oscar du meilleur film en 1929 ?",
+    "answer": "Wings",
+    "aliases": [
+      "wings",
+      "les ailes"
+    ]
+  },
+  {
+    "id": "c-cg102-095",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel réalisateur a signé « Citizen Kane » ?",
+    "answer": "Orson Welles",
+    "aliases": [
+      "welles",
+      "orson welles"
+    ]
+  },
+  {
+    "id": "c-cg102-096",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Jeux vidéo",
+    "prompt": "Quel plombier moustachu est la mascotte de Nintendo ?",
+    "answer": "Mario",
+    "aliases": [
+      "mario"
+    ]
+  },
+  {
+    "id": "c-cg102-097",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Quel studio a créé « Minecraft » ?",
+    "answer": "Mojang",
+    "aliases": [
+      "mojang",
+      "mojang studios"
+    ]
+  },
+  {
+    "id": "c-cg102-098",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Qui a composé le cycle de concertos « Les Quatre Saisons » ?",
+    "answer": "Antonio Vivaldi",
+    "aliases": [
+      "vivaldi",
+      "antonio vivaldi"
+    ]
+  },
+  {
+    "id": "c-cg102-099",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Dans quel sport utilise-t-on une raquette et une navette ?",
+    "answer": "Le badminton",
+    "aliases": [
+      "badminton"
+    ]
+  },
+  {
+    "id": "c-cg102-100",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Culture",
+    "prompt": "Outre une somme d’argent, que reçoit chaque lauréat du prix Nobel ?",
+    "answer": "Une médaille et un diplôme",
+    "aliases": [
+      "médaille nobel",
+      "diplôme nobel",
+      "médaille et diplôme"
+    ]
+  },
+  {
+    "id": "c-cg103-001",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Football",
+    "prompt": "Quel club a remporté la Ligue des champions en 2004 à la surprise générale sous José Mourinho ?",
+    "answer": "FC Porto",
+    "aliases": [
+      "porto",
+      "fc porto"
+    ]
+  },
+  {
+    "id": "c-cg103-002",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel joueur a marqué le but de la victoire pour l’Espagne en finale de la Coupe du monde 2010 ?",
+    "answer": "Andrés Iniesta",
+    "aliases": [
+      "iniesta",
+      "andres iniesta"
+    ]
+  },
+  {
+    "id": "c-cg103-003",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel pays a remporté l’Euro 2004 en battant le Portugal en finale ?",
+    "answer": "La Grèce",
+    "aliases": [
+      "grèce",
+      "grece",
+      "greece"
+    ]
+  },
+  {
+    "id": "c-cg103-004",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel club anglais était surnommé les « Invincibles » après sa saison 2003-2004 sans défaite en Premier League ?",
+    "answer": "Arsenal",
+    "aliases": [
+      "arsenal fc",
+      "the arsenal"
+    ]
+  },
+  {
+    "id": "c-cg103-005",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Football",
+    "prompt": "Quel gardien allemand a marqué de la tête en Ligue des champions contre la Juventus en 2001 ?",
+    "answer": "Jens Lehmann",
+    "aliases": [
+      "lehmann",
+      "jens lehmann"
+    ]
+  },
+  {
+    "id": "c-cg103-006",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Football",
+    "prompt": "Quel joueur a inscrit une panenka en finale de l’Euro 1976 ?",
+    "answer": "Antonín Panenka",
+    "aliases": [
+      "panenka",
+      "antonin panenka"
+    ]
+  },
+  {
+    "id": "c-cg103-007",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel entraîneur a mené Leicester au titre de Premier League en 2016 ?",
+    "answer": "Claudio Ranieri",
+    "aliases": [
+      "ranieri",
+      "claudio ranieri"
+    ]
+  },
+  {
+    "id": "c-cg103-008",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel club néerlandais est associé au « football total » des années 1970 ?",
+    "answer": "Ajax Amsterdam",
+    "aliases": [
+      "ajax",
+      "ajax amsterdam"
+    ]
+  },
+  {
+    "id": "c-cg103-009",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel joueur croate a remporté le Ballon d’Or 2018 ?",
+    "answer": "Luka Modrić",
+    "aliases": [
+      "modric",
+      "luka modric",
+      "modrić"
+    ]
+  },
+  {
+    "id": "c-cg103-010",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Football",
+    "prompt": "Quel club argentin est historiquement associé au stade La Bombonera ?",
+    "answer": "Boca Juniors",
+    "aliases": [
+      "boca",
+      "boca juniors"
+    ]
+  },
+  {
+    "id": "c-cg103-011",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel pays africain a atteint les demi-finales de la Coupe du monde 2022 ?",
+    "answer": "Le Maroc",
+    "aliases": [
+      "maroc",
+      "morocco"
+    ]
+  },
+  {
+    "id": "c-cg103-012",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Football",
+    "prompt": "Quel joueur a marqué le « but du siècle » contre l’Angleterre en 1986 ?",
+    "answer": "Diego Maradona",
+    "aliases": [
+      "maradona",
+      "diego maradona"
+    ]
+  },
+  {
+    "id": "c-cg103-013",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel club italien est surnommé « la Dea » ?",
+    "answer": "Atalanta Bergame",
+    "aliases": [
+      "atalanta",
+      "atalanta bergamo",
+      "bergame"
+    ]
+  },
+  {
+    "id": "c-cg103-014",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel entraîneur argentin est célèbre pour son pressing intense et son surnom « El Loco » ?",
+    "answer": "Marcelo Bielsa",
+    "aliases": [
+      "bielsa",
+      "marcelo bielsa"
+    ]
+  },
+  {
+    "id": "c-cg103-015",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Football",
+    "prompt": "Quel club espagnol a remporté la Liga 1999-2000 alors qu’il venait d’être promu deux saisons plus tôt ?",
+    "answer": "Deportivo La Corogne",
+    "aliases": [
+      "deportivo",
+      "deportivo la coruna",
+      "la corogne",
+      "dépor"
+    ]
+  },
+  {
+    "id": "c-cg103-016",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "NBA",
+    "prompt": "Quel joueur NBA était surnommé « The Dream » ?",
+    "answer": "Hakeem Olajuwon",
+    "aliases": [
+      "olajuwon",
+      "hakeem olajuwon",
+      "akeem olajuwon"
+    ]
+  },
+  {
+    "id": "c-cg103-017",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "NBA",
+    "prompt": "Quelle équipe NBA a gagné 73 matchs en saison régulière en 2015-2016 ?",
+    "answer": "Les Golden State Warriors",
+    "aliases": [
+      "golden state warriors",
+      "warriors",
+      "gsw"
+    ]
+  },
+  {
+    "id": "c-cg103-018",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "NBA",
+    "prompt": "Quel joueur a été drafté en première position en 2003 ?",
+    "answer": "LeBron James",
+    "aliases": [
+      "lebron james",
+      "lebron",
+      "james"
+    ]
+  },
+  {
+    "id": "c-cg103-019",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel joueur a popularisé le skyhook ?",
+    "answer": "Kareem Abdul-Jabbar",
+    "aliases": [
+      "abdul-jabbar",
+      "kareem",
+      "lew alcindor"
+    ]
+  },
+  {
+    "id": "c-cg103-020",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "NBA",
+    "prompt": "Quel joueur a réussi un quadruple-double officiel avec les Spurs en 1994 ?",
+    "answer": "David Robinson",
+    "aliases": [
+      "robinson",
+      "david robinson",
+      "the admiral"
+    ]
+  },
+  {
+    "id": "c-cg103-021",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel coach NBA est associé au « triangle offense » avec les Bulls et les Lakers ?",
+    "answer": "Phil Jackson",
+    "aliases": [
+      "phil jackson",
+      "jackson"
+    ]
+  },
+  {
+    "id": "c-cg103-022",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel joueur a marqué 81 points dans un match NBA en 2006 ?",
+    "answer": "Kobe Bryant",
+    "aliases": [
+      "kobe",
+      "bryant",
+      "black mamba"
+    ]
+  },
+  {
+    "id": "c-cg103-023",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "NBA",
+    "prompt": "Quel club NBA a drafté Dirk Nowitzki avant de l’échanger immédiatement à Dallas ?",
+    "answer": "Les Milwaukee Bucks",
+    "aliases": [
+      "milwaukee bucks",
+      "bucks",
+      "milwaukee"
+    ]
+  },
+  {
+    "id": "c-cg103-024",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel joueur français a été MVP des Finales NBA en 2007 ?",
+    "answer": "Tony Parker",
+    "aliases": [
+      "parker",
+      "tony parker"
+    ]
+  },
+  {
+    "id": "c-cg103-025",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "NBA",
+    "prompt": "Quel joueur des Sixers était surnommé « The Answer » ?",
+    "answer": "Allen Iverson",
+    "aliases": [
+      "iverson",
+      "allen iverson"
+    ]
+  },
+  {
+    "id": "c-cg103-026",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "NBA",
+    "prompt": "Quel pivot a été choisi juste avant Michael Jordan à la draft 1984 ?",
+    "answer": "Sam Bowie",
+    "aliases": [
+      "bowie",
+      "sam bowie"
+    ]
+  },
+  {
+    "id": "c-cg103-027",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel joueur a remporté le titre NBA 2011 avec Dallas comme franchise player ?",
+    "answer": "Dirk Nowitzki",
+    "aliases": [
+      "nowitzki",
+      "dirk nowitzki",
+      "nowitzki"
+    ]
+  },
+  {
+    "id": "c-cg103-028",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "NBA",
+    "prompt": "Quelle équipe NBA a réussi un comeback après avoir été menée 3-1 en finale 2016 ?",
+    "answer": "Les Cleveland Cavaliers",
+    "aliases": [
+      "cleveland cavaliers",
+      "cavaliers",
+      "cavs"
+    ]
+  },
+  {
+    "id": "c-cg103-029",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel meneur canadien a gagné deux MVP avec les Phoenix Suns ?",
+    "answer": "Steve Nash",
+    "aliases": [
+      "nash",
+      "steve nash"
+    ]
+  },
+  {
+    "id": "c-cg103-030",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel joueur est célèbre pour le « Reggie Miller 8 points in 9 seconds » contre les Knicks ?",
+    "answer": "Reggie Miller",
+    "aliases": [
+      "miller",
+      "reggie miller"
+    ]
+  },
+  {
+    "id": "c-cg103-031",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Tennis",
+    "prompt": "Quel joueur a battu Rafael Nadal à Roland-Garros pour la première fois en 2009 ?",
+    "answer": "Robin Söderling",
+    "aliases": [
+      "soderling",
+      "robin soderling",
+      "söderling"
+    ]
+  },
+  {
+    "id": "c-cg103-032",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Tennis",
+    "prompt": "Quelle joueuse belge a remporté 7 titres du Grand Chelem en simple ?",
+    "answer": "Justine Henin",
+    "aliases": [
+      "henin",
+      "justine henin"
+    ]
+  },
+  {
+    "id": "c-cg103-033",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Tennis",
+    "prompt": "Quel joueur a remporté Wimbledon 2001 en bénéficiant d’une wild-card ?",
+    "answer": "Goran Ivanišević",
+    "aliases": [
+      "ivanisevic",
+      "goran ivanisevic",
+      "ivanišević"
+    ]
+  },
+  {
+    "id": "c-cg103-034",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Tennis",
+    "prompt": "Quel tennisman suisse a gagné Roland-Garros en 2009 ?",
+    "answer": "Roger Federer",
+    "aliases": [
+      "federer",
+      "roger federer"
+    ]
+  },
+  {
+    "id": "c-cg103-035",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Tennis",
+    "prompt": "Quel joueur argentin a remporté l’US Open 2009 contre Federer en finale ?",
+    "answer": "Juan Martín del Potro",
+    "aliases": [
+      "del potro",
+      "delpotro",
+      "juan martin del potro"
+    ]
+  },
+  {
+    "id": "c-cg103-036",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Tennis",
+    "prompt": "Quelle joueuse a réalisé le « Golden Slam » en 1988 ?",
+    "answer": "Steffi Graf",
+    "aliases": [
+      "graf",
+      "steffi graf",
+      "graf steffi"
+    ]
+  },
+  {
+    "id": "c-cg103-037",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Tennis",
+    "prompt": "Quel joueur français a atteint la finale de l’Open d’Australie 2008 ?",
+    "answer": "Jo-Wilfried Tsonga",
+    "aliases": [
+      "tsonga",
+      "jo-wilfried tsonga"
+    ]
+  },
+  {
+    "id": "c-cg103-038",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Tennis",
+    "prompt": "Quel joueur a remporté son premier Grand Chelem à l’US Open 2014 contre Kei Nishikori ?",
+    "answer": "Marin Čilić",
+    "aliases": [
+      "cilic",
+      "marin cilic",
+      "čilić"
+    ]
+  },
+  {
+    "id": "c-cg103-039",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Tennis",
+    "prompt": "Quelle joueuse chinoise a remporté Roland-Garros 2011 ?",
+    "answer": "Li Na",
+    "aliases": [
+      "li na"
+    ]
+  },
+  {
+    "id": "c-cg103-040",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Tennis",
+    "prompt": "Quel joueur a remporté Wimbledon 2013, mettant fin à 77 ans d’attente britannique ?",
+    "answer": "Andy Murray",
+    "aliases": [
+      "murray",
+      "andy murray"
+    ]
+  },
+  {
+    "id": "c-cg103-041",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Formule 1",
+    "prompt": "Quel pilote a remporté le championnat du monde de F1 2009 avec Brawn GP ?",
+    "answer": "Jenson Button",
+    "aliases": [
+      "button",
+      "jenson button"
+    ]
+  },
+  {
+    "id": "c-cg103-042",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Formule 1",
+    "prompt": "Quel pilote brésilien a perdu le titre mondial 2008 dans le dernier virage du dernier Grand Prix ?",
+    "answer": "Felipe Massa",
+    "aliases": [
+      "massa",
+      "felipe massa"
+    ]
+  },
+  {
+    "id": "c-cg103-043",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Formule 1",
+    "prompt": "Quelle écurie a dominé la saison 1988 avec Ayrton Senna et Alain Prost ?",
+    "answer": "McLaren",
+    "aliases": [
+      "mclaren",
+      "mclaren honda"
+    ]
+  },
+  {
+    "id": "c-cg103-044",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Formule 1",
+    "prompt": "Quel pilote espagnol a gagné deux titres mondiaux avec Renault en 2005 et 2006 ?",
+    "answer": "Fernando Alonso",
+    "aliases": [
+      "alonso",
+      "fernando alonso"
+    ]
+  },
+  {
+    "id": "c-cg103-045",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Formule 1",
+    "prompt": "Quel circuit belge est célèbre pour le virage de l’Eau Rouge-Raidillon ?",
+    "answer": "Spa-Francorchamps",
+    "aliases": [
+      "spa",
+      "circuit de spa",
+      "spa francorchamps"
+    ]
+  },
+  {
+    "id": "c-cg103-046",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Formule 1",
+    "prompt": "Quel pilote allemand a remporté son premier titre mondial avec Benetton ?",
+    "answer": "Michael Schumacher",
+    "aliases": [
+      "schumacher",
+      "michael schumacher"
+    ]
+  },
+  {
+    "id": "c-cg103-047",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Formule 1",
+    "prompt": "Quel pilote finlandais est surnommé « The Iceman » ?",
+    "answer": "Kimi Räikkönen",
+    "aliases": [
+      "raikkonen",
+      "kimi raikkonen",
+      "räikkönen"
+    ]
+  },
+  {
+    "id": "c-cg103-048",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport automobile",
+    "prompt": "Quelle course automobile d’endurance dure 24 heures dans la Sarthe ?",
+    "answer": "Les 24 Heures du Mans",
+    "aliases": [
+      "24 heures du mans",
+      "lemans",
+      "le mans"
+    ]
+  },
+  {
+    "id": "c-cg103-049",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport automobile",
+    "prompt": "Quel constructeur japonais a remporté les 24 Heures du Mans pour la première fois en 2018 ?",
+    "answer": "Toyota",
+    "aliases": [
+      "toyota gazoo"
+    ]
+  },
+  {
+    "id": "c-cg103-050",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport automobile",
+    "prompt": "Quel pilote français a remporté quatre titres mondiaux consécutifs en WRC de 2004 à 2007, puis davantage ensuite ?",
+    "answer": "Sébastien Loeb",
+    "aliases": [
+      "loeb",
+      "sebastien loeb",
+      "sébastien loeb"
+    ]
+  },
+  {
+    "id": "c-cg103-051",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cyclisme",
+    "prompt": "Quel coureur italien était surnommé « Il Pirata » ?",
+    "answer": "Marco Pantani",
+    "aliases": [
+      "pantani",
+      "marco pantani"
+    ]
+  },
+  {
+    "id": "c-cg103-052",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cyclisme",
+    "prompt": "Quel Colombien a remporté le Tour de France 2019 ?",
+    "answer": "Egan Bernal",
+    "aliases": [
+      "bernal",
+      "egan bernal"
+    ]
+  },
+  {
+    "id": "c-cg103-053",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cyclisme",
+    "prompt": "Quelle montée du Tour de France est célèbre pour ses 21 virages numérotés ?",
+    "answer": "L’Alpe d’Huez",
+    "aliases": [
+      "alpe d huez",
+      "alpe d'huez"
+    ]
+  },
+  {
+    "id": "c-cg103-054",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Cyclisme",
+    "prompt": "Quel coureur slovène a remporté le Tour de France 2020 après un contre-la-montre renversant à La Planche des Belles Filles ?",
+    "answer": "Tadej Pogačar",
+    "aliases": [
+      "pogacar",
+      "tadej pogacar",
+      "pogačar"
+    ]
+  },
+  {
+    "id": "c-cg103-055",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cyclisme",
+    "prompt": "Quel Belge est surnommé « le Cannibale » ?",
+    "answer": "Eddy Merckx",
+    "aliases": [
+      "merckx",
+      "eddy merckx"
+    ]
+  },
+  {
+    "id": "c-cg103-056",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cyclisme",
+    "prompt": "Quelle course cycliste est surnommée « l’Enfer du Nord » ?",
+    "answer": "Paris-Roubaix",
+    "aliases": [
+      "paris roubaix",
+      "paris-roubaix"
+    ]
+  },
+  {
+    "id": "c-cg103-057",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cyclisme",
+    "prompt": "Quel coureur britannique a remporté le Tour de France 2012 ?",
+    "answer": "Bradley Wiggins",
+    "aliases": [
+      "wiggins",
+      "bradley wiggins",
+      "wigg"
+    ]
+  },
+  {
+    "id": "c-cg103-058",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cyclisme",
+    "prompt": "Quel maillot récompense le meilleur grimpeur sur le Tour de France ?",
+    "answer": "Le maillot à pois",
+    "aliases": [
+      "maillot a pois",
+      "maillot grimpeur",
+      "pois"
+    ]
+  },
+  {
+    "id": "c-cg103-059",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Cyclisme",
+    "prompt": "Quel grand tour se dispute principalement en Italie ?",
+    "answer": "Le Giro d’Italia",
+    "aliases": [
+      "giro",
+      "giro d italia",
+      "giro d'italia"
+    ]
+  },
+  {
+    "id": "c-cg103-060",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Cyclisme",
+    "prompt": "Quel coureur espagnol est associé au « pistolero » comme célébration ?",
+    "answer": "Alberto Contador",
+    "aliases": [
+      "contador",
+      "alberto contador"
+    ]
+  },
+  {
+    "id": "c-cg103-061",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Rugby",
+    "prompt": "Quel pays a remporté la Coupe du monde de rugby 1995, symbole fort de l’après-apartheid ?",
+    "answer": "L’Afrique du Sud",
+    "aliases": [
+      "afrique du sud",
+      "south africa",
+      "springboks"
+    ]
+  },
+  {
+    "id": "c-cg103-062",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Rugby",
+    "prompt": "Quel joueur néo-zélandais est célèbre pour avoir popularisé le poste d’ailier surpuissant dans les années 1990 ?",
+    "answer": "Jonah Lomu",
+    "aliases": [
+      "lomu",
+      "jonah lomu"
+    ]
+  },
+  {
+    "id": "c-cg103-063",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Rugby",
+    "prompt": "Quel pays a remporté la Coupe du monde de rugby 2003 grâce à un drop de Jonny Wilkinson ?",
+    "answer": "L’Angleterre",
+    "aliases": [
+      "angleterre",
+      "england",
+      "xv de la rose"
+    ]
+  },
+  {
+    "id": "c-cg103-064",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Rugby",
+    "prompt": "Quel club français de rugby est associé au stade Marcel-Michelin ?",
+    "answer": "L’ASM Clermont Auvergne",
+    "aliases": [
+      "asm clermont",
+      "clermont",
+      "asm"
+    ]
+  },
+  {
+    "id": "c-cg103-065",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Rugby",
+    "prompt": "Quel pays européen porte le surnom « le XV du Trèfle » ?",
+    "answer": "L’Irlande",
+    "aliases": [
+      "irlande",
+      "ireland"
+    ]
+  },
+  {
+    "id": "c-cg103-066",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Rugby",
+    "prompt": "Quel joueur français a longtemps été surnommé « le Petit Prince » du rugby français ?",
+    "answer": "Philippe Sella",
+    "aliases": [
+      "sella",
+      "philippe sella"
+    ]
+  },
+  {
+    "id": "c-cg103-067",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Rugby",
+    "prompt": "Quel pays a battu la Nouvelle-Zélande en quart de finale de la Coupe du monde 2007 à Cardiff ?",
+    "answer": "La France",
+    "aliases": [
+      "france",
+      "xv de france"
+    ]
+  },
+  {
+    "id": "c-cg103-068",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Rugby",
+    "prompt": "Quel club toulousain est le plus titré en Champions Cup ?",
+    "answer": "Le Stade Toulousain",
+    "aliases": [
+      "stade toulousain",
+      "toulouse",
+      "st toulousain"
+    ]
+  },
+  {
+    "id": "c-cg103-069",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Rugby",
+    "prompt": "Quel joueur sud-africain était capitaine des Springboks lors du titre mondial 2019 ?",
+    "answer": "Siya Kolisi",
+    "aliases": [
+      "kolisi",
+      "siya kolisi"
+    ]
+  },
+  {
+    "id": "c-cg103-070",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Rugby",
+    "prompt": "Quel stade accueille traditionnellement les matchs du XV de France à domicile depuis 1998 ?",
+    "answer": "Le Stade de France",
+    "aliases": [
+      "stade de france",
+      "sdf"
+    ]
+  },
+  {
+    "id": "c-cg103-071",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sports US",
+    "prompt": "Quel quarterback a remporté sept Super Bowls ?",
+    "answer": "Tom Brady",
+    "aliases": [
+      "brady",
+      "tom brady"
+    ]
+  },
+  {
+    "id": "c-cg103-072",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sports US",
+    "prompt": "Quelle franchise NFL est associée au « Steel Curtain » des années 1970 ?",
+    "answer": "Les Pittsburgh Steelers",
+    "aliases": [
+      "steelers",
+      "pittsburgh steelers"
+    ]
+  },
+  {
+    "id": "c-cg103-073",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Boxe",
+    "prompt": "Quel boxeur a battu Mike Tyson en 1990 dans l’une des plus grandes surprises de l’histoire ?",
+    "answer": "Buster Douglas",
+    "aliases": [
+      "douglas",
+      "buster douglas"
+    ]
+  },
+  {
+    "id": "c-cg103-074",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Boxe",
+    "prompt": "Quel boxeur mexicain est célèbre pour sa rivalité avec Gennady Golovkin ?",
+    "answer": "Canelo Álvarez",
+    "aliases": [
+      "canelo",
+      "alvarez",
+      "canelo alvarez",
+      "saúl álvarez"
+    ]
+  },
+  {
+    "id": "c-cg103-075",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "MMA",
+    "prompt": "Quel combattant UFC irlandais a été double champion simultané featherweight et lightweight ?",
+    "answer": "Conor McGregor",
+    "aliases": [
+      "mcgregor",
+      "conor mcgregor"
+    ]
+  },
+  {
+    "id": "c-cg103-076",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "MMA",
+    "prompt": "Quel combattant russe invaincu a pris sa retraite avec un record de 29-0 en MMA ?",
+    "answer": "Khabib Nurmagomedov",
+    "aliases": [
+      "khabib",
+      "nurmagomedov",
+      "khabib nurmagomedov"
+    ]
+  },
+  {
+    "id": "c-cg103-077",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Baseball",
+    "prompt": "Quel joueur MLB est surnommé « The Sultan of Swat » ?",
+    "answer": "Babe Ruth",
+    "aliases": [
+      "ruth",
+      "babe ruth"
+    ]
+  },
+  {
+    "id": "c-cg103-078",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Baseball",
+    "prompt": "Quelle équipe MLB a brisé la « curse of the Bambino » en 2004 ?",
+    "answer": "Les Boston Red Sox",
+    "aliases": [
+      "red sox",
+      "boston red sox"
+    ]
+  },
+  {
+    "id": "c-cg103-079",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Hockey",
+    "prompt": "Quel joueur de hockey canadien est surnommé « The Great One » ?",
+    "answer": "Wayne Gretzky",
+    "aliases": [
+      "gretzky",
+      "wayne gretzky"
+    ]
+  },
+  {
+    "id": "c-cg103-080",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Hockey",
+    "prompt": "Quelle franchise NHL a remporté la Coupe Stanley 24 fois, record historique ?",
+    "answer": "Les Canadiens de Montréal",
+    "aliases": [
+      "canadiens de montréal",
+      "canadiens",
+      "habs",
+      "montreal canadiens"
+    ]
+  },
+  {
+    "id": "c-cg103-081",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Jeux olympiques",
+    "prompt": "Quel athlète américain a remporté quatre médailles d’or aux Jeux de Berlin 1936 ?",
+    "answer": "Jesse Owens",
+    "aliases": [
+      "owens",
+      "jesse owens"
+    ]
+  },
+  {
+    "id": "c-cg103-082",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Athlétisme",
+    "prompt": "Quel coureur détient le record du monde du 100 m masculin depuis 2009 ?",
+    "answer": "Usain Bolt",
+    "aliases": [
+      "bolt",
+      "usain bolt"
+    ]
+  },
+  {
+    "id": "c-cg103-083",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Athlétisme",
+    "prompt": "Quelle athlète américaine a dominé le sprint féminin avec plusieurs titres olympiques dans les années 1980 ?",
+    "answer": "Florence Griffith-Joyner",
+    "aliases": [
+      "flo jo",
+      "griffith joyner",
+      "florence griffith joyner"
+    ]
+  },
+  {
+    "id": "c-cg103-084",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Natation",
+    "prompt": "Quel nageur américain a remporté 8 médailles d’or aux JO de Pékin 2008 ?",
+    "answer": "Michael Phelps",
+    "aliases": [
+      "phelps",
+      "michael phelps"
+    ]
+  },
+  {
+    "id": "c-cg103-085",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Athlétisme",
+    "prompt": "Quel perchiste suédois domine la discipline depuis les années 2020 ?",
+    "answer": "Armand Duplantis",
+    "aliases": [
+      "duplantis",
+      "mondo duplantis",
+      "armand duplantis"
+    ]
+  },
+  {
+    "id": "c-cg103-086",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Judo",
+    "prompt": "Quel judoka français est multiple champion olympique et mondial des poids lourds ?",
+    "answer": "Teddy Riner",
+    "aliases": [
+      "riner",
+      "teddy riner"
+    ]
+  },
+  {
+    "id": "c-cg103-087",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Gymnastique",
+    "prompt": "Quelle gymnaste américaine est considérée comme l’une des plus grandes de l’histoire avec plusieurs titres olympiques ?",
+    "answer": "Simone Biles",
+    "aliases": [
+      "biles",
+      "simone biles"
+    ]
+  },
+  {
+    "id": "c-cg103-088",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Athlétisme",
+    "prompt": "Quel sprinteur sud-africain amputé des deux jambes a participé aux JO de Londres 2012 ?",
+    "answer": "Oscar Pistorius",
+    "aliases": [
+      "pistorius",
+      "oscar pistorius"
+    ]
+  },
+  {
+    "id": "c-cg103-089",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Natation",
+    "prompt": "Quel nageur français a remporté 4 médailles d’or aux Jeux olympiques de Paris 2024 ?",
+    "answer": "Léon Marchand",
+    "aliases": [
+      "marchand",
+      "leon marchand",
+      "léon marchand"
+    ]
+  },
+  {
+    "id": "c-cg103-090",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Athlétisme",
+    "prompt": "Quel athlète britannique a remporté le 5 000 m et le 10 000 m aux JO de Londres 2012 ?",
+    "answer": "Mo Farah",
+    "aliases": [
+      "farah",
+      "mo farah"
+    ]
+  },
+  {
+    "id": "c-cg103-091",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel entraîneur portugais a gagné la Ligue des champions avec deux clubs différents avant 2010 ?",
+    "answer": "José Mourinho",
+    "aliases": [
+      "mourinho",
+      "jose mourinho",
+      "special one"
+    ]
+  },
+  {
+    "id": "c-cg103-092",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Quel sportif jamaïcain est devenu une icône mondiale avec sa pose de l’éclair ?",
+    "answer": "Usain Bolt",
+    "aliases": [
+      "bolt",
+      "usain bolt"
+    ]
+  },
+  {
+    "id": "c-cg103-093",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Football",
+    "prompt": "Quel club espagnol est associé à la devise « Més que un club » ?",
+    "answer": "Le FC Barcelone",
+    "aliases": [
+      "barça",
+      "barca",
+      "fc barcelone",
+      "fc barcelona"
+    ]
+  },
+  {
+    "id": "c-cg103-094",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel basketteur grec est surnommé « Greek Freak » ?",
+    "answer": "Giannis Antetokounmpo",
+    "aliases": [
+      "antetokounmpo",
+      "giannis",
+      "giannis antetokounmpo"
+    ]
+  },
+  {
+    "id": "c-cg103-095",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Football",
+    "prompt": "Quel joueur français a remporté le Ballon d’Or 2022 ?",
+    "answer": "Karim Benzema",
+    "aliases": [
+      "benzema",
+      "karim benzema"
+    ]
+  },
+  {
+    "id": "c-cg103-096",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Football",
+    "prompt": "Quel club allemand est surnommé « Die Schwarzgelben » ?",
+    "answer": "Le Borussia Dortmund",
+    "aliases": [
+      "dortmund",
+      "bvb",
+      "borussia dortmund"
+    ]
+  },
+  {
+    "id": "c-cg103-097",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "Tennis",
+    "prompt": "Quel tennisman suédois a remporté 11 titres du Grand Chelem avant de prendre sa retraite très jeune ?",
+    "answer": "Björn Borg",
+    "aliases": [
+      "borg",
+      "bjorn borg",
+      "björn borg"
+    ]
+  },
+  {
+    "id": "c-cg103-098",
+    "mode": "classic",
+    "difficulty": "easy",
+    "category": "Football",
+    "prompt": "Quel pays a organisé la première Coupe du monde de football en 1930 ?",
+    "answer": "L’Uruguay",
+    "aliases": [
+      "uruguay"
+    ]
+  },
+  {
+    "id": "c-cg103-099",
+    "mode": "classic",
+    "difficulty": "medium",
+    "category": "NBA",
+    "prompt": "Quel club NBA a remporté le premier titre de son histoire en 2019 grâce notamment à Kawhi Leonard ?",
+    "answer": "Les Toronto Raptors",
+    "aliases": [
+      "raptors",
+      "toronto raptors"
+    ]
+  },
+  {
+    "id": "c-cg103-100",
+    "mode": "classic",
+    "difficulty": "hard",
+    "category": "Athlétisme",
+    "prompt": "Quel coureur kenyan a été le premier à courir un marathon sous les deux heures dans des conditions non homologuées ?",
+    "answer": "Eliud Kipchoge",
+    "aliases": [
+      "kipchoge",
+      "eliud kipchoge"
+    ]
   }
 ]

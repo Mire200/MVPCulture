@@ -6,38 +6,226 @@
     "category": "Géographie",
     "prompt": "Citez un pays d'Amérique du Sud.",
     "validItems": [
-      "argentine", "bolivie", "brésil", "bresil", "chili", "colombie", "équateur",
-      "equateur", "guyana", "paraguay", "pérou", "perou", "suriname", "uruguay",
-      "venezuela"
+      "argentine", "bolivie", "brésil", "bresil", "chili", "colombie", "équateur", "equateur",
+      "guyana", "paraguay", "pérou", "perou", "suriname", "uruguay", "venezuela"
     ],
-    "turnSeconds": 12,
-    "source": "Wikipedia:South_America"
+    "turnSeconds": 12
   },
   {
     "id": "l-geo-002",
     "mode": "list-turns",
     "difficulty": "medium",
     "category": "Géographie",
-    "prompt": "Citez un pays frontalier de l'Allemagne.",
+    "prompt": "Citez un pays qui a une frontière terrestre avec la France.",
     "validItems": [
-      "france", "belgique", "pays-bas", "luxembourg", "danemark", "pologne",
-      "république tchèque", "republique tcheque", "tchequie", "autriche", "suisse"
+      "belgique", "luxembourg", "allemagne", "suisse", "italie", "espagne", "monaco",
+      "andorre", "brésil", "bresil", "suriname", "pays-bas"
     ],
     "turnSeconds": 12,
-    "source": "Wikipedia:Germany"
+    "tags": ["piege"]
   },
   {
     "id": "l-geo-003",
     "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez un pays traversé par l'équateur.",
+    "validItems": [
+      "équateur", "equateur", "colombie", "brésil", "bresil", "gabon", "congo",
+      "république démocratique du congo", "rdc", "ouganda", "kenya", "somalie",
+      "sao tomé-et-principe", "sao tome", "indonésie", "indonesie", "maldives", "kiribati"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-geo-004",
+    "mode": "list-turns",
     "difficulty": "hard",
     "category": "Géographie",
-    "prompt": "Citez une capitale d'un pays scandinave ou nordique.",
+    "prompt": "Citez un pays enclavé (sans accès à la mer) en Europe.",
     "validItems": [
-      "oslo", "stockholm", "copenhague", "copenhagen", "helsinki", "reykjavik"
+      "suisse", "autriche", "hongrie", "république tchèque", "republique tcheque",
+      "tchéquie", "tchequie", "slovaquie", "serbie", "macédoine du nord", "macedoine du nord",
+      "kosovo", "biélorussie", "bielorussie", "moldavie", "luxembourg", "andorre",
+      "saint-marin", "saint marin", "liechtenstein", "vatican"
     ],
-    "turnSeconds": 12,
-    "source": "Wikipedia:Nordic_countries"
+    "turnSeconds": 15
   },
+  {
+    "id": "l-geo-005",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez un pays membre de l'Union européenne.",
+    "validItems": [
+      "france", "allemagne", "italie", "espagne", "portugal", "belgique", "pays-bas",
+      "luxembourg", "autriche", "finlande", "suède", "suede", "danemark", "irlande",
+      "grèce", "grece", "pologne", "hongrie", "tchéquie", "tchequie", "slovaquie",
+      "slovénie", "slovenie", "croatie", "roumanie", "bulgarie", "lituanie", "lettonie",
+      "estonie", "chypre", "malte"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-geo-006",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Citez un pays d'Afrique subsaharienne.",
+    "validItems": [
+      "nigeria", "éthiopie", "ethiopie", "tanzanie", "kenya", "ouganda", "ghana",
+      "mozambique", "madagascar", "côte d'ivoire", "cote d'ivoire", "cameroun",
+      "angola", "mali", "burkina faso", "niger", "sénégal", "senegal", "guinée", "guinee",
+      "zambie", "zimbabwe", "soudan du sud", "rwanda", "bénin", "benin",
+      "somalie", "tchad", "sud-soudan", "togo", "sierra leone", "libéria", "liberia",
+      "mauritanie", "namibie", "botswana", "gabon", "congo", "rdc",
+      "érythrée", "eritree", "djibouti", "comores", "eswatini", "lesotho",
+      "gambie", "guinée-bissau", "guinee-bissau", "cap-vert", "sao tomé", "sao tome"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-geo-007",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez un pays membre de l'OTAN.",
+    "validItems": [
+      "états-unis", "etats-unis", "usa", "canada", "royaume-uni", "france", "allemagne",
+      "italie", "espagne", "portugal", "belgique", "pays-bas", "luxembourg", "danemark",
+      "norvège", "norvege", "islande", "grèce", "grece", "turquie", "pologne", "hongrie",
+      "tchéquie", "tchequie", "slovaquie", "slovénie", "slovenie", "bulgarie", "roumanie",
+      "lituanie", "lettonie", "estonie", "croatie", "monténégro", "montenegro",
+      "macédoine du nord", "macedoine du nord", "albanie", "finlande", "suède", "suede"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-geo-008",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez une région administrative française (métropole ou outre-mer).",
+    "validItems": [
+      "île-de-france", "ile-de-france", "auvergne-rhône-alpes", "auvergne rhone alpes",
+      "nouvelle-aquitaine", "nouvelle aquitaine", "occitanie", "hauts-de-france",
+      "hauts de france", "grand est", "bretagne", "pays de la loire", "normandie",
+      "centre-val de loire", "centre val de loire", "bourgogne-franche-comté",
+      "bourgogne franche comté", "provence-alpes-côte d'azur", "paca",
+      "corse", "guadeloupe", "martinique", "guyane", "la réunion", "la reunion", "mayotte"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-geo-009",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez un fleuve ou une rivière qui coule en France.",
+    "validItems": [
+      "seine", "loire", "rhône", "rhone", "garonne", "dordogne", "charente", "lot",
+      "tarn", "hérault", "herault", "aude", "gard", "doubs", "moselle", "meuse",
+      "rhin", "oise", "marne", "yonne", "allier", "cher", "indre", "vienne",
+      "sarthe", "mayenne", "isère", "isere", "ardèche", "ardeche", "var", "verdon",
+      "somme", "authie", "aa", "scarpe", "lys", "ill", "saar", "sarre", "adour",
+      "ariège", "arieges", "tech", "têt", "aude", "saône", "saone", "ain",
+      "creuse", "rance", "vilaine", "blavet"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-geo-010",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Citez une grande ville de France (plus de 150 000 habitants).",
+    "validItems": [
+      "paris", "marseille", "lyon", "toulouse", "nice", "nantes", "montpellier",
+      "strasbourg", "bordeaux", "lille", "rennes", "reims", "le havre", "saint-étienne",
+      "saint etienne", "toulon", "grenoble", "dijon", "angers", "nîmes", "nimes",
+      "villeurbanne", "le mans", "aix-en-provence", "aix en provence", "clermont-ferrand",
+      "clermont ferrand", "brest", "tours", "amiens", "limoges", "perpignan",
+      "metz", "besançon", "besancon", "orléans", "orleans", "mulhouse", "rouen",
+      "caen", "nancy", "argenteuil", "saint-denis", "montreuil"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-geo-011",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Citez un pays d'Amérique centrale ou des Caraïbes.",
+    "validItems": [
+      "mexique", "guatemala", "belize", "honduras", "salvador", "nicaragua", "costa rica",
+      "panama", "cuba", "haïti", "haiti", "jamaïque", "jamaique", "porto rico",
+      "saint-domingue", "trinité-et-tobago", "trinite-et-tobago", "barbade", "barbados",
+      "grenade", "saint-lucie", "saint lucie", "saint-vincent", "antigua", "dominique",
+      "saint-kitts", "bahamas", "aruba", "curaçao", "curacao",
+      "guadeloupe", "martinique", "caïmans", "bermudes"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-geo-012",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez un pays du G20.",
+    "validItems": [
+      "france", "allemagne", "italie", "royaume-uni", "espagne", "états-unis", "etats-unis",
+      "canada", "japon", "chine", "inde", "corée du sud", "australie", "brésil", "bresil",
+      "mexique", "argentine", "afrique du sud", "russie", "turquie", "arabie saoudite",
+      "indonésie", "indonesie", "union européenne", "union europeenne"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-geo-013",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Citez un pays membre de la Ligue arabe.",
+    "validItems": [
+      "égypte", "egypte", "arabie saoudite", "iraq", "jordanie", "liban", "libye",
+      "syrie", "yémen", "yemen", "algérie", "algerie", "maroc", "tunisie", "soudan",
+      "koweït", "koweit", "émirats arabes unis", "emirats arabes unis", "bahreïn", "bahrein",
+      "qatar", "oman", "mauritanie", "somalie", "djibouti", "comores",
+      "palestine", "état de palestine"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-geo-014",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Citez un pays producteur de vin reconnu.",
+    "validItems": [
+      "france", "italie", "espagne", "portugal", "allemagne", "autriche", "grèce", "grece",
+      "hongrie", "roumanie", "bulgarie", "croatie", "moldavie", "géorgie", "georgie",
+      "états-unis", "etats-unis", "australie", "nouvelle-zélande", "nouvelle zelande",
+      "chili", "argentine", "afrique du sud", "brésil", "bresil", "chine", "japon",
+      "maroc", "tunisie", "algérie", "algerie", "liban", "israël", "israel", "arménie", "armenie"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-geo-015",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Citez un pays ayant l'euro comme monnaie officielle.",
+    "validItems": [
+      "france", "allemagne", "italie", "espagne", "portugal", "belgique", "pays-bas",
+      "luxembourg", "autriche", "finlande", "irlande", "grèce", "grece",
+      "slovaquie", "slovénie", "slovenie", "estonie", "lettonie", "lituanie",
+      "chypre", "malte", "croatie", "monténégro", "montenegro", "kosovo", "andorre",
+      "saint-marin", "saint marin", "vatican", "monaco"
+    ],
+    "turnSeconds": 12
+  },
+
   {
     "id": "l-his-001",
     "mode": "list-turns",
@@ -48,23 +236,398 @@
       "de gaulle", "charles de gaulle", "pompidou", "giscard d'estaing", "giscard",
       "mitterrand", "chirac", "sarkozy", "hollande", "macron"
     ],
-    "turnSeconds": 10,
-    "source": "Wikipedia:French_Fifth_Republic"
+    "turnSeconds": 12
   },
   {
     "id": "l-his-002",
     "mode": "list-turns",
     "difficulty": "hard",
     "category": "Histoire",
-    "prompt": "Citez un empereur romain (du Haut-Empire).",
+    "prompt": "Citez un empereur romain (Haut-Empire).",
     "validItems": [
       "auguste", "tibère", "tibere", "caligula", "claude", "néron", "neron",
       "vespasien", "titus", "domitien", "nerva", "trajan", "hadrien", "antonin le pieux",
-      "marc aurèle", "marc aurele", "commode"
+      "marc aurèle", "marc aurele", "commode", "lucius verus"
     ],
-    "turnSeconds": 12,
-    "source": "Wikipedia:Roman_emperors"
+    "turnSeconds": 12
   },
+  {
+    "id": "l-his-003",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Citez un président américain du XXᵉ siècle.",
+    "validItems": [
+      "mckinley", "theodore roosevelt", "taft", "wilson", "harding", "coolidge",
+      "hoover", "franklin roosevelt", "fdr", "truman", "eisenhower", "kennedy",
+      "jfk", "johnson", "lbj", "nixon", "ford", "carter", "reagan", "bush", "george bush",
+      "george h. w. bush", "clinton", "bill clinton"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-his-004",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Citez un pharaon célèbre de l'Égypte antique.",
+    "validItems": [
+      "ramsès ii", "ramses ii", "ramsès", "ramses", "toutankhamon", "cléopâtre", "cleopatre",
+      "nefertiti", "akhenaton", "thoutmôsis iii", "thoutmosis iii", "séti ier", "seti",
+      "aménophis iv", "akhénaton", "akhenaton", "kheops", "khéops", "chéops", "cheops",
+      "khephren", "mykérinos", "mykerinos", "hatchepsout", "hatshepsout",
+      "aménophis iii", "amenophis iii", "ptolémée", "ptolemee", "néfertari", "nefertari"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-his-005",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Citez une bataille de Napoléon Bonaparte.",
+    "validItems": [
+      "austerlitz", "waterloo", "wagram", "iéna", "iena", "marengo", "pyramides",
+      "trafalgar", "borodino", "leipzig", "arcole", "rivoli", "eylau", "friedland",
+      "aboukir", "smolensk", "dresde", "lützen", "lutzen", "bautzen", "champaubert",
+      "montmirail", "laon", "saint-dizier", "quatre-bras", "ligny"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-his-006",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Citez un souverain du Royaume-Uni depuis 1500.",
+    "validItems": [
+      "henri vii", "henri viii", "henri 8", "édouard vi", "edouard vi", "marie ire", "marie i",
+      "élisabeth ire", "elizabeth i", "élisabeth 1", "jacques ier", "james i",
+      "charles ier", "charles i", "cromwell", "charles ii", "charles 2",
+      "jacques ii", "james ii", "guillaume iii", "william iii", "anne",
+      "george ier", "george i", "george ii", "george iii", "george iv",
+      "guillaume iv", "william iv", "victoria", "édouard vii", "edouard vii",
+      "george v", "édouard viii", "edouard viii", "george vi",
+      "élisabeth ii", "elizabeth ii", "charles iii", "charles 3"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-his-007",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Citez un pape du XXᵉ ou XXIᵉ siècle.",
+    "validItems": [
+      "léon xiii", "leon xiii", "pie x", "benoît xv", "benoit xv", "pie xi",
+      "pie xii", "jean xxiii", "paul vi", "jean-paul ier", "jean paul i",
+      "jean-paul ii", "jean paul ii", "karol wojtyla", "benoît xvi", "benoit xvi",
+      "ratzinger", "françois", "francois", "jorge bergoglio"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-his-008",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Citez un grand empire historique.",
+    "validItems": [
+      "empire romain", "empire ottoman", "empire mongol", "empire britannique",
+      "empire français", "empire espagnol", "empire russe", "empire byzantin",
+      "empire perse", "empire alexandrin", "empire de charlemagne", "empire carolingien",
+      "empire han", "empire tang", "empire ming", "empire qing", "empire moghol",
+      "empire aztèque", "empire azteque", "empire inca", "empire arabe",
+      "empire carthaginois", "empire assyrien", "empire babylonien", "empire perse achéménide",
+      "empire sassanide", "califat omeyyade", "califat abbasside", "empire zoulou"
+    ],
+    "turnSeconds": 12
+  },
+
+  {
+    "id": "l-cin-001",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Citez un film de la saga Star Wars (épisode principal).",
+    "validItems": [
+      "un nouvel espoir", "a new hope", "épisode iv", "episode 4",
+      "l'empire contre-attaque", "empire contre-attaque", "épisode v", "episode 5",
+      "le retour du jedi", "retour du jedi", "épisode vi", "episode 6",
+      "la menace fantôme", "menace fantôme", "menace fantome", "épisode i", "episode 1",
+      "l'attaque des clones", "attaque des clones", "épisode ii", "episode 2",
+      "la revanche des sith", "revanche des sith", "épisode iii", "episode 3",
+      "le réveil de la force", "reveil de la force", "épisode vii", "episode 7",
+      "les derniers jedi", "derniers jedi", "épisode viii", "episode 8",
+      "l'ascension de skywalker", "ascension de skywalker", "épisode ix", "episode 9"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-cin-002",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un film ayant gagné l'Oscar du meilleur film depuis 2010.",
+    "validItems": [
+      "démineurs", "demineurs", "the hurt locker", "le discours d'un roi", "king's speech",
+      "the artist", "argo", "12 years a slave", "birdman", "spotlight",
+      "moonlight", "la forme de l'eau", "shape of water", "green book",
+      "parasite", "nomadland", "coda", "everything everywhere all at once",
+      "oppenheimer", "anora"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-cin-003",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Citez un film Pixar.",
+    "validItems": [
+      "toy story", "toy story 2", "toy story 3", "toy story 4",
+      "1001 pattes", "bugs life", "monstres et cie", "monsters inc",
+      "le monde de nemo", "nemo", "les indestructibles", "incredibles",
+      "cars", "cars 2", "cars 3", "ratatouille", "wall-e", "wall e",
+      "là-haut", "la haut", "up", "rebelle", "brave",
+      "vice versa", "inside out", "le voyage d'arlo", "bon voyage arlo",
+      "le bon dinosaure", "coco", "les indestructibles 2", "en avant", "onward",
+      "soul", "luca", "alerte rouge", "turning red", "buzz l'éclair", "buzz leclair",
+      "élémentaire", "elemental"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-cin-004",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Citez un personnage de l'univers Harry Potter.",
+    "validItems": [
+      "harry potter", "hermione granger", "hermione", "ron weasley", "ron",
+      "albus dumbledore", "dumbledore", "voldemort", "severus rogue", "snape",
+      "sirius black", "sirius", "hagrid", "rubeus hagrid", "drago malefoy", "drago",
+      "neville londubat", "neville", "luna lovegood", "luna", "bellatrix lestrange",
+      "bellatrix", "minerva mcgonagall", "mcgonagall", "lupin", "remus lupin",
+      "dobby", "ginny weasley", "ginny", "fred weasley", "george weasley",
+      "molly weasley", "arthur weasley", "percy weasley", "bill weasley", "charlie weasley",
+      "fleur delacour", "viktor krum", "cedric diggory", "cedric", "cho chang",
+      "tom jedusor", "peter pettigrow", "queudver", "crabbe", "goyle"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-cin-005",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un film de la saga James Bond (titre).",
+    "validItems": [
+      "dr. no", "dr no", "bons baisers de russie", "from russia with love", "goldfinger",
+      "opération tonnerre", "thunderball", "on ne vit que deux fois", "you only live twice",
+      "au service secret de sa majesté", "on her majesty's secret service",
+      "les diamants sont éternels", "diamonds are forever",
+      "vivre et laisser mourir", "live and let die",
+      "l'homme au pistolet d'or", "the man with the golden gun",
+      "l'espion qui m'aimait", "the spy who loved me",
+      "moonraker", "rien que pour vos yeux", "for your eyes only",
+      "octopussy", "dangereusement vôtre", "a view to a kill",
+      "tuer n'est pas jouer", "the living daylights",
+      "permis de tuer", "licence to kill",
+      "goldeneye", "demain ne meurt jamais", "tomorrow never dies",
+      "le monde ne suffit pas", "the world is not enough",
+      "meurs un autre jour", "die another day",
+      "casino royale", "quantum of solace", "skyfall", "spectre",
+      "mourir peut attendre", "no time to die"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-cin-006",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Citez un film d'animation Disney (classique ou récent).",
+    "validItems": [
+      "blanche-neige", "blanche neige", "pinocchio", "fantasia", "dumbo", "bambi",
+      "cendrillon", "alice au pays des merveilles", "peter pan", "la belle au bois dormant",
+      "les 101 dalmatiens", "la petite sirène", "la petite sirene",
+      "la belle et la bête", "la belle et la bete", "aladdin", "le roi lion",
+      "pocahontas", "le bossu de notre-dame", "hercule", "mulan", "tarzan",
+      "lilo et stitch", "le monde de nemo", "les indestructibles", "ratatouille",
+      "wall-e", "là-haut", "rebelle", "raiponce", "les mondes de ralph",
+      "la reine des neiges", "la reine des neiges 2", "big hero 6", "zootopie",
+      "vaiana", "encanto", "red", "wish", "coco", "soul", "luca"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-cin-007",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un personnage récurrent des Simpsons.",
+    "validItems": [
+      "homer", "marge", "bart", "lisa", "maggie", "burns", "mr burns",
+      "waylon smithers", "smithers", "ned flanders", "flanders",
+      "apu nahasapeemapetilon", "apu", "milhouse", "nelson muntz", "nelson",
+      "martin prince", "martin", "barney gumble", "barney", "moe szyslak", "moe",
+      "lenny", "carl", "sideshow bob", "bob", "krusty", "groundskeeper willie", "willie",
+      "chief wiggum", "wiggum", "ralph wiggum", "ralph", "principal skinner", "skinner",
+      "edna krabappel", "edna", "otto", "hans moleman", "snake jailbird", "snake",
+      "fat tony", "mayor quimby", "quimby", "lionel hutz", "troy mcclure",
+      "reverend lovejoy", "dr. hibbert", "hibbert", "patty bouvier", "selma bouvier",
+      "sideshow mel", "mel", "kent brockman"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-cin-008",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Séries",
+    "prompt": "Citez une série originale Netflix populaire.",
+    "validItems": [
+      "stranger things", "la casa de papel", "money heist", "squid game", "ozark",
+      "narcos", "the crown", "bridgerton", "lupin", "witcher", "the witcher",
+      "dark", "emily in paris", "you", "mindhunter", "black mirror",
+      "orange is the new black", "house of cards", "altered carbon",
+      "the umbrella academy", "wednesday", "mercredi", "dahmer",
+      "don't look up", "all of us are dead", "kingdom", "elite",
+      "sex education", "the haunting of hill house", "midnight mass",
+      "tiger king", "making a murderer", "maniac"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-cin-009",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un film de la saga Fast & Furious.",
+    "validItems": [
+      "fast and furious", "fast & furious", "2 fast 2 furious", "tokyo drift",
+      "the fast and the furious tokyo drift", "fast & furious 4", "fast five",
+      "fast & furious 6", "furious 7", "the fate of the furious", "f8",
+      "hobbs & shaw", "fast 9", "f9", "fast x", "fast 10", "fast 11"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-cin-010",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un film réalisé par Steven Spielberg.",
+    "validItems": [
+      "duel", "les dents de la mer", "jaws", "rencontres du troisième type",
+      "close encounters", "les aventuriers de l'arche perdue", "raiders of the lost ark",
+      "e.t.", "e.t. l'extra-terrestre", "la liste de schindler", "schindler's list",
+      "jurassic park", "le temple maudit", "indiana jones", "la dernière croisade",
+      "amistad", "il faut sauver le soldat ryan", "saving private ryan",
+      "a.i. intelligence artificielle", "minority report", "catch me if you can",
+      "le terminal", "la guerre des mondes", "munich", "indiana jones et le royaume",
+      "cheval de guerre", "war horse", "lincoln", "le pont des espions",
+      "ready player one", "west side story", "the fabelmans"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-cin-011",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Citez un personnage de The Office (version US).",
+    "validItems": [
+      "michael scott", "michael", "dwight schrute", "dwight", "jim halpert", "jim",
+      "pam beesly", "pam", "ryan howard", "ryan", "andy bernard", "andy",
+      "angela martin", "angela", "kevin malone", "kevin", "oscar martinez", "oscar",
+      "stanley hudson", "stanley", "phyllis vance", "phyllis", "meredith palmer", "meredith",
+      "creed bratton", "creed", "toby flenderson", "toby", "kelly kapoor", "kelly",
+      "darryl philbin", "darryl", "jan levinson", "jan", "roy anderson", "roy",
+      "gabe lewis", "gabe", "robert california", "erin hannon", "erin"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-cin-012",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un film de Quentin Tarantino.",
+    "validItems": [
+      "reservoir dogs", "pulp fiction", "jackie brown",
+      "kill bill volume 1", "kill bill", "kill bill volume 2",
+      "les 8 salopards", "the hateful eight", "inglourious basterds",
+      "django unchained", "once upon a time in hollywood", "il était une fois à hollywood",
+      "true romance", "natural born killers"
+    ],
+    "turnSeconds": 10
+  },
+  {
+    "id": "l-cin-013",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Séries",
+    "prompt": "Citez une série produite par HBO.",
+    "validItems": [
+      "les soprano", "the sopranos", "six feet under", "band of brothers",
+      "the wire", "deadwood", "rome", "true blood", "boardwalk empire",
+      "game of thrones", "true detective", "girls", "westworld",
+      "succession", "barry", "euphoria", "the young pope", "white lotus",
+      "chernobyl", "silicon valley", "veep", "curb your enthusiasm",
+      "the last of us", "house of the dragon", "the idol", "industry"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-cin-014",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Citez un film de Tim Burton.",
+    "validItems": [
+      "pee-wee's big adventure", "beetlejuice", "batman", "edward aux mains d'argent",
+      "edward scissorhands", "batman le défi", "batman returns", "batman forever",
+      "l'étrange noël de m. jack", "nightmare before christmas",
+      "ed wood", "sleepy hollow", "la planète des singes", "big fish",
+      "charlie et la chocolaterie", "charlie and the chocolate factory",
+      "les noces funèbres", "corpse bride", "sweeney todd", "alice au pays des merveilles",
+      "dark shadows", "le grand yeux", "big eyes", "miss peregrine", "dumbo"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-cin-015",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Citez un film de la saga Mission: Impossible.",
+    "validItems": [
+      "mission impossible", "mission impossible 2", "mission impossible iii",
+      "mission impossible protocole fantôme", "ghost protocol",
+      "mission impossible rogue nation", "rogue nation",
+      "mission impossible fallout", "fallout",
+      "mission impossible dead reckoning partie 1", "dead reckoning",
+      "mission impossible the final reckoning"
+    ],
+    "turnSeconds": 10
+  },
+
+  {
+    "id": "l-ser-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Séries",
+    "prompt": "Citez une maison de Game of Thrones.",
+    "validItems": [
+      "stark", "lannister", "targaryen", "baratheon", "greyjoy", "tyrell", "martell",
+      "tully", "arryn", "bolton", "frey", "mormont", "karstark", "reed",
+      "clegane", "tarly"
+    ],
+    "turnSeconds": 12
+  },
+
   {
     "id": "l-sci-001",
     "mode": "list-turns",
@@ -75,74 +638,296 @@
       "mercure", "vénus", "venus", "terre", "mars", "jupiter", "saturne",
       "uranus", "neptune"
     ],
-    "turnSeconds": 10,
-    "source": "Wikipedia:Solar_System"
+    "turnSeconds": 10
   },
   {
     "id": "l-sci-002",
     "mode": "list-turns",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "category": "Sciences",
-    "prompt": "Citez un élément chimique dont le symbole commence par C.",
+    "prompt": "Citez un élément chimique du tableau périodique (ligne 1-3).",
     "validItems": [
-      "carbone", "calcium", "chlore", "chrome", "cobalt", "cuivre", "césium",
-      "cesium", "cadmium", "cérium", "cerium", "curium", "californium"
+      "hydrogène", "hydrogene", "hélium", "helium", "lithium", "béryllium", "beryllium",
+      "bore", "carbone", "azote", "oxygène", "oxygene", "fluor", "néon", "neon",
+      "sodium", "magnésium", "magnesium", "aluminium", "silicium", "phosphore",
+      "soufre", "chlore", "argon"
     ],
-    "turnSeconds": 15,
-    "source": "Wikipedia:List_of_chemical_elements"
+    "turnSeconds": 12
   },
   {
-    "id": "l-cin-001",
+    "id": "l-sci-003",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Citez un organe du corps humain.",
+    "validItems": [
+      "cœur", "coeur", "poumon", "poumons", "foie", "rein", "reins", "cerveau",
+      "estomac", "intestin", "intestin grêle", "colon", "pancréas", "pancreas",
+      "rate", "vésicule biliaire", "vesicule biliaire", "appendice", "thyroïde", "thyroide",
+      "surrénale", "surrenale", "hypophyse", "thymus", "prostate", "utérus", "uterus",
+      "ovaire", "testicule", "peau", "muscle", "os", "œsophage", "esophage",
+      "trachée", "trachee", "bronche", "diaphragme", "aorte", "veine", "artère", "artere",
+      "langue", "dent", "œil", "oeil", "oreille", "nez"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-sci-004",
     "mode": "list-turns",
     "difficulty": "medium",
-    "category": "Cinéma",
-    "prompt": "Citez un film de Christopher Nolan.",
+    "category": "Sciences",
+    "prompt": "Citez un type de nuage.",
     "validItems": [
-      "following", "memento", "insomnia", "batman begins", "le prestige", "the prestige",
-      "the dark knight", "the dark knight rises", "inception", "interstellar",
-      "dunkirk", "dunkerque", "tenet", "oppenheimer"
+      "cumulus", "cumulonimbus", "nimbostratus", "altostratus", "altocumulus",
+      "cirrus", "cirrostratus", "cirrocumulus", "stratus", "stratocumulus",
+      "nuage lenticulaire", "mammatus", "arcus", "shelf cloud", "roll cloud",
+      "nuage nacré", "nuage noctulescent", "nuage en champignon"
     ],
-    "turnSeconds": 12,
-    "source": "Wikipedia:Christopher_Nolan_filmography"
+    "turnSeconds": 12
   },
   {
-    "id": "l-cin-002",
+    "id": "l-sci-005",
     "mode": "list-turns",
-    "difficulty": "hard",
-    "category": "Cinéma",
-    "prompt": "Citez un acteur ayant joué James Bond au cinéma (films officiels EON).",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Citez une pierre précieuse ou semi-précieuse.",
     "validItems": [
-      "sean connery", "george lazenby", "roger moore", "timothy dalton",
-      "pierce brosnan", "daniel craig"
+      "diamant", "rubis", "émeraude", "emeraude", "saphir", "perle", "opale",
+      "alexandrite", "tanzanite", "grenat", "améthyste", "amethyste", "topaze",
+      "turquoise", "lapis-lazuli", "lapis lazuli", "péridot", "peridot", "spessartine",
+      "aigue-marine", "aigue marine", "corail", "jade", "malachite", "onyx",
+      "obsidienne", "quartz rose", "citrine", "agate", "labradorite",
+      "chrysoprase", "amazonite", "rhodonite", "sodalite", "kunzite"
     ],
-    "turnSeconds": 12,
-    "source": "Wikipedia:James_Bond_in_film"
+    "turnSeconds": 12
   },
+  {
+    "id": "l-sci-006",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Citez un arbre que l'on trouve en Europe.",
+    "validItems": [
+      "chêne", "chene", "hêtre", "hetre", "pin", "sapin", "épicéa", "epicea",
+      "bouleau", "tilleul", "frêne", "frene", "orme", "charme", "platane",
+      "châtaignier", "chataignier", "noyer", "cerisier", "pommier", "poirier",
+      "peuplier", "saule", "aulne", "érable", "erable", "marronnier",
+      "if", "genévrier", "genevrier", "mélèze", "meleze", "cèdre", "cedre",
+      "cyprès", "cypres", "olivier", "figuier", "vigne", "micocoulier"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-sci-007",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Citez un mammifère marin.",
+    "validItems": [
+      "baleine", "baleine bleue", "baleine à bosse", "cachalot", "orque",
+      "dauphin", "marsouin", "béluga", "beluga", "narval", "dugong",
+      "lamantin", "phoque", "lion de mer", "morse", "otarie",
+      "loutre de mer", "éléphant de mer", "elephant de mer",
+      "cétacé", "jubarte", "rorqual", "rorqual commun", "rorqual boréal",
+      "baleine franche", "baleine pilote", "globicéphale", "globicephale",
+      "dauphin commun", "grand dauphin", "dauphin de risso"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-sci-008",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Citez une espèce de requin.",
+    "validItems": [
+      "grand requin blanc", "requin blanc", "requin baleine", "requin pèlerin", "requin pelerin",
+      "requin tigre", "requin bouledogue", "requin marteau", "requin taureau",
+      "requin bleu", "requin citron", "requin soyeux", "requin océanique", "requin oceanique",
+      "requin-renard", "requin renard", "requin gris", "requin à pointes noires",
+      "requin de récif", "requin de reef", "requin zèbre", "requin zebre",
+      "requin nourrice", "requin wobbegong", "requin épaulette", "requin epaulette",
+      "requin à pointes blanches", "aiguillat", "ange de mer"
+    ],
+    "turnSeconds": 12
+  },
+
   {
     "id": "l-mus-001",
     "mode": "list-turns",
     "difficulty": "medium",
     "category": "Musique",
-    "prompt": "Citez un membre des Beatles.",
+    "prompt": "Citez un album des Beatles.",
     "validItems": [
-      "john lennon", "paul mccartney", "george harrison", "ringo starr",
-      "lennon", "mccartney", "harrison", "starr"
+      "please please me", "with the beatles", "a hard day's night", "beatles for sale",
+      "help!", "help", "rubber soul", "revolver", "sgt. pepper's lonely hearts club band",
+      "sgt pepper", "magical mystery tour", "white album", "the beatles",
+      "yellow submarine", "abbey road", "let it be"
     ],
-    "turnSeconds": 10,
-    "source": "Wikipedia:The_Beatles"
+    "turnSeconds": 12
   },
   {
     "id": "l-mus-002",
     "mode": "list-turns",
     "difficulty": "hard",
     "category": "Musique",
-    "prompt": "Citez un instrument de l'orchestre symphonique (famille cordes frottées).",
+    "prompt": "Citez une note de la gamme chromatique.",
     "validItems": [
-      "violon", "alto", "violoncelle", "contrebasse"
+      "do", "do dièse", "do diese", "ré", "re", "ré dièse", "re diese", "mi",
+      "fa", "fa dièse", "fa diese", "sol", "sol dièse", "sol diese", "la",
+      "la dièse", "la diese", "si", "si bémol", "si bemol"
     ],
-    "turnSeconds": 10,
-    "source": "Wikipedia:Orchestra"
+    "turnSeconds": 10
   },
+  {
+    "id": "l-mus-003",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Citez un instrument à cordes.",
+    "validItems": [
+      "guitare", "violon", "violoncelle", "contrebasse", "alto", "harpe",
+      "banjo", "mandoline", "ukulélé", "ukulele", "luth", "balalaïka", "balalaika",
+      "cithare", "sitar", "koto", "erhu", "oud", "pipa", "basse électrique",
+      "basse electrique", "guitare électrique", "guitare electrique",
+      "guitare acoustique", "guitare classique", "guitare folk",
+      "théorbe", "theorbe", "vihuela", "clavecin", "piano",
+      "clavicorde", "hammered dulcimer"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-mus-004",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Citez un instrument à vent.",
+    "validItems": [
+      "flûte", "flute", "clarinette", "hautbois", "basson", "saxophone", "trompette",
+      "trombone", "cor", "tuba", "euphonium", "bugle", "cornet", "flûte traversière",
+      "flute traversiere", "piccolo", "flûte à bec", "flute a bec",
+      "didgeridoo", "harmonica", "accordéon", "accordeon", "musette",
+      "fifre", "shakuhachi", "bansuri", "shenai", "duduk", "hulusi",
+      "bombarde", "cornemuse", "gaita"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-mus-005",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Citez un genre musical.",
+    "validItems": [
+      "rock", "pop", "jazz", "blues", "hip-hop", "rap", "classical", "classique",
+      "électronique", "electronique", "techno", "house", "reggae", "soul", "r&b",
+      "metal", "punk", "country", "folk", "indie", "alternative", "grunge",
+      "disco", "funk", "gospel", "opera", "opéra", "bossa nova", "samba",
+      "flamenco", "salsa", "merengue", "bachata", "cumbia", "tango",
+      "afrobeat", "afrobeats", "highlife", "mbalax", "zouk", "dancehall",
+      "drum and bass", "dubstep", "ambient", "new wave", "post-punk",
+      "heavy metal", "death metal", "black metal", "thrash metal"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-mus-006",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Citez un rappeur ou rappeure français·e.",
+    "validItems": [
+      "mc solaar", "iam", "ntu", "ntm", "suprême ntm", "supreme ntm",
+      "booba", "rohff", "kaaris", "lacrim", "alonzo",
+      "nekfeu", "damso", "ninho", "naps",
+      "laylow", "lomepal", "orelsan", "bigflo et oli",
+      "akhenaton", "shurik'n", "sadek", "maes",
+      "hamza", "lefa", "soolking",
+      "soprano", "jul", "pso thug",
+      "kalash criminel", "freeze corleone", "di-meh", "sch",
+      "myth syzer", "alpha wann", "oxmo puccino", "oxmo",
+      "kool shen", "joeystarr"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-mus-007",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Citez un groupe de rock britannique.",
+    "validItems": [
+      "the beatles", "beatles", "the rolling stones", "rolling stones",
+      "the who", "who", "pink floyd", "led zeppelin", "queen",
+      "the clash", "clash", "sex pistols", "the cure", "cure",
+      "depeche mode", "radiohead", "oasis", "blur", "pulp",
+      "suede", "the verve", "verve", "arctic monkeys",
+      "coldplay", "muse", "the killers", "killers",
+      "the strokes", "strokes", "the prodigy", "prodigy",
+      "gorillaz", "the smiths", "smiths", "morrissey",
+      "the kinks", "kinks", "cream", "deep purple",
+      "black sabbath", "iron maiden", "motörhead", "motorhead"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-mus-008",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Citez un compositeur classique célèbre.",
+    "validItems": [
+      "beethoven", "mozart", "bach", "chopin", "debussy", "ravel",
+      "schubert", "brahms", "tchaikovski", "tchaïkovski", "verdi", "puccini",
+      "wagner", "haydn", "handel", "haendel", "vivaldi", "liszt",
+      "schumann", "mendelssohn", "berlioz", "saint-saëns", "saint-saens",
+      "mahler", "bruckner", "sibelius", "grieg", "dvorak",
+      "stravinski", "prokofiev", "bartok", "shostakovich", "schoenberg",
+      "monteverdi", "corelli", "telemann", "rameau", "couperin"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-mus-009",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Citez un festival de musique dans le monde.",
+    "validItems": [
+      "coachella", "glastonbury", "burning man", "lollapalooza", "tomorrowland",
+      "rock en seine", "les vieilles charrues", "hellfest", "les eurockéennes",
+      "eurockéennes", "transmusicales", "main square festival",
+      "download festival", "reading festival", "leeds festival",
+      "bonnaroo", "sxsw", "south by southwest", "ultra music festival",
+      "exit festival", "untold festival", "electric daisy carnival",
+      "pukkelpop", "rock werchter", "dour festival", "montreux jazz festival",
+      "north sea jazz", "sziget festival", "fuji rock", "summer sonic",
+      "primavera sound", "sonar", "benicàssim", "mad cool", "the big weekend"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-mus-010",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "Citez un artiste ayant remporté un Grammy Award.",
+    "validItems": [
+      "beyoncé", "beyonce", "adele", "taylor swift", "eminem",
+      "jay-z", "kanye west", "billie eilish", "harry styles",
+      "michael jackson", "the beatles", "the rolling stones",
+      "u2", "steely dan", "dixie chicks", "the chicks",
+      "alicia keys", "john legend", "sam smith",
+      "billie holiday", "frank sinatra", "ray charles",
+      "aretha franklin", "whitney houston", "mariah carey",
+      "daft punk", "coldplay", "radiohead", "beck",
+      "kendrick lamar", "chance the rapper", "tyler the creator",
+      "silk sonic", "anderson paak", "bruno mars", "lizzo",
+      "olivia rodrigo", "sza", "the weeknd"
+    ],
+    "turnSeconds": 12
+  },
+
   {
     "id": "l-spo-001",
     "mode": "list-turns",
@@ -150,259 +935,809 @@
     "category": "Sport",
     "prompt": "Citez un sport olympique d'été.",
     "validItems": [
-      "athlétisme", "athletisme", "natation", "cyclisme", "gymnastique", "judo",
-      "escrime", "aviron", "voile", "tir à l'arc", "tir a l'arc", "tennis",
-      "football", "basketball", "handball", "volley-ball", "boxe", "haltérophilie",
-      "halterophilie", "équitation", "equitation", "triathlon", "skateboard",
-      "surf", "escalade", "taekwondo", "karaté", "karate", "rugby à 7", "rugby a 7",
-      "golf", "badminton", "tennis de table", "tir", "lutte", "hockey sur gazon",
-      "plongeon", "water-polo", "canoë", "canoe", "bmx", "pentathlon moderne",
-      "breaking", "breakdance"
+      "athlétisme", "athletisme", "natation", "plongeon", "gymnastique",
+      "gymnastique rythmique", "trampoline", "cyclisme", "escalade", "surf",
+      "skateboard", "tennis", "tennis de table", "badminton", "boxe", "judo",
+      "karaté", "karate", "taekwondo", "lutte", "aviron", "canoë", "canoe",
+      "voile", "tir", "tir à l'arc", "tir a l'arc", "équitation", "equitation",
+      "escrime", "haltérophilie", "halterophilie", "football", "basketball",
+      "handball", "rugby", "volleyball", "hockey sur gazon", "triathlon",
+      "pentathlon", "golf", "breakdance", "breaking"
     ],
-    "turnSeconds": 10,
-    "source": "Wikipedia:Summer_Olympic_sports"
+    "turnSeconds": 12
   },
   {
     "id": "l-spo-002",
     "mode": "list-turns",
     "difficulty": "medium",
     "category": "Sport",
-    "prompt": "Citez un club ayant gagné la Ligue des Champions.",
+    "prompt": "Citez un vainqueur du Ballon d'Or depuis 2008.",
     "validItems": [
-      "real madrid", "barcelone", "barcelona", "bayern munich", "bayern", "liverpool",
-      "milan", "ac milan", "inter", "inter milan", "manchester united", "man united",
-      "chelsea", "manchester city", "man city", "juventus", "ajax", "porto",
-      "psv eindhoven", "psv", "borussia dortmund", "dortmund", "olympique de marseille",
-      "om", "marseille", "benfica", "celtic", "nottingham forest", "aston villa",
-      "hambourg", "hsv", "red star", "étoile rouge de belgrade", "steaua", "feyenoord"
+      "ronaldinho", "cristiano ronaldo", "messi", "lionel messi", "modric", "luka modric",
+      "benzema", "karim benzema", "rodri", "rodri hernandez"
     ],
-    "turnSeconds": 15,
-    "source": "Wikipedia:UEFA_Champions_League"
+    "turnSeconds": 12
   },
   {
-    "id": "l-ani-001",
+    "id": "l-spo-003",
     "mode": "list-turns",
     "difficulty": "medium",
-    "category": "Animaux",
-    "prompt": "Citez un félin (espèce sauvage).",
+    "category": "Sport",
+    "prompt": "Citez un club ayant évolué en Premier League anglaise.",
     "validItems": [
-      "lion", "tigre", "léopard", "leopard", "jaguar", "guépard", "guepard",
-      "puma", "lynx", "panthère des neiges", "panthere des neiges", "once",
-      "ocelot", "caracal", "serval", "chat sauvage", "chat doré", "chat dore"
+      "manchester united", "manchester city", "liverpool", "chelsea", "arsenal",
+      "tottenham", "spurs", "aston villa", "newcastle", "west ham",
+      "everton", "leicester", "leeds", "fulham", "brentford",
+      "brighton", "wolves", "wolverhampton", "crystal palace",
+      "nottingham forest", "bournemouth", "southampton", "ipswich",
+      "burnley", "luton", "sheffield united", "watford",
+      "middlesbrough", "sunderland", "bolton", "blackburn", "blackpool",
+      "charlton", "reading", "wigan", "hull city", "swansea",
+      "norwich", "stoke", "cardiff", "derby", "queens park rangers", "qpr",
+      "west bromwich", "west brom", "coventry", "barnsley"
     ],
-    "turnSeconds": 12,
-    "source": "Wikipedia:Felidae"
+    "turnSeconds": 12
   },
   {
-    "id": "l-cin-003",
+    "id": "l-spo-004",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Citez une équipe NBA.",
+    "validItems": [
+      "lakers", "los angeles lakers", "celtics", "boston celtics",
+      "warriors", "golden state warriors", "bulls", "chicago bulls",
+      "heat", "miami heat", "nets", "brooklyn nets", "knicks", "new york knicks",
+      "sixers", "philadelphia 76ers", "bucks", "milwaukee bucks",
+      "nuggets", "denver nuggets", "suns", "phoenix suns",
+      "mavs", "mavericks", "dallas mavericks", "clippers", "los angeles clippers",
+      "rockets", "houston rockets", "spurs", "san antonio spurs",
+      "thunder", "oklahoma city thunder", "blazers", "portland trail blazers",
+      "kings", "sacramento kings", "jazz", "utah jazz",
+      "hawks", "atlanta hawks", "hornets", "charlotte hornets",
+      "pistons", "detroit pistons", "pacers", "indiana pacers",
+      "cavs", "cavaliers", "cleveland cavaliers", "raptors", "toronto raptors",
+      "magic", "orlando magic", "wizards", "washington wizards",
+      "pelicans", "new orleans pelicans", "grizzlies", "memphis grizzlies",
+      "wolves", "timberwolves", "minnesota timberwolves"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-spo-005",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Citez un champion du monde de Formule 1.",
+    "validItems": [
+      "michael schumacher", "schumacher", "lewis hamilton", "hamilton",
+      "sebastian vettel", "vettel", "max verstappen", "verstappen",
+      "ayrton senna", "senna", "alain prost", "prost",
+      "nigel mansell", "mansell", "damon hill", "hill",
+      "mika häkkinen", "hakkinen", "fernando alonso", "alonso",
+      "kimi räikkönen", "raikkonen", "jenson button", "button",
+      "nico rosberg", "rosberg", "emerson fittipaldi", "fittipaldi",
+      "jackie stewart", "jack brabham", "brabham", "jim clark",
+      "juan manuel fangio", "fangio", "giuseppe farina",
+      "mike hawthorn", "phil hill", "john surtees", "surtees",
+      "jochen rindt", "rindt", "james hunt", "hunt",
+      "mario andretti", "andretti", "jody scheckter",
+      "nelson piquet", "piquet", "niki lauda", "lauda"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-spo-006",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Citez un joueur ou joueuse de tennis ayant remporté au moins un Grand Chelem.",
+    "validItems": [
+      "rafael nadal", "nadal", "roger federer", "federer", "novak djokovic", "djokovic",
+      "serena williams", "serena", "steffi graf", "graf",
+      "pete sampras", "sampras", "andre agassi", "agassi",
+      "margaret court", "billie jean king", "chris evert", "martina navratilova",
+      "boris becker", "becker", "john mcenroe", "mcenroe",
+      "jimmy connors", "connors", "ivan lendl", "lendl",
+      "jim courier", "courier", "lleyton hewitt", "hewitt",
+      "andy murray", "murray", "stan wawrinka", "wawrinka",
+      "carlos alcaraz", "alcaraz", "dominic thiem", "thiem",
+      "ashleigh barty", "barty", "naomi osaka", "osaka",
+      "simona halep", "halep", "angelique kerber", "kerber",
+      "victoria azarenka", "azarenka", "maria sharapova", "sharapova",
+      "iga swiatek", "swiatek", "aryna sabalenka", "sabalenka"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-spo-007",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Citez une épreuve d'athlétisme aux Jeux olympiques.",
+    "validItems": [
+      "100 mètres", "200 mètres", "400 mètres", "800 mètres", "1500 mètres",
+      "5000 mètres", "10000 mètres", "marathon", "110 mètres haies", "400 mètres haies",
+      "3000 mètres steeple", "4x100 mètres", "4x400 mètres",
+      "saut en hauteur", "saut à la perche", "saut en longueur", "triple saut",
+      "lancer du poids", "lancer du disque", "lancer du marteau", "lancer du javelot",
+      "décathlon", "heptathlon", "20 km marche", "50 km marche", "marche",
+      "100 mètres haies", "relais"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-spo-008",
     "mode": "list-turns",
     "difficulty": "easy",
-    "category": "Cinéma",
-    "prompt": "Citez un personnage principal de Friends.",
+    "category": "Sport",
+    "prompt": "Citez un sport de combat olympique.",
     "validItems": [
-      "ross", "rachel", "monica", "chandler", "joey", "phoebe"
-    ],
-    "turnSeconds": 10,
-    "source": "Wikipedia:Friends"
-  },
-  {
-    "id": "l-tec-001",
-    "mode": "list-turns",
-    "difficulty": "medium",
-    "category": "Technologie",
-    "prompt": "Citez un langage de programmation.",
-    "validItems": [
-      "python", "javascript", "typescript", "java", "c", "c++", "c#", "go",
-      "golang", "rust", "ruby", "php", "swift", "kotlin", "dart", "scala",
-      "haskell", "elixir", "clojure", "perl", "r", "julia", "objective-c",
-      "lua", "bash", "shell", "sql", "fortran", "cobol", "pascal", "delphi",
-      "matlab", "groovy", "lisp", "scheme", "erlang", "ocaml", "f#", "zig",
-      "nim", "crystal", "solidity"
-    ],
-    "turnSeconds": 10,
-    "source": "Wikipedia:List_of_programming_languages"
-  },
-  {
-    "id": "l-geo-004",
-    "mode": "list-turns",
-    "difficulty": "medium",
-    "category": "Géographie",
-    "prompt": "Citez un département français.",
-    "validItems": [
-      "ain", "aisne", "allier", "alpes-de-haute-provence", "hautes-alpes", "alpes-maritimes",
-      "ardèche", "ardeche", "ardennes", "ariège", "ariege", "aube", "aude", "aveyron",
-      "bouches-du-rhône", "bouches du rhone", "calvados", "cantal", "charente",
-      "charente-maritime", "cher", "corrèze", "correze", "corse-du-sud", "haute-corse",
-      "côte-d'or", "cote d'or", "côtes-d'armor", "cotes d'armor", "creuse",
-      "dordogne", "doubs", "drôme", "drome", "eure", "eure-et-loir", "finistère", "finistere",
-      "gard", "haute-garonne", "gers", "gironde", "hérault", "herault",
-      "ille-et-vilaine", "indre", "indre-et-loire", "isère", "isere", "jura",
-      "landes", "loir-et-cher", "loire", "haute-loire", "loire-atlantique", "loiret",
-      "lot", "lot-et-garonne", "lozère", "lozere", "maine-et-loire", "manche", "marne",
-      "haute-marne", "mayenne", "meurthe-et-moselle", "meuse", "morbihan", "moselle",
-      "nièvre", "nievre", "nord", "oise", "orne", "pas-de-calais", "puy-de-dôme", "puy de dome",
-      "pyrénées-atlantiques", "pyrenees atlantiques", "hautes-pyrénées", "pyrénées-orientales",
-      "bas-rhin", "haut-rhin", "rhône", "rhone", "haute-saône", "haute saone",
-      "saône-et-loire", "saone et loire", "sarthe", "savoie", "haute-savoie", "paris",
-      "seine-maritime", "seine-et-marne", "yvelines", "deux-sèvres", "deux sevres",
-      "somme", "tarn", "tarn-et-garonne", "var", "vaucluse", "vendée", "vendee",
-      "vienne", "haute-vienne", "vosges", "yonne", "territoire de belfort",
-      "essonne", "hauts-de-seine", "seine-saint-denis", "val-de-marne", "val-d'oise",
-      "guadeloupe", "martinique", "guyane", "la réunion", "la reunion", "mayotte"
+      "boxe", "judo", "lutte", "taekwondo", "karaté", "karate",
+      "escrime", "jiu-jitsu", "jiu jitsu", "kickboxing",
+      "lutte libre", "lutte gréco-romaine", "lutte greco-romaine",
+      "wrestling", "sambo", "aikido", "muay thai", "capoeira",
+      "kung fu", "wushu"
     ],
     "turnSeconds": 12
   },
   {
-    "id": "l-cin-004",
+    "id": "l-spo-009",
     "mode": "list-turns",
-    "difficulty": "medium",
-    "category": "Cinéma",
-    "prompt": "Citez un réalisateur français.",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Citez un sport pratiqué aux Jeux olympiques d'hiver.",
     "validItems": [
-      "jean-luc godard", "godard", "françois truffaut", "truffaut",
-      "claude chabrol", "chabrol", "éric rohmer", "eric rohmer", "rohmer",
-      "louis malle", "malle", "alain resnais", "resnais",
-      "agnès varda", "agnes varda", "varda", "claire denis", "denis",
-      "jacques audiard", "audiard", "michel gondry", "gondry", "luc besson", "besson",
-      "jean-pierre jeunet", "jeunet", "olivier assayas", "assayas",
-      "bertrand tavernier", "tavernier", "xavier dolan", "dolan",
-      "michel hazanavicius", "hazanavicius", "jacques demy", "demy",
-      "jean renoir", "renoir", "robert bresson", "bresson", "patrice leconte", "leconte",
-      "cédric klapisch", "cedric klapisch", "klapisch", "céline sciamma", "celine sciamma",
-      "sciamma", "maïwenn", "maiwenn", "rebecca zlotowski", "zlotowski"
+      "ski alpin", "ski de fond", "biathlon", "bob", "bobsleigh",
+      "luge", "skeleton", "saut à ski", "saut a ski",
+      "combiné nordique", "combine nordique", "patinage artistique",
+      "patinage de vitesse", "hockey sur glace", "hockey", "curling",
+      "ski freestyle", "snowboard", "patinage courte piste",
+      "super-g", "descente", "slalom", "géant", "geant",
+      "slalom géant", "biathlon relais"
     ],
     "turnSeconds": 12
   },
   {
-    "id": "l-lit-001",
+    "id": "l-spo-010",
     "mode": "list-turns",
     "difficulty": "medium",
-    "category": "Littérature",
-    "prompt": "Citez une pièce de Molière.",
+    "category": "Sport",
+    "prompt": "Citez un pays ayant organisé les Jeux olympiques d'été.",
     "validItems": [
-      "l'avare", "le misanthrope", "tartuffe", "le tartuffe",
-      "dom juan", "don juan", "le malade imaginaire", "le bourgeois gentilhomme",
-      "l'école des femmes", "l'ecole des femmes",
-      "l'école des maris", "l'ecole des maris",
-      "les précieuses ridicules", "les precieuses ridicules",
-      "les fourberies de scapin", "le médecin malgré lui", "le medecin malgre lui",
-      "les femmes savantes", "george dandin", "amphitryon",
-      "l'étourdi", "l'etourdi", "sganarelle", "psyché", "psyche"
+      "grèce", "grece", "france", "états-unis", "etats-unis", "royaume-uni", "suède", "suede",
+      "belgique", "pays-bas", "finlande", "australie", "italie", "japon", "mexique",
+      "allemagne", "canada", "urss", "russie", "corée du sud", "espagne", "barcelone",
+      "chine", "brésil", "bresil"
     ],
     "turnSeconds": 12
   },
+  {
+    "id": "l-spo-011",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Citez un club de Ligue 1 française (saison 2023-24).",
+    "validItems": [
+      "paris saint-germain", "psg", "olympique de marseille", "marseille", "om",
+      "olympique lyonnais", "lyon", "ol", "monaco", "as monaco",
+      "stade rennais", "rennes", "nice", "ogc nice", "lens", "rc lens",
+      "toulouse", "montpellier", "reims", "stade de reims",
+      "brest", "stade brestois", "lorient", "fc lorient",
+      "strasbourg", "rc strasbourg", "nantes", "fc nantes",
+      "clermont", "clermont foot", "le havre", "havre athletic club",
+      "metz", "fc metz", "saint-étienne", "saint etienne"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-spo-012",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Citez un vainqueur du Tour de France depuis l'an 2000.",
+    "validItems": [
+      "lance armstrong", "armstrong", "jan ullrich", "ullrich",
+      "carlos sastre", "sastre", "alberto contador", "contador",
+      "andy schleck", "schleck", "cadel evans", "evans",
+      "bradley wiggins", "wiggins", "chris froome", "froome",
+      "vincenzo nibali", "nibali", "geraint thomas", "thomas",
+      "egan bernal", "bernal", "tadej pogacar", "pogacar",
+      "jonas vingegaard", "vingegaard", "richard virenque", "virenque"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-spo-013",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Citez un club du Top 14 de rugby (2023-24).",
+    "validItems": [
+      "toulouse", "stade toulousain", "la rochelle", "stade rochelais",
+      "bordeaux", "bordeaux-bègles", "bordeaux begles", "ub", "union bordeaux bègles",
+      "montpellier", "mhr", "montpellier hérault rugby",
+      "clermont", "asm", "auvergne", "racing 92", "racing",
+      "castres", "co castres", "stade français", "stade francais",
+      "lyon", "lou", "pau", "section paloise", "toulon", "rc toulon",
+      "perpignan", "usap", "brive", "ca brive", "bayonne", "aviron bayonnais"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-spo-014",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Citez un sport de raquette.",
+    "validItems": [
+      "tennis", "badminton", "squash", "tennis de table", "ping-pong", "ping pong",
+      "padel", "pickleball", "racquetball", "raquetball",
+      "frontenis", "pelote basque", "jai alai",
+      "beach tennis", "raquette de plage"
+    ],
+    "turnSeconds": 10
+  },
+  {
+    "id": "l-spo-015",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Citez une nage ou épreuve de natation olympique.",
+    "validItems": [
+      "crawl", "nage libre", "dos crawlé", "dos", "brasse",
+      "papillon", "nage de dauphin", "4 nages", "quatre nages",
+      "relais 4x100", "relais 4x200", "nage synchronisée",
+      "water-polo", "plongeon", "plongeon tremplin", "plongeon haut-vol",
+      "marathon aquatique", "open water",
+      "50 mètres", "100 mètres", "200 mètres", "400 mètres", "800 mètres", "1500 mètres"
+    ],
+    "turnSeconds": 12
+  },
+
+  {
+    "id": "l-jv-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Citez un jeu The Legend of Zelda (jeu principal).",
+    "validItems": [
+      "the legend of zelda", "zelda ii", "adventure of link", "a link to the past",
+      "link's awakening", "ocarina of time", "majora's mask", "majoras mask",
+      "oracle of seasons", "oracle of ages", "the wind waker", "wind waker",
+      "four swords", "the minish cap", "minish cap", "twilight princess",
+      "phantom hourglass", "spirit tracks", "skyward sword", "a link between worlds",
+      "tri force heroes", "breath of the wild", "tears of the kingdom", "echoes of wisdom"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-jv-002",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Jeux vidéo",
+    "prompt": "Citez un Pokémon de départ (1ère génération).",
+    "validItems": [
+      "bulbizarre", "herbizarre", "florizarre", "bulbasaur", "ivysaur", "venusaur",
+      "salamèche", "salameche", "reptincel", "dracaufeu", "charmander", "charmeleon",
+      "charizard", "carapuce", "carabaffe", "tortank", "squirtle", "wartortle", "blastoise",
+      "pikachu", "raichu", "mewtwo"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-jv-003",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Citez un jeu de la saga Assassin's Creed.",
+    "validItems": [
+      "assassin's creed", "assassins creed", "assassin's creed 2", "assassins creed 2",
+      "brotherhood", "revelations", "assassin's creed 3", "assassins creed 3",
+      "black flag", "rogue", "unity", "syndicate",
+      "origins", "odyssey", "valhalla",
+      "mirage", "shadows"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-jv-004",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Jeux vidéo",
+    "prompt": "Citez une console de jeux vidéo (salon ou portable, toutes marques).",
+    "validItems": [
+      "nes", "super nintendo", "snes", "nintendo 64", "n64", "gamecube", "wii", "wii u",
+      "switch", "nintendo switch", "game boy", "game boy color", "game boy advance",
+      "nintendo ds", "3ds", "nintendo 3ds", "virtual boy",
+      "playstation", "ps1", "playstation 2", "ps2", "playstation 3", "ps3",
+      "playstation 4", "ps4", "playstation 5", "ps5",
+      "psp", "playstation portable", "ps vita", "vita",
+      "xbox", "xbox 360", "xbox one", "xbox series x", "xbox series s",
+      "sega mega drive", "mega drive", "sega saturn", "dreamcast",
+      "atari 2600", "atari", "colecovision", "intellivision",
+      "neo geo", "turbografx", "jaguar", "3do"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-jv-005",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Citez un studio ou éditeur de jeux vidéo.",
+    "validItems": [
+      "nintendo", "sony", "microsoft", "sega", "ubisoft", "ea", "electronic arts",
+      "activision", "blizzard", "activision blizzard", "rockstar", "rockstar games",
+      "bethesda", "capcom", "konami", "square enix", "bandai namco",
+      "cd projekt red", "cd projekt", "fromsoft", "fromsoftware",
+      "naughty dog", "insomniac games", "guerrilla games", "santa monica studio",
+      "bungie", "valve", "epic games", "2k games", "2k", "take-two",
+      "riot games", "riot", "supercell", "king", "zynga",
+      "atlus", "sega atlus", "koei tecmo", "marvelous",
+      "level-5", "tri-ace", "platinum games", "gearbox"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-jv-006",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Citez un jeu de la saga Final Fantasy (numéroté).",
+    "validItems": [
+      "final fantasy", "final fantasy i", "final fantasy 1",
+      "final fantasy ii", "final fantasy 2", "final fantasy iii", "final fantasy 3",
+      "final fantasy iv", "final fantasy 4", "final fantasy v", "final fantasy 5",
+      "final fantasy vi", "final fantasy 6", "final fantasy vii", "final fantasy 7",
+      "ff7", "final fantasy viii", "final fantasy 8", "ff8",
+      "final fantasy ix", "final fantasy 9", "ff9",
+      "final fantasy x", "final fantasy 10", "ffx",
+      "final fantasy xi", "final fantasy 11",
+      "final fantasy xii", "final fantasy 12",
+      "final fantasy xiii", "final fantasy 13",
+      "final fantasy xiv", "final fantasy 14", "ffxiv",
+      "final fantasy xv", "final fantasy 15",
+      "final fantasy xvi", "final fantasy 16"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-jv-007",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Jeux vidéo",
+    "prompt": "Citez un personnage jouable de Mortal Kombat.",
+    "validItems": [
+      "liu kang", "kung lao", "johnny cage", "cage", "sonya blade", "sonya",
+      "raiden", "kano", "scorpion", "sub-zero", "sub zero", "kitana",
+      "mileena", "reptile", "jax", "jax briggs", "shang tsung", "shang",
+      "goro", "baraka", "shao kahn", "kahn", "noob saibot", "noob",
+      "smoke", "sektor", "cyrax", "jade", "stryker",
+      "sindel", "kabal", "nightwolf", "sheeva",
+      "ermac", "rain", "cassie cage", "cassie",
+      "takeda", "kung jin", "jacqui briggs", "jacqui",
+      "d'vorah", "dvorah", "ferra torr", "tremor",
+      "kenshi", "skarlet", "ermac", "shinnok", "fujin",
+      "cetrion", "kollector", "geras", "kronika",
+      "spawn", "joker", "terminator", "robocop"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-jv-008",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Jeux vidéo",
+    "prompt": "Citez un jeu de la saga principale Pokémon (paire de versions).",
+    "validItems": [
+      "rouge bleu", "rouge et bleu", "jaune", "or argent", "or et argent", "cristal",
+      "rubis saphir", "rubis et saphir", "émeraude", "emeraude", "feu rouge vert feuille",
+      "diamant perle", "diamant et perle", "platine",
+      "or heartgold argent soulsilver", "heartgold soulsilver",
+      "noir blanc", "noir et blanc", "noir 2 blanc 2",
+      "x y", "x et y", "rubis oméga saphir alpha", "rubis omega saphir alpha",
+      "soleil lune", "soleil et lune", "ultra-soleil ultra-lune",
+      "épée bouclier", "epee bouclier", "epée et bouclier",
+      "brillant diamant perle scintillante", "légendes arceus", "legendes arceus",
+      "écarlate violet", "ecarlate et violet"
+    ],
+    "turnSeconds": 15
+  },
+
   {
     "id": "l-gas-001",
     "mode": "list-turns",
     "difficulty": "easy",
     "category": "Gastronomie",
-    "prompt": "Citez un fruit rouge.",
+    "prompt": "Citez un fromage français.",
     "validItems": [
-      "fraise", "framboise", "mûre", "mure", "cerise", "groseille",
-      "cassis", "myrtille", "airelle", "cranberry", "canneberge"
+      "camembert", "brie", "roquefort", "comté", "comte", "gruyère", "gruyere",
+      "reblochon", "munster", "mont d'or", "mont dor", "emmental", "cantal", "livarot",
+      "maroilles", "époisses", "epoisses", "chèvre", "chevre", "chabichou",
+      "crottin de chavignol", "saint-nectaire", "saint nectaire", "morbier", "raclette",
+      "tomme", "tomme de savoie", "bleu d'auvergne", "bleu des causses", "fourme d'ambert",
+      "beaufort", "ossau-iraty", "ossau iraty", "neufchâtel", "neufchatel", "pont-l'évêque",
+      "pont l'eveque", "pont l'évêque", "valençay", "valencay", "selles-sur-cher",
+      "picodon", "rocamadour"
     ],
-    "turnSeconds": 10
+    "turnSeconds": 12
   },
   {
     "id": "l-gas-002",
     "mode": "list-turns",
     "difficulty": "medium",
     "category": "Gastronomie",
-    "prompt": "Citez une épice ou un aromate.",
+    "prompt": "Citez un type de pâtes italiennes.",
     "validItems": [
-      "poivre", "sel", "cumin", "curry", "paprika", "piment",
-      "safran", "cardamome", "cannelle", "gingembre", "muscade", "coriandre",
-      "curcuma", "anis", "badiane", "clou de girofle", "vanille", "fenouil",
-      "thym", "romarin", "origan", "basilic", "persil", "ciboulette", "estragon",
-      "laurier", "sauge", "menthe", "aneth", "marjolaine"
+      "spaghetti", "penne", "rigatoni", "fusilli", "farfalle", "linguine",
+      "tagliatelle", "fettuccine", "lasagne", "lasagna", "gnocchi",
+      "papardelle", "orecchiette", "conchiglie", "paccheri",
+      "bucatini", "ziti", "maccheroni", "macaroni",
+      "cavatappi", "rotini", "gemelli", "ditalini",
+      "tortellini", "ravioli", "cappelletti", "agnolotti",
+      "malfaldine", "trenette", "pici", "strozzapreti",
+      "trofie", "casarecce", "lumache", "candele"
     ],
     "turnSeconds": 12
   },
   {
-    "id": "l-ani-002",
+    "id": "l-gas-003",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "Citez une épice ou herbe aromatique.",
+    "validItems": [
+      "sel", "poivre", "cumin", "curcuma", "paprika", "cannelle", "gingembre",
+      "muscade", "cardamome", "clou de girofle", "anis étoilé", "anis etoile",
+      "safran", "sumac", "coriandre", "persil", "basilic", "thym", "romarin",
+      "origan", "menthe", "estragon", "aneth", "fenouil", "laurier",
+      "cerfeuil", "sarriette", "marjolaine", "livèche", "liveche",
+      "fenugrec", "nigelle", "sésame", "sesame", "pavot",
+      "vanille", "fève tonka", "feve tonka", "piment",
+      "curry", "ras el hanout", "zaatar", "za'atar",
+      "berbere", "harissa", "colombo"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-gas-004",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Gastronomie",
+    "prompt": "Citez un cocktail classique.",
+    "validItems": [
+      "mojito", "margarita", "cosmopolitan", "cosmopolitan", "daiquiri",
+      "pina colada", "piña colada", "negroni", "aperol spritz", "spritz",
+      "old fashioned", "manhattan", "dry martini", "martini",
+      "whisky sour", "whiskey sour", "amaretto sour", "sidecar",
+      "caipirinha", "caipiroska", "moscow mule", "dark and stormy",
+      "gimlet", "aviation", "clover club", "bee's knees",
+      "french 75", "kir royal", "kir", "bellini", "rossini",
+      "tequila sunrise", "sex on the beach", "blue lagoon",
+      "mai tai", "zombie", "singapore sling", "long island iced tea",
+      "gin tonic", "gin & tonic", "campari soda",
+      "americano", "white lady", "stinger", "rusty nail"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-gas-005",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "Citez un légume du potager.",
+    "validItems": [
+      "tomate", "carotte", "pomme de terre", "courgette", "aubergine", "poivron",
+      "haricot vert", "haricot", "petit pois", "pois", "concombre", "salade",
+      "laitue", "épinard", "epinard", "chou", "chou-fleur", "chou fleur",
+      "brocoli", "céleri", "celeri", "poireau", "oignon", "ail", "échalote", "echalote",
+      "radis", "betterave", "navet", "panais", "artichaut", "asperge",
+      "courge", "potiron", "butternut", "maïs", "mais", "fenouil",
+      "blette", "oseille", "mâche", "mache", "endive", "chicorée", "chicoree"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-gas-006",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "Citez un pain ou une viennoiserie française.",
+    "validItems": [
+      "baguette", "croissant", "pain au chocolat", "chocolatine",
+      "pain de campagne", "pain complet", "pain aux céréales",
+      "brioche", "pain brioché", "pain viennois",
+      "bâtard", "batard", "ficelle", "flûte", "flute",
+      "miche", "épi", "epi", "couronne",
+      "pain de mie", "pain de seigle", "pain au levain",
+      "fougasse", "focaccia", "pain basque", "pain brié", "pain brie",
+      "pain polka", "pain chapeau",
+      "pain rustique", "pain fermier",
+      "escargot", "pain aux raisins", "pain suisse",
+      "chausson aux pommes", "chausson", "beignet", "donut",
+      "éclair", "eclair", "chouquette", "religieuse",
+      "madeleine", "financier", "palmier", "sablé", "sable"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-gas-007",
+    "mode": "list-turns",
+    "difficulty": "hard",
+    "category": "Gastronomie",
+    "prompt": "Citez un fromage italien.",
+    "validItems": [
+      "parmesan", "parmigiano reggiano", "grana padano",
+      "mozzarella", "burrata", "ricotta", "mascarpone",
+      "gorgonzola", "pecorino", "provolone", "asiago",
+      "taleggio", "fontina", "scamorza", "caciocavallo",
+      "bitto", "bra", "castelmagno", "montasio",
+      "stracchino", "crescenza", "robiola", "quartirolo",
+      "fiore sardo", "canestrato pugliese", "cacioricotta",
+      "caprino", "primo sale"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-gas-008",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Gastronomie",
+    "prompt": "Citez un type de café ou mode de préparation.",
+    "validItems": [
+      "expresso", "espresso", "americano", "café allongé", "café filtre", "café noir",
+      "cappuccino", "latte", "café latte", "flat white", "macchiato",
+      "cortado", "ristretto", "lungo", "café noisette", "noisette",
+      "café viennois", "café crème", "café glacé", "cold brew",
+      "café turc", "café grec", "café irlandais", "irish coffee",
+      "affogato", "café au lait", "café frappé", "frappe",
+      "café bombón", "bombon", "café de olla"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-gas-009",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Gastronomie",
+    "prompt": "Citez un fruit commun.",
+    "validItems": [
+      "pomme", "poire", "banane", "orange", "citron", "fraise", "framboise",
+      "cerise", "pêche", "peche", "abricot", "prune", "raisin", "melon",
+      "pastèque", "pasteque", "ananas", "mangue", "papaye", "kiwi",
+      "grenade", "figue", "datte", "litchi", "avocat",
+      "clémentine", "clementine", "pamplemousse", "mandarine",
+      "myrtille", "mûre", "mure", "groseille", "cassis",
+      "mirabelle", "quetsche", "nectarine", "brugnon",
+      "fruit de la passion", "goyave", "carambole"
+    ],
+    "turnSeconds": 12
+  },
+
+  {
+    "id": "l-nat-001",
     "mode": "list-turns",
     "difficulty": "medium",
     "category": "Animaux",
-    "prompt": "Citez un primate.",
+    "prompt": "Citez un animal du zodiaque chinois.",
     "validItems": [
-      "gorille", "chimpanzé", "chimpanze", "bonobo", "orang-outan", "orang outan",
-      "gibbon", "macaque", "babouin", "mandrill", "ouistiti", "tamarin",
-      "capucin", "lémurien", "lemurien", "tarsier", "homme", "humain"
+      "rat", "bœuf", "boeuf", "tigre", "lapin", "lièvre", "lievre", "dragon",
+      "serpent", "cheval", "chèvre", "chevre", "mouton", "singe", "coq", "chien", "cochon",
+      "sanglier"
     ],
     "turnSeconds": 10
   },
   {
-    "id": "l-art-001",
+    "id": "l-nat-002",
     "mode": "list-turns",
-    "difficulty": "hard",
-    "category": "Arts",
-    "prompt": "Citez une œuvre de Picasso.",
+    "difficulty": "medium",
+    "category": "Animaux",
+    "prompt": "Citez un primate (singe ou grand singe).",
     "validItems": [
-      "guernica", "les demoiselles d'avignon", "la vie",
-      "le vieux guitariste", "femme en pleurs", "la colombe", "dora maar au chat",
-      "jeune fille à la corbeille fleurie", "les trois musiciens", "portrait de dora maar"
+      "chimpanzé", "chimpanze", "bonobo", "gorille", "orang-outan", "orang outan",
+      "gibbon", "siamang", "macaque", "babouin", "mandrill",
+      "tamarin", "ouistiti", "ouistiti", "marmouset",
+      "capucin", "singe araignée", "singe araignee",
+      "singe hurleur", "singe laineux", "singe de nuit",
+      "colobus", "langur", "nasique", "proboscis",
+      "gelada", "théropithèque", "theropithecus",
+      "lemur", "lémurien", "lemurien", "indri", "aye-aye",
+      "tarsier", "loris", "galago"
+    ],
+    "turnSeconds": 12
+  },
+
+  {
+    "id": "l-pop-001",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Pop culture",
+    "prompt": "Citez un personnage de Dragon Ball Z.",
+    "validItems": [
+      "goku", "songoku", "son goku", "vegeta", "piccolo", "gohan",
+      "krillin", "crilin", "krilin", "trunks", "gotenks", "goten",
+      "bulma", "chi-chi", "chichi", "cell", "freezer", "freeza", "frieza",
+      "majin buu", "buu", "androïde 17", "androide 17", "androïde 18", "androide 18",
+      "androïde 16", "androide 16", "yamcha", "tenshinhan", "tien",
+      "chaozu", "nappa", "raditz", "broly", "zarbon", "dodoria",
+      "ginyu", "recoome", "burter", "jeice", "guldo",
+      "krilin", "tao pai pai", "mr satan", "videl"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-pop-002",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Pop culture",
+    "prompt": "Citez un personnage de Naruto.",
+    "validItems": [
+      "naruto", "sasuke", "sakura", "kakashi", "rock lee", "neji", "hinata",
+      "tenten", "gaara", "temari", "kankuro", "shino", "kiba", "shikamaru",
+      "ino", "choji", "orochimaru", "jiraiya", "tsunade", "itachi",
+      "kisame", "pain", "nagato", "konan", "deidara", "sasori",
+      "tobi", "obito", "minato", "kushina", "might guy",
+      "iruka", "asuma", "kurenai", "anko", "zabuza", "haku",
+      "suigetsu", "karin", "jugo", "kabuto", "sai",
+      "danzo", "yamato", "killer bee", "darui", "gaara"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-pop-003",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Pop culture",
+    "prompt": "Citez un personnage de One Piece.",
+    "validItems": [
+      "monkey d. luffy", "luffy", "roronoa zoro", "zoro", "nami", "usopp",
+      "sanji", "tony tony chopper", "chopper", "nico robin", "robin",
+      "franky", "brook", "jinbe",
+      "shanks", "barbe noire", "barbe blanche", "whitebeard",
+      "portgas d. ace", "ace", "sabo",
+      "trafalgar law", "law", "dracule mihawk", "mihawk",
+      "boa hancock", "hancock", "crocodile", "don quichotte doflamingo", "doflamingo",
+      "big mom", "charlotte linlin", "kaido", "admiral akainu",
+      "garp", "rayleigh", "dragon", "monkey d. dragon"
+    ],
+    "turnSeconds": 15
+  },
+  {
+    "id": "l-pop-004",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Pop culture",
+    "prompt": "Citez un superhéros Marvel.",
+    "validItems": [
+      "spider-man", "spiderman", "iron man", "captain america", "thor", "hulk",
+      "black widow", "hawkeye", "ant-man", "wasp", "doctor strange", "black panther",
+      "captain marvel", "scarlet witch", "vision", "falcon", "winter soldier",
+      "star-lord", "gamora", "drax", "rocket raccoon", "groot", "nebula",
+      "daredevil", "jessica jones", "luke cage", "iron fist", "punisher",
+      "deadpool", "wolverine", "cyclops", "jean grey", "magneto", "storm",
+      "colossus", "nightcrawler", "gambit", "rogue", "iceman", "beast",
+      "silver surfer", "fantastique", "human torch", "thing", "mr fantastic"
     ],
     "turnSeconds": 12
   },
   {
-    "id": "l-mus-003",
+    "id": "l-pop-005",
     "mode": "list-turns",
     "difficulty": "easy",
-    "category": "Musique",
-    "prompt": "Citez une note de musique.",
+    "category": "Pop culture",
+    "prompt": "Citez un superhéros DC Comics.",
     "validItems": [
-      "do", "ré", "re", "mi", "fa", "sol", "la", "si"
+      "batman", "superman", "wonder woman", "aquaman", "flash", "green lantern",
+      "cyborg", "shazam", "green arrow", "black canary", "hawkman",
+      "hawkgirl", "martian manhunter", "zatanna", "constantine",
+      "nightwing", "robin", "batgirl", "red hood", "red robin",
+      "supergirl", "superwoman", "power girl", "steel",
+      "blue beetle", "booster gold", "atom", "elongated man",
+      "plastic man", "firestorm", "captain cold", "captain atom"
     ],
-    "turnSeconds": 8
+    "turnSeconds": 12
   },
   {
-    "id": "l-div-001",
-    "mode": "list-turns",
-    "difficulty": "medium",
-    "category": "Divers",
-    "prompt": "Citez un mois de l'année.",
-    "validItems": [
-      "janvier", "février", "fevrier", "mars", "avril", "mai", "juin",
-      "juillet", "août", "aout", "septembre", "octobre", "novembre", "décembre", "decembre"
-    ],
-    "turnSeconds": 10
-  },
-  {
-    "id": "l-sci-003",
-    "mode": "list-turns",
-    "difficulty": "medium",
-    "category": "Sciences",
-    "prompt": "Citez un gaz rare (noble).",
-    "validItems": [
-      "hélium", "helium", "néon", "neon", "argon", "krypton", "xénon", "xenon", "radon"
-    ],
-    "turnSeconds": 10
-  },
-  {
-    "id": "l-tec-002",
+    "id": "l-pop-006",
     "mode": "list-turns",
     "difficulty": "easy",
-    "category": "Technologie",
-    "prompt": "Citez une marque de téléphone.",
+    "category": "Pop culture",
+    "prompt": "Citez une application ou plateforme populaire sur smartphone.",
     "validItems": [
-      "apple", "iphone", "samsung", "google", "pixel", "huawei", "xiaomi",
-      "oppo", "oneplus", "sony", "nokia", "motorola", "asus", "lg",
-      "honor", "realme", "vivo", "fairphone", "wiko"
+      "instagram", "tiktok", "snapchat", "twitter", "x", "facebook", "whatsapp",
+      "telegram", "discord", "youtube", "netflix", "spotify", "twitch",
+      "google maps", "google", "gmail", "chrome", "safari",
+      "tinder", "bumble", "hinge", "duolingo", "shazam",
+      "uber", "bolt", "free now", "lyft", "deliveroo", "uber eats",
+      "amazon", "ebay", "vinted", "leboncoin", "airbnb", "booking",
+      "paypal", "revolut", "n26", "wise", "monzo",
+      "linkedin", "pinterest", "reddit", "tumblr"
     ],
-    "turnSeconds": 10
+    "turnSeconds": 12
   },
   {
-    "id": "l-spo-003",
+    "id": "l-pop-007",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Pop culture",
+    "prompt": "Citez une langue comptant plus de 50 millions de locuteurs natifs.",
+    "validItems": [
+      "mandarin", "chinois", "espagnol", "anglais", "hindi", "arabe", "portugais",
+      "bengali", "russe", "japonais", "coréen", "français", "punjabi", "panjabi",
+      "allemand", "javanais", "télougou", "telougou", "marathi", "tamoul", "tamil",
+      "ourdou", "urdu", "turc", "vietnamien", "polonais", "ukrainien",
+      "cantonais", "wu", "min nan", "hakka", "thai", "thaï",
+      "persan", "farsi", "dari", "pashto", "amharique"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-pop-008",
+    "mode": "list-turns",
+    "difficulty": "easy",
+    "category": "Pop culture",
+    "prompt": "Citez une princesse Disney.",
+    "validItems": [
+      "blanche-neige", "blanche neige", "cendrillon", "aurore", "belle",
+      "ariel", "jasmine", "pocahontas", "mulan", "tiana",
+      "raiponce", "mérida", "merida", "anna", "elsa",
+      "moana", "vaiana", "raya", "wish asha", "asha"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-pop-009",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Pop culture",
+    "prompt": "Citez un personnage de Toy Story.",
+    "validItems": [
+      "woody", "buzz l'éclair", "buzz leclair", "buzz lightyear", "buzz",
+      "jessie", "rex", "hamm", "slinky", "mr. patate", "mr patate",
+      "mrs patate", "three eyed aliens", "lotso", "ken",
+      "barbie", "bullseye", "forky", "gabby gabby", "gabby",
+      "bo peep", "bo", "sarge", "les soldats verts",
+      "mike", "emperor zurg", "zurg"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-pop-010",
     "mode": "list-turns",
     "difficulty": "hard",
-    "category": "Sport",
-    "prompt": "Citez une ville ayant accueilli les JO d'été.",
+    "category": "Pop culture",
+    "prompt": "Citez une marque de luxe française.",
     "validItems": [
-      "athènes", "athenes", "paris", "saint-louis", "londres", "stockholm",
-      "anvers", "amsterdam", "los angeles", "berlin", "helsinki", "melbourne",
-      "rome", "tokyo", "mexico", "munich", "montréal", "montreal",
-      "moscou", "séoul", "seoul", "barcelone", "atlanta", "sydney", "pékin", "pekin",
-      "beijing", "rio", "rio de janeiro"
+      "louis vuitton", "chanel", "hermès", "hermes", "dior", "christian dior",
+      "givenchy", "balenciaga", "saint laurent", "yves saint laurent", "ysl",
+      "celine", "céline", "loewe", "fendi", "gucci",
+      "cartier", "van cleef", "boucheron", "chaumet", "bulgari", "bvlgari",
+      "lancôme", "lancome", "yves rocher", "clarins", "biotherm",
+      "parfums christian dior", "chanel parfums",
+      "krug", "dom pérignon", "dom perignon", "moët", "moet",
+      "veuve clicquot", "bollinger", "roederer", "perrier-jouët",
+      "château pétrus", "chateau petrus", "romanée-conti", "romanee-conti",
+      "sèvres", "sevres", "christofle"
+    ],
+    "turnSeconds": 12
+  },
+  {
+    "id": "l-pop-011",
+    "mode": "list-turns",
+    "difficulty": "medium",
+    "category": "Pop culture",
+    "prompt": "Citez une série animée populaire (anime japonais ou dessin animé).",
+    "validItems": [
+      "dragon ball", "dragon ball z", "naruto", "one piece", "bleach",
+      "attack on titan", "l'attaque des titans", "demon slayer", "jujutsu kaisen",
+      "my hero academia", "fullmetal alchemist", "death note",
+      "hunter x hunter", "one punch man", "sword art online",
+      "pokemon", "pokémon", "digimon", "yu-gi-oh", "yu gi oh",
+      "fairy tail", "black clover", "chainsaw man", "spy x family",
+      "mob psycho 100", "avatar", "the simpsons", "family guy", "american dad",
+      "south park", "futurama", "bob's burgers", "archer",
+      "rick and morty", "bojack horseman", "big mouth"
     ],
     "turnSeconds": 12
   }

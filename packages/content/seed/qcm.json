@@ -1,0 +1,300 @@
+[
+  {
+    "id": "qcm-hist-001",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "En quelle année a eu lieu la prise de la Bastille ?",
+    "answer": "1789",
+    "distractors": ["1776", "1799", "1815"],
+    "tags": ["revolution"]
+  },
+  {
+    "id": "qcm-hist-002",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel traité met fin à la Première Guerre mondiale en 1919 ?",
+    "answer": "Traité de Versailles",
+    "distractors": ["Traité de Trianon", "Traité de Saint-Germain", "Traité de Sèvres"]
+  },
+  {
+    "id": "qcm-hist-003",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Qui était empereur des Français lors de la bataille d'Austerlitz ?",
+    "answer": "Napoléon Ier",
+    "distractors": ["Louis XVI", "Napoléon III", "Louis XVIII"]
+  },
+  {
+    "id": "qcm-hist-004",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Quel pharaon a fait bâtir la plus grande pyramide de Gizeh ?",
+    "answer": "Khéops",
+    "distractors": ["Khéphren", "Mykérinos", "Ramsès II"]
+  },
+  {
+    "id": "qcm-hist-005",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "En quelle année la chute du mur de Berlin a-t-elle eu lieu ?",
+    "answer": "1989",
+    "distractors": ["1987", "1990", "1991"]
+  },
+  {
+    "id": "qcm-geo-001",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle est la capitale de l'Australie ?",
+    "answer": "Canberra",
+    "distractors": ["Sydney", "Melbourne", "Perth"]
+  },
+  {
+    "id": "qcm-geo-002",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quel est le plus long fleuve d'Afrique ?",
+    "answer": "Nil",
+    "distractors": ["Congo", "Niger", "Zambèze"]
+  },
+  {
+    "id": "qcm-geo-003",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quelle mer sépare l'Italie de la côte est des Balkans ?",
+    "answer": "Mer Adriatique",
+    "distractors": ["Mer Égée", "Mer Ionienne", "Mer Tyrrhénienne"]
+  },
+  {
+    "id": "qcm-geo-004",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays a la frontière terrestre la plus longue au monde ?",
+    "answer": "Chine",
+    "distractors": ["Russie", "Brésil", "Inde"]
+  },
+  {
+    "id": "qcm-geo-005",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Dans quel pays se trouve le lac Titicaca (partagé à moitié) ?",
+    "answer": "Bolivie",
+    "distractors": ["Équateur", "Chili", "Brésil"]
+  },
+  {
+    "id": "qcm-sci-001",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quel est le symbole chimique de l'or ?",
+    "answer": "Au",
+    "distractors": ["Ag", "Or", "Go"]
+  },
+  {
+    "id": "qcm-sci-002",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien de chromosomes possède une cellule humaine normale ?",
+    "answer": "46",
+    "distractors": ["23", "48", "44"]
+  },
+  {
+    "id": "qcm-sci-003",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quelle particule élémentaire a été découverte au CERN en 2012 ?",
+    "answer": "Boson de Higgs",
+    "distractors": ["Quark top", "Neutrino tau", "Graviton"]
+  },
+  {
+    "id": "qcm-sci-004",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Qui a formulé la théorie de la relativité générale en 1915 ?",
+    "answer": "Albert Einstein",
+    "distractors": ["Isaac Newton", "Niels Bohr", "Max Planck"]
+  },
+  {
+    "id": "qcm-sci-005",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Quel est l'élément chimique le plus abondant dans l'univers ?",
+    "answer": "Hydrogène",
+    "distractors": ["Hélium", "Oxygène", "Carbone"]
+  },
+  {
+    "id": "qcm-cin-001",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Cinéma",
+    "prompt": "Qui a réalisé le film « Pulp Fiction » ?",
+    "answer": "Quentin Tarantino",
+    "distractors": ["Martin Scorsese", "Ridley Scott", "Spike Lee"]
+  },
+  {
+    "id": "qcm-cin-002",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Quel film a remporté l'Oscar du meilleur film en 2020 ?",
+    "answer": "Parasite",
+    "distractors": ["1917", "Joker", "Once Upon a Time in Hollywood"]
+  },
+  {
+    "id": "qcm-cin-003",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Cinéma",
+    "prompt": "Dans la saga Star Wars, quel est le vrai nom de Dark Vador ?",
+    "answer": "Anakin Skywalker",
+    "distractors": ["Luke Skywalker", "Obi-Wan Kenobi", "Han Solo"]
+  },
+  {
+    "id": "qcm-cin-004",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Cinéma",
+    "prompt": "Quel acteur incarne le Joker dans « The Dark Knight » (2008) ?",
+    "answer": "Heath Ledger",
+    "distractors": ["Joaquin Phoenix", "Jared Leto", "Jack Nicholson"]
+  },
+  {
+    "id": "qcm-litt-001",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Littérature",
+    "prompt": "Qui a écrit « Les Misérables » ?",
+    "answer": "Victor Hugo",
+    "distractors": ["Émile Zola", "Honoré de Balzac", "Gustave Flaubert"]
+  },
+  {
+    "id": "qcm-litt-002",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Littérature",
+    "prompt": "Dans quel roman de Proust trouve-t-on la fameuse madeleine ?",
+    "answer": "Du côté de chez Swann",
+    "distractors": ["Le Temps retrouvé", "Sodome et Gomorrhe", "La Prisonnière"]
+  },
+  {
+    "id": "qcm-litt-003",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Littérature",
+    "prompt": "Qui a écrit « Cent ans de solitude » ?",
+    "answer": "Gabriel García Márquez",
+    "distractors": ["Mario Vargas Llosa", "Jorge Luis Borges", "Pablo Neruda"]
+  },
+  {
+    "id": "qcm-mus-001",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Musique",
+    "prompt": "Quel groupe a composé « Bohemian Rhapsody » ?",
+    "answer": "Queen",
+    "distractors": ["The Beatles", "Led Zeppelin", "Pink Floyd"]
+  },
+  {
+    "id": "qcm-mus-002",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Musique",
+    "prompt": "De quelle nationalité était le compositeur Frédéric Chopin ?",
+    "answer": "Polonaise",
+    "distractors": ["Française", "Allemande", "Autrichienne"]
+  },
+  {
+    "id": "qcm-mus-003",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Musique",
+    "prompt": "Combien de symphonies Beethoven a-t-il composées ?",
+    "answer": "9",
+    "distractors": ["7", "10", "12"]
+  },
+  {
+    "id": "qcm-sport-001",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sport",
+    "prompt": "Dans quel sport évolue Rafael Nadal ?",
+    "answer": "Tennis",
+    "distractors": ["Football", "Golf", "Basketball"]
+  },
+  {
+    "id": "qcm-sport-002",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sport",
+    "prompt": "Quel pays a remporté la Coupe du Monde de football en 2018 ?",
+    "answer": "France",
+    "distractors": ["Croatie", "Allemagne", "Brésil"]
+  },
+  {
+    "id": "qcm-sport-003",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sport",
+    "prompt": "Combien de Grands Chelems Roger Federer a-t-il remportés en simple ?",
+    "answer": "20",
+    "distractors": ["17", "22", "24"]
+  },
+  {
+    "id": "qcm-art-001",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Art",
+    "prompt": "Dans quel musée se trouve « La Joconde » ?",
+    "answer": "Musée du Louvre",
+    "distractors": ["Musée d'Orsay", "Galerie des Offices", "British Museum"]
+  },
+  {
+    "id": "qcm-art-002",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Art",
+    "prompt": "Qui a peint « Le Cri » (1893) ?",
+    "answer": "Edvard Munch",
+    "distractors": ["Vincent van Gogh", "Gustav Klimt", "Egon Schiele"]
+  },
+  {
+    "id": "qcm-tech-001",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Tech",
+    "prompt": "Quelle entreprise a créé le système d'exploitation Windows ?",
+    "answer": "Microsoft",
+    "distractors": ["Apple", "Google", "IBM"]
+  },
+  {
+    "id": "qcm-tech-002",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Tech",
+    "prompt": "En quelle année le premier iPhone a-t-il été présenté ?",
+    "answer": "2007",
+    "distractors": ["2005", "2008", "2010"]
+  },
+  {
+    "id": "qcm-tech-003",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Tech",
+    "prompt": "Qui est considéré comme le père du World Wide Web ?",
+    "answer": "Tim Berners-Lee",
+    "distractors": ["Vint Cerf", "Linus Torvalds", "Bill Gates"]
+  }
+]

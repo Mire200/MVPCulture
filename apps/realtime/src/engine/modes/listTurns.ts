@@ -129,6 +129,7 @@ export const listTurnsMode: GameMode = {
     const turn: TurnState = {
       currentPlayerId: firstId,
       endsAt: ctx.now() + (q.turnSeconds ?? 15) * 1000,
+      order,
       eliminatedOrder: [],
       usedItems: [],
       correctContributions: {},

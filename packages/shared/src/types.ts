@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export const GameModeIdSchema = z.enum([
   'classic',
+  'qcm',
   'estimation',
   'list-turns',
   // Prévus pour phase 2 :
@@ -10,6 +11,8 @@ export const GameModeIdSchema = z.enum([
   'map',
   'chronology',
   'guess-who',
+  'imposter',
+  'codenames',
 ]);
 export type GameModeId = z.infer<typeof GameModeIdSchema>;
 
@@ -23,6 +26,10 @@ export const AvatarSchema = z.object({
 });
 export type Avatar = z.infer<typeof AvatarSchema>;
 
+/** Équipe de Codenames. Choisi dans le lobby, non modifiable en cours de partie. */
+export const CodenamesTeamSchema = z.enum(['red', 'blue', 'spectator']);
+export type CodenamesTeam = z.infer<typeof CodenamesTeamSchema>;
+
 export const PlayerSchema = z.object({
   id: z.string(),
   nickname: z.string().min(1).max(20),
@@ -31,6 +38,10 @@ export const PlayerSchema = z.object({
   connected: z.boolean(),
   score: z.number().int().default(0),
   joinedAt: z.number(),
+  /** Équipe choisie pour Codenames (uniquement dans le lobby). */
+  cnTeam: CodenamesTeamSchema.optional(),
+  /** Le joueur se propose comme spymaster (uniquement Codenames / lobby). */
+  cnWantsSpymaster: z.boolean().optional(),
 });
 export type Player = z.infer<typeof PlayerSchema>;
 
@@ -41,6 +52,7 @@ export const BaseQuestionSchema = z.object({
   category: z.string(),
   prompt: z.string(),
   source: z.string().optional(),
+  tags: z.array(z.string()).default([]).optional(),
 });
 
 export const ClassicQuestionSchema = BaseQuestionSchema.extend({
@@ -49,6 +61,19 @@ export const ClassicQuestionSchema = BaseQuestionSchema.extend({
   aliases: z.array(z.string()).default([]),
 });
 export type ClassicQuestion = z.infer<typeof ClassicQuestionSchema>;
+
+/**
+ * QCM : question à choix multiples. L'auteur donne `answer` (la bonne réponse
+ * canonique) et `distractors` (les mauvaises propositions). Le backend
+ * construit la liste finale `choices` en mélangeant le tout de façon
+ * déterministe par manche, et expose `choices` dans la `PublicQuestion`.
+ */
+export const QcmQuestionSchema = BaseQuestionSchema.extend({
+  mode: z.literal('qcm'),
+  answer: z.string().min(1),
+  distractors: z.array(z.string().min(1)).min(1).max(6),
+});
+export type QcmQuestion = z.infer<typeof QcmQuestionSchema>;
 
 export const EstimationQuestionSchema = BaseQuestionSchema.extend({
   mode: z.literal('estimation'),
@@ -108,8 +133,22 @@ export const GuessWhoQuestionSchema = BaseQuestionSchema.extend({
 });
 export type GuessWhoQuestion = z.infer<typeof GuessWhoQuestionSchema>;
 
+export const ImposterQuestionSchema = BaseQuestionSchema.extend({
+  mode: z.literal('imposter'),
+  civilianWord: z.string().min(1),
+  imposterWord: z.string().min(1),
+  aliases: z.array(z.string()).default([]),
+});
+export type ImposterQuestion = z.infer<typeof ImposterQuestionSchema>;
+
+export const CodenamesQuestionSchema = BaseQuestionSchema.extend({
+  mode: z.literal('codenames'),
+});
+export type CodenamesQuestion = z.infer<typeof CodenamesQuestionSchema>;
+
 export const QuestionSchema = z.discriminatedUnion('mode', [
   ClassicQuestionSchema,
+  QcmQuestionSchema,
   EstimationQuestionSchema,
   ListTurnsQuestionSchema,
   HotPotatoQuestionSchema,
@@ -117,6 +156,8 @@ export const QuestionSchema = z.discriminatedUnion('mode', [
   MapQuestionSchema,
   ChronologyQuestionSchema,
   GuessWhoQuestionSchema,
+  ImposterQuestionSchema,
+  CodenamesQuestionSchema,
 ]);
 export type Question = z.infer<typeof QuestionSchema>;
 
@@ -148,6 +189,10 @@ export interface RoundStateBase {
   phase: RoomPhase;
   endsAt?: number;
   currentPlayerId?: string;
+  /** Ordre des tours pour le mode `list-turns` (tous les joueurs, vivants + éliminés). */
+  turnOrder?: string[];
+  /** IDs éliminés dans l'ordre pour le mode `list-turns`. */
+  turnEliminated?: string[];
   hpPhase?: 'bid' | 'answer';
   hpProgress?: Record<string, { bid?: number; count: number; done: boolean }>;
   gwPhase?: 'select' | 'play';
@@ -155,7 +200,60 @@ export interface RoundStateBase {
   gwEliminated?: string[];
   gwRevealed?: Record<string, string>;
   gwCurrentGrid?: string[];
-  gwWinnerId?: string;
+  /**
+   * Historique public des guesses du round, révélé **uniquement à la fin de
+   * chaque tour** : les tentatives du tour courant restent privées (seul le
+   * guesser connaît son propre résultat via l'ack) pour ne pas influencer les
+   * autres joueurs qui voudraient eux aussi tenter. Au flush :
+   * - les guesses corrects éliminent leur cible (et révèlent son avatar)
+   * - les guesses ratés n'ont aucun effet hors de la grille correspondante
+   *   (le guesser peut encore tenter sur les autres grilles).
+   */
+  gwGuesses?: Array<{ playerId: string; targetId: string; avatarSrc: string; correct: boolean }>;
+  /** Sous-phase du mode imposteur. */
+  imPhase?: 'clue-1' | 'clue-2' | 'vote' | 'guess' | 'done';
+  /** Indices soumis par tour, par joueur. `[tour0, tour1]`. */
+  imClues?: Array<Record<string, string>>;
+  /** IDs des joueurs ayant voté (cibles masquées jusqu'à la révélation). */
+  imVoters?: string[];
+  /** Révélé uniquement au reveal : id de l'imposteur. */
+  imImposterId?: string;
+  /** Révélé uniquement au reveal : imposteur démasqué ? */
+  imDemasque?: boolean;
+  /** Révélé uniquement au reveal : devinette de l'imposteur (si applicable). */
+  imGuess?: string;
+  /** Révélé uniquement au reveal : devinette correcte ? */
+  imGuessCorrect?: boolean;
+  /** Révélé uniquement au reveal : tally des votes `{targetId: count}`. */
+  imVoteTally?: Record<string, number>;
+
+  /** Sous-phase Codenames. */
+  cnPhase?: 'clue' | 'guess' | 'done';
+  /** Grille 5x5. `color` n'est renseigné que sur les tuiles révélées publiquement. */
+  cnGrid?: Array<{ word: string; color?: 'red' | 'blue' | 'neutral' | 'assassin' }>;
+  /** Équipe active (celle qui doit donner l'indice ou deviner). */
+  cnCurrentTeam?: 'red' | 'blue';
+  /** IDs des spymasters des deux équipes. */
+  cnSpymasters?: { red: string; blue: string };
+  /** Indice courant en cours de phase guess. */
+  cnClue?: { word: string; count: number; byTeam: 'red' | 'blue' };
+  /** Tentatives restantes dans la phase guess courante. */
+  cnGuessesLeft?: number;
+  /** Nombre de mots encore à trouver par équipe. */
+  cnRemaining?: { red: number; blue: number };
+  /** Gagnant final (rempli quand `cnPhase === 'done'`). */
+  cnWinner?: 'red' | 'blue';
+  /** Raison de la fin de partie. */
+  cnEndReason?: 'assassin' | 'allFound' | 'forfeit';
+  /** Historique des indices donnés, par ordre chronologique. */
+  cnClueHistory?: Array<{ word: string; count: number; byTeam: 'red' | 'blue' }>;
+
+  /** Speed-elim : nombre de joueurs à devoir trouver pour clore la manche. */
+  seTargetFinders?: number;
+  /** Speed-elim : IDs des joueurs ayant trouvé, dans l'ordre d'arrivée. */
+  seFinders?: string[];
+  /** Speed-elim : nombre total de tentatives envoyées par joueur (pour l'UI). */
+  seAttemptCount?: Record<string, number>;
 }
 
 export interface PublicQuestion {
@@ -171,6 +269,8 @@ export interface PublicQuestion {
   timerSeconds?: number;
   mapHint?: { centerLat?: number; centerLng?: number; zoom?: number };
   events?: Array<{ id: string; label: string }>;
+  /** Choix publics pour le mode QCM (ordre déjà mélangé côté serveur). */
+  choices?: string[];
 }
 
 export interface PlayerAnswer {

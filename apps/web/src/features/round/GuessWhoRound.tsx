@@ -1,7 +1,15 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Crown, SkipForward, CircleOff, HelpCircle } from 'lucide-react';
+import {
+  Check,
+  SkipForward,
+  CircleOff,
+  HelpCircle,
+  Target,
+  X,
+  Sparkles,
+} from 'lucide-react';
 import { AVATAR_POOL } from '@mvpc/shared';
 import type { Player } from '@mvpc/shared';
 import { getSocket } from '@/lib/socket';
@@ -15,64 +23,6 @@ function GwXIcon() {
       <line x1="4" y1="4" x2="20" y2="20" />
       <line x1="20" y1="4" x2="4" y2="20" />
     </svg>
-  );
-}
-
-/* ─── Confetti for the winner screen ─── */
-function GwConfetti({ active }: { active: boolean }) {
-  const [particles, setParticles] = useState<
-    Array<{
-      id: number;
-      left: number;
-      color: string;
-      duration: number;
-      delay: number;
-      dx: number;
-      rot: number;
-      size: number;
-    }>
-  >([]);
-
-  useEffect(() => {
-    if (!active) return;
-    const colors = ['#a3e635', '#22d3ee', '#f43f5e', '#fbbf24', '#a855f7'];
-    const ps = Array.from({ length: 80 }, (_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      color: colors[Math.floor(Math.random() * colors.length)]!,
-      duration: 1.6 + Math.random() * 1.6,
-      delay: Math.random() * 0.8,
-      dx: (Math.random() - 0.5) * 220,
-      rot: (Math.random() - 0.5) * 720,
-      size: 6 + Math.random() * 8,
-    }));
-    setParticles(ps);
-    const t = setTimeout(() => setParticles([]), 4200);
-    return () => clearTimeout(t);
-  }, [active]);
-
-  return (
-    <>
-      {particles.map((p) => (
-        <div
-          key={p.id}
-          className="gw-confetti-particle"
-          style={
-            {
-              left: `${p.left}vw`,
-              top: '-20px',
-              width: p.size,
-              height: p.size,
-              background: p.color,
-              animationDuration: `${p.duration}s`,
-              animationDelay: `${p.delay}s`,
-              ['--gw-dx' as string]: `${p.dx}px`,
-              ['--gw-rot' as string]: `${p.rot}deg`,
-            } as React.CSSProperties
-          }
-        />
-      ))}
-    </>
   );
 }
 
@@ -106,9 +56,10 @@ export function GuessWhoRound() {
       currentGrid={round.gwCurrentGrid ?? []}
       eliminated={round.gwEliminated ?? []}
       revealed={round.gwRevealed ?? {}}
-      winnerId={round.gwWinnerId}
       players={snapshot.players}
       masks={masks}
+      guesses={round.gwGuesses ?? []}
+      roundIndex={round.roundIndex}
     />
   );
 }
@@ -249,6 +200,8 @@ function SelectPhase({
 }
 
 /* ─── Phase 2 — play ─── */
+type MyGuessResult = { targetId: string; avatarSrc: string; correct: boolean };
+
 function PlayPhase({
   myId,
   mySecret,
@@ -256,9 +209,10 @@ function PlayPhase({
   currentGrid,
   eliminated,
   revealed,
-  winnerId,
   players,
   masks,
+  guesses,
+  roundIndex,
 }: {
   myId: string | null;
   mySecret: string | null;
@@ -266,9 +220,10 @@ function PlayPhase({
   currentGrid: string[];
   eliminated: string[];
   revealed: Record<string, string>;
-  winnerId?: string;
   players: Player[];
   masks: Record<string, Set<string>>;
+  guesses: Array<{ playerId: string; targetId: string; avatarSrc: string; correct: boolean }>;
+  roundIndex: number;
 }) {
   const target = useMemo(
     () => players.find((p) => p.id === currentTargetId),
@@ -282,8 +237,34 @@ function PlayPhase({
     return masks[currentTargetId] ?? new Set<string>();
   }, [masks, currentTargetId]);
 
+  // Bans locaux : cibles que j'ai déjà tenté de guess (correct ou raté).
+  // Reset au début d'une nouvelle manche.
+  const [myBannedTargets, setMyBannedTargets] = useState<Set<string>>(() => new Set());
+  const [myGuessesByTarget, setMyGuessesByTarget] = useState<Record<string, MyGuessResult>>({});
+  const prevRoundRef = useRef<number>(roundIndex);
+  useEffect(() => {
+    if (prevRoundRef.current !== roundIndex) {
+      setMyBannedTargets(new Set());
+      setMyGuessesByTarget({});
+      prevRoundRef.current = roundIndex;
+    }
+  }, [roundIndex]);
+
+  const iAmBannedForCurrent = !!(currentTargetId && myBannedTargets.has(currentTargetId));
+  const myGuessForCurrent =
+    currentTargetId ? myGuessesByTarget[currentTargetId] ?? null : null;
+
+  const [guessMode, setGuessMode] = useState(false);
+  const [pendingGuess, setPendingGuess] = useState<string | null>(null);
+
+  useEffect(() => {
+    setGuessMode(false);
+    setPendingGuess(null);
+  }, [currentTargetId]);
+
   const toggleMask = (avatarSrc: string) => {
     if (!currentTargetId || iAmTarget || iAmEliminated) return;
+    if (guessMode) return;
     const nextMasked = !myMasksForTarget.has(avatarSrc);
     const sock = getSocket();
     sock.emit(
@@ -293,6 +274,42 @@ function PlayPhase({
         if (!res.ok) alert(res.message);
       },
     );
+  };
+
+  const attemptGuess = (avatarSrc: string) => {
+    if (!currentTargetId || iAmTarget || iAmEliminated || iAmBannedForCurrent) return;
+    if (pendingGuess) return;
+    const targetName = target?.nickname ?? 'cette grille';
+    if (
+      !window.confirm(
+        `Tu tentes ton unique guess sur la grille de ${targetName}. ` +
+          `Tu ne pourras plus retenter cette grille — mais si tu te trompes, ` +
+          `tu pourras toujours guess les autres. Résultats révélés en fin de tour.`,
+      )
+    ) {
+      return;
+    }
+    setPendingGuess(avatarSrc);
+    const sock = getSocket();
+    const targetId = currentTargetId;
+    sock.emit('guessWho:guess', { avatarSrc }, (res) => {
+      setPendingGuess(null);
+      if (!res.ok) {
+        alert(res.message);
+        return;
+      }
+      const correct = res.data.correct;
+      setMyBannedTargets((prev) => {
+        const n = new Set(prev);
+        n.add(targetId);
+        return n;
+      });
+      setMyGuessesByTarget((prev) => ({
+        ...prev,
+        [targetId]: { targetId, avatarSrc, correct },
+      }));
+      setGuessMode(false);
+    });
   };
 
   const nextTurn = () => {
@@ -310,11 +327,6 @@ function PlayPhase({
       if (!res.ok) alert(res.message);
     });
   };
-
-  if (winnerId) {
-    const winner = players.find((p) => p.id === winnerId);
-    return <WinnerScreen winner={winner} mySecret={mySecret} />;
-  }
 
   const remaining = currentGrid.length - myMasksForTarget.size;
   const targetColor = target?.avatar.color ?? '#a855f7';
@@ -402,17 +414,71 @@ function PlayPhase({
             </button>
           </div>
         )}
+
+        {!iAmTarget && !iAmEliminated && (
+          <div className="flex gap-2 flex-shrink-0 flex-wrap justify-end">
+            {iAmBannedForCurrent ? (
+              <div
+                className="text-[11px] text-text-dim inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md"
+                style={{
+                  background: 'rgba(251,191,36,0.08)',
+                  border: '1px solid rgba(251,191,36,0.3)',
+                  color: 'var(--neon-amber)',
+                }}
+                title="Tu as déjà tenté sur cette grille. Tu pourras guess les autres."
+              >
+                <Sparkles className="w-3 h-3" />
+                Guess déjà tenté — attends la prochaine grille
+              </div>
+            ) : guessMode ? (
+              <button
+                type="button"
+                onClick={() => setGuessMode(false)}
+                className="btn-secondary"
+                style={{ padding: '10px 16px' }}
+              >
+                <X className="w-4 h-4" />
+                Annuler
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setGuessMode(true)}
+                className="btn-primary"
+                style={{ padding: '10px 16px' }}
+                title="Tenter de deviner l'avatar secret de cette grille (1 essai par grille)"
+              >
+                <Target className="w-4 h-4" />
+                Tenter un guess
+              </button>
+            )}
+          </div>
+        )}
       </div>
 
-      <div className="panel gw-grid-wrap">
+      <div className={cn('panel gw-grid-wrap', guessMode && 'gw-grid-guess-mode')}>
         <div className="gw-grid-scan" />
         <div className="flex items-center justify-between px-4 pt-3 pb-1 flex-wrap gap-2">
           <div className="text-[11px] uppercase tracking-[0.1em] text-text-dim flex items-center gap-2">
-            <HelpCircle className="w-3 h-3" />
-            Grille de{' '}
-            <span className="text-text font-semibold normal-case tracking-normal">
-              {target?.nickname ?? '—'}
-            </span>
+            {guessMode ? (
+              <>
+                <Target className="w-3 h-3" style={{ color: 'var(--neon-amber)' }} />
+                <span style={{ color: 'var(--neon-amber)' }}>
+                  Clique sur l'avatar que tu penses être le secret de{' '}
+                </span>
+                <span className="text-text font-semibold normal-case tracking-normal">
+                  {target?.nickname ?? '—'}
+                </span>
+              </>
+            ) : (
+              <>
+                <HelpCircle className="w-3 h-3" />
+                Grille de{' '}
+                <span className="text-text font-semibold normal-case tracking-normal">
+                  {target?.nickname ?? '—'}
+                </span>
+              </>
+            )}
           </div>
           <div className="font-mono text-xs text-text-muted">
             <span
@@ -429,6 +495,8 @@ function PlayPhase({
             const masked = myMasksForTarget.has(src);
             const isMyOwnSecret = iAmTarget && src === mySecret;
             const clickable = !iAmTarget && !iAmEliminated;
+            const guessing = guessMode && clickable && !iAmBannedForCurrent && !masked;
+            const isPendingGuess = pendingGuess === src;
             return (
               <motion.button
                 key={src}
@@ -437,13 +505,14 @@ function PlayPhase({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.015, duration: 0.25 }}
                 whileTap={clickable ? { scale: 0.94 } : undefined}
-                disabled={!clickable}
-                onClick={() => toggleMask(src)}
+                disabled={!clickable || (guessMode && (masked || iAmBannedForCurrent))}
+                onClick={() => (guessMode ? attemptGuess(src) : toggleMask(src))}
                 className={cn(
                   'gw-avatar-cell',
                   masked && 'masked',
                   isMyOwnSecret && 'mine',
                   !clickable && 'disabled',
+                  guessing && 'gw-guessable',
                 )}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -454,11 +523,118 @@ function PlayPhase({
                   </div>
                 )}
                 {isMyOwnSecret && <div className="gw-mine-badge">Toi</div>}
+                {isPendingGuess && (
+                  <div
+                    className="absolute inset-0 flex items-center justify-center"
+                    style={{ background: 'rgba(10,6,18,0.55)' }}
+                  >
+                    <div
+                      className="w-6 h-6 rounded-full animate-spin"
+                      style={{
+                        border: '2px solid var(--neon-amber)',
+                        borderTopColor: 'transparent',
+                      }}
+                    />
+                  </div>
+                )}
               </motion.button>
             );
           })}
         </div>
       </div>
+
+      {/* Rappel privé de MA tentative sur la grille courante (invisible aux
+          autres joueurs tant que le tour n'est pas terminé). */}
+      <AnimatePresence>
+        {myGuessForCurrent && (
+          <motion.div
+            key={myGuessForCurrent.targetId}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="panel p-4 text-sm flex items-center gap-3"
+            style={{
+              border: '1px solid rgba(251,191,36,0.4)',
+              background:
+                'linear-gradient(135deg, rgba(251,191,36,0.1), rgba(34,211,238,0.06))',
+            }}
+          >
+            <Sparkles className="w-5 h-5" style={{ color: 'var(--neon-amber)' }} />
+            <div className="flex-1 min-w-0">
+              <div
+                className="font-semibold"
+                style={{ color: 'var(--neon-amber)' }}
+              >
+                Guess envoyé (secret)
+              </div>
+              <div className="text-text-muted text-xs">
+                Tu as tenté sur la grille de{' '}
+                <span className="text-text font-semibold">
+                  {target?.nickname ?? '—'}
+                </span>
+                . Le résultat sera révélé à tous en fin de tour.
+              </div>
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={myGuessForCurrent.avatarSrc}
+              alt=""
+              className="w-10 h-10 rounded-full object-cover"
+              style={{ border: '2px solid var(--neon-amber)' }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {guesses.length > 0 && (
+        <div className="panel p-4">
+          <div className="text-[11px] uppercase tracking-[0.1em] text-text-dim mb-2 flex items-center gap-2">
+            <HelpCircle className="w-3 h-3" />
+            Tentatives révélées (tours précédents)
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {guesses.map((g, i) => {
+              const guesser = players.find((p) => p.id === g.playerId);
+              const tgt = players.find((p) => p.id === g.targetId);
+              return (
+                <motion.div
+                  key={`${g.playerId}-${g.targetId}-${i}`}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="gw-elim-pill"
+                  style={{
+                    borderColor: g.correct
+                      ? 'rgba(163,230,53,0.5)'
+                      : 'rgba(244,63,94,0.5)',
+                    background: g.correct
+                      ? 'rgba(163,230,53,0.08)'
+                      : 'rgba(244,63,94,0.08)',
+                  }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={g.avatarSrc} alt="" />
+                  <span className="nick">
+                    {guesser?.nickname ?? '?'} → {tgt?.nickname ?? '?'}
+                  </span>
+                  {g.correct ? (
+                    <Check
+                      className="w-3.5 h-3.5 ml-1"
+                      style={{ color: 'var(--neon-lime)' }}
+                      strokeWidth={3}
+                    />
+                  ) : (
+                    <X
+                      className="w-3.5 h-3.5 ml-1"
+                      style={{ color: 'var(--neon-rose)' }}
+                      strokeWidth={3}
+                    />
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       <AnimatePresence>
         {eliminated.length > 0 && (
@@ -513,88 +689,3 @@ function PlayPhase({
   );
 }
 
-/* ─── Winner screen ─── */
-function WinnerScreen({
-  winner,
-  mySecret,
-}: {
-  winner?: Player;
-  mySecret: string | null;
-}) {
-  const [shown, setShown] = useState(false);
-  useEffect(() => {
-    const t = setTimeout(() => setShown(true), 100);
-    return () => clearTimeout(t);
-  }, []);
-
-  const winnerImage = winner?.avatar.image;
-  const winnerColor = winner?.avatar.color ?? '#fbbf24';
-
-  return (
-    <div className="relative">
-      <GwConfetti active={shown} />
-      <div className="panel gw-fade-up text-center p-10 sm:p-14">
-        <Crown className="gw-crown text-neon-amber mx-auto" />
-        <div className="font-display text-4xl sm:text-5xl font-extrabold mt-3 mb-1">
-          Victoire !
-        </div>
-        <div className="text-text-muted text-sm mb-8">
-          Le dernier avatar non démasqué
-        </div>
-
-        <div className="flex flex-col items-center gap-3 mb-8">
-          <div
-            className="rounded-full overflow-hidden"
-            style={{
-              width: 96,
-              height: 96,
-              border: '3px solid var(--neon-amber)',
-              boxShadow: '0 0 44px rgba(251, 191, 36, 0.45)',
-              background: 'var(--bg-elev)',
-            }}
-          >
-            {winnerImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={winnerImage}
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div
-                className="w-full h-full flex items-center justify-center"
-                style={{
-                  background: `linear-gradient(135deg, ${winnerColor}, ${winnerColor}99)`,
-                  fontSize: 48,
-                }}
-              >
-                {winner?.avatar.emoji ?? '🎭'}
-              </div>
-            )}
-          </div>
-          <div
-            className="font-display text-2xl sm:text-3xl font-bold"
-            style={{ color: 'var(--neon-amber)' }}
-          >
-            {winner?.nickname ?? '—'}
-          </div>
-        </div>
-
-        <div className="gw-glow-line mb-6" />
-
-        {mySecret && (
-          <div className="text-sm text-text-muted inline-flex items-center gap-3 justify-center">
-            Ton avatar secret était :
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={mySecret}
-              alt="mon secret"
-              className="w-10 h-10 rounded-full object-cover"
-              style={{ border: '2px solid var(--neon-lime)' }}
-            />
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}

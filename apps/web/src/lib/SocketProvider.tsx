@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { getSocket } from './socket';
 import { useGameStore } from '@/store/gameStore';
-import { saveHostToken } from './identity';
+import { loadHostToken, saveHostToken } from './identity';
 
 /**
  * Monte une seule fois au layout client et relie les events Socket.IO au store Zustand.
@@ -19,18 +19,36 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
   const setHostValidations = useGameStore((s) => s.setHostValidations);
   const setError = useGameStore((s) => s.setError);
   const setGwMasks = useGameStore((s) => s.setGwMasks);
+  const setImposterYourWord = useGameStore((s) => s.setImposterYourWord);
+  const setCnMyKey = useGameStore((s) => s.setCnMyKey);
   const setLobbyDrawing = useGameStore((s) => s.setLobbyDrawing);
   const appendLobbyStroke = useGameStore((s) => s.appendLobbyStroke);
   const clearLobbyDrawing = useGameStore((s) => s.clearLobbyDrawing);
 
   useEffect(() => {
     const sock = getSocket();
-    const onConn = () => setConnected(true);
+    const onConn = () => {
+      setConnected(true);
+      // Reconnexion après coupure / throttling d'onglet : si on était dans une
+      // salle, on renvoie un room:resume pour se ré-enregistrer côté serveur
+      // (sans ça, le socket est connecté mais le joueur reste en "disconnected"
+      // côté room et ne reçoit plus les events privés).
+      const { code, playerId } = useGameStore.getState();
+      if (code && playerId) {
+        const hostToken = loadHostToken(code);
+        sock.emit('room:resume', { code, playerId, hostToken }, (res) => {
+          if (res.ok) {
+            if (res.data.hostToken) saveHostToken(res.data.code, res.data.hostToken);
+            setSnapshot(res.data.snapshot);
+          }
+        });
+      }
+    };
     const onDisc = () => setConnected(false);
 
     sock.on('connect', onConn);
     sock.on('disconnect', onDisc);
-    if (sock.connected) onConn();
+    if (sock.connected) setConnected(true);
 
     sock.on('room:state', (snapshot) => {
       setSnapshot(snapshot);
@@ -73,6 +91,18 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
     sock.on('guessWho:playerEliminated', () => {
       // L'état public arrive via room:state ; rien d'autre à faire ici.
     });
+    sock.on('imposter:yourWord', ({ word }) => {
+      setImposterYourWord({ word });
+    });
+    sock.on('imposter:clueSubmitted', ({ playerId }) => {
+      markAnswered(playerId);
+    });
+    sock.on('imposter:voted', ({ playerId }) => {
+      markAnswered(playerId);
+    });
+    sock.on('codenames:key', ({ key }) => {
+      setCnMyKey(key);
+    });
     sock.on('lobby:draw:stroke', (stroke) => {
       appendLobbyStroke(stroke);
     });
@@ -98,6 +128,10 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
       sock.off('match:final');
       sock.off('guessWho:masks');
       sock.off('guessWho:playerEliminated');
+      sock.off('imposter:yourWord');
+      sock.off('imposter:clueSubmitted');
+      sock.off('imposter:voted');
+      sock.off('codenames:key');
       sock.off('lobby:draw:stroke');
       sock.off('lobby:draw:cleared');
       sock.off('lobby:drawing:sync');
@@ -115,6 +149,8 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
     setHostValidations,
     setError,
     setGwMasks,
+    setImposterYourWord,
+    setCnMyKey,
     setLobbyDrawing,
     appendLobbyStroke,
     clearLobbyDrawing,

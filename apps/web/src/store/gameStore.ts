@@ -25,6 +25,8 @@ export interface GameState {
   lastError: { code: string; message: string } | null;
   gwMySecret: string | null;
   gwMasks: Record<string, Set<string>>;
+  imposterMyWord: string | null;
+  cnMyKey: Array<'red' | 'blue' | 'neutral' | 'assassin'> | null;
   lobbyDrawing: LobbyDrawStroke[];
 
   setConnected: (c: boolean) => void;
@@ -41,6 +43,8 @@ export interface GameState {
   setError: (e: { code: string; message: string } | null) => void;
   setGwMySecret: (secret: string | null) => void;
   setGwMasks: (byTarget: Record<string, string[]>) => void;
+  setImposterYourWord: (payload: { word: string } | null) => void;
+  setCnMyKey: (key: Array<'red' | 'blue' | 'neutral' | 'assassin'> | null) => void;
   setLobbyDrawing: (strokes: LobbyDrawStroke[]) => void;
   appendLobbyStroke: (stroke: LobbyDrawStroke) => void;
   clearLobbyDrawing: () => void;
@@ -74,6 +78,8 @@ export const useGameStore = create<GameState>((set, get) => ({
   lastError: null,
   gwMySecret: null,
   gwMasks: {},
+  imposterMyWord: null,
+  cnMyKey: null,
   lobbyDrawing: [],
 
   setConnected: (connected) => set({ connected }),
@@ -91,7 +97,11 @@ export const useGameStore = create<GameState>((set, get) => ({
     }),
   pushElimination: (e) =>
     set((s) => ({ eliminations: [...s.eliminations, e] })),
-  resetRoundLocal: () =>
+  resetRoundLocal: () => {
+    // Le secret "qui-est-ce" est par manche : on le purge entre les rounds
+    // (nécessaire en mode multi-manches où chaque round rebat les grilles).
+    const code = get().code;
+    persistGwSecret(code, null);
     set({
       reveal: null,
       scoring: null,
@@ -99,7 +109,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       eliminations: [],
       hostValidations: {},
       gwMasks: {},
-    }),
+      gwMySecret: null,
+      imposterMyWord: null,
+      cnMyKey: null,
+    });
+  },
   setHostValidation: (playerId, correct) =>
     set((s) => ({ hostValidations: { ...s.hostValidations, [playerId]: correct } })),
   setHostValidations: (v) =>
@@ -122,6 +136,11 @@ export const useGameStore = create<GameState>((set, get) => ({
       }
       return { gwMasks: next };
     }),
+  setImposterYourWord: (payload) =>
+    set({
+      imposterMyWord: payload?.word ?? null,
+    }),
+  setCnMyKey: (key) => set({ cnMyKey: key }),
   setLobbyDrawing: (strokes) => set({ lobbyDrawing: strokes }),
   appendLobbyStroke: (stroke) =>
     set((s) => ({ lobbyDrawing: [...s.lobbyDrawing, stroke] })),
@@ -141,6 +160,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       lastError: null,
       gwMySecret: null,
       gwMasks: {},
+      imposterMyWord: null,
+      cnMyKey: null,
       lobbyDrawing: [],
     }),
 }));

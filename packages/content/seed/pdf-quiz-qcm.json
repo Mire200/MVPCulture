@@ -1,0 +1,4783 @@
+[
+  {
+    "id": "pdf-cg-001",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Le premier ministre de la Culture fut :",
+    "answer": "André Malraux.",
+    "distractors": [
+      "Alain Peyrefitte.",
+      "Jack Lang.",
+      "Maurice Druon."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-002",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Jean-Baptiste Poquelin est mieux connu sous le nom de :",
+    "answer": "Molière.",
+    "distractors": [
+      "Voltaire.",
+      "Corneille.",
+      "Zola."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-003",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "À l'origine de la vocation de nombreux océanographes, Vingt Mille Lieues sous les mers est un roman que l’on doit à :",
+    "answer": "JulesVerne.",
+    "distractors": [
+      "Victor Hugo.",
+      "Alexandre Dumas.",
+      "Jules Michelet."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-004",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Qui a écrit : « Les parfums, les couleurs et les sons se répondent » ?",
+    "answer": "Charles Baudelaire.",
+    "distractors": [
+      "Guillaume Apollinaire.",
+      "Arthur Rimbaud.",
+      "Alfred de Vigny."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-005",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Qui a écrit ses Mémoires d’outre-tombe?",
+    "answer": "François René de Chateaubriand.",
+    "distractors": [
+      "Alfred deVigny.",
+      "Alphonse de Lamartine.",
+      "Madame de Staël."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-006",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Qui pense que « L'homme n’est qu’un roseau, le plus faible de la nature, mais c’est un roseau pensant » ?",
+    "answer": "Blaise Pascal.",
+    "distractors": [
+      "René Descartes.",
+      "Auguste Comte.",
+      "Michel de Montaigne."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-007",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Qui pense que « Ce que l’on conçoit bien s’énonce clairement et les mots pour le dire arrivent aisément » ?",
+    "answer": "Nicolas Boileau.",
+    "distractors": [
+      "Alphonse de Lamartine.",
+      "Jacques Bénigne Bossuet.",
+      "Georg Hegel."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-008",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Le chef de file du surréalisme est :",
+    "answer": "André Breton.",
+    "distractors": [
+      "Alain Robbe-Grillet.",
+      "Charles Baudelaire.",
+      "Nathalie Sarraute."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-009",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Le dadaïsme a été inventé par :",
+    "answer": "Tristan Tzara.",
+    "distractors": [
+      "Dada.",
+      "André Breton.",
+      "Salvador Dali."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-010",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "En attendant Godot est la pièce maîtresse de :",
+    "answer": "Samuel Beckett.",
+    "distractors": [
+      "Luigi Pirandello.",
+      "Marivaux.",
+      "Paul Claudel."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-011",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Quelle œuvre d’Arthur Miller fait référence au maccarthysme ?",
+    "answer": "Les Sorcières de Salem.",
+    "distractors": [
+      "Mort d’un commis voyageur.",
+      "Après la chute.",
+      "Les Désaxés."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-012",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Le Festival d'Avignon a été fondé en 1947 par :",
+    "answer": "Jean Vilar.",
+    "distractors": [
+      "Patrice Chéreau.",
+      "AntoineVitez.",
+      "Samuel Beckett."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-013",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "L'auteur du Petit Livre rouge est :",
+    "answer": "Mao Zedong.",
+    "distractors": [
+      "Karl Marx.",
+      "Lénine.",
+      "Jean-Paul Sartre."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-014",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Dans la tragédie de William Shakespeare, Roméo et Juliette sont appelés les amants de :",
+    "answer": "-Vérone.",
+    "distractors": [
+      "Venise.",
+      "Florence.",
+      "Messine."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-015",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "« Apprenez que tout flatteur vit aux dépens de celui qui l'écoute » est la morale d’une fable :",
+    "answer": "De La Fontaine.",
+    "distractors": [
+      "D’Esope.",
+      "D'’Aristophane.",
+      "De Démétrios de Phalère."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-016",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "À qui doit-on L’Espoir?",
+    "answer": "André Malraux.",
+    "distractors": [
+      "Albert Camus.",
+      "Roland Dorgelès.",
+      "Roger Martin du Gard."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-017",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "« Le cœur a ses raisons que la raison ne connaît pas » est une pensée de :",
+    "answer": "Blaise Pascal.",
+    "distractors": [
+      "René Descartes.",
+      "Pierre Corneille.",
+      "Alphonse Allais."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-018",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Matisse, Van Dongen, Derain, Vlaminck ou Braque sont des peintres qui appartiennent au courant :",
+    "answer": "Du fauvisme.",
+    "distractors": [
+      "De l’impressionnisme.",
+      "De l’expressionnisme.",
+      "Du romantisme."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-019",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "La figure de proue du pop art américain est :",
+    "answer": "Andy Warhol.",
+    "distractors": [
+      "Allen Ginsberg.",
+      "Daniel Terra.",
+      "Paul Morrissey."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-020",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "En bande dessinée, quel nom donne-t-on a un récit d’une narration limpide et au dessin épuré ?",
+    "answer": "La ligne claire.",
+    "distractors": [
+      "La limpure.",
+      "Un comic strip.",
+      "Un manga."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-021",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Le trophée délivré chaque année au festival de la bande dessinée d'Angoulême s’appelle : — ARTS ET MYTHOLOGIE —",
+    "answer": "LAlph-art.",
+    "distractors": [
+      "Le Milou.",
+      "Le Tintin.",
+      "Le Hergé."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-022",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Le terme « manga », utilisé pour la première fois au Japon au xvii siècle, signifie :",
+    "answer": "Image dérisoire.",
+    "distractors": [
+      "Suite d’estampes.",
+      "Homme courageux.",
+      "Jeu d’enfant."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-023",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Quel peintre s’est inspiré des nénuphars de sa propriété à Giverny ?",
+    "answer": "Claude Monet.",
+    "distractors": [
+      "Paul Cézanne.",
+      "Auguste Renoir.",
+      "VincentVan Gogh."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-024",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Frida Kahlo et Diego Rivera, couple mythique, sont deux peintres :",
+    "answer": "Mexicains.",
+    "distractors": [
+      "Brésiliens.",
+      "Portoricains.",
+      "Cubains."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-025",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Quel peintre eut pour muse Gala et fut surnommé par André Breton « Avida Dollars »?",
+    "answer": "Salvador Dali.",
+    "distractors": [
+      "Max Ernst.",
+      "Pablo Picasso.",
+      "Maurice deVlaminck."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-026",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Quel peintre est connu pour ses portraits suggérés par des légumes, des fruits ou des végétaux astucieusement disposés ?",
+    "answer": "Giuseppe Arcimboldo.",
+    "distractors": [
+      "Nicolas Poussin.",
+      "Le Caravage.",
+      "Francis Bacon."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-027",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "L’Origine du monde, peint par Gustave Courbet, représente :",
+    "answer": "Le sexe d’une femme.",
+    "distractors": [
+      "Une explosion atomique.",
+      "Le regard d’un bébé.",
+      "Un arbre."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-028",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "On doit les tableaux La Laitière et La Jeune Fille à la perle à :",
+    "answer": "Vermeer de Delft.",
+    "distractors": [
+      "Rembrandt.",
+      "Bruegel.",
+      "Piet Mondrian."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-029",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Le plafond de l'Opéra de Paris a été peint par :",
+    "answer": "Marc Chagall.",
+    "distractors": [
+      "El Greco.",
+      "Georges Braque.",
+      "Jean Cocteau."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-030",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "On doit l’opéra Tosca à :",
+    "answer": "Puccini.",
+    "distractors": [
+      "Verdi.",
+      "Bellini.",
+      "Lully."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-031",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "On doit ’opéra Norma a :",
+    "answer": "Bellini.",
+    "distractors": [
+      "Verdi.",
+      "Puccini.",
+      "Lully."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-032",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Le festival de Bayreuth est un festival d’opéra fondé en 1876 par :",
+    "answer": "Richard Wagner.",
+    "distractors": [
+      "Jean-Sébastien Bach.",
+      "Jean-Baptiste Lully.",
+      "Henry Purcell."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-033",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Oum Kalsoum, la diva égyptienne des années 1940 et 1950, était surnommée :",
+    "answer": "L'Astre d'Orient.",
+    "distractors": [
+      "Le Rossignol.",
+      "La Shéhérazade du bel canto.",
+      "LaVoix."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-034",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Il a réalisé Sur mes lèvres, De battre mon cœur s’est arrêté et Un Prophète, il s’agit de :",
+    "answer": "Jacques Audiard.",
+    "distractors": [
+      "Christophe Honoré.",
+      "Dominik Moll.",
+      "Arnaud Desplechin."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-035",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "On lui doit les films Jour de féte, Trafic, Mon oncle ou Les Vacances de M. Hulot, il s’agit de :",
+    "answer": "Jacques Tati.",
+    "distractors": [
+      "Henri Georges Clouzot.",
+      "Jean-Pierre Melville.",
+      "Georges Lautner."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-036",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "En quelle année eut lieu le premier festival de Cannes ?",
+    "answer": "En 1946.",
+    "distractors": [
+      "En 1936.",
+      "En 1956.",
+      "En 1966."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-037",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "La statue ailée baptisée Victoire de Samothrace est l’œuvre de :",
+    "answer": "Un sculpteur inconnu.",
+    "distractors": [
+      "Samothrace.",
+      "Praxitèle.",
+      "Phidias."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-038",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Le sculpteur Calder est connu pour :",
+    "answer": "Ses mobiles.",
+    "distractors": [
+      "Son urinoir.",
+      "Ses compressions.",
+      "Ses accumulations."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-039",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Offerte par la France aux Etats-Unis en 1886, la statue de la Liberté est l’œuvre du sculpteur :",
+    "answer": "Auguste Bartholdi.",
+    "distractors": [
+      "Alexandre Calder.",
+      "Arman.",
+      "Marcel Duchamp."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-040",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "La célèbre photo du Che Guevara symbolisant la rébellion ne rapporta rien a son auteur car il s’agissait de :",
+    "answer": "Korda, le photographe personnel de Fidel Castro.",
+    "distractors": [
+      "Un anonyme, mort peu de temps après.",
+      "La petite amie du Che, et son but était de célébrer la gloire de son grand homme.",
+      "La notion de droit d’auteur n’existe pas à Cuba."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-041",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Robert Doisneau a célébré Paris en noir et blanc, l’une de ses photos les plus connues est celle du Baiser.",
+    "answer": "de l'Hôtel de ville.",
+    "distractors": [
+      "des amoureux.",
+      "des amants parisiens.",
+      "volé."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-042",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Dans l'Antiquité, l’oracle de Delphes était rendu par :",
+    "answer": "La Pythie.",
+    "distractors": [
+      "Le Sphinx.",
+      "Cerbère.",
+      "Cassandre."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-043",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Ancêtre mythologique de l'avion, Icare brûla les ailes qu'il s’était fabriquées en volant trop près du soleil. L'idée lui venait de son père :",
+    "answer": "Dédale.",
+    "distractors": [
+      "Minos.",
+      "Zeus.",
+      "Hercule."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-044",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Pour échapper à la musique enjôleuse du chant des Sirènes, Ulysse :",
+    "answer": "S’est attaché au mat de son navire.",
+    "distractors": [
+      "S’est mis de la cire dans les oreilles.",
+      "A changé de cap.",
+      "S’est crevé les tympans."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-045",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "L'équivalent romain de Poséidon, le dieu de la Mer, est :",
+    "answer": "— Neptune.",
+    "distractors": [
+      "Jupiter.",
+      "Minerve.",
+      "Mercure."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-046",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Celui qui vient à bout de l’énigme du Sphinx est :",
+    "answer": "Œdipe.",
+    "distractors": [
+      "Sisyphe.",
+      "Ulysse.",
+      "—Achille."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-047",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Quel personnage mythique tire sa force extraordinaire de ses cheveux?",
+    "answer": "Samson.",
+    "distractors": [
+      "Dalila.",
+      "Hercule.",
+      "Apollon."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-048",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Les dieux de la mythologie gréco-romaine ont coutume de se retrouver sur :",
+    "answer": "Le mont Olympe.",
+    "distractors": [
+      "Le mont Sinaï.",
+      "Le mont Gerbier-de-Jonc.",
+      "LAcropole."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-049",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Arts",
+    "prompt": "Qu’a fait Edipe?",
+    "answer": "Ila tué son père et épousé sa mère.",
+    "distractors": [
+      "Ila tué ses parents d’adoption.",
+      "Il a épousé sa mère et son père lui a crevé les yeux.",
+      "Ila sauvé ses parents de la tuerie des dieux."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-050",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Le Saint-Graal que recherche le roi Arthur est :",
+    "answer": "Une coupe ayant recueilli le sang de Jésus-Christ.",
+    "distractors": [
+      "Une relique de saint Pierre.",
+      "Un morceau de la robe de la Vierge.",
+      "Un trésor."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-052",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Dans la mythologie nordique, les Valkyries sont :",
+    "answer": "Des vierges qui annoncent aux guerriers qu’ils vont mourir au combat.",
+    "distractors": [
+      "Des déesses qui surveillent les hommes.",
+      "Des guerriéres qui pourchassent les maris infidèles.",
+      "Des prostituées qui poussent à la luxure."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-053",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Pandore était une femme perfide et curieuse. Elle ouvrit une boîte offerte par Zeus d’où s’échappèrent :",
+    "answer": "Tous les maux de l’humanité.",
+    "distractors": [
+      "Des guerriers féroces et sans pitié.",
+      "Des serpents venimeux.",
+      "Des araignées tueuses."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-054",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Arts",
+    "prompt": "Jason et ses Argonautes affrontérent bien des périls avant de s'emparer :",
+    "answer": "De la Toison d’or.",
+    "distractors": [
+      "Du Veau d’or.",
+      "Du Saint-Graal.",
+      "Du trésor des Incas."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-055",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Arts",
+    "prompt": "Psyché était une princesse si belle que le dieu de l’Amour, Eros, en tomba amoureux. « Psyché » vient du grec psixi et signifie :",
+    "answer": "Ame.",
+    "distractors": [
+      "Regard.",
+      "Corps.",
+      "Amour. Histoire et grandes figures"
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-056",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Les fondateurs de Rome, Romulus et Rémus, furent allaités par :",
+    "answer": "Une louve.",
+    "distractors": [
+      "Une chèvre.",
+      "Une lionne.",
+      "Une tigresse."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-058",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "LAntiquité démarre :",
+    "answer": "En 3000 av.J.-C.",
+    "distractors": [
+      "En 10000 av.J.-C.",
+      "En 5000 av.J.-C.",
+      "En 476."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-059",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Vercingétorix est vaincu à Alésia en 52 av. J.-C. par :",
+    "answer": "Jules César.",
+    "distractors": [
+      "Charlemagne.",
+      "LesVikings.",
+      "Le chevalier Bayard."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-060",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "En 732, quel souverain de France repousse une armée musulmane à Poitiers ?",
+    "answer": "Charles Martel.",
+    "distractors": [
+      "Pépin le Bref.",
+      "Charlemagne.",
+      "Clovis I‘."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-061",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La fonction des missi dominici, émissaires de Charlemagne dans les provinces, était de :",
+    "answer": "Contrôler l’application des lois.",
+    "distractors": [
+      "Lever les armées.",
+      "Recueillir l'impôt.",
+      "Punir les mauvais payeurs."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-062",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Au v siècle, la Gaule est ravagée par les Huns. Son chef redouté, dont on dit que l’herbe ne repousse pas derrière son passage, est :",
+    "answer": "Attila.",
+    "distractors": [
+      "Vercingétorix.",
+      "Clovis.",
+      "Bayard."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-063",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "À quelle époque le bon roi mérovingien Dagobert, que l’on accuse d’avoir mis sa culotte à l'envers, a-t-il régné ?",
+    "answer": "Au vii° siècle.",
+    "distractors": [
+      "Au tt siècle.",
+      "Au tv‘ siècle."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-064",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Injustement méprisés par les historiens, les derniers rois mérovingiens étaient surnommés les rois :",
+    "answer": "Fainéants.",
+    "distractors": [
+      "Truands.",
+      "Décadents.",
+      "Poilants."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-065",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Saint Louis était en fait :",
+    "answer": "Louis IX.",
+    "distractors": [
+      "Louis X.",
+      "Louis XI.",
+      "Louis XII."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-066",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Les jacqueries étaient :",
+    "answer": "Des soulévements de paysans.",
+    "distractors": [
+      "Des réunions publiques pour discuter des affaires de la ville.",
+      "Des soulèvements de royalistes.",
+      "Des manifestations contre la taille et la gabelle."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-067",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La guerre de Cent Ans a démarré :",
+    "answer": "Au xiv‘ siècle.",
+    "distractors": [
+      "Au xii siècle.",
+      "Au xv‘ siècle.",
+      "Au xvr siècle."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-068",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La guerre de Cent Ans opposa la France à :",
+    "answer": "L’Angleterre.",
+    "distractors": [
+      "TL'Italie.",
+      "L'Espagne.",
+      "La Prusse."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-069",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quel personnage historique renverse le cours de l’histoire pendant la guerre de Cent Ans en faisant preuve d’une extrême bravoure ?",
+    "answer": "Jeanne d’Arc.",
+    "distractors": [
+      "Lancelot.",
+      "Le chevalier Bayard.",
+      "Roland."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-070",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "En 1515, la bataille de Marignan est :",
+    "answer": "La première victoire des armées de François I* sur les Suisses.",
+    "distractors": [
+      "La dernière victoire de Jeanne d’Arc sur les Anglais.",
+      "La victoire de Louis XI sur son ennemi Charles le Téméraire.",
+      "La défaite des Français en Normandie face à Henri IV d'Angleterre."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-071",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La guerre de Trente Ans oppose la France à :",
+    "answer": "L'Empire des Habsbourg.",
+    "distractors": [
+      "La Russie.",
+      "L’Angleterre.",
+      "L'Italie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-072",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Quel roi protestant s’est converti au catholicisme en 1593 afin de monter sur le trône de France?",
+    "answer": "Henri IV.",
+    "distractors": [
+      "Henri III.",
+      "François I*.",
+      "Philippe Auguste."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-073",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "L'époque moderne démarre :",
+    "answer": "À la découverte de ’ Amérique.",
+    "distractors": [
+      "À la Révolution française.",
+      "À la I* République.",
+      "Au premier pas sur la Lune."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-074",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "En 1590, lors de la bataille d’lvry, qui a dit : « Si vous perdez vos enseignes, ralliez-vous à mon panache blanc! Vous le trouverez toujours sur le chemin de l’honneur et de la victoire » ?",
+    "answer": "Henri IV.",
+    "distractors": [
+      "Charles IX.",
+      "Saint Louis.",
+      "Charlemagne."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-075",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Le massacre de la Saint-Barthélemy, perpétré le 24 août 1572 à Paris, était :",
+    "answer": "L'œuvre des catholiques.",
+    "distractors": [
+      "L'œuvre des protestants.",
+      "Une tuerie entre catholiques et protestants.",
+      "Le massacre de tous les opposants au royaume."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-076",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La Réforme désigne :",
+    "answer": "Le mouvement de protestation à l’origine des Églises protestantes.",
+    "distractors": [
+      "Le changement administratif effectué par Napoléon.",
+      "La suppression du service militaire obligatoire.",
+      "La rénovation du statut de l’Église catholique."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-077",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "« L'État c'est moi », affirmait :",
+    "answer": "Louis XIV.",
+    "distractors": [
+      "Francois I*.",
+      "Henri IV.",
+      "Louis XVI."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-078",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Lors des révoltes paysannes, les gens du peuple étaient appelés les « croquants » car :",
+    "answer": "C’est le surnom qui avait été donné aux nobles, qui « cro- quaient » le peuple.",
+    "distractors": [
+      "Ils avaient souvent un couteau entre les dents.",
+      "Ils mangeaient sans fourchette en croquant dans les aliments.",
+      "Ils étaient prêts à croquer tous les royalistes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-079",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Louis XIV était surnommé :",
+    "answer": "Le Roi-Soleil.",
+    "distractors": [
+      "Le Divin.",
+      "Le Roi-Absolu.",
+      "Le Roi-Dieu."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-080",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Pour porter bonheur aux dames de la cour, quel roi décida de leur offrir au 1° mai de chaque année un brin de muguet?",
+    "answer": "Charles IX.",
+    "distractors": [
+      "Louis XIV.",
+      "François I\".",
+      "Philippe le Bel."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-082",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La monarchie française a duré mille trois cents ans et connu :",
+    "answer": "65 rois.",
+    "distractors": [
+      "45 rois.",
+      "55 rois.",
+      "75 rois."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-083",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La l° République date de :",
+    "answer": "1792.",
+    "distractors": [
+      "1789.",
+      "1848.",
+      "1878."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-084",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Personnages emblématiques de la Révolution française, les sans-culottes s’appelaient ainsi car :",
+    "answer": "Ils portaient des pantalons.",
+    "distractors": [
+      "Ils ne portaient pas de caleçon long sous leur pantalon.",
+      "Ils fustigeaient les nobles en les représentant sans culotte.",
+      "Ils transperçaient de leur baïonnette les pantalons de leurs adversaires."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-085",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "« Tous les hommes naissent libres et égaux en droits » est le début de :",
+    "answer": "La Déclaration des droits de l’homme et du citoyen.",
+    "distractors": [
+      "La Constitution.",
+      "La Marseillaise.",
+      "Le Code civil."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-086",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La Marseillaise s'appelle ainsi car :",
+    "answer": "Les fédérés marseillais la chantaient lors de l’insurrection du palais des Tuileries en 1792.",
+    "distractors": [
+      "Son compositeur était de Marseille.",
+      "Elle a été composée à Marseille."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-087",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Le Chemin des Dames est une bataille de :",
+    "answer": "La Première Guerre mondiale.",
+    "distractors": [
+      "La Seconde Guerre mondiale.",
+      "La campagne d Italie.",
+      "La guerre d’Espagne."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-088",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel événement du 28 juin 1914 a déclenché la Première Guerre mondiale ?",
+    "answer": "L’assassinat de l’archiduc François-Ferdinand, héritier du trône d'Autriche.",
+    "distractors": [
+      "L’invasion de la Hollande par l'Allemagne.",
+      "La violation de la ligne Maginot."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-091",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "La « drôle de guerre » est le nom donné au début de :",
+    "answer": "La Seconde Guerre mondiale.",
+    "distractors": [
+      "La Première Guerre mondiale.",
+      "La guerre d'Algérie.",
+      "La guerre de 1870."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-093",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Par « Grande Guerre » on désigne :",
+    "answer": "La Première Guerre mondiale.",
+    "distractors": [
+      "La Seconde Guerre mondiale.",
+      "La guerre d’Indochine.",
+      "La guerre de 1870."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-094",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Après la Seconde Guerre mondiale, les États-Unis, que la guerre a seuls enrichis, voient le dollar consacré monnaie internationale lors de :",
+    "answer": "La conférence de Bretton Woods.",
+    "distractors": [
+      "La Charte des Nations unies.",
+      "La conférence de Yalta."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-095",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Le Front populaire est :",
+    "answer": "Une coalition de partis de gauche.",
+    "distractors": [
+      "Une révolte générale contre la royauté.",
+      "Une révolte générale contre l’Empire.",
+      "Le nom du parti socialiste au x1x° siècle."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-096",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "L'époque contemporaine de notre histoire démarre :",
+    "answer": "À la Révolution française.",
+    "distractors": [
+      "À la I° République.",
+      "Au xx‘ siècle.",
+      "A la Seconde Guerre mondiale."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-097",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La République populaire de Chine a été proclamée en :",
+    "answer": "1949.",
+    "distractors": [
+      "1921.",
+      "1934.",
+      "1939."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-098",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Mao Zedong est mort en :",
+    "answer": "1976.",
+    "distractors": [
+      "1966.",
+      "1986.",
+      "1996."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-099",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "En 1946, le canal de Suez est nationalisé par :",
+    "answer": "Gamal Abdel Nasser.",
+    "distractors": [
+      "Saddam Hussein.",
+      "Hussein de Jordanie.",
+      "Yasser Arafat."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-100",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Qui décida de construire le mur de Berlin ?",
+    "answer": "Les Soviétiques.",
+    "distractors": [
+      "Les Américains.",
+      "Les Allemands.",
+      "Les Italiens."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-101",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Le mur de Berlin est tombé en :",
+    "answer": "1989.",
+    "distractors": [
+      "1979.",
+      "1992.",
+      "1999."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-102",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "On doit la réunification de l'Allemagne à :",
+    "answer": "Helmut Kohl.",
+    "distractors": [
+      "Konrad Adenauer.",
+      "Gerhard Schrôder.",
+      "Angela Merkel."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-103",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La Glasnost fait référence a une politique de liberté d’expression et de publication introduite en URSS par :",
+    "answer": "Mikhail Gorbatchev.",
+    "distractors": [
+      "Leonid Brejnev.",
+      "Andreï Gromyko.",
+      "Boris Eltsine."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-104",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "« Faites l’amour, pas la guerre », le slogan phare de la révolution sexuelle des années 1970, fait référence à :",
+    "answer": "La guerre du Vietnam.",
+    "distractors": [
+      "La guerre du Biafra.",
+      "La guerre d'Algérie.",
+      "La guerre des Balkans."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-105",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "À la tête du Mouvement du 22 mars, le groupe d'étudiants gauchistes leader du soulèvement de mai 1968, se trouve Daniel Cohn-Bendit, surnommé :",
+    "answer": "Dany le Rouge.",
+    "distractors": [
+      "Le Rebelle de Nanterre.",
+      "L’Anar allemand.",
+      "Le Gauchiste roux."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-106",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "OTAN signifie :",
+    "answer": "Organisation du traité de Atlantique Nord.",
+    "distractors": [
+      "Organe temporaire des armées unies.",
+      "Organisme transatlantique d'administration nationale."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-107",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "L'OTAN a vu le jour en :",
+    "answer": "1949.",
+    "distractors": [
+      "1929.",
+      "1939.",
+      "1959."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-108",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Aux États-Unis, les esclaves des plantations du Sud sont affranchis en :",
+    "answer": "1865.",
+    "distractors": [
+      "1825.",
+      "1850.",
+      "1860."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-109",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Le Mayflower est entré dans l’histoire pour avoir été le bateau à bord duquel :",
+    "answer": "Les premiers colons sont arrivés en Amérique.",
+    "distractors": [
+      "Christophe Colomb a découvert l’ Amérique.",
+      "Le marquis de La Fayette s’est rendu aux Amériques lors de la guerre d’Indépendance.",
+      "Le commandant Charcot faisait ses explorations polaires."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-110",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "La Perestroïka désigne :",
+    "answer": "Une politique de restructuration économique.",
+    "distractors": [
+      "Une danse russe.",
+      "Des mines de sel soviétiques.",
+      "La Chambre des députés soviétique."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-111",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Le célèbre téléphone rouge, qui en fait était un télex, reliait :",
+    "answer": "La Maison-Blanche au Kremlin.",
+    "distractors": [
+      "L'Élysée à la Maison-Blanche.",
+      "LElysée au Kremlin.",
+      "LElysée au Bundestag."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-112",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Le guide supréme de la révolution iranienne est :",
+    "answer": "Le premier personnage du régime en Iran.",
+    "distractors": [
+      "Le chef religieux de tous les islamistes.",
+      "Une autorité religieuse sans pouvoir politique.",
+      "L’équivalent du pape chez les catholiques."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-113",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "En 1962, Alfred Sauvy invente le terme « tiers-monde » pour désigner, sur le modèle du tiers état de l’Ancien Régime, un troisième monde. Quels sont les deux autres mondes ?",
+    "answer": "Les pays communistes et les pays capitalistes.",
+    "distractors": [
+      "Les Etats-Unis et l’Europe.",
+      "L'Europe et le Moyen-Orient.",
+      "LURSS et l'Europe."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-114",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "À quel économiste doit-on l’expression les Trente Glorieuses ?",
+    "answer": "Alfred Sauvy.",
+    "distractors": [
+      "John Maynard Keynes.",
+      "George Soros.",
+      "Thomas Malthus."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-115",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Pour dénoncer le monopole anglais en Inde, Gandhi prône :",
+    "answer": "De tisser ses propres vêtements.",
+    "distractors": [
+      "De manger les vaches sacrées.",
+      "De boycotter le sel.",
+      "De cesser le travail."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-116",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Quel nom donna Staline à l'organisme d’information des partis communistes du monde entier, qu'il avait créé ?",
+    "answer": "Le Kominform.",
+    "distractors": [
+      "La Pravda.",
+      "Le Bureau central.",
+      "L'Info rouge."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-117",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "Les jeux Olympiques de 2012 auront lieu à Londres, mais dans quel pays se sont déroulés les premiers JO ?",
+    "answer": "En Grèce.",
+    "distractors": [
+      "Dans l’Empire romain.",
+      "En Egypte.",
+      "A Babylone."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-118",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Histoire",
+    "prompt": "Yasser Arafat est mort en :",
+    "answer": "2004.",
+    "distractors": [
+      "2000.",
+      "2002.",
+      "2006."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-119",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Histoire",
+    "prompt": "Siddharta Gautama n’est autre que :",
+    "answer": "— Bouddha.",
+    "distractors": [
+      "Confucius.",
+      "Lao-tseu.",
+      "Le Mahatma Gandhi."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-120",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Histoire",
+    "prompt": "À travers le monde, la religion prédominante est la religion :",
+    "answer": "Chrétienne.",
+    "distractors": [
+      "Juive.",
+      "Musulmane.",
+      "Bouddhiste. Pays et capitales"
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-121",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Dans quel pays seraient situés aujourd’hui les célèbres jardins suspendus de Babylone, l’une des Sept Merveilles du monde ?",
+    "answer": "En Irak.",
+    "distractors": [
+      "En Iran.",
+      "En Syrie.",
+      "En Hongrie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-122",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "L'Union européenne compte :",
+    "answer": "27 membres.",
+    "distractors": [
+      "17 membres.",
+      "29 membres.",
+      "32 membres."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-124",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Le père de l’Europe est :",
+    "answer": "Jean Monnet.",
+    "distractors": [
+      "Maurice Couve de Murville.",
+      "Pierre de Coubertin.",
+      "Konrad Adenauer."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-125",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Schengen se trouve :",
+    "answer": "Au Luxembourg.",
+    "distractors": [
+      "En Allemagne.",
+      "En Belgique.",
+      "Aux Pays-Bas."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-126",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Maastricht se trouve :",
+    "answer": "Aux Pays-Bas.",
+    "distractors": [
+      "En Suisse.",
+      "En Belgique.",
+      "Au Luxembourg."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-127",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La Navarre d’autrefois est aujourd’hui située :",
+    "answer": "Dans les Pyrénées espagnoles.",
+    "distractors": [
+      "En Andorre.",
+      "En Galice.",
+      "Au Maroc."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-129",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Le mont Gerbier-de-Jonc, source de la Loire, se trouve dans :",
+    "answer": "Le Massif central.",
+    "distractors": [
+      "Les Pyrénées.",
+      "Le Jura.",
+      "LesVosges."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-130",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Le fleuve le plus long de France est :",
+    "answer": "La Loire.",
+    "distractors": [
+      "Le Rhône.",
+      "La Seine.",
+      "La Garonne."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-131",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Le fleuve le plus long d'Europe est :",
+    "answer": "LaVolga.",
+    "distractors": [
+      "L’Elbe.",
+      "Le Rhin",
+      "Le Danube."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-132",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Le plus long fleuve du monde est :",
+    "answer": "Le Nil.",
+    "distractors": [
+      "L'Amour",
+      "L’Amazone.",
+      "—Le Congo."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-133",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Vilnius est la capitale de :",
+    "answer": "La Lituanie.",
+    "distractors": [
+      "L’Estonie.",
+      "La Bulgarie.",
+      "La Hongrie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-134",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Riga est la capitale de :",
+    "answer": "La Lettonie.",
+    "distractors": [
+      "L’Estonie.",
+      "La Roumanie.",
+      "La Croatie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-135",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Le canal de Suez se trouve en:",
+    "answer": "Égypte.",
+    "distractors": [
+      "Jordanie.",
+      "Syrie.",
+      "Éthiopie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-136",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Helsinki est la capitale de :",
+    "answer": "La Finlande.",
+    "distractors": [
+      "La Suède.",
+      "La Bulgarie.",
+      "La République tchèque."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-137",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Bratislava est la capitale de :",
+    "answer": "La Slovaquie.",
+    "distractors": [
+      "La Slovénie.",
+      "Malte.",
+      "La Hongrie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-138",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Tallinn est la capitale de :",
+    "answer": "LEstonie.",
+    "distractors": [
+      "La Lituanie.",
+      "La Slovaquie.",
+      "LAlbanie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-139",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La premiére opération humanitaire en direction d’un pays du tiers-monde s’est déroulée en :",
+    "answer": "1967.",
+    "distractors": [
+      "1947.",
+      "1957.",
+      "1977."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-140",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "En 1992, dans quel pays Bernard Kouchner débarque-t-il un sac de riz sur l’épaule ?",
+    "answer": "En Somalie.",
+    "distractors": [
+      "En Croatie.",
+      "Au Bangladesh.",
+      "En Yougoslavie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-142",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Carcassonne se situe dans le département :",
+    "answer": "Del’Aude.",
+    "distractors": [
+      "De l'Aveyron.",
+      "De la Haute-Garonne.",
+      "Des Alpes-Maritimes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-143",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La capitale de l’Australie est :",
+    "answer": "Canberra.",
+    "distractors": [
+      "Darwin.",
+      "Sydney.",
+      "Wellington."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-144",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "La capitale de I’Inde est :",
+    "answer": "New Delhi.",
+    "distractors": [
+      "Calcutta.",
+      "Bombay.",
+      "Katmandou."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-145",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Les Maldives sont des îles situées à la pointe sud du continent :",
+    "answer": "— Indien.",
+    "distractors": [
+      "Africain.",
+      "Américain.",
+      "Européen."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-146",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Colombo est la capitale du :",
+    "answer": "Sri Lanka.",
+    "distractors": [
+      "Pakistan.",
+      "Népal.",
+      "Suriname."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-147",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Phnom Penh est la capitale :",
+    "answer": "Du Cambodge.",
+    "distractors": [
+      "De la Birmanie.",
+      "Du Laos.",
+      "De la Malaisie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-148",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La capitale de la Jordanie est :",
+    "answer": "Amman.",
+    "distractors": [
+      "Beyrouth.",
+      "Damas.",
+      "Sanaa."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-149",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La capitale du Canada est :",
+    "answer": "Ottawa.",
+    "distractors": [
+      "Vancouver.",
+      "Montréal.",
+      "Québec."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-150",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Kigali est la capitale :",
+    "answer": "Du Rwanda.",
+    "distractors": [
+      "Du Soudan.",
+      "De l’Ouganda.",
+      "De la Namibie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-151",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Ramallah se trouve :",
+    "answer": "En Cisjordanie.",
+    "distractors": [
+      "En Israël.",
+      "Au Liban.",
+      "en Syrie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-152",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Le pays des Magyars est :",
+    "answer": "La Hongrie.",
+    "distractors": [
+      "La République tchèque.",
+      "La Roumanie.",
+      "—LAlbanie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-153",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Le canal de Panama relie :",
+    "answer": "— L’Atlantique au Pacifique.",
+    "distractors": [
+      "La Méditerranée à la mer Rouge.",
+      "La mer Ionienne à la mer Egée.",
+      "L Atlantique à la Méditerranée."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-154",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Rangoon est la capitale :",
+    "answer": "De la Birmanie.",
+    "distractors": [
+      "Du Laos.",
+      "Du Soudan.",
+      "De la Mongolie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-155",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La Paz est la capitale :",
+    "answer": "De la Bolivie.",
+    "distractors": [
+      "Du Pérou.",
+      "De la Colombie.",
+      "De l’Équateur."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-156",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Le secrétaire d’État américain correspond en France au :",
+    "answer": "Ministre des Affaires étrangères.",
+    "distractors": [
+      "Premier ministre.",
+      "Porte-parole du gouvernement.",
+      "Ministre de l’Intérieur."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-157",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Félix Houphouët-Boigny a été le 1° président :",
+    "answer": "De la Côte d'Ivoire.",
+    "distractors": [
+      "D'Haïti.",
+      "Du Cameroun.",
+      "Du Kenya."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-158",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays désigne-t-on par « Oncle Sam »?",
+    "answer": "Les Etats-Unis.",
+    "distractors": [
+      "L Angleterre.",
+      "—L Australie.",
+      "UIrlande."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-159",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Par « perfide Albion » on désigne :",
+    "answer": "La Grande-Bretagne.",
+    "distractors": [
+      "LAmérique. sl",
+      "L'Irlande.",
+      "—L'Écosse."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-161",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Le Tigre et l’Euphrate sont deux fleuves qui traversent :",
+    "answer": "L'Irak.",
+    "distractors": [
+      "L'Égypte.",
+      "Le Kenya.",
+      "La Roumanie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-162",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "La Perse s’appelle aujourd’hui :",
+    "answer": "L'Iran.",
+    "distractors": [
+      "L’Irak.",
+      "L'Éthiopie.",
+      "La Palestine."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-163",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "L'arbre fétiche du Liban est :",
+    "answer": "Le cèdre.",
+    "distractors": [
+      "LVolivier.",
+      "Le figuier.",
+      "Le palmier."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-164",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La Rhodésie du Sud s'appelle aujourd’hui :",
+    "answer": "Le Zimbabwe.",
+    "distractors": [
+      "Le Congo.",
+      "Le Burundi.",
+      "Le Burkina Faso."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-165",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "La Haute-Volta s’appelle aujourd’hui :",
+    "answer": "Le Burkina Faso.",
+    "distractors": [
+      "LV Angola.",
+      "Le Mali.",
+      "Le Ghana."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-166",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Le Dahomey s’appelle aujourd’hui :",
+    "answer": "Le Bénin.",
+    "distractors": [
+      "Le Soudan.",
+      "Le Burundi.",
+      "La Somalie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-167",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La Grande-Bretagne se compose :",
+    "answer": "De l’Angleterre, du pays de Galles et de l’Écosse.",
+    "distractors": [
+      "De l'Angleterre, de l'Irlande et du pays de Galles.",
+      "De l'Angleterre, de l’Écosse et de l'Irlande du Nord."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-168",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Le Darfour est une région :",
+    "answer": "Du Soudan.",
+    "distractors": [
+      "Du Bénin.",
+      "Du Mali.",
+      "De l’Ouganda."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-169",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Quel pays est surnommé le Toit du Monde ?",
+    "answer": "LeTibet.",
+    "distractors": [
+      "La Chine.",
+      "Le Japon.",
+      "L'Inde."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-170",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Tchernobyl est situé :",
+    "answer": "En Ukraine.",
+    "distractors": [
+      "En Russie.",
+      "En Biélorussie.",
+      "Au Kazakhstan."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-171",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Formose est aussi appelée :",
+    "answer": "Taïwan.",
+    "distractors": [
+      "Macao.",
+      "Shanghai.",
+      "Malaisie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-172",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "L'Empire du Milieu est l’autre nom :",
+    "answer": "De la Chine.",
+    "distractors": [
+      "Du Japon.",
+      "De la Corée.",
+      "Du Sri Lanka."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-173",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Le Pays du Matin calme est :",
+    "answer": "La Corée.",
+    "distractors": [
+      "Le Japon.",
+      "La Chine.",
+      "LeTurkménistan."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-174",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Quelle est la capitale de l'Arabie saoudite ?",
+    "answer": "Riyad.",
+    "distractors": [
+      "Dubaï.",
+      "Téhéran.",
+      "Islamabad."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-175",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Le Machu Picchu se trouve :",
+    "answer": "Au Pérou.",
+    "distractors": [
+      "En Chine.",
+      "Au Zaïre.",
+      "Au Mexique."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-176",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Davos, ville célèbre depuis le sommet qui porte son nom, se trouve :",
+    "answer": "En Suisse.",
+    "distractors": [
+      "Aux États-Unis.",
+      "Au Québec.",
+      "En Belgique."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-177",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Porto Alegre, célèbre depuis le premier Forum social mondial de 2001, se trouve :",
+    "answer": "Au Brésil.",
+    "distractors": [
+      "Au Portugal.",
+      "Au Mexique.",
+      "A Cuba."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-178",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La capitale du Brésil est :",
+    "answer": "Brasilia.",
+    "distractors": [
+      "Sio Paulo.",
+      "Rio de Janeiro.",
+      "San José."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-179",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Rovaniemi, « la ville du Père Noël », se trouve en :",
+    "answer": "Finlande.",
+    "distractors": [
+      "Islande.",
+      "Norvège.",
+      "Estonie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-180",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "De quel archipel fait partie Ibiza, l’île aux plaisirs réputée pour ses folies nocturnes ?",
+    "answer": "Les Baléares.",
+    "distractors": [
+      "Les Canaries.",
+      "Les Antilles."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-181",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "La mer Morte est appelée ainsi car :",
+    "answer": "Elle contient trop de sel et rien ne peut y vivre.",
+    "distractors": [
+      "Elle a été à l’origine d’un naufrage ayant entraîné plus de 3000 morts.",
+      "Celui qui l’a découverte est mort tout de suite après."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-182",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Géographie",
+    "prompt": "Malibu, la célèbre plage de la brigade des sauveteurs en maillot rouge, se trouve sur :",
+    "answer": "L’océan Pacifique.",
+    "distractors": [
+      "Vocéan Atlantique.",
+      "Le golfe du Mexique.",
+      "La mer des Caraïbes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-183",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Géographie",
+    "prompt": "Samarkand, grande cité d’art islamique, est située en :",
+    "answer": "Ouzbékistan.",
+    "distractors": [
+      "Russie.",
+      "Turquie.",
+      "Géorgie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-184",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien de méridiens compte la Terre ?",
+    "answer": "360.",
+    "distractors": [
+      "90.",
+      "180.",
+      "250."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-185",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Géographie",
+    "prompt": "Combien la Terre compte-t-elle de paralléles ?",
+    "answer": "90.",
+    "distractors": [
+      "30.",
+      "180.",
+      "360. Société et médias"
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-187",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Le collège unique a été institué par :",
+    "answer": "René Haby.",
+    "distractors": [
+      "Jean Zay.",
+      "Alain Peyrefitte.",
+      "Alice Saunier-Seité."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-188",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Les collèges relèvent de la compétence :",
+    "answer": "Du département.",
+    "distractors": [
+      "De la commune.",
+      "De la Région.",
+      "De l'État."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-189",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "Les lycées relèvent de la compétence :",
+    "answer": "De la Région.",
+    "distractors": [
+      "De la commune.",
+      "Du département.",
+      "De l'État."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-190",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Avant d’obtenir son bac, combien d’heures un élève passe-t-il sur les bancs de l’école ?",
+    "answer": "10500.",
+    "distractors": [
+      "5500.",
+      "7500.",
+      "12500."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-191",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Au début du siècle, les enfants apportaient à l’école leur déjeuner. Les instituteurs devaient veiller à ce que les élèves :",
+    "answer": "Ne boivent pas trop d’alcool.",
+    "distractors": [
+      "Ne mangent pas trop.",
+      "Ne mangent pas avec leurs doigts.",
+      "Ne reçoivent pas trop de coups de règle."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-192",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "L'école est mixte depuis :",
+    "answer": "1969.",
+    "distractors": [
+      "1949.",
+      "1959.",
+      "1979."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-194",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "La première agence de presse a vu le jour en 1835, il s’agit de :",
+    "answer": "LAFP.",
+    "distractors": [
+      "L'agence Reuters.",
+      "L Associated Press.",
+      "World Press."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-195",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Le fondateur du quotidien Le Monde est :",
+    "answer": "Hubert Beuve-Méry.",
+    "distractors": [
+      "Pierre Lazareff.",
+      "Edwy Plenel.",
+      "Jacques Fauvet."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-196",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "Le quotidien Le Parisien a été créé par :",
+    "answer": "Émilien Amaury.",
+    "distractors": [
+      "Philippe Bouvard.",
+      "Patrick Poivre d'Arvor.",
+      "Christine Ockrent."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-197",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "La télé existe depuis :",
+    "answer": "1935.",
+    "distractors": [
+      "1939.",
+      "1945.",
+      "1955. Les quotidiens et leurs créateurs ° Georges Clemenceau (1841-1929) fonda L’Aurore en 1903. e Jean Jaurès (1859-191"
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-198",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "La télé est en couleur depuis :",
+    "answer": "1967.",
+    "distractors": [
+      "1937.",
+      "1947.",
+      "1957."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-199",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "En 1953, L'Express est fondé par :",
+    "answer": "Jean-Jacques Servan-Schreiber.",
+    "distractors": [
+      "David Servan-Schreiber.",
+      "Jean-Louis Servan-Schreiber.",
+      "Françoise Giroud."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-200",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "L'hebdomadaire satirique Le Canard enchaîné existe depuis :",
+    "answer": "1915.",
+    "distractors": [
+      "1870.",
+      "1905.",
+      "1945. 1935: première émission officielle de la télévision française. 1949: création de la RTF (Radiodiffusion-télévision"
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-201",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "En 1974, à quelle femme, ministre de la Santé, doit-on d’avoir défendu avec acharnement la loi sur l'IVG, l'interruption volontaire de grossesse ?",
+    "answer": "SimoneVeil.",
+    "distractors": [
+      "Françoise Giroud.",
+      "Gisèle Halimi.",
+      "Edith Cresson."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-202",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Luc Montagnier est connu pour :",
+    "answer": "Avoir découvert le virus du sida.",
+    "distractors": [
+      "Avoir pratiqué avec succès la première expérience de thérapie génique.",
+      "Avoir effectué la première greffe cardiaque.",
+      "Avoir réussi un clonage humain."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-203",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "L'organisme chargé de venir à bout de la faim dans le monde est :",
+    "answer": "La FAO.",
+    "distractors": [
+      "Action contre la faim.",
+      "Le PNUD.",
+      "L’UNICEE"
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-206",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "En 1800, la France ne compte aucun centenaire; en 1900, il y en a 10 et aujourd’hui ils sont :",
+    "answer": "20000.",
+    "distractors": [
+      "100.",
+      "10000.",
+      "26000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-207",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Nous bénéficions de la Sécurité sociale depuis :",
+    "answer": "1945.",
+    "distractors": [
+      "1935.",
+      "1950.",
+      "1955."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-208",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "La légende raconte que les effets du café furent découverts grâce à la gourmandise :",
+    "answer": "De chèvres yéménites.",
+    "distractors": [
+      "De moines éthiopiens.",
+      "D'’enfants brésiliens.",
+      "De femmes afghanes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-209",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Quel est le fruit le plus consommé en France ?",
+    "answer": "La pomme.",
+    "distractors": [
+      "La banane.",
+      "L’orange.",
+      "La poire."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-210",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "Avec une moyenne de 123 kilos de légumes par an et par habitant, depuis dix ans les Français achètent :",
+    "answer": "Autant de légumes qu’en 1998.",
+    "distractors": [
+      "Moins de légumes.",
+      "Beaucoup plus de légumes, la campagne « Au moins 5 fruits et légumes par jour » ayant porté ses fruits."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-211",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "On compte le plus grand nombre de végétariens, adeptes d’une alimentation sans produit animal et fondée sur les fruits et légumes associés aux légumes secs, aux céréales et aux produits laitiers :",
+    "answer": "En Allemagne.",
+    "distractors": [
+      "En France.",
+      "En Grande-Bretagne.",
+      "En Suède."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-215",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Une maladie nosocomiale se contracte :",
+    "answer": "Lors d’un séjour à l’hôpital.",
+    "distractors": [
+      "Par un coup de froid.",
+      "Par les sinus.",
+      "Aux toilettes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-216",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Les premiers cas de sida ont été repérés en:",
+    "answer": "1981.",
+    "distractors": [
+      "1971.",
+      "1986.",
+      "1991."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-217",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "Le sida fait combien de morts par jour à travers le monde ?",
+    "answer": "8000.",
+    "distractors": [
+      "18000.",
+      "180000.",
+      "280000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-222",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Le passage de la durée de travail de 39 heures a 35 heures a été voté en:",
+    "answer": "1998.",
+    "distractors": [
+      "2002.",
+      "2004.",
+      "2006."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-224",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "Le divorce par consentement mutuel est possible depuis :",
+    "answer": "1975.",
+    "distractors": [
+      "1955.",
+      "1965.",
+      "1985."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-225",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "En 1971, le Manifeste des 343 salopes désigne des femmes :",
+    "answer": "Déclarant avoir eu recours al’avortement.",
+    "distractors": [
+      "Accusées d’avoir trompé leur mari.",
+      "Confessant avoir eu des relations sexuelles lorsqu’elles étaient mineures.",
+      "Soupconnées de battre leurs enfants."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-226",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Chaque année, les enfants maltraités sont au nombre de :",
+    "answer": "18000.",
+    "distractors": [
+      "5000.",
+      "10000.",
+      "25000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-227",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Le nombre des esclaves dans le monde aujourd’hui est :",
+    "answer": "Supérieur à ce qu’il était au cours des vingt siècles précédents.",
+    "distractors": [
+      "Inférieur à ce qu’il était au temps de la traite des Noirs.",
+      "Égal à ce qu’il était au temps de la traite des Noirs."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-228",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "La devise des jeux Olympiques est :",
+    "answer": "« Plus vite, plus haut, plus fort ».",
+    "distractors": [
+      "« Haut les cœurs! ».",
+      "« L'important, c’est de participer »."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-229",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Les anneaux des jeux Olympiques représentent :",
+    "answer": "Les cing continents de l’olympisme.",
+    "distractors": [
+      "L’abolition des chaînes en tout genre.",
+      "Les premiers esclaves jetés en pature dans les arènes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-231",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "15000 enfants naissent chaque année grace aux techniques de procréation médicalement assistée, le premier a été :",
+    "answer": "Louise Brown.",
+    "distractors": [
+      "Amandine.",
+      "Dolly.",
+      "Number One."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-232",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Le RSA, le revenu de solidarité active, a vu le jour en :",
+    "answer": "2009.",
+    "distractors": [
+      "1983.",
+      "1995.",
+      "2005."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-234",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Nous conduisons à droite parce que :",
+    "answer": "Napoléon l’a imposé à l'Europe pour harmoniser la circula- tion.",
+    "distractors": [
+      "La plupart des gens sont droitiers.",
+      "Il fallait choisir droite ou gauche pour éviter les collisions."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-235",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Le port obligatoire de la ceinture de sécurité en voiture remonte à :",
+    "answer": "1973.",
+    "distractors": [
+      "1965.",
+      "1986.",
+      "1992."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-236",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Chaque année, il se célèbre en France :",
+    "answer": "Entre 265 000 et 280000 mariages.",
+    "distractors": [
+      "Entre 175000 et 180 000 mariages.",
+      "Entre 375 000 et 380 000 mariages.",
+      "Entre 390 000 et 420 000 mariages."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-237",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "On enregistre en France chaque année :",
+    "answer": "Environ 140000 divorces.",
+    "distractors": [
+      "Environ 70000 divorces.",
+      "Environ 100000 divorces.",
+      "Environ 240000 divorces."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-238",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "En moyenne, combien de PACS sont conclus chaque année?",
+    "answer": "100000.",
+    "distractors": [
+      "50000.",
+      "75000.",
+      "200000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-239",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Qui a dit : « Il y a plus inconnu que le Soldat inconnu : sa femme » ?",
+    "answer": "Le MLE",
+    "distractors": [
+      "Simone de Beauvoir.",
+      "Le général de Gaulle.",
+      "Fadela Amara."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-240",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Pour fêter les milliers de musiciens amateurs que compte la France, Jack Lang a inventé la Fête de la musique en :",
+    "answer": "1982.",
+    "distractors": [
+      "1975.",
+      "1989.",
+      "1992."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-241",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien y a-t-il de personnes détenues dans les prisons françaises ?",
+    "answer": "64000.",
+    "distractors": [
+      "24000.",
+      "44000.",
+      "84000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-243",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Lorsqu'elle a créé son tailleur en tweed porté avec une blouse en soie, Coco Chanel était âgée de :",
+    "answer": "71 ans.",
+    "distractors": [
+      "19 ans.",
+      "45 ans.",
+      "81 ans."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-244",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Combien de femmes dans le monde ont les moyens de s’offrir des vétements de haute couture?",
+    "answer": "3000.",
+    "distractors": [
+      "30000.",
+      "50000.",
+      "100000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-245",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "En 1963, les premières chaussures de tennis sont inventées par :",
+    "answer": "Adidas.",
+    "distractors": [
+      "Nike.",
+      "Reebook."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-247",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Symbole de la France, indissociable de l’image de l’abbé Pierre ou de Bourvil, le béret a été inventé par les Béarnais dès le Moyen Âge. Les premiers à le porter furent :",
+    "answer": "Les bergers.",
+    "distractors": [
+      "Les paysans.",
+      "Les parachutistes.",
+      "Les ouvriers."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-248",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Élément vestimentaire longtemps incontournable de la mode masculine, la cravate nous vient :",
+    "answer": "De Croatie.",
+    "distractors": [
+      "De Chine.",
+      "D’Allemagne.",
+      "D'Italie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-249",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Combien de balles faut-il prévoir pour un tournoi à Roland-Garros ?",
+    "answer": "60000.",
+    "distractors": [
+      "20000.",
+      "90000.",
+      "120000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-250",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Comme le chanteur Daniel Guichard ou l’acteur Gérard Lanvin, combien compte-t-on de propriétaires de camping-car en France ?",
+    "answer": "150000.",
+    "distractors": [
+      "50000.",
+      "300000.",
+      "500000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-251",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Nous avons des euros en poche depuis :",
+    "answer": "2002.",
+    "distractors": [
+      "1999.",
+      "2000.",
+      "2004."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-252",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "Le pays qui compte le plus grand nombre de casinos en Europe est :",
+    "answer": "La France.",
+    "distractors": [
+      "L'Allemagne.",
+      "La Grande-Bretagne.",
+      "L'Italie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-253",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "« Faites vos jeux... Rien ne va plus » : le croupier qui prononce ces phrases a une particularité liée à sa fonction :",
+    "answer": "Il porte des vêtements sans poches.",
+    "distractors": [
+      "Il est trilingue.",
+      "Ilest célibataire.",
+      "II ne joue jamais."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-254",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Les machines à sous sont parfois surnommées :",
+    "answer": "Bandits manchots.",
+    "distractors": [
+      "Poules aux œufs d’or.",
+      "Sac à pièces.",
+      "Bras ballants."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-255",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Nous vivons actuellement sous le calendrier :",
+    "answer": "Grégorien.",
+    "distractors": [
+      "Républicain.",
+      "Julien.",
+      "Arménien."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-256",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Les subprimes, à l’origine de la crise américaine de l’immobilier en 2007, sont des :",
+    "answer": "Emprunts hypothécaires à risques.",
+    "distractors": [
+      "Capitaux de retraite.",
+      "Assurances logement très chères."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-257",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Le sous-emploi désigne selon l'INSEE :",
+    "answer": "Les salariés à temps partiel qui souhaiteraient travailler plus.",
+    "distractors": [
+      "Les personnes qui occupent un emploi ne correspondant pas à leur niveau de compétence.",
+      "Les travailleurs illégalement payés en dessous du SMIC."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-258",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "En anglais, PIB (produit intérieur brut) se dit :",
+    "answer": "GDP.",
+    "distractors": [
+      "BIP.",
+      "PIB."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-259",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Société",
+    "prompt": "L'indice des prix est aussi appelé :",
+    "answer": "Pouvoir d’achat.",
+    "distractors": [
+      "Indice de la construction.",
+      "Indice fiscal."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-260",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Bercy désigne communément le :",
+    "answer": "Ministère des Finances.",
+    "distractors": [
+      "Ministère du Travail.",
+      "Ministère de la Défense.",
+      "Palais de l'Élysée."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-261",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "En quelle année le centre d'hébergement et d’accueil d'urgence de Sangatte a-t-il été fermé ?",
+    "answer": "2005.",
+    "distractors": [
+      "1999.",
+      "2002.",
+      "2008"
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-262",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "En France, combien de personnes sont assujetties à l'impôt de solidarité sur la fortune ?",
+    "answer": "200000.",
+    "distractors": [
+      "50000.",
+      "100000.",
+      "500000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-264",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Société",
+    "prompt": "Quel économiste pense qu’il faut limiter les naissances pour éviter la surpopulation ?",
+    "answer": "Thomas Malthus.",
+    "distractors": [
+      "Charles Darwin.",
+      "Gregor Mendel."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-265",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Société",
+    "prompt": "Max Havelaar, symbole du commerce équitable, est :",
+    "answer": "Le héros d’un roman de Multatuli. Sciences et environnement",
+    "distractors": [
+      "Le fondateur du commerce équitable.",
+      "Le premier producteur équitable."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-266",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Qu’a découvert Alexander Fleming ?",
+    "answer": "La pénicilline.",
+    "distractors": [
+      "Le vaccin contre la rage.",
+      "Le BCG.",
+      "—Vinsuline."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-267",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "A quel physicien doit-on la théorie des quanta?",
+    "answer": "Max Planck.",
+    "distractors": [
+      "Albert Einstein.",
+      "Isaac Newton.",
+      "Hubert Reeves."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-268",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Linsuline a été inventée par des chercheurs canadiens en :",
+    "answer": "1921.",
+    "distractors": [
+      "1931.",
+      "1941.",
+      "1951."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-269",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Einstein est passé à la postérité avec la formule mathématique la plus célèbre au monde : E = me qui institue l’équivalence entre :",
+    "answer": "L'énergie et la masse.",
+    "distractors": [
+      "L’électron et le mégatemps.",
+      "L'espace et sa mesure.",
+      "Vélectrode et sa mesure."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-270",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "On doit la première greffe du cœur, réalisée en 1967, a:",
+    "answer": "Christiaan Barnard.",
+    "distractors": [
+      "Luc Montagnier.",
+      "Léon Schwartzenberg."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-271",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La pilule anticonceptionnelle a été inventée en :",
+    "answer": "1955.",
+    "distractors": [
+      "1855.",
+      "1915.",
+      "1945."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-272",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "L'homme dispose de :",
+    "answer": "23 paires de chromosomes.",
+    "distractors": [
+      "12 paires de chromosomes.",
+      "33 paires de chromosomes.",
+      "43 paires de chromosomes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-273",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Pour être donneur de sang universel, il faut être du groupe sanguin :",
+    "answer": "O.",
+    "distractors": [
+      "A.",
+      "-AB.",
+      "B."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-274",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "On doit les premiers ordinateurs à la société :",
+    "answer": "IBM.",
+    "distractors": [
+      "Apple.",
+      "Bull.",
+      "Dell."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-275",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La première femme à avoir obtenu un prix Nobel est :",
+    "answer": "Marie Curie.",
+    "distractors": [
+      "Mère Teresa.",
+      "La comtesse Bertha von Suttner.",
+      "Marguerite Yourcenar."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-276",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Pour construire un igloo il faut :",
+    "answer": "Compacter la neige pour former des blocs de glace et les assembler en coupole.",
+    "distractors": [
+      "Fabriquer une charpente en bois ovale et la recouvrir de neige.",
+      "Empiler en cercle des pierres recouvertes de neige pilée."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-277",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Mars est surnommée la Planète Rouge :",
+    "answer": "Parce qu’elle est imbibée d’oxydes ferriques, de couleur rouge, ce qui atteste la présence d’eau.",
+    "distractors": [
+      "En contraste avec la Terre appelée Planète Bleue.",
+      "Parce que ce sont les Soviétiques qui l’ont découverte en premier."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-278",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "L'Agence spatiale française est l’autre nom donné :",
+    "answer": "Au CNES.",
+    "distractors": [
+      "Au CNRS.",
+      "À la NASA."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-279",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Le 21 juillet 1969, Neil Armstrong et Edwin Aldrin ont marché sur la Lune pendant :",
+    "answer": "Deux heures trente.",
+    "distractors": [
+      "Trois minutes.",
+      "Quatre heures.",
+      "Huit heures."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-280",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Combien d'hommes ont marché sur la Lune?",
+    "answer": "12.",
+    "distractors": [
+      "2.",
+      "6.",
+      "24."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-281",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel pays a envoyé son premier homme dans l’espace en 2003?",
+    "answer": "La Chine.",
+    "distractors": [
+      "La Corée.",
+      "L'Inde.",
+      "Le Japon."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-282",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Benjamin Franklin a inventé :",
+    "answer": "Le paratonnerre.",
+    "distractors": [
+      "La pile électrique.",
+      "La lampe à incandescence.",
+      "Le téléphone."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-283",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La célèbre pierre de Rosette, qui permit à Champollion de déchiffrer les hiéroglyphes, tire son nom de :",
+    "answer": "La ville où elle fut trouvée, Rosette, sur le Nil.",
+    "distractors": [
+      "Son découvreur, Albéric Rosette.",
+      "Sa couleur légèrement rosée."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-284",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Linventeur du baromètre est :",
+    "answer": "Evangelista Torricelli.",
+    "distractors": [
+      "Galileo Galilei.",
+      "Blaise Pascal."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-285",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Qui a inventé la brouette ?",
+    "answer": "Les Chinois.",
+    "distractors": [
+      "Les Indiens.",
+      "Les Gaulois."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-286",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La première révolution industrielle est indissociable de l'invention de la machine à vapeur, que l’on doit à :",
+    "answer": "Denis Papin.",
+    "distractors": [
+      "Karl Benz.",
+      "Jesse Reno."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-287",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Le concours Lépine, qui récompense les découvertes les plus originales, a vu le jour en :",
+    "answer": "1901.",
+    "distractors": [
+      "1921.",
+      "1949.",
+      "1961."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-288",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Que signifie le sigle IRM désignant cette technique médicale récente permettant d’avoir une vue en 2D ou en 3D d’une partie du corps ?",
+    "answer": "Imagerie par résonance magnétique.",
+    "distractors": [
+      "Imagerie par radiographie médicale.",
+      "Imagerie par rayons magnétiques.",
+      "Imagerie par recherche médicale."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-289",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Les trains ont abandonné le charbon pour l'électricité en :",
+    "answer": "1879.",
+    "distractors": [
+      "1919.",
+      "1939.",
+      "1949."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-290",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Réve fou, le tunnel sous la Manche fut inauguré en :",
+    "answer": "1994.",
+    "distractors": [
+      "1964.",
+      "1974.",
+      "1984."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-292",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La calorie est la quantité de chaleur nécessaire pour élever de 1 °C la température de :",
+    "answer": "1 gramme d’eau.",
+    "distractors": [
+      "1 milligramme d’eau.",
+      "10 grammes d’eau.",
+      "100 grammes d’eau."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-293",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Le nom du bateau sur lequel le commandant Cousteau partait à la découverte des fonds marins est :",
+    "answer": "La Calypso.",
+    "distractors": [
+      "Le Belem.",
+      "La Belle-Poule."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-294",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Outil indispensable à la survie du campeur, le couteau suisse, aux multiples lames, a été inventé en 1891 pour :",
+    "answer": "L’armée suisse.",
+    "distractors": [
+      "Les scouts français.",
+      "Les médecins soviétiques."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-295",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La photographie a été inventée au début du xix’ siècle par :",
+    "answer": "Joseph Nicéphore Niépce.",
+    "distractors": [
+      "Louis Daguerre.",
+      "Nadar."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-296",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien la France compte-t-elle de « nez » capables de créer des parfums ?",
+    "answer": "250.",
+    "distractors": [
+      "50.",
+      "150.",
+      "450."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-298",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Congeler son corps en attendant que la médecine fasse des progrès est :",
+    "answer": "Proposé par des entreprises aux Etats-Unis.",
+    "distractors": [
+      "Déjà pratiqué en France.",
+      "Interdit partout dans le monde."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-300",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "L'homme et la femme ont 22 paires de chromosomes identiques. La 23° paire fait la différence. Chez la femme, elle est formée du couple :",
+    "answer": "XX.",
+    "distractors": [
+      "XY.",
+      "YY."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-302",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Le support matériel de l’hérédité est :",
+    "answer": "LADN.",
+    "distractors": [
+      "La cellule.",
+      "Le cerveau.",
+      "Le sang."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-303",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Combien l’homme a-t-il de gènes ?",
+    "answer": "Entre 20000 et 25 000.",
+    "distractors": [
+      "Entre 30000 et 40000.",
+      "Entre 50000 et 60000.",
+      "Entre 70000 et 80000."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-304",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Le nanomètre est une unité de mesure qui représente :",
+    "answer": "Le milliardième du mètre.",
+    "distractors": [
+      "Le millième du mètre.",
+      "Le dix millionième du mètre.",
+      "Le cent millionième du mètre."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-306",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Les vitamines sont au nombre de :",
+    "answer": "13.",
+    "distractors": [
+      "5.",
+      "7.",
+      "15."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-307",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Entre 1950 et aujourd’hui, notre consommation de matières grasses :",
+    "answer": "A doublé.",
+    "distractors": [
+      "Est restée identique.",
+      "A diminué de 25 %.",
+      "A triplé."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-309",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Qui est considéré comme l'inventeur du champagne?",
+    "answer": "Dom Pérignon.",
+    "distractors": [
+      "- Moët et Chandon.",
+      "La veuve Clicquot."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-310",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Les hommes sont plus souvent chauves que les femmes car :",
+    "answer": "Ils sécrètent trop de testostérone.",
+    "distractors": [
+      "Ils ont tendance à stresser davantage.",
+      "Ils ne s’occupent pas assez de leurs cheveux."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-311",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Nous avons en moyenne entre 80000 et 150000 cheveux sur la tête. Ceux qui en ont le plus sont :",
+    "answer": "Les blonds.",
+    "distractors": [
+      "Les bruns.",
+      "Les roux."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-312",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "La durée de vie d’un cheveu est de :",
+    "answer": "Trois à six ans.",
+    "distractors": [
+      "Trois mois à un an.",
+      "Dix ans.",
+      "Toute la vie."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-313",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Découverte par un chimiste français dans le petit village de Javel, l’eau du même nom a d’abord été connue pour ses propriétés :",
+    "answer": "Blanchissantes.",
+    "distractors": [
+      "Désodorisantes.",
+      "Désinfectantes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-314",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "En France, le premier centre de thalassothérapie a vu le jour en 1899 a:",
+    "answer": "Roscoff.",
+    "distractors": [
+      "Saint-Malo.",
+      "La Rochelle.",
+      "—Dax."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-315",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Une maladie orpheline est une maladie :",
+    "answer": "Rare.",
+    "distractors": [
+      "Qui rend stérile.",
+      "Totalement inconnue."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-318",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "On ne rit pas quand on se chatouille tout seul car :",
+    "answer": "On s’y attend et on n’est pas surpris.",
+    "distractors": [
+      "Notre main ne provoque pas de réaction.",
+      "Notre cerveau n’est pas programmé comme ça."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-320",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Lorsqu'il y a des cumulonimbus, c’est que le temps est :",
+    "answer": "À l'orage.",
+    "distractors": [
+      "Au beau fixe.",
+      "À la neige."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-323",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Les marées sont dues à l'attraction :",
+    "answer": "De la Lune et du Soleil sur la Terre.",
+    "distractors": [
+      "Du Soleil sur la Terre.",
+      "De la Lune sur le Soleil."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-324",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "L'effet de serre a été découvert en :",
+    "answer": "1896.",
+    "distractors": [
+      "1926.",
+      "1946.",
+      "1966."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-325",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Quel est le principal responsable de l'augmentation des émissions de gaz à effet de serre ?",
+    "answer": "Les transports.",
+    "distractors": [
+      "Les industries.",
+      "Le chauffage urbain."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-326",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Depuis le début du xx’ siècle, la température de la Terre a augmenté de :",
+    "answer": "Moins de 1 °C.",
+    "distractors": [
+      "142°C.",
+      "3a4°C.",
+      "5à6°c."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-327",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Quelle part de la population n’a pas accès à l’eau potable ?",
+    "answer": "1/5.",
+    "distractors": [
+      "1/4.",
+      "1/10.",
+      "1/20."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-330",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Bien que recouvrant les trois quarts de la surface de la Terre, l’eau est insuffisante car :",
+    "answer": "Elle est salée pour plus de 97 % de son volume.",
+    "distractors": [
+      "Elle est de plus en plus polluée.",
+      "Elle est de plus en plus incontrôlable, du fait du changement climatique."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-333",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Parmi ces pays, lequel voit sa part du nucléaire dans la production d'électricité atteindre 79 % ?",
+    "answer": "La France.",
+    "distractors": [
+      "La Belgique.",
+      "La Corée du Sud.",
+      "L'Allemagne."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-334",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Combien la France compte-t-elle de centrales nucléaires ?",
+    "answer": "19.",
+    "distractors": [
+      "5.",
+      "10.",
+      "30."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-336",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Le principal pays producteur de pétrole est :",
+    "answer": "L’Arabie saoudite.",
+    "distractors": [
+      "L'Iran.",
+      "LeVenezuela.",
+      "Le Qatar."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-337",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Pour avoir hybridé des petits pois, il est considéré comme le pére de la génétique, il s’agit de :",
+    "answer": "Gregor Mendel.",
+    "distractors": [
+      "Charles Darwin.",
+      "Thomas Malthus."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-338",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Que devient une sonde spatiale abandonnée dans l’espace ?",
+    "answer": "Elle devient une planète artificielle.",
+    "distractors": [
+      "Elle se désagrége.",
+      "Elle retombe sur la Terre."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-340",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "Les grands carnivores avaient quasiment disparu de France. Aujourd’hui, leur rôle écologique est reconnu. Ainsi, l’ours brun des Pyrénées fait désormais assez bon ménage avec les bergers, qui acceptent mieux sa présence. D'ailleurs, que font-ils qui en apporte la preuve ?",
+    "answer": "Ils moulent son empreinte sur le fromage Pé Descaous.",
+    "distractors": [
+      "Ils ont fait de l’ours brun la mascotte d’un livre pour enfants.",
+      "Ils en ont fait des ours en peluche, une spécialité de la région."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-342",
+    "mode": "qcm",
+    "difficulty": "easy",
+    "category": "Sciences",
+    "prompt": "Comment appelait-on l’hydroélectricité au xx’ siècle ?",
+    "answer": "Houille blanche.",
+    "distractors": [
+      "Énergie neptunienne.",
+      "Électreau."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-343",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "Les plus gros consommateurs d’eau sont...",
+    "answer": "Les agriculteurs.",
+    "distractors": [
+      "Les industriels.",
+      "Les ménages."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-346",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "En France, les centrales nucléaires fonctionnent sur le principe de la :",
+    "answer": "Fission des atomes.",
+    "distractors": [
+      "Fusion des atomes.",
+      "Surgénération des atomes."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-347",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "L'inventeur de la voiture est...",
+    "answer": "Nicolas Joseph Cugnot.",
+    "distractors": [
+      "Gottlieb Daimler.",
+      "Louis Renault."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-349",
+    "mode": "qcm",
+    "difficulty": "medium",
+    "category": "Sciences",
+    "prompt": "La bicyclette actuelle est née vers :",
+    "answer": "1880.",
+    "distractors": [
+      "1820.",
+      "1860.",
+      "1920."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  },
+  {
+    "id": "pdf-cg-350",
+    "mode": "qcm",
+    "difficulty": "hard",
+    "category": "Sciences",
+    "prompt": "L'Internet doit son existence à :",
+    "answer": "L'US Air Force, qui désirait créer un réseau de communication capable de résister à une attaque nucléaire.",
+    "distractors": [
+      "Coca-Cola, qui voulait toucher instantanément ses grossistes.",
+      "Le conservateur de la bibliothèque du Congrès de Washington."
+    ],
+    "tags": [
+      "pdf-culture-generale"
+    ]
+  }
+]

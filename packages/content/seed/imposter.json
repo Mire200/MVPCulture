@@ -1,0 +1,67 @@
+[
+  { "id": "im-frt-001", "mode": "imposter", "difficulty": "easy", "category": "Fruits", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Pomme", "imposterWord": "Poire", "aliases": ["pommes", "la pomme"] },
+  { "id": "im-frt-002", "mode": "imposter", "difficulty": "easy", "category": "Fruits", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Citron", "imposterWord": "Orange", "aliases": ["citrons"] },
+  { "id": "im-frt-003", "mode": "imposter", "difficulty": "easy", "category": "Fruits", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Fraise", "imposterWord": "Framboise", "aliases": ["fraises"] },
+  { "id": "im-frt-004", "mode": "imposter", "difficulty": "medium", "category": "Fruits", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Pêche", "imposterWord": "Abricot", "aliases": ["peche", "pêches"] },
+  { "id": "im-frt-005", "mode": "imposter", "difficulty": "hard", "category": "Fruits", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Mangue", "imposterWord": "Papaye", "aliases": [] },
+
+  { "id": "im-cui-001", "mode": "imposter", "difficulty": "easy", "category": "Cuisine", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Pizza", "imposterWord": "Quiche", "aliases": ["pizzas"] },
+  { "id": "im-cui-002", "mode": "imposter", "difficulty": "easy", "category": "Cuisine", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Croissant", "imposterWord": "Pain au chocolat", "aliases": ["croissants"] },
+  { "id": "im-cui-003", "mode": "imposter", "difficulty": "medium", "category": "Cuisine", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Sushi", "imposterWord": "Maki", "aliases": ["sushis", "makis"] },
+  { "id": "im-cui-004", "mode": "imposter", "difficulty": "medium", "category": "Cuisine", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Raclette", "imposterWord": "Tartiflette", "aliases": [] },
+  { "id": "im-cui-005", "mode": "imposter", "difficulty": "hard", "category": "Cuisine", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Risotto", "imposterWord": "Paella", "aliases": [] },
+
+  { "id": "im-ani-001", "mode": "imposter", "difficulty": "easy", "category": "Animaux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Chien", "imposterWord": "Chat", "aliases": ["chiens"] },
+  { "id": "im-ani-002", "mode": "imposter", "difficulty": "easy", "category": "Animaux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Cheval", "imposterWord": "Âne", "aliases": ["ane", "anes"] },
+  { "id": "im-ani-003", "mode": "imposter", "difficulty": "medium", "category": "Animaux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Lion", "imposterWord": "Tigre", "aliases": ["lions"] },
+  { "id": "im-ani-004", "mode": "imposter", "difficulty": "medium", "category": "Animaux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Aigle", "imposterWord": "Faucon", "aliases": [] },
+  { "id": "im-ani-005", "mode": "imposter", "difficulty": "hard", "category": "Animaux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Alligator", "imposterWord": "Crocodile", "aliases": [] },
+  { "id": "im-ani-006", "mode": "imposter", "difficulty": "hard", "category": "Animaux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Dauphin", "imposterWord": "Marsouin", "aliases": [] },
+
+  { "id": "im-spo-001", "mode": "imposter", "difficulty": "easy", "category": "Sport", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Football", "imposterWord": "Rugby", "aliases": [] },
+  { "id": "im-spo-002", "mode": "imposter", "difficulty": "medium", "category": "Sport", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Tennis", "imposterWord": "Badminton", "aliases": [] },
+  { "id": "im-spo-003", "mode": "imposter", "difficulty": "medium", "category": "Sport", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Ski", "imposterWord": "Snowboard", "aliases": [] },
+  { "id": "im-spo-004", "mode": "imposter", "difficulty": "hard", "category": "Sport", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Judo", "imposterWord": "Karaté", "aliases": ["karate"] },
+  { "id": "im-spo-005", "mode": "imposter", "difficulty": "hard", "category": "Sport", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Aviron", "imposterWord": "Canoë", "aliases": ["canoe"] },
+
+  { "id": "im-met-001", "mode": "imposter", "difficulty": "easy", "category": "Métiers", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Médecin", "imposterWord": "Infirmier", "aliases": ["medecin"] },
+  { "id": "im-met-002", "mode": "imposter", "difficulty": "easy", "category": "Métiers", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Pompier", "imposterWord": "Policier", "aliases": [] },
+  { "id": "im-met-003", "mode": "imposter", "difficulty": "medium", "category": "Métiers", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Boulanger", "imposterWord": "Pâtissier", "aliases": ["patissier"] },
+  { "id": "im-met-004", "mode": "imposter", "difficulty": "hard", "category": "Métiers", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Avocat", "imposterWord": "Notaire", "aliases": [] },
+
+  { "id": "im-obj-001", "mode": "imposter", "difficulty": "easy", "category": "Objets", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Fourchette", "imposterWord": "Cuillère", "aliases": ["cuillere"] },
+  { "id": "im-obj-002", "mode": "imposter", "difficulty": "medium", "category": "Objets", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Guitare", "imposterWord": "Ukulélé", "aliases": ["ukulele"] },
+  { "id": "im-obj-003", "mode": "imposter", "difficulty": "medium", "category": "Objets", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Piano", "imposterWord": "Clavecin", "aliases": [] },
+  { "id": "im-obj-004", "mode": "imposter", "difficulty": "hard", "category": "Objets", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Marteau", "imposterWord": "Masse", "aliases": [] },
+
+  { "id": "im-tra-001", "mode": "imposter", "difficulty": "easy", "category": "Transports", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Voiture", "imposterWord": "Moto", "aliases": [] },
+  { "id": "im-tra-002", "mode": "imposter", "difficulty": "medium", "category": "Transports", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Avion", "imposterWord": "Hélicoptère", "aliases": ["helicoptere"] },
+  { "id": "im-tra-003", "mode": "imposter", "difficulty": "medium", "category": "Transports", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Train", "imposterWord": "Tramway", "aliases": [] },
+  { "id": "im-tra-004", "mode": "imposter", "difficulty": "hard", "category": "Transports", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Vélo", "imposterWord": "Trottinette", "aliases": ["velo"] },
+
+  { "id": "im-lie-001", "mode": "imposter", "difficulty": "easy", "category": "Lieux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Plage", "imposterWord": "Piscine", "aliases": [] },
+  { "id": "im-lie-002", "mode": "imposter", "difficulty": "medium", "category": "Lieux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Hôpital", "imposterWord": "Clinique", "aliases": ["hopital"] },
+  { "id": "im-lie-003", "mode": "imposter", "difficulty": "hard", "category": "Lieux", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Musée", "imposterWord": "Galerie", "aliases": ["musee"] },
+
+  { "id": "im-cin-001", "mode": "imposter", "difficulty": "medium", "category": "Cinéma", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Batman", "imposterWord": "Superman", "aliases": [] },
+  { "id": "im-cin-002", "mode": "imposter", "difficulty": "medium", "category": "Cinéma", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Star Wars", "imposterWord": "Star Trek", "aliases": [] },
+  { "id": "im-cin-003", "mode": "imposter", "difficulty": "hard", "category": "Cinéma", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Tarantino", "imposterWord": "Scorsese", "aliases": [] },
+
+  { "id": "im-boi-001", "mode": "imposter", "difficulty": "easy", "category": "Boissons", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Café", "imposterWord": "Thé", "aliases": ["cafe", "the"] },
+  { "id": "im-boi-002", "mode": "imposter", "difficulty": "medium", "category": "Boissons", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Vin rouge", "imposterWord": "Vin blanc", "aliases": [] },
+  { "id": "im-boi-003", "mode": "imposter", "difficulty": "hard", "category": "Boissons", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Whisky", "imposterWord": "Bourbon", "aliases": [] },
+
+  { "id": "im-vet-001", "mode": "imposter", "difficulty": "easy", "category": "Vêtements", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Pantalon", "imposterWord": "Short", "aliases": [] },
+  { "id": "im-vet-002", "mode": "imposter", "difficulty": "medium", "category": "Vêtements", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Veste", "imposterWord": "Manteau", "aliases": [] },
+  { "id": "im-vet-003", "mode": "imposter", "difficulty": "hard", "category": "Vêtements", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Pull", "imposterWord": "Cardigan", "aliases": [] },
+
+  { "id": "im-pay-001", "mode": "imposter", "difficulty": "medium", "category": "Pays", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Espagne", "imposterWord": "Portugal", "aliases": [] },
+  { "id": "im-pay-002", "mode": "imposter", "difficulty": "hard", "category": "Pays", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Norvège", "imposterWord": "Suède", "aliases": ["norvege", "suede"] },
+  { "id": "im-pay-003", "mode": "imposter", "difficulty": "hard", "category": "Pays", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Slovaquie", "imposterWord": "Slovénie", "aliases": ["slovenie"] },
+
+  { "id": "im-jv-001", "mode": "imposter", "difficulty": "medium", "category": "Jeux vidéo", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Mario", "imposterWord": "Sonic", "aliases": [] },
+  { "id": "im-jv-002", "mode": "imposter", "difficulty": "hard", "category": "Jeux vidéo", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Fortnite", "imposterWord": "Warzone", "aliases": [] },
+
+  { "id": "im-mus-001", "mode": "imposter", "difficulty": "medium", "category": "Musique", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Beatles", "imposterWord": "Rolling Stones", "aliases": [] },
+  { "id": "im-mus-002", "mode": "imposter", "difficulty": "hard", "category": "Musique", "prompt": "Tu reçois un mot secret. Donne un indice sans le dire.", "civilianWord": "Jazz", "imposterWord": "Blues", "aliases": [] }
+]

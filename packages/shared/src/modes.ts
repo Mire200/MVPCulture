@@ -20,6 +20,15 @@ export const MODE_DESCRIPTORS: Record<GameModeId, ModeDescriptor> = {
     usesSpeed: false,
     inputKind: 'text',
   },
+  qcm: {
+    id: 'qcm',
+    label: 'Choix multiples',
+    shortLabel: 'QCM',
+    description: 'Une question, quatre choix. Clique la bonne réponse — validation automatique.',
+    implemented: true,
+    usesSpeed: false,
+    inputKind: 'text',
+  },
   estimation: {
     id: 'estimation',
     label: 'Estimation',
@@ -84,10 +93,31 @@ export const MODE_DESCRIPTORS: Record<GameModeId, ModeDescriptor> = {
     usesSpeed: false,
     inputKind: 'text',
   },
+  imposter: {
+    id: 'imposter',
+    label: "Mot de l'imposteur",
+    shortLabel: 'Imposteur',
+    description:
+      'Chacun reçoit un mot secret, sauf un imposteur avec un mot proche. Donne un indice, démasque-le au vote.',
+    implemented: true,
+    usesSpeed: false,
+    inputKind: 'text',
+  },
+  codenames: {
+    id: 'codenames',
+    label: 'Codenames',
+    shortLabel: 'Codenames',
+    description:
+      "Deux équipes, deux spymasters. Donne un indice pour faire trouver tes mots avant l'équipe adverse — sans cliquer l'assassin.",
+    implemented: true,
+    usesSpeed: false,
+    inputKind: 'text',
+  },
 };
 
 export const ALL_MODES: GameModeId[] = [
   'classic',
+  'qcm',
   'estimation',
   'list-turns',
   'hot-potato',
@@ -95,6 +125,8 @@ export const ALL_MODES: GameModeId[] = [
   'map',
   'chronology',
   'guess-who',
+  'imposter',
+  'codenames',
 ];
 
 export const MVP_MODES: GameModeId[] = ['classic', 'estimation', 'list-turns'];

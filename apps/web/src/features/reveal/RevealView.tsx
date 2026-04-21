@@ -8,6 +8,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { getSocket } from '@/lib/socket';
 import { mvpConfetti } from '@/lib/confetti';
 import { mvpSound } from '@/lib/sound';
+import { ImposterReveal } from './ImposterReveal';
+import { CodenamesReveal } from './CodenamesReveal';
+import { EstimationTimelineReveal } from './EstimationTimelineReveal';
 
 const RevealMapLazy = dynamic(() => import('./RevealMap').then((m) => m.RevealMap), {
   ssr: false,
@@ -102,6 +105,15 @@ export function RevealView() {
 
   if (!snapshot || !reveal || !question) return null;
 
+  if (mode === 'imposter') {
+    return <ImposterReveal />;
+  }
+  if (mode === 'codenames') {
+    return <CodenamesReveal />;
+  }
+
+  const isDateEstim = mode === 'estimation' && isDateEstimation(question);
+
   const toggle = (playerId: string, correct: boolean) => {
     if (!isHost) return;
     setHostValidation(playerId, correct);
@@ -116,6 +128,8 @@ export function RevealView() {
   const officialAnswer =
     mode === 'classic'
       ? (question as any).answer
+      : mode === 'qcm'
+        ? (question as any).answer
       : mode === 'speed-elim'
         ? (question as any).answer
         : mode === 'estimation'
@@ -146,6 +160,19 @@ export function RevealView() {
         </motion.h2>
       </div>
 
+      {isDateEstim && (
+        <EstimationTimelineReveal
+          answers={answersInOrder.map(({ player, answer }) => ({
+            player,
+            numeric: typeof answer?.numeric === 'number' ? answer.numeric : undefined,
+          }))}
+          officialValue={(question as any).numericAnswer}
+          unit={(question as any).unit}
+          revealedIdx={revealedIdx}
+          showingOfficial={showingOfficial}
+        />
+      )}
+
       {mode === 'map' && (
         <RevealMapLazy
           resetKey={question.id}
@@ -167,7 +194,7 @@ export function RevealView() {
         />
       )}
 
-      <div className="space-y-3">
+      <div className={`space-y-3 ${isDateEstim ? 'hidden' : ''}`}>
         <AnimatePresence>
           {answersInOrder.slice(0, revealedIdx).map(({ player, answer, auto }) => {
             const mark =
@@ -223,6 +250,16 @@ export function RevealView() {
                   </div>
                 )}
 
+                {mode === 'qcm' && (
+                  <div className="shrink-0">
+                    {auto === true ? (
+                      <div className="chip-lime">Correct</div>
+                    ) : (
+                      <div className="chip-magenta">Raté</div>
+                    )}
+                  </div>
+                )}
+
                 {mode === 'hot-potato' && answer && (
                   <div className="flex items-center gap-2 shrink-0">
                     <Target className="w-4 h-4 text-text-muted" />
@@ -254,7 +291,7 @@ export function RevealView() {
       </div>
 
       <AnimatePresence>
-        {showingOfficial && (
+        {showingOfficial && !isDateEstim && (
           <motion.div
             initial={{ opacity: 0, y: 30, scale: 0.7 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -316,7 +353,7 @@ function AnswerRenderer({
   question: any;
 }) {
   if (!answer) return <span className="italic text-text-dim">— pas de réponse —</span>;
-  if (mode === 'classic' || mode === 'speed-elim') {
+  if (mode === 'classic' || mode === 'speed-elim' || mode === 'qcm') {
     return <div className="text-text-muted truncate text-lg">{answer.text || '—'}</div>;
   }
   if (mode === 'estimation') {
@@ -395,4 +432,25 @@ function formatKm(km: number): string {
 function chronologyOfficial(q: any): string {
   const events = [...(q.events ?? [])].sort((a: any, b: any) => a.year - b.year);
   return events.map((e: any) => `${e.year} — ${e.label}`).join(' → ');
+}
+
+/**
+ * Reconnaît une question d'estimation portant sur une date (année ou année
+ * av. J.-C.) pour activer le reveal en frise chronologique. On se base sur
+ * le prompt ("Année de…", "En quelle année…") et sur l'unité explicitement
+ * marquée "av. J.-C.". Fallback : pas d'unité + nombre entier plausible
+ * comme année (entre 1000 et 2100).
+ */
+function isDateEstimation(q: any): boolean {
+  if (!q || q.mode !== 'estimation') return false;
+  const prompt: string = (q.prompt ?? '').toLowerCase();
+  if (/^\s*ann[eé]e\b/.test(prompt)) return true;
+  if (/en quelle ann[eé]e/.test(prompt)) return true;
+  const unit: string = (q.unit ?? '').toLowerCase();
+  if (unit.includes('j.-c') || unit.includes('j-c') || unit.includes('av. j')) {
+    return true;
+  }
+  const n = q.numericAnswer;
+  if (!q.unit && Number.isInteger(n) && n >= 1000 && n <= 2100) return true;
+  return false;
 }
