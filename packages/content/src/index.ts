@@ -8,6 +8,7 @@ import mapMode from '../seed/map.json' with { type: 'json' };
 import chronology from '../seed/chronology.json' with { type: 'json' };
 import imposter from '../seed/imposter.json' with { type: 'json' };
 import codenames from '../seed/codenames.json' with { type: 'json' };
+import wikirace from '../seed/wikirace.json' with { type: 'json' };
 import wpClassic from '../seed/wikipedia-classic.json' with { type: 'json' };
 import wpEstimation from '../seed/wikipedia-estimation.json' with { type: 'json' };
 import wpListTurns from '../seed/wikipedia-list-turns.json' with { type: 'json' };
@@ -48,6 +49,7 @@ export const CHRONOLOGY_QUESTIONS = [
 ];
 export const IMPOSTER_QUESTIONS = imposter as unknown as Question[];
 export const CODENAMES_WORDS = codenames as unknown as string[];
+export const WIKIRACE_QUESTIONS = wikirace as unknown as Question[];
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLASSIC_QUESTIONS,

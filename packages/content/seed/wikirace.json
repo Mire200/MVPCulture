@@ -1,0 +1,17 @@
+[
+  { "id": "wr-001", "mode": "wikirace", "difficulty": "easy", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Paris", "targetTitle": "Tokyo", "wikiLang": "fr" },
+  { "id": "wr-002", "mode": "wikirace", "difficulty": "easy", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Football", "targetTitle": "Philosophie", "wikiLang": "fr" },
+  { "id": "wr-003", "mode": "wikirace", "difficulty": "easy", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Napoléon Ier", "targetTitle": "Météorologie", "wikiLang": "fr" },
+  { "id": "wr-004", "mode": "wikirace", "difficulty": "easy", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Baguette de pain", "targetTitle": "Nintendo Switch", "wikiLang": "fr" },
+  { "id": "wr-005", "mode": "wikirace", "difficulty": "medium", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Ludwig van Beethoven", "targetTitle": "ChatGPT", "wikiLang": "fr" },
+  { "id": "wr-006", "mode": "wikirace", "difficulty": "medium", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Mars (planète)", "targetTitle": "Fromage", "wikiLang": "fr" },
+  { "id": "wr-007", "mode": "wikirace", "difficulty": "medium", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Statue de la Liberté", "targetTitle": "Chocolat", "wikiLang": "fr" },
+  { "id": "wr-008", "mode": "wikirace", "difficulty": "medium", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Albert Einstein", "targetTitle": "Pomme", "wikiLang": "fr" },
+  { "id": "wr-009", "mode": "wikirace", "difficulty": "medium", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "La Joconde", "targetTitle": "Internet", "wikiLang": "fr" },
+  { "id": "wr-010", "mode": "wikirace", "difficulty": "medium", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Tour Eiffel", "targetTitle": "Dinosaure", "wikiLang": "fr" },
+  { "id": "wr-011", "mode": "wikirace", "difficulty": "hard", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Sushi", "targetTitle": "Fusée Saturn V", "wikiLang": "fr" },
+  { "id": "wr-012", "mode": "wikirace", "difficulty": "hard", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Pyramide de Khéops", "targetTitle": "Bitcoin", "wikiLang": "fr" },
+  { "id": "wr-013", "mode": "wikirace", "difficulty": "hard", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Mont Everest", "targetTitle": "Sushi", "wikiLang": "fr" },
+  { "id": "wr-014", "mode": "wikirace", "difficulty": "hard", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Jeanne d'Arc", "targetTitle": "Télévision", "wikiLang": "fr" },
+  { "id": "wr-015", "mode": "wikirace", "difficulty": "hard", "category": "Wikirace", "prompt": "Rejoins la page cible en cliquant les liens internes.", "startTitle": "Vincent van Gogh", "targetTitle": "Empire romain", "wikiLang": "fr" }
+]

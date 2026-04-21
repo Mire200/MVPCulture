@@ -13,6 +13,7 @@ export const GameModeIdSchema = z.enum([
   'guess-who',
   'imposter',
   'codenames',
+  'wikirace',
 ]);
 export type GameModeId = z.infer<typeof GameModeIdSchema>;
 
@@ -146,6 +147,14 @@ export const CodenamesQuestionSchema = BaseQuestionSchema.extend({
 });
 export type CodenamesQuestion = z.infer<typeof CodenamesQuestionSchema>;
 
+export const WikiraceQuestionSchema = BaseQuestionSchema.extend({
+  mode: z.literal('wikirace'),
+  startTitle: z.string().min(1).max(120),
+  targetTitle: z.string().min(1).max(120),
+  wikiLang: z.string().min(2).max(5).default('fr'),
+});
+export type WikiraceQuestion = z.infer<typeof WikiraceQuestionSchema>;
+
 export const QuestionSchema = z.discriminatedUnion('mode', [
   ClassicQuestionSchema,
   QcmQuestionSchema,
@@ -158,6 +167,7 @@ export const QuestionSchema = z.discriminatedUnion('mode', [
   GuessWhoQuestionSchema,
   ImposterQuestionSchema,
   CodenamesQuestionSchema,
+  WikiraceQuestionSchema,
 ]);
 export type Question = z.infer<typeof QuestionSchema>;
 
@@ -254,6 +264,28 @@ export interface RoundStateBase {
   seFinders?: string[];
   /** Speed-elim : nombre total de tentatives envoyées par joueur (pour l'UI). */
   seAttemptCount?: Record<string, number>;
+
+  /** Wikirace : titre de départ (identique pour tout le monde). */
+  wrStartTitle?: string;
+  /** Wikirace : titre cible à atteindre. */
+  wrTargetTitle?: string;
+  /** Wikirace : langue Wikipédia utilisée (`fr`, `en`, …). */
+  wrWikiLang?: string;
+  /** Wikirace : timestamp du départ de la course. */
+  wrStartedAt?: number;
+  /**
+   * Wikirace : état public par joueur durant la course. Le chemin détaillé
+   * reste privé jusqu'au reveal ; on n'expose que le nombre de sauts, le
+   * statut et le timestamp d'arrivée éventuel.
+   */
+  wrPlayers?: Record<
+    string,
+    {
+      status: 'running' | 'finished' | 'abandoned' | 'disconnected';
+      hops: number;
+      finishedAt?: number;
+    }
+  >;
 }
 
 export interface PublicQuestion {
@@ -271,6 +303,12 @@ export interface PublicQuestion {
   events?: Array<{ id: string; label: string }>;
   /** Choix publics pour le mode QCM (ordre déjà mélangé côté serveur). */
   choices?: string[];
+  /** Wikirace : page de départ. */
+  wrStartTitle?: string;
+  /** Wikirace : page cible à atteindre. */
+  wrTargetTitle?: string;
+  /** Wikirace : code langue Wikipédia. */
+  wrWikiLang?: string;
 }
 
 export interface PlayerAnswer {

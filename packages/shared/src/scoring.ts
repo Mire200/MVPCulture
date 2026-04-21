@@ -23,6 +23,7 @@ export const MODE_USES_SPEED: Record<GameModeId, boolean> = {
   'guess-who': false,
   imposter: false,
   codenames: false,
+  wikirace: true,
 };
 
 export function classicScore(difficulty: Difficulty, correct: boolean): number {

@@ -19,6 +19,7 @@ import {
   SetLobbyConfigPayloadSchema,
   StartGamePayloadSchema,
   ValidatePayloadSchema,
+  WikiraceNavigatePayloadSchema,
   type ClientToServerEvents,
   type ServerToClientEvents,
 } from '@mvpc/shared';
@@ -965,6 +966,57 @@ io.on('connection', (socket) => {
     }
   });
 
+  socket.on('wikirace:navigate', (payload, ack) => {
+    const parsed = WikiraceNavigatePayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    // Un clic ≈ 1 nav : on tolère une courte rafale (plusieurs onglets ouverts).
+    if (hitRateLimit(`wrnav:${playerId}`, 40, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop de navigations' });
+    }
+    try {
+      const res = room.wrNavigate(playerId, parsed.data.title);
+      ack({ ok: true, data: res });
+      broadcastRoom(room);
+      maybeAutoReveal(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('wikirace:abandon', (...args: unknown[]) => {
+    const ack = (args.find((a) => typeof a === 'function') ?? (() => {})) as (
+      res: unknown,
+    ) => void;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    try {
+      room.wrAbandon(playerId);
+      ack({ ok: true, data: null });
+      broadcastRoom(room);
+      maybeAutoReveal(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
   socket.on('lobby:draw:stroke', (payload, ack) => {
     const parsed = LobbyDrawStrokePayloadSchema.safeParse(payload);
     if (!parsed.success) {
@@ -1087,6 +1139,8 @@ function leave(socket: { data: SockData; leave: (room: string) => void; id: stri
   if (room.phase === 'lobby' || room.phase === 'match_final') {
     scheduleLobbyEviction(room.code, playerId);
   }
+  // Wikirace : si le dernier joueur connecté abandonne en partant, on clôt.
+  maybeAutoReveal(room);
   socket.data.roomCode = undefined;
   socket.data.playerId = undefined;
   socket.leave(roomCode);

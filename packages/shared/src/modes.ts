@@ -113,6 +113,16 @@ export const MODE_DESCRIPTORS: Record<GameModeId, ModeDescriptor> = {
     usesSpeed: false,
     inputKind: 'text',
   },
+  wikirace: {
+    id: 'wikirace',
+    label: 'Wikirace',
+    shortLabel: 'Wikirace',
+    description:
+      "Course Wikipédia : rejoins la page cible en cliquant uniquement les liens internes, le plus vite possible.",
+    implemented: true,
+    usesSpeed: true,
+    inputKind: 'text',
+  },
 };
 
 export const ALL_MODES: GameModeId[] = [
@@ -127,6 +137,7 @@ export const ALL_MODES: GameModeId[] = [
   'guess-who',
   'imposter',
   'codenames',
+  'wikirace',
 ];
 
 export const MVP_MODES: GameModeId[] = ['classic', 'estimation', 'list-turns'];

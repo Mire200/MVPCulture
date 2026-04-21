@@ -11,6 +11,7 @@ import { chronologyMode } from './modes/chronology.js';
 import { guessWhoMode } from './modes/guessWho.js';
 import { imposterMode } from './modes/imposter.js';
 import { codenamesMode } from './modes/codenames.js';
+import { wikiraceMode } from './modes/wikirace.js';
 
 export const MODE_REGISTRY: Partial<Record<GameModeId, GameMode>> = {
   classic: classicMode,
@@ -24,6 +25,7 @@ export const MODE_REGISTRY: Partial<Record<GameModeId, GameMode>> = {
   'guess-who': guessWhoMode,
   imposter: imposterMode,
   codenames: codenamesMode,
+  wikirace: wikiraceMode,
 };
 
 export function getMode(id: GameModeId): GameMode {

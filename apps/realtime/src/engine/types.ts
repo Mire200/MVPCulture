@@ -87,6 +87,8 @@ export interface GuessWhoState {
   guessBans: Map<string, Set<string>>;
   /** Nombre de tours joués (incrémenté à chaque fin de tour). */
   turnsPlayed: number;
+  /** Nombre de cycles complets sur `turnOrder` déjà joués. */
+  cyclesPlayed: number;
   /** Round terminé (plus de cible disponible ou ≤1 joueur en vie). */
   ended: boolean;
 }
@@ -163,6 +165,26 @@ export interface CodenamesState {
   endReason?: 'assassin' | 'allFound' | 'forfeit';
 }
 
+export type WikiracePlayerStatus = 'running' | 'finished' | 'abandoned' | 'disconnected';
+
+export interface WikiracePlayerState {
+  status: WikiracePlayerStatus;
+  /** Chemin parcouru, commençant par `startTitle`. Titres normalisés (espaces, pas d'underscore). */
+  path: string[];
+  startedAt: number;
+  finishedAt?: number;
+}
+
+export interface WikiraceState {
+  startTitle: string;
+  targetTitle: string;
+  wikiLang: string;
+  startedAt: number;
+  players: Map<string, WikiracePlayerState>;
+  /** Tous les joueurs ont terminé, abandonné ou sont déconnectés. */
+  ended: boolean;
+}
+
 export type CollectPhase =
   | { kind: 'parallel'; answers: Map<string, CollectedAnswer>; endsAt: number }
   | { kind: 'turns'; turn: TurnState }
@@ -170,7 +192,8 @@ export type CollectPhase =
   | { kind: 'guess-who'; gw: GuessWhoState }
   | { kind: 'imposter'; im: ImposterState }
   | { kind: 'codenames'; cn: CodenamesState }
-  | { kind: 'speed-elim'; se: SpeedElimState };
+  | { kind: 'speed-elim'; se: SpeedElimState }
+  | { kind: 'wikirace'; wr: WikiraceState };
 
 export interface RoundState {
   roundIndex: number;

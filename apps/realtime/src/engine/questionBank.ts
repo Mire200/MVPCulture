@@ -1,4 +1,4 @@
-import { ALL_QUESTIONS, IMPOSTER_QUESTIONS } from '@mvpc/content';
+import { ALL_QUESTIONS, IMPOSTER_QUESTIONS, WIKIRACE_QUESTIONS } from '@mvpc/content';
 import type { GameConfig, GameModeId, Question } from '@mvpc/shared';
 
 function syntheticGuessWho(index: number): Question {
@@ -64,6 +64,13 @@ export function buildRoundPlaylist(config: GameConfig): Question[] {
   // la grille est tirée au moment du `prepare` depuis la banque de mots.
   if (pool.includes('codenames')) {
     return [syntheticCodenames(0)];
+  }
+  // Wikirace occupe toute la session : un seul round, une paire (start, target)
+  // tirée au hasard dans la banque.
+  if (pool.includes('wikirace')) {
+    const list = WIKIRACE_QUESTIONS;
+    if (list.length === 0) return [];
+    return [pickRandom(list)];
   }
 
   for (let i = 0; i < config.rounds; i++) {

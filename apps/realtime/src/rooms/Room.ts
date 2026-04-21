@@ -12,6 +12,7 @@ import {
   lobbyPenColorForPlayer,
 } from '@mvpc/shared';
 import type { GuessWhoState, RoundEvent, RoundState } from '../engine/types.js';
+import { normalizeWikiTitle } from '../engine/modes/wikirace.js';
 import { getMode } from '../engine/registry.js';
 import { buildRoundPlaylist } from '../engine/questionBank.js';
 import { listTurnsTick, setRoundPlayers } from '../engine/modes/listTurns.js';
@@ -367,6 +368,20 @@ export class Room {
     let seTargetFinders: number | undefined;
     let seFinders: string[] | undefined;
     let seAttemptCount: Record<string, number> | undefined;
+    let wrStartTitle: string | undefined;
+    let wrTargetTitle: string | undefined;
+    let wrWikiLang: string | undefined;
+    let wrStartedAt: number | undefined;
+    let wrPlayers:
+      | Record<
+          string,
+          {
+            status: 'running' | 'finished' | 'abandoned' | 'disconnected';
+            hops: number;
+            finishedAt?: number;
+          }
+        >
+      | undefined;
     if (r.collect.kind === 'parallel') {
       endsAt = r.collect.endsAt;
     } else if (r.collect.kind === 'turns') {
@@ -459,6 +474,20 @@ export class Room {
       if (cn.sub === 'clue') {
         currentPlayerId = cn.spymasters[cn.currentTeam];
       }
+    } else if (r.collect.kind === 'wikirace') {
+      const wr = r.collect.wr;
+      wrStartTitle = wr.startTitle;
+      wrTargetTitle = wr.targetTitle;
+      wrWikiLang = wr.wikiLang;
+      wrStartedAt = wr.startedAt;
+      wrPlayers = {};
+      for (const [pid, ps] of wr.players.entries()) {
+        wrPlayers[pid] = {
+          status: ps.status,
+          hops: Math.max(0, ps.path.length - 1),
+          finishedAt: ps.finishedAt,
+        };
+      }
     }
     return {
       roundIndex: r.roundIndex,
@@ -498,6 +527,11 @@ export class Room {
       seTargetFinders,
       seFinders,
       seAttemptCount,
+      wrStartTitle,
+      wrTargetTitle,
+      wrWikiLang,
+      wrStartedAt,
+      wrPlayers,
     };
   }
 
@@ -771,6 +805,43 @@ export class Room {
     }
     set.add(targetId);
     return { targetId, correct };
+  }
+
+  /**
+   * Wikirace : un joueur clique un lien de Wikipédia et tente de rejoindre la
+   * cible. On ajoute le titre au chemin, on marque `finished` si c'est la
+   * cible. Retourne le statut du joueur après navigation. On tolère les
+   * navigations après finition mais on ne modifie plus l'état.
+   */
+  wrNavigate(playerId: string, title: string): { finished: boolean; hops: number } {
+    if (!this.round) throw new Error('PHASE_MISMATCH');
+    if (this.phase !== 'round_collect') throw new Error('PHASE_MISMATCH');
+    if (this.round.collect.kind !== 'wikirace') throw new Error('PHASE_MISMATCH');
+    if (!this.players.has(playerId)) throw new Error('NOT_IN_ROOM');
+    const wr = this.round.collect.wr;
+    const state = wr.players.get(playerId);
+    if (!state) throw new Error('NOT_IN_ROOM');
+    if (state.status !== 'running') {
+      return { finished: state.status === 'finished', hops: Math.max(0, state.path.length - 1) };
+    }
+    const cleaned = title.trim().slice(0, 200);
+    if (!cleaned) throw new Error('INVALID_PAYLOAD');
+    state.path.push(cleaned);
+    if (normalizeWikiTitle(cleaned) === normalizeWikiTitle(wr.targetTitle)) {
+      state.status = 'finished';
+      state.finishedAt = Date.now();
+    }
+    return { finished: state.status === 'finished', hops: state.path.length - 1 };
+  }
+
+  wrAbandon(playerId: string): void {
+    if (!this.round) throw new Error('PHASE_MISMATCH');
+    if (this.phase !== 'round_collect') throw new Error('PHASE_MISMATCH');
+    if (this.round.collect.kind !== 'wikirace') throw new Error('PHASE_MISMATCH');
+    const wr = this.round.collect.wr;
+    const state = wr.players.get(playerId);
+    if (!state) throw new Error('NOT_IN_ROOM');
+    if (state.status === 'running') state.status = 'abandoned';
   }
 
   private static readonly MAX_LOBBY_STROKES = 900;

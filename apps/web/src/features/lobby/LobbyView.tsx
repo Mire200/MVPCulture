@@ -1,13 +1,12 @@
 'use client';
 import { useGameStore } from '@/store/gameStore';
 import { AvatarBadge } from '@/components/AvatarPicker';
-import { Copy, Check, Crown, Play, Settings2, Tags, Eraser, Grid3x3 } from 'lucide-react';
+import { Copy, Check, Crown, Play, Settings2, Eraser, Grid3x3 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { getSocket } from '@/lib/socket';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { GameModeId } from '@mvpc/shared';
 import { lobbyPenColorForPlayer } from '@mvpc/shared';
-import { ALL_CATEGORIES } from '@mvpc/content';
 import { mvpSound } from '@/lib/sound';
 import {
   LobbyDrawingCanvas,
@@ -17,33 +16,37 @@ import {
 import { CodenamesLobbyPanel } from './CodenamesLobbyPanel';
 import { TvPlayer } from '@/components/TvPlayer';
 
-const MODE_LABELS: Record<string, string> = {
-  classic: 'Classique',
-  qcm: 'QCM',
-  estimation: 'Estimation',
-  'list-turns': 'Liste',
-  'hot-potato': 'Patate',
-  'speed-elim': 'Rapidité',
-  map: 'Carte',
-  chronology: 'Chrono',
-  'guess-who': 'Qui est-ce ?',
-  imposter: 'Imposteur',
-  codenames: 'Codenames',
+type ModeTone = 'cyan' | 'magenta' | 'violet' | 'lime' | 'amber' | 'rose';
+
+const MODE_META: Record<GameModeId, {
+  label: string;
+  emoji: string;
+  tone: ModeTone;
+  solo?: boolean;
+}> = {
+  classic: { label: 'Classique', emoji: '📝', tone: 'cyan' },
+  qcm: { label: 'QCM', emoji: '🔘', tone: 'violet' },
+  estimation: { label: 'Estimation', emoji: '🎯', tone: 'amber' },
+  'list-turns': { label: 'Liste', emoji: '📋', tone: 'lime' },
+  'hot-potato': { label: 'Patate', emoji: '🥵', tone: 'rose' },
+  'speed-elim': { label: 'Rapidité', emoji: '⚡', tone: 'amber' },
+  map: { label: 'Carte', emoji: '🗺️', tone: 'cyan' },
+  chronology: { label: 'Chrono', emoji: '⏳', tone: 'violet' },
+  'guess-who': { label: 'Qui est-ce ?', emoji: '🕵️', tone: 'magenta', solo: true },
+  imposter: { label: 'Imposteur', emoji: '🎭', tone: 'violet', solo: true },
+  codenames: { label: 'Codenames', emoji: '🔤', tone: 'cyan', solo: true },
 };
 
-const ALL_MODE_IDS: GameModeId[] = [
-  'classic',
-  'qcm',
-  'estimation',
-  'list-turns',
-  'hot-potato',
-  'speed-elim',
-  'map',
-  'chronology',
-  'guess-who',
-  'imposter',
-  'codenames',
-];
+const ALL_MODE_IDS = Object.keys(MODE_META) as GameModeId[];
+
+const TONE_RGB: Record<ModeTone, string> = {
+  cyan: '34, 211, 238',
+  magenta: '236, 72, 153',
+  violet: '168, 85, 247',
+  lime: '163, 230, 53',
+  amber: '251, 191, 36',
+  rose: '244, 63, 94',
+};
 
 const EXCLUSIVE_MODES = new Set<GameModeId>(['guess-who', 'imposter', 'codenames']);
 
@@ -78,7 +81,6 @@ export function LobbyView() {
   // (y compris non-hôte) affichent donc la même sélection et peuvent
   // agir en conséquence (ex. voir le panel Codenames).
   const modesPool = (snapshot.config.modesPool as GameModeId[]) ?? [];
-  const categoriesPool = snapshot.config.categoriesPool ?? [];
   const roundsFromSnap = snapshot.config.rounds ?? 8;
   const rounds = roundsLocal ?? roundsFromSnap;
 
@@ -116,7 +118,7 @@ export function LobbyView() {
     const effectiveRounds = isSoloMode ? 1 : rounds;
     sock.emit(
       'game:start',
-      { config: { rounds: effectiveRounds, modesPool, categoriesPool } },
+      { config: { rounds: effectiveRounds, modesPool, categoriesPool: [] } },
       (res) => {
         if (!res.ok) alert(res.message);
       },
@@ -136,23 +138,10 @@ export function LobbyView() {
     emitConfig({ modesPool: next });
   };
 
-  const toggleCategory = (cat: string) => {
-    if (!isHost) return;
-    const next = categoriesPool.includes(cat)
-      ? categoriesPool.filter((c) => c !== cat)
-      : [...categoriesPool, cat];
-    emitConfig({ categoriesPool: next });
-  };
-
   const changeRounds = (n: number) => {
     if (!isHost) return;
     setRoundsLocal(n);
     emitConfig({ rounds: n });
-  };
-
-  const resetCategories = () => {
-    if (!isHost) return;
-    emitConfig({ categoriesPool: [] });
   };
 
   const clearLobbyCanvas = () => {
@@ -332,73 +321,72 @@ export function LobbyView() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-[11px] text-text-muted uppercase tracking-[0.1em]">
-              Modes actifs
-            </label>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex items-center justify-between">
+              <label className="text-[11px] text-text-muted uppercase tracking-[0.1em]">
+                Modes actifs
+              </label>
+              <span className="text-[10px] text-text-dim">
+                {modesPool.length} sélectionné{modesPool.length > 1 ? 's' : ''}
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
               {ALL_MODE_IDS.map((id) => {
+                const meta = MODE_META[id];
                 const active = modesPool.includes(id);
+                const rgb = TONE_RGB[meta.tone];
                 return (
                   <motion.button
                     key={id}
                     type="button"
                     disabled={!isHost}
-                    whileHover={isHost ? { y: -1 } : undefined}
+                    whileHover={isHost ? { y: -2 } : undefined}
+                    whileTap={isHost ? { scale: 0.97 } : undefined}
                     onClick={() => toggleMode(id)}
-                    className={
-                      active ? 'chip-cyan' : 'chip opacity-50 hover:opacity-80'
-                    }
+                    className="relative flex items-center text-left rounded-xl px-3 py-3 min-h-[56px] border transition-all duration-150 disabled:cursor-not-allowed"
+                    style={{
+                      borderColor: active
+                        ? `rgba(${rgb}, 0.6)`
+                        : 'rgba(148, 163, 184, 0.15)',
+                      background: active
+                        ? `linear-gradient(135deg, rgba(${rgb}, 0.18), rgba(${rgb}, 0.04))`
+                        : 'rgba(15, 23, 42, 0.35)',
+                      boxShadow: active
+                        ? `0 0 0 1px rgba(${rgb}, 0.35), 0 8px 24px -12px rgba(${rgb}, 0.6), inset 0 1px 0 rgba(255,255,255,0.04)`
+                        : 'inset 0 1px 0 rgba(255,255,255,0.03)',
+                      opacity: !isHost && !active ? 0.45 : 1,
+                    }}
                   >
-                    {MODE_LABELS[id]}
+                    <div className="flex items-center gap-2 w-full">
+                      <span className="text-lg leading-none shrink-0">{meta.emoji}</span>
+                      <span
+                        className="font-semibold text-[13px] leading-tight break-words min-w-0 flex-1"
+                        style={{ color: active ? `rgb(${rgb})` : 'var(--text)' }}
+                      >
+                        {meta.label}
+                      </span>
+                    </div>
+                    {meta.solo && (
+                      <span
+                        className="absolute bottom-1.5 right-2 text-[8.5px] uppercase tracking-wider font-semibold"
+                        style={{ color: `rgba(${rgb}, 0.75)` }}
+                      >
+                        solo
+                      </span>
+                    )}
+                    {active && (
+                      <motion.span
+                        layoutId={`mode-dot-${id}`}
+                        className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full"
+                        style={{ background: `rgb(${rgb})`, boxShadow: `0 0 8px rgb(${rgb})` }}
+                      />
+                    )}
                   </motion.button>
                 );
               })}
             </div>
-          </div>
-
-          <div className="space-y-2 border-t border-border pt-4">
-            <div className="flex items-center justify-between">
-              <label className="text-[11px] text-text-muted uppercase tracking-[0.1em] flex items-center gap-1.5">
-                <Tags className="w-3 h-3" />
-                Catégories
-                <span className="text-text-dim normal-case tracking-normal">
-                  {categoriesPool.length === 0
-                    ? '(toutes)'
-                    : `(${categoriesPool.length}/${ALL_CATEGORIES.length})`}
-                </span>
-              </label>
-              {isHost && categoriesPool.length > 0 && (
-                <button
-                  type="button"
-                  onClick={resetCategories}
-                  className="text-[10px] text-text-dim hover:text-neon-magenta uppercase tracking-wider"
-                >
-                  réinitialiser
-                </button>
-              )}
-            </div>
-            <div className="flex flex-wrap gap-1.5">
-              {ALL_CATEGORIES.map((cat) => {
-                const active = categoriesPool.includes(cat);
-                return (
-                  <motion.button
-                    key={cat}
-                    type="button"
-                    disabled={!isHost}
-                    whileHover={isHost ? { y: -1 } : undefined}
-                    onClick={() => toggleCategory(cat)}
-                    className={
-                      active ? 'chip-magenta' : 'chip opacity-50 hover:opacity-80'
-                    }
-                  >
-                    {cat}
-                  </motion.button>
-                );
-              })}
-            </div>
-            {categoriesPool.length === 0 && (
-              <p className="text-[10px] text-text-dim">
-                Aucune sélection = toutes catégories actives.
+            {modesPool.length === 0 && (
+              <p className="text-[10px] text-neon-rose/80">
+                Sélectionne au moins un mode pour lancer.
               </p>
             )}
           </div>

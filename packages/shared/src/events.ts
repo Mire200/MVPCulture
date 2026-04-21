@@ -133,6 +133,11 @@ export type CodenamesKeyPayload = {
   key: Array<'red' | 'blue' | 'neutral' | 'assassin'>;
 };
 
+export const WikiraceNavigatePayloadSchema = z.object({
+  title: z.string().trim().min(1).max(200),
+});
+export type WikiraceNavigatePayload = z.infer<typeof WikiraceNavigatePayloadSchema>;
+
 export const LobbyDrawStrokePayloadSchema = z.object({
   widthNorm: z.number().min(0.004).max(0.12),
   points: z
@@ -211,6 +216,11 @@ export type ClientToServerEvents = {
     ack: (res: AckResult<null>) => void,
   ) => void;
   'codenames:endTurn': (ack: (res: AckResult<null>) => void) => void;
+  'wikirace:navigate': (
+    payload: WikiraceNavigatePayload,
+    ack: (res: AckResult<{ finished: boolean; hops: number }>) => void,
+  ) => void;
+  'wikirace:abandon': (ack: (res: AckResult<null>) => void) => void;
   'radio:sync': (ack: (res: AckResult<RadioStatePayload>) => void) => void;
   'radio:skip': (ack: (res: AckResult<RadioStatePayload>) => void) => void;
   'tv:sync': (ack: (res: AckResult<TvStatePayload>) => void) => void;

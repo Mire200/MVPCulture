@@ -94,10 +94,16 @@ export function gwCurrentTargetId(gw: GuessWhoState): string | undefined {
 }
 
 /**
- * Avance l'index courant **en monotone** : chaque joueur est ciblé au plus une
- * fois par round (la manche dure un cycle complet sur `turnOrder`). On saute
- * les éliminés et on marque `gw.ended = true` s'il n'y a plus de cible.
- * Retourne `true` si un nouveau target a été trouvé.
+ * Nombre de cycles complets joués par round (chaque cycle = un passage sur
+ * tous les joueurs en vie). Augmenté à 3 pour donner de la matière au mode.
+ */
+export const GUESS_WHO_CYCLES_PER_ROUND = 3;
+
+/**
+ * Avance l'index courant en sautant les éliminés. Quand on atteint la fin de
+ * `turnOrder`, on compte un cycle de plus ; tant que le nombre de cycles
+ * joués < `GUESS_WHO_CYCLES_PER_ROUND`, on reboucle depuis le début. Sinon on
+ * marque la manche finie. Retourne `true` si un nouveau target a été trouvé.
  */
 export function gwAdvanceTurn(gw: GuessWhoState): boolean {
   const n = gw.turnOrder.length;
@@ -106,6 +112,16 @@ export function gwAdvanceTurn(gw: GuessWhoState): boolean {
     if (!gw.eliminated.has(candidate)) {
       gw.currentTargetIndex = idx;
       return true;
+    }
+  }
+  gw.cyclesPlayed += 1;
+  if (gw.cyclesPlayed < GUESS_WHO_CYCLES_PER_ROUND) {
+    for (let idx = 0; idx < n; idx++) {
+      const candidate = gw.turnOrder[idx]!;
+      if (!gw.eliminated.has(candidate)) {
+        gw.currentTargetIndex = idx;
+        return true;
+      }
     }
   }
   gw.ended = true;
@@ -138,6 +154,7 @@ export const guessWhoMode: GameMode = {
       pendingGuesses: [],
       guessBans: new Map(),
       turnsPlayed: 0,
+      cyclesPlayed: 0,
       ended: false,
     };
     return {
