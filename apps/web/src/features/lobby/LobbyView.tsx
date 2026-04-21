@@ -35,6 +35,7 @@ const MODE_META: Record<GameModeId, {
   'guess-who': { label: 'Qui est-ce ?', emoji: '🕵️', tone: 'magenta', solo: true },
   imposter: { label: 'Imposteur', emoji: '🎭', tone: 'violet', solo: true },
   codenames: { label: 'Codenames', emoji: '🔤', tone: 'cyan', solo: true },
+  wikirace: { label: 'Wikirace', emoji: '🏁', tone: 'lime', solo: true },
 };
 
 const ALL_MODE_IDS = Object.keys(MODE_META) as GameModeId[];
@@ -48,7 +49,7 @@ const TONE_RGB: Record<ModeTone, string> = {
   rose: '244, 63, 94',
 };
 
-const EXCLUSIVE_MODES = new Set<GameModeId>(['guess-who', 'imposter', 'codenames']);
+const EXCLUSIVE_MODES = new Set<GameModeId>(['guess-who', 'imposter', 'codenames', 'wikirace']);
 
 export function LobbyView() {
   const snapshot = useGameStore((s) => s.snapshot);
@@ -87,7 +88,8 @@ export function LobbyView() {
   const isGuessWho = modesPool.length === 1 && modesPool[0] === 'guess-who';
   const isImposter = modesPool.length === 1 && modesPool[0] === 'imposter';
   const isCodenames = modesPool.length === 1 && modesPool[0] === 'codenames';
-  const isSoloMode = isGuessWho || isImposter || isCodenames;
+  const isWikirace = modesPool.length === 1 && modesPool[0] === 'wikirace';
+  const isSoloMode = isGuessWho || isImposter || isCodenames || isWikirace;
   const notEnoughForImposter = isImposter && snapshot.players.length < 3;
   const redCount = snapshot.players.filter((p) => p.cnTeam === 'red').length;
   const blueCount = snapshot.players.filter((p) => p.cnTeam === 'blue').length;

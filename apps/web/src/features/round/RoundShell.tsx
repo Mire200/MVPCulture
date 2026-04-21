@@ -22,6 +22,7 @@ const MODE_META: Record<
   'guess-who': { label: 'Qui est-ce ?', chip: 'amber', icon: <HelpCircle className="w-3.5 h-3.5" /> },
   imposter: { label: "Mot de l'imposteur", chip: 'magenta', icon: <UserX className="w-3.5 h-3.5" /> },
   codenames: { label: 'Codenames', chip: 'cyan', icon: <Grid3x3 className="w-3.5 h-3.5" /> },
+  wikirace: { label: 'Wikirace', chip: 'lime', icon: <Zap className="w-3.5 h-3.5" /> },
 };
 
 export function RoundShell({ children }: { children: React.ReactNode }) {

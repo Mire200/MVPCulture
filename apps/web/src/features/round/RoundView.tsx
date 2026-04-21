@@ -11,6 +11,7 @@ import { ChronologyRound } from './ChronologyRound';
 import { GuessWhoRound } from './GuessWhoRound';
 import { ImposterRound } from './ImposterRound';
 import { CodenamesRound } from './CodenamesRound';
+import { WikiraceRound } from './WikiraceRound';
 import { RoundShell } from './RoundShell';
 
 export function RoundView() {
@@ -31,6 +32,7 @@ export function RoundView() {
       {mode === 'guess-who' && <GuessWhoRound />}
       {mode === 'imposter' && <ImposterRound />}
       {mode === 'codenames' && <CodenamesRound />}
+      {mode === 'wikirace' && <WikiraceRound />}
     </RoundShell>
   );
 }

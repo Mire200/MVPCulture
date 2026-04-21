@@ -9,7 +9,7 @@ import { mvpConfetti } from '@/lib/confetti';
 import { mvpSound } from '@/lib/sound';
 import type { GameModeId } from '@mvpc/shared';
 
-const REPLAY_DIRECTLY_MODES: GameModeId[] = ['guess-who', 'imposter', 'codenames'];
+const REPLAY_DIRECTLY_MODES: GameModeId[] = ['guess-who', 'imposter', 'codenames', 'wikirace'];
 
 export function FinalView() {
   const snapshot = useGameStore((s) => s.snapshot);

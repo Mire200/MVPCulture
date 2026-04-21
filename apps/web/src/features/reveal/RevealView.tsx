@@ -132,6 +132,8 @@ export function RevealView() {
         ? (question as any).answer
       : mode === 'speed-elim'
         ? (question as any).answer
+        : mode === 'wikirace'
+          ? (question as any).targetTitle
         : mode === 'estimation'
           ? `${(question as any).numericAnswer}${(question as any).unit ? ' ' + (question as any).unit : ''}`
           : mode === 'map'
@@ -374,6 +376,23 @@ function AnswerRenderer({
             {it}
           </span>
         ))}
+      </div>
+    );
+  }
+  if (mode === 'wikirace') {
+    const steps = answer.listItems ?? [];
+    const hops = typeof answer.numeric === 'number' ? Math.max(0, Math.round(answer.numeric / 1000)) : undefined;
+    return (
+      <div className="text-text-muted text-sm">
+        <div>
+          {answer.success ? 'Arrivé' : 'Non terminé'} · {steps.length > 0 ? `${steps.length - 1} sauts` : '0 saut'}
+        </div>
+        {steps.length > 0 && (
+          <div className="truncate text-xs mt-1">
+            {steps[0]} {steps.length > 1 ? `→ ${steps[steps.length - 1]}` : ''}
+          </div>
+        )}
+        {hops !== undefined && <div className="text-[11px] text-text-dim">{hops}s</div>}
       </div>
     );
   }
