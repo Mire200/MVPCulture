@@ -20,12 +20,27 @@ import {
   StartGamePayloadSchema,
   ValidatePayloadSchema,
   WikiraceNavigatePayloadSchema,
+  GarticPhoneSubmitTextPayloadSchema,
+  GarticPhoneSubmitDrawingPayloadSchema,
+  GarticPhoneAdvanceRevealPayloadSchema,
+  TicketToRideClaimRoutePayloadSchema,
+  TicketToRideDrawFromMarketPayloadSchema,
+  TicketToRideKeepDestinationsPayloadSchema,
   type ClientToServerEvents,
   type ServerToClientEvents,
 } from '@mvpc/shared';
 import { config } from './config.js';
 import { RoomManager } from './rooms/RoomManager.js';
 import { Room } from './rooms/Room.js';
+import {
+  ttrClaimRoute,
+  ttrConfirmInitialDestinations,
+  ttrDrawDestinations,
+  ttrDrawFromDeck,
+  ttrDrawFromMarket,
+  ttrKeepDestinations,
+  ttrPrivateFor,
+} from './engine/modes/ticketToRide.js';
 import { signHostToken, verifyHostToken } from './util/hostToken.js';
 import { hitRateLimit } from './util/rateLimit.js';
 import { Radio } from './radio/Radio.js';
@@ -142,6 +157,33 @@ function broadcastImposterWords(room: Room) {
   }
 }
 
+function broadcastGarticPrompts(room: Room) {
+  if (!room.round || room.round.mode !== 'gartic-phone') return;
+  for (const p of room.allPlayers()) {
+    const socketId = room.socketsByPlayer.get(p.id);
+    if (!socketId) continue;
+    const prompt = room.gpPromptFor(p.id);
+    if (prompt) {
+      io.to(socketId).emit('garticPhone:prompt', prompt);
+    }
+  }
+}
+
+function emitTtrPrivateToPlayer(room: Room, playerId: string) {
+  if (!room.round || room.round.mode !== 'ticket-to-ride') return;
+  if (room.round.collect.kind !== 'ticket-to-ride') return;
+  const socketId = room.socketsByPlayer.get(playerId);
+  if (!socketId) return;
+  const payload = ttrPrivateFor(room.round.collect.ttr, playerId);
+  if (!payload) return;
+  io.to(socketId).emit('ttr:private', payload);
+}
+
+function broadcastTtrPrivate(room: Room) {
+  if (!room.round || room.round.mode !== 'ticket-to-ride') return;
+  for (const p of room.allPlayers()) emitTtrPrivateToPlayer(room, p.id);
+}
+
 function emitCodenamesKeyToPlayer(room: Room, playerId: string) {
   if (!room.round || room.round.mode !== 'codenames') return;
   const socketId = room.socketsByPlayer.get(playerId);
@@ -201,11 +243,12 @@ setInterval(() => {
       broadcastRoom(room);
       continue;
     }
-    // list-turns : si le tour a changé via timeout (eliminated + turn_started),
+    // list-turns et bombparty : si le tour a changé via timeout (eliminated + turn_started ou bp_explosion),
     // il faut re-broadcaster le snapshot pour que les clients voient le nouveau
     // currentPlayerId / endsAt. Sans ça, l'UI reste bloquée sur l'ancien joueur.
-    if (room.round?.mode === 'list-turns' && events.length > 0) {
+    if ((room.round?.mode === 'list-turns' || room.round?.mode === 'bombparty' || room.round?.mode === 'ticket-to-ride') && events.length > 0) {
       broadcastRoom(room);
+      if (room.round?.mode === 'ticket-to-ride') broadcastTtrPrivate(room);
       continue;
     }
     // Timeout côté parallel (classic, estimation).
@@ -235,6 +278,11 @@ setInterval(() => {
     // Rebroadcast quand hot-potato passe de bid à answer via timeout : sans ça
     // les joueurs qui n'ont pas misé restent coincés sur l'écran de mise.
     if (room.round?.mode === 'hot-potato' && room.hpPhaseChangedInLastTick) {
+      broadcastRoom(room);
+    }
+    // Gartic Phone : rebroadcast si la sous-phase a changé (timeout).
+    if (room.round?.mode === 'gartic-phone' && room.gpPhaseChangedInLastTick) {
+      broadcastGarticPrompts(room);
       broadcastRoom(room);
     }
   }
@@ -350,6 +398,9 @@ io.on('connection', (socket) => {
     if (room.round?.mode === 'codenames') {
       emitCodenamesKeyToPlayer(room, payload.playerId);
     }
+    if (room.round?.mode === 'ticket-to-ride') {
+      emitTtrPrivateToPlayer(room, payload.playerId);
+    }
   });
 
   socket.on('room:leave', () => {
@@ -411,6 +462,13 @@ io.on('connection', (socket) => {
             : 'Il faut au moins 3 joueurs pour l’imposteur.',
         });
       }
+      if (msg === 'TTR_PLAYER_COUNT') {
+        return ack({
+          ok: false,
+          code: ERROR_CODES.INVALID_PAYLOAD,
+          message: 'Il faut 2 à 5 joueurs pour Aventuriers du Rail.',
+        });
+      }
       return ack({
         ok: false,
         code: ERROR_CODES.ROOM_ALREADY_STARTED,
@@ -423,6 +481,8 @@ io.on('connection', (socket) => {
     broadcastRoom(room);
     if (room.round?.mode === 'imposter') broadcastImposterWords(room);
     if (room.round?.mode === 'codenames') broadcastCodenamesKeys(room);
+    if (room.round?.mode === 'ticket-to-ride') broadcastTtrPrivate(room);
+    // Gartic Phone : pas de prompts en phase write (le joueur invente librement).
   });
 
   socket.on('round:answer', (payload, ack) => {
@@ -446,8 +506,21 @@ io.on('connection', (socket) => {
         (ev): ev is Extract<(typeof events)[number], { type: 'speed_elim_attempt' }> =>
           ev.type === 'speed_elim_attempt',
       );
+      const bpInvalidSyl = events.find(ev => ev.type === 'bp_invalid_syllable');
+      const bpUsed = events.find(ev => ev.type === 'bp_already_used');
+      const bpDict = events.find(ev => ev.type === 'bp_not_in_dict');
+      const bpAccepted = events.find(ev => ev.type === 'bp_word_accepted');
+
       if (seEvent) {
         ack({ ok: true, data: { correct: seEvent.correct } });
+      } else if (bpInvalidSyl) {
+        ack({ ok: true, data: { error: "Syllabe manquante" } as any });
+      } else if (bpUsed) {
+        ack({ ok: true, data: { error: "Mot déjà utilisé" } as any });
+      } else if (bpDict) {
+        ack({ ok: true, data: { error: "Mot inconnu" } as any });
+      } else if (bpAccepted) {
+        ack({ ok: true, data: { correct: true } });
       } else {
         ack({ ok: true, data: null });
       }
@@ -537,6 +610,7 @@ io.on('connection', (socket) => {
       broadcastRoom(room);
       if (room.round?.mode === 'imposter') broadcastImposterWords(room);
       if (room.round?.mode === 'codenames') broadcastCodenamesKeys(room);
+      if (room.round?.mode === 'ticket-to-ride') broadcastTtrPrivate(room);
       ack({ ok: true, data: null });
       return;
     }
@@ -593,6 +667,7 @@ io.on('connection', (socket) => {
         io.to(room.code).emit('round:started', room.snapshot());
       }
       broadcastRoom(room);
+      if (room.round?.mode === 'ticket-to-ride') broadcastTtrPrivate(room);
       ack({ ok: true, data: null });
     } catch (e) {
       const code = (e as Error).message;
@@ -860,6 +935,159 @@ io.on('connection', (socket) => {
     }
   });
 
+  socket.on('ttr:confirmInitialDestinations', (payload, ack) => {
+    const parsed = TicketToRideKeepDestinationsPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (!room.round || room.round.collect.kind !== 'ticket-to-ride') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Mauvaise phase' });
+    }
+    const res = ttrConfirmInitialDestinations(
+      room.round.collect.ttr,
+      playerId,
+      parsed.data.kept,
+      Date.now(),
+    );
+    if (!res.ok) return ack({ ok: false, code: res.code, message: res.message });
+    ack({ ok: true, data: null });
+    broadcastRoom(room);
+    broadcastTtrPrivate(room);
+  });
+
+  socket.on('ttr:drawFromDeck', (...args: unknown[]) => {
+    const ack = (args.find((a) => typeof a === 'function') ?? (() => {})) as (
+      res: unknown,
+    ) => void;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`ttr:${playerId}`, 40, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop d’actions' });
+    }
+    if (!room.round || room.round.collect.kind !== 'ticket-to-ride') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Mauvaise phase' });
+    }
+    const res = ttrDrawFromDeck(room.round.collect.ttr, playerId, Date.now());
+    if (!res.ok) return ack({ ok: false, code: res.code, message: res.message });
+    ack({ ok: true, data: null });
+    maybeAutoReveal(room);
+    broadcastRoom(room);
+    broadcastTtrPrivate(room);
+  });
+
+  socket.on('ttr:drawFromMarket', (payload, ack) => {
+    const parsed = TicketToRideDrawFromMarketPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`ttr:${playerId}`, 40, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop d’actions' });
+    }
+    if (!room.round || room.round.collect.kind !== 'ticket-to-ride') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Mauvaise phase' });
+    }
+    const res = ttrDrawFromMarket(
+      room.round.collect.ttr,
+      playerId,
+      parsed.data.slot,
+      Date.now(),
+    );
+    if (!res.ok) return ack({ ok: false, code: res.code, message: res.message });
+    ack({ ok: true, data: null });
+    maybeAutoReveal(room);
+    broadcastRoom(room);
+    broadcastTtrPrivate(room);
+  });
+
+  socket.on('ttr:claimRoute', (payload, ack) => {
+    const parsed = TicketToRideClaimRoutePayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`ttr:${playerId}`, 40, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop d’actions' });
+    }
+    if (!room.round || room.round.collect.kind !== 'ticket-to-ride') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Mauvaise phase' });
+    }
+    const res = ttrClaimRoute(
+      room.round.collect.ttr,
+      playerId,
+      parsed.data.routeId,
+      parsed.data.paidColor,
+      parsed.data.locoCount,
+      Date.now(),
+    );
+    if (!res.ok) return ack({ ok: false, code: res.code, message: res.message });
+    ack({ ok: true, data: null });
+    maybeAutoReveal(room);
+    broadcastRoom(room);
+    broadcastTtrPrivate(room);
+  });
+
+  socket.on('ttr:drawDestinations', (...args: unknown[]) => {
+    const ack = (args.find((a) => typeof a === 'function') ?? (() => {})) as (
+      res: unknown,
+    ) => void;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`ttr:${playerId}`, 40, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop d’actions' });
+    }
+    if (!room.round || room.round.collect.kind !== 'ticket-to-ride') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Mauvaise phase' });
+    }
+    const res = ttrDrawDestinations(room.round.collect.ttr, playerId);
+    if (!res.ok) return ack({ ok: false, code: res.code, message: res.message });
+    ack({ ok: true, data: null });
+    broadcastRoom(room);
+    broadcastTtrPrivate(room);
+  });
+
+  socket.on('ttr:keepDestinations', (payload, ack) => {
+    const parsed = TicketToRideKeepDestinationsPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    if (hitRateLimit(`ttr:${playerId}`, 40, 10_000)) {
+      return ack({ ok: false, code: ERROR_CODES.RATE_LIMITED, message: 'Trop d’actions' });
+    }
+    if (!room.round || room.round.collect.kind !== 'ticket-to-ride') {
+      return ack({ ok: false, code: ERROR_CODES.PHASE_MISMATCH, message: 'Mauvaise phase' });
+    }
+    const res = ttrKeepDestinations(
+      room.round.collect.ttr,
+      playerId,
+      parsed.data.kept,
+      Date.now(),
+    );
+    if (!res.ok) return ack({ ok: false, code: res.code, message: res.message });
+    ack({ ok: true, data: null });
+    maybeAutoReveal(room);
+    broadcastRoom(room);
+    broadcastTtrPrivate(room);
+  });
+
   socket.on('lobby:codenames:setSpymaster', (payload, ack) => {
     const parsed = CodenamesSetSpymasterPayloadSchema.safeParse(payload);
     if (!parsed.success) {
@@ -1005,6 +1233,83 @@ io.on('connection', (socket) => {
     try {
       room.wrAbandon(playerId);
       ack({ ok: true, data: null });
+      broadcastRoom(room);
+      maybeAutoReveal(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  // ============================== GARTIC PHONE ==============================
+
+  socket.on('garticPhone:submitText', (payload, ack) => {
+    const parsed = GarticPhoneSubmitTextPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    try {
+      room.gpSubmitText(playerId, parsed.data.text);
+      ack({ ok: true, data: null });
+      // Si l'étape a avancé (tous ont soumis), envoyer les nouveaux prompts
+      broadcastGarticPrompts(room);
+      broadcastRoom(room);
+      maybeAutoReveal(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('garticPhone:advanceReveal', (payload, ack) => {
+    const parsed = GarticPhoneAdvanceRevealPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    try {
+      room.gpAdvanceReveal(playerId);
+      ack({ ok: true, data: null });
+      broadcastRoom(room);
+      maybeAutoReveal(room);
+    } catch (e) {
+      const code = (e as Error).message;
+      return ack({
+        ok: false,
+        code: (ERROR_CODES as Record<string, string>)[code] ?? ERROR_CODES.INTERNAL,
+        message: (e as Error).message,
+      });
+    }
+  });
+
+  socket.on('garticPhone:submitDrawing', (payload, ack) => {
+    const parsed = GarticPhoneSubmitDrawingPayloadSchema.safeParse(payload);
+    if (!parsed.success) {
+      return ack({ ok: false, code: ERROR_CODES.INVALID_PAYLOAD, message: 'Payload invalide' });
+    }
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId) {
+      return ack({ ok: false, code: ERROR_CODES.NOT_IN_ROOM, message: 'Pas dans un salon' });
+    }
+    try {
+      room.gpSubmitDrawing(playerId, parsed.data.dataUrl);
+      ack({ ok: true, data: null });
+      broadcastGarticPrompts(room);
       broadcastRoom(room);
       maybeAutoReveal(room);
     } catch (e) {

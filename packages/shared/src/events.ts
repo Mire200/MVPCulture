@@ -138,6 +138,66 @@ export const WikiraceNavigatePayloadSchema = z.object({
 });
 export type WikiraceNavigatePayload = z.infer<typeof WikiraceNavigatePayloadSchema>;
 
+export const GarticPhoneSubmitTextPayloadSchema = z.object({
+  text: z.string().trim().min(1).max(200),
+});
+export type GarticPhoneSubmitTextPayload = z.infer<typeof GarticPhoneSubmitTextPayloadSchema>;
+
+export const GarticPhoneSubmitDrawingPayloadSchema = z.object({
+  dataUrl: z.string().min(1).max(200_000),
+});
+export type GarticPhoneSubmitDrawingPayload = z.infer<typeof GarticPhoneSubmitDrawingPayloadSchema>;
+
+export const GarticPhoneAdvanceRevealPayloadSchema = z.object({});
+export type GarticPhoneAdvanceRevealPayload = z.infer<typeof GarticPhoneAdvanceRevealPayloadSchema>;
+
+export type GarticPhonePromptPayload = {
+  type: 'text' | 'drawing';
+  content: string;
+};
+
+export type GarticPhoneRevealPayload = {
+  chainOwnerId: string;
+  entries: Array<{ type: 'text' | 'drawing'; playerId: string; content: string }>;
+};
+
+export const BombpartySubmitWordPayloadSchema = z.object({
+  word: z.string().trim().min(1).max(50),
+});
+export type BombpartySubmitWordPayload = z.infer<typeof BombpartySubmitWordPayloadSchema>;
+
+export const TicketToRideDrawFromMarketPayloadSchema = z.object({
+  /** Index de l'emplacement 0..4 du marché. */
+  slot: z.number().int().min(0).max(4),
+});
+export type TicketToRideDrawFromMarketPayload = z.infer<
+  typeof TicketToRideDrawFromMarketPayloadSchema
+>;
+
+export const TicketToRideClaimRoutePayloadSchema = z.object({
+  routeId: z.string().min(1),
+  /** Couleur de cartes dépensée (obligatoire, sauf loco pur qui paye 'loco'). */
+  paidColor: z.string().min(1).max(10),
+  /** Nombre de locomotives utilisées dans le paiement. */
+  locoCount: z.number().int().min(0).max(6),
+});
+export type TicketToRideClaimRoutePayload = z.infer<typeof TicketToRideClaimRoutePayloadSchema>;
+
+export const TicketToRideKeepDestinationsPayloadSchema = z.object({
+  /** Billets conservés parmi ceux piochés. */
+  kept: z.array(z.string().min(1)).min(1).max(3),
+});
+export type TicketToRideKeepDestinationsPayload = z.infer<
+  typeof TicketToRideKeepDestinationsPayloadSchema
+>;
+
+export type TicketToRidePrivatePayload = {
+  hand: Record<string, number>;
+  destinations: string[];
+  pendingDraw?: string[];
+  pendingIsInitial?: boolean;
+};
+
 export const LobbyDrawStrokePayloadSchema = z.object({
   widthNorm: z.number().min(0.004).max(0.12),
   points: z
@@ -221,6 +281,40 @@ export type ClientToServerEvents = {
     ack: (res: AckResult<{ finished: boolean; hops: number }>) => void,
   ) => void;
   'wikirace:abandon': (ack: (res: AckResult<null>) => void) => void;
+  'garticPhone:submitText': (
+    payload: GarticPhoneSubmitTextPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'garticPhone:submitDrawing': (
+    payload: GarticPhoneSubmitDrawingPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'garticPhone:advanceReveal': (
+    payload: GarticPhoneAdvanceRevealPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'bombparty:submitWord': (
+    payload: BombpartySubmitWordPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'ttr:confirmInitialDestinations': (
+    payload: TicketToRideKeepDestinationsPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'ttr:drawFromDeck': (ack: (res: AckResult<null>) => void) => void;
+  'ttr:drawFromMarket': (
+    payload: TicketToRideDrawFromMarketPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'ttr:claimRoute': (
+    payload: TicketToRideClaimRoutePayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
+  'ttr:drawDestinations': (ack: (res: AckResult<null>) => void) => void;
+  'ttr:keepDestinations': (
+    payload: TicketToRideKeepDestinationsPayload,
+    ack: (res: AckResult<null>) => void,
+  ) => void;
   'radio:sync': (ack: (res: AckResult<RadioStatePayload>) => void) => void;
   'radio:skip': (ack: (res: AckResult<RadioStatePayload>) => void) => void;
   'tv:sync': (ack: (res: AckResult<TvStatePayload>) => void) => void;
@@ -255,6 +349,9 @@ export type ServerToClientEvents = {
   'lobby:draw:stroke': (stroke: LobbyDrawStroke) => void;
   'lobby:draw:cleared': () => void;
   'lobby:drawing:sync': (payload: { strokes: LobbyDrawStroke[] }) => void;
+  'garticPhone:prompt': (payload: GarticPhonePromptPayload) => void;
+  'garticPhone:reveal': (payload: GarticPhoneRevealPayload) => void;
+  'ttr:private': (payload: TicketToRidePrivatePayload) => void;
 };
 
 export type AckResult<T> = { ok: true; data: T } | { ok: false; code: string; message: string };

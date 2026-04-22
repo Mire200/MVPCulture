@@ -21,6 +21,8 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
   const setGwMasks = useGameStore((s) => s.setGwMasks);
   const setImposterYourWord = useGameStore((s) => s.setImposterYourWord);
   const setCnMyKey = useGameStore((s) => s.setCnMyKey);
+  const setGarticPrompt = useGameStore((s) => s.setGarticPrompt);
+  const setTtrPrivate = useGameStore((s) => s.setTtrPrivate);
   const setLobbyDrawing = useGameStore((s) => s.setLobbyDrawing);
   const appendLobbyStroke = useGameStore((s) => s.appendLobbyStroke);
   const clearLobbyDrawing = useGameStore((s) => s.clearLobbyDrawing);
@@ -112,6 +114,12 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
     sock.on('lobby:drawing:sync', ({ strokes }) => {
       setLobbyDrawing(strokes);
     });
+    sock.on('garticPhone:prompt', (payload) => {
+      setGarticPrompt(payload);
+    });
+    sock.on('ttr:private', (payload) => {
+      setTtrPrivate(payload);
+    });
     sock.on('error', (err) => setError(err));
 
     return () => {
@@ -135,6 +143,8 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
       sock.off('lobby:draw:stroke');
       sock.off('lobby:draw:cleared');
       sock.off('lobby:drawing:sync');
+      sock.off('garticPhone:prompt');
+      sock.off('ttr:private');
       sock.off('error');
     };
   }, [
@@ -151,9 +161,11 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
     setGwMasks,
     setImposterYourWord,
     setCnMyKey,
+    setTtrPrivate,
     setLobbyDrawing,
     appendLobbyStroke,
     clearLobbyDrawing,
+    setGarticPrompt,
   ]);
 
   // Save host token if we receive one via create ack (handled in the page using the socket directly).

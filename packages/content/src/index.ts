@@ -16,6 +16,8 @@ import wpHotPotato from '../seed/wikipedia-hot-potato.json' with { type: 'json' 
 import wpSpeedElim from '../seed/wikipedia-speed-elim.json' with { type: 'json' };
 import wpMap from '../seed/wikipedia-map.json' with { type: 'json' };
 import wpChronology from '../seed/wikipedia-chronology.json' with { type: 'json' };
+import bombparty from '../seed/bombparty.json' with { type: 'json' };
+import ticketToRide from '../seed/ticket-to-ride.json' with { type: 'json' };
 import type { Question } from '@mvpc/shared';
 
 export const CLASSIC_QUESTIONS = [
@@ -50,6 +52,8 @@ export const CHRONOLOGY_QUESTIONS = [
 export const IMPOSTER_QUESTIONS = imposter as unknown as Question[];
 export const CODENAMES_WORDS = codenames as unknown as string[];
 export const WIKIRACE_QUESTIONS = wikirace as unknown as Question[];
+export const BOMBPARTY_QUESTIONS = bombparty as unknown as Question[];
+export const TICKET_TO_RIDE_QUESTIONS = ticketToRide as unknown as Question[];
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLASSIC_QUESTIONS,
@@ -60,8 +64,12 @@ export const ALL_QUESTIONS: Question[] = [
   ...SPEED_ELIM_QUESTIONS,
   ...MAP_QUESTIONS,
   ...CHRONOLOGY_QUESTIONS,
+  ...BOMBPARTY_QUESTIONS,
+  ...TICKET_TO_RIDE_QUESTIONS,
 ];
 
 export const ALL_CATEGORIES: string[] = Array.from(
   new Set(ALL_QUESTIONS.map((q) => q.category)),
 ).sort((a, b) => a.localeCompare(b, 'fr'));
+
+export * from './dictionary.js';

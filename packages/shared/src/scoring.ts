@@ -24,6 +24,9 @@ export const MODE_USES_SPEED: Record<GameModeId, boolean> = {
   imposter: false,
   codenames: false,
   wikirace: true,
+  'gartic-phone': false,
+  bombparty: false,
+  'ticket-to-ride': false,
 };
 
 export function classicScore(difficulty: Difficulty, correct: boolean): number {

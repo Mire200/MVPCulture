@@ -7,6 +7,7 @@ import type {
   RoomSnapshot,
   RoundReveal,
   RoundScoring,
+  TicketToRidePrivatePayload,
 } from '@mvpc/shared';
 
 type Reason = 'duplicate' | 'invalid' | 'timeout';
@@ -27,6 +28,8 @@ export interface GameState {
   gwMasks: Record<string, Set<string>>;
   imposterMyWord: string | null;
   cnMyKey: Array<'red' | 'blue' | 'neutral' | 'assassin'> | null;
+  garticPrompt: { type: 'text' | 'drawing'; content: string } | null;
+  ttrPrivate: TicketToRidePrivatePayload | null;
   lobbyDrawing: LobbyDrawStroke[];
 
   setConnected: (c: boolean) => void;
@@ -45,6 +48,8 @@ export interface GameState {
   setGwMasks: (byTarget: Record<string, string[]>) => void;
   setImposterYourWord: (payload: { word: string } | null) => void;
   setCnMyKey: (key: Array<'red' | 'blue' | 'neutral' | 'assassin'> | null) => void;
+  setGarticPrompt: (prompt: { type: 'text' | 'drawing'; content: string } | null) => void;
+  setTtrPrivate: (payload: TicketToRidePrivatePayload | null) => void;
   setLobbyDrawing: (strokes: LobbyDrawStroke[]) => void;
   appendLobbyStroke: (stroke: LobbyDrawStroke) => void;
   clearLobbyDrawing: () => void;
@@ -80,6 +85,8 @@ export const useGameStore = create<GameState>((set, get) => ({
   gwMasks: {},
   imposterMyWord: null,
   cnMyKey: null,
+  garticPrompt: null,
+  ttrPrivate: null,
   lobbyDrawing: [],
 
   setConnected: (connected) => set({ connected }),
@@ -112,6 +119,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       gwMySecret: null,
       imposterMyWord: null,
       cnMyKey: null,
+      garticPrompt: null,
+      ttrPrivate: null,
     });
   },
   setHostValidation: (playerId, correct) =>
@@ -141,6 +150,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       imposterMyWord: payload?.word ?? null,
     }),
   setCnMyKey: (key) => set({ cnMyKey: key }),
+  setGarticPrompt: (prompt) => set({ garticPrompt: prompt }),
+  setTtrPrivate: (payload) => set({ ttrPrivate: payload }),
   setLobbyDrawing: (strokes) => set({ lobbyDrawing: strokes }),
   appendLobbyStroke: (stroke) =>
     set((s) => ({ lobbyDrawing: [...s.lobbyDrawing, stroke] })),
@@ -162,6 +173,8 @@ export const useGameStore = create<GameState>((set, get) => ({
       gwMasks: {},
       imposterMyWord: null,
       cnMyKey: null,
+      garticPrompt: null,
+      ttrPrivate: null,
       lobbyDrawing: [],
     }),
 }));

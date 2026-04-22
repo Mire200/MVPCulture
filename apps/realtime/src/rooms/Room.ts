@@ -5,6 +5,7 @@ import {
   type HostValidation,
   type LobbyDrawStroke,
   type Player,
+  type PublicQuestion,
   type Question,
   type RoomSnapshot,
   type RoomPhase,
@@ -40,6 +41,15 @@ import {
 } from '../engine/modes/codenames.js';
 import type { CodenamesColor } from '../engine/types.js';
 import type { CodenamesTeam } from '@mvpc/shared';
+import {
+  gpSubmitText as _gpSubmitText,
+  gpSubmitDrawing as _gpSubmitDrawing,
+  gpTick,
+  gpPromptFor as _gpPromptFor,
+  gpAdvanceReveal as _gpAdvanceReveal,
+} from '../engine/modes/garticPhone.js';
+import { bpTick } from '../engine/modes/bombparty.js';
+import { ttrTick } from '../engine/modes/ticketToRide.js';
 
 const ROOM_CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 
@@ -135,6 +145,12 @@ export class Room {
     this.config = { ...DEFAULT_CONFIG, ...this.config, ...(partial ?? {}) };
     if (this.config.modesPool.includes('imposter') && this.allPlayers().length < 3) {
       throw new Error('NOT_ENOUGH_PLAYERS');
+    }
+    if (
+      this.config.modesPool.includes('ticket-to-ride') &&
+      (this.allPlayers().length < 2 || this.allPlayers().length > 5)
+    ) {
+      throw new Error('TTR_PLAYER_COUNT');
     }
     if (this.config.modesPool.includes('codenames')) {
       const red = this.allPlayers().filter((p) => p.cnTeam === 'red').length;
@@ -244,11 +260,14 @@ export class Room {
   cnPhaseChangedInLastTick = false;
   /** Retourne `true` si la sous-phase hot-potato (bid→answer) a changé lors de ce tick. */
   hpPhaseChangedInLastTick = false;
+  /** Retourne `true` si la sous-phase gartic-phone a changé lors de ce tick. */
+  gpPhaseChangedInLastTick = false;
 
   tick(): RoundEvent[] {
     this.imPhaseChangedInLastTick = false;
     this.cnPhaseChangedInLastTick = false;
     this.hpPhaseChangedInLastTick = false;
+    this.gpPhaseChangedInLastTick = false;
     if (!this.round || this.phase !== 'round_collect') return [];
     if (this.round.mode === 'list-turns') {
       setRoundPlayers(this.round, this.allPlayers());
@@ -288,6 +307,31 @@ export class Room {
       cnTick(cn, Date.now());
       if (cn.sub !== prevSub || cn.currentTeam !== prevTeam) {
         this.cnPhaseChangedInLastTick = true;
+      }
+    }
+    // Gartic Phone : gère les timeouts des étapes write/draw/guess.
+    if (this.round.mode === 'gartic-phone' && this.round.collect.kind === 'gartic-phone') {
+      const gp = this.round.collect.gp;
+      const prev = gp.sub;
+      gpTick(gp, Date.now());
+      if (gp.sub !== prev) {
+        this.gpPhaseChangedInLastTick = true;
+      }
+    }
+    // Bombparty
+    if (this.round.mode === 'bombparty' && this.round.collect.kind === 'bombparty') {
+      const bp = this.round.collect.bp;
+      const res = bpTick(bp, Date.now());
+      if (res.explodeEvents.length > 0) {
+        return res.explodeEvents;
+      }
+    }
+    // Ticket to Ride
+    if (this.round.mode === 'ticket-to-ride' && this.round.collect.kind === 'ticket-to-ride') {
+      const ttr = this.round.collect.ttr;
+      const res = ttrTick(ttr, Date.now());
+      if (res.ttrEvents.length > 0) {
+        return res.ttrEvents;
       }
     }
     return [];
@@ -382,6 +426,32 @@ export class Room {
           }
         >
       | undefined;
+    let gpPhase: 'write' | 'draw' | 'guess' | 'reveal' | 'done' | undefined;
+    let gpStepIndex: number | undefined;
+    let gpTotalSteps: number | undefined;
+    let gpPlayerOrder: string[] | undefined;
+    let gpSubmitted: string[] | undefined;
+    let gpRevealChainIndex: number | undefined;
+    let gpRevealStepIndex: number | undefined;
+    let gpRevealChain: Array<{ type: 'text' | 'drawing'; playerId: string; content: string }> | undefined;
+    let ttrSub: 'initial-destinations' | 'playing' | 'last-round' | 'done' | undefined;
+    let ttrTurnOrder: string[] | undefined;
+    let ttrMarket: Array<string | null> | undefined;
+    let ttrDeckSize: number | undefined;
+    let ttrDiscardSize: number | undefined;
+    let ttrDestinationDeckSize: number | undefined;
+    let ttrTrains: Record<string, number> | undefined;
+    let ttrHandCounts: Record<string, number> | undefined;
+    let ttrDestinationCounts: Record<string, number> | undefined;
+    let ttrClaimedRoutes: Array<{ id: string; ownerId?: string; paidColor?: string }> | undefined;
+    let ttrScoreFromRoutes: Record<string, number> | undefined;
+    let ttrLastRoundTriggerId: string | undefined;
+    let ttrTurnAction:
+      | { kind: 'idle' }
+      | { kind: 'drew-one'; tookLoco: boolean }
+      | { kind: 'picking-destinations'; minKeep: number }
+      | undefined;
+    let ttrInitialConfirmed: Record<string, boolean> | undefined;
     if (r.collect.kind === 'parallel') {
       endsAt = r.collect.endsAt;
     } else if (r.collect.kind === 'turns') {
@@ -488,6 +558,71 @@ export class Room {
           finishedAt: ps.finishedAt,
         };
       }
+    } else if (r.collect.kind === 'gartic-phone') {
+      const gp = r.collect.gp;
+      gpPhase = gp.sub;
+      gpStepIndex = gp.stepIndex;
+      gpTotalSteps = gp.totalSteps;
+      gpPlayerOrder = [...gp.playerOrder];
+      gpSubmitted = [...gp.submitted];
+      gpRevealChainIndex = gp.revealChainIndex;
+      gpRevealStepIndex = gp.revealStepIndex;
+      if (gp.sub === 'reveal') {
+        const chain = gp.chains.get(gp.playerOrder[gp.revealChainIndex] ?? '') ?? [];
+        gpRevealChain = chain.map((e) => ({
+          type: e.type,
+          playerId: e.playerId,
+          content: e.content,
+        }));
+      }
+      endsAt = gp.endsAt;
+    } else if (r.collect.kind === 'ticket-to-ride') {
+      const ttr = r.collect.ttr;
+      ttrSub = ttr.sub;
+      ttrTurnOrder = [...ttr.turnOrder];
+      currentPlayerId = ttr.sub === 'done' ? undefined : ttr.turnOrder[ttr.currentPlayerIndex];
+      endsAt = ttr.turnEndsAt;
+      ttrMarket = [...ttr.market];
+      ttrDeckSize = ttr.deck.length;
+      ttrDiscardSize = ttr.discard.length;
+      ttrDestinationDeckSize = ttr.destinationDeck.length;
+      ttrClaimedRoutes = ttr.routes.map((rt) => ({ ...rt }));
+      ttrLastRoundTriggerId = ttr.lastRoundTriggerId;
+      ttrTrains = {};
+      ttrHandCounts = {};
+      ttrDestinationCounts = {};
+      ttrScoreFromRoutes = {};
+      ttrInitialConfirmed = {};
+      for (const [pid, ps] of ttr.players.entries()) {
+        ttrTrains[pid] = ps.trainsLeft;
+        ttrHandCounts[pid] = Object.values(ps.hand).reduce((sum, n) => sum + n, 0);
+        ttrDestinationCounts[pid] = ps.destinations.length;
+        ttrScoreFromRoutes[pid] = ps.scoreFromRoutes;
+        ttrInitialConfirmed[pid] = ps.initialDestinationsConfirmed;
+      }
+      if (ttr.turnAction.kind === 'picking-destinations') {
+        ttrTurnAction = { kind: 'picking-destinations', minKeep: ttr.turnAction.minKeep };
+      } else {
+        ttrTurnAction = { ...ttr.turnAction };
+      }
+    } else if (r.collect.kind === 'bombparty') {
+      const bp = r.collect.bp;
+      // Ajout des propriétés spécifiques à Bombparty dans le retour
+      return {
+        roundIndex: r.roundIndex,
+        question: r.publicQuestion,
+        mode: r.mode,
+        phase: this.phase,
+        endsAt: bp.explodesAt,
+        currentPlayerId: bp.currentPlayerId || undefined,
+        bpTimerMs: bp.timerMs,
+        bpExplodesAt: bp.explodesAt,
+        bpSyllable: bp.syllable,
+        bpLives: bp.lives,
+        bpAlphabets: Object.fromEntries(
+          Object.entries(bp.alphabets).map(([pid, set]) => [pid, Array.from(set)])
+        ),
+      };
     }
     return {
       roundIndex: r.roundIndex,
@@ -532,6 +667,30 @@ export class Room {
       wrWikiLang,
       wrStartedAt,
       wrPlayers,
+      gpPhase,
+      gpStepIndex,
+      gpTotalSteps,
+      gpPlayerOrder,
+      gpSubmitted,
+      gpRevealChainIndex,
+      gpRevealStepIndex,
+      gpRevealChain,
+      ttrSub,
+      ttrTurnOrder,
+      ttrCurrentPlayerId: currentPlayerId,
+      ttrTurnEndsAt: endsAt,
+      ttrMarket,
+      ttrDeckSize,
+      ttrDiscardSize,
+      ttrDestinationDeckSize,
+      ttrTrains,
+      ttrHandCounts,
+      ttrDestinationCounts,
+      ttrClaimedRoutes,
+      ttrScoreFromRoutes,
+      ttrLastRoundTriggerId,
+      ttrTurnAction,
+      ttrInitialConfirmed,
     };
   }
 
@@ -842,6 +1001,38 @@ export class Room {
     const state = wr.players.get(playerId);
     if (!state) throw new Error('NOT_IN_ROOM');
     if (state.status === 'running') state.status = 'abandoned';
+  }
+
+  /* ============================== GARTIC PHONE ============================== */
+
+  gpSubmitText(playerId: string, text: string): void {
+    if (!this.round) throw new Error('PHASE_MISMATCH');
+    if (this.phase !== 'round_collect') throw new Error('PHASE_MISMATCH');
+    if (this.round.collect.kind !== 'gartic-phone') throw new Error('PHASE_MISMATCH');
+    if (!this.players.has(playerId)) throw new Error('NOT_IN_ROOM');
+    const res = _gpSubmitText(this.round.collect.gp, playerId, text, Date.now());
+    if (!res.accepted) throw new Error(res.code ?? 'INTERNAL');
+  }
+
+  gpSubmitDrawing(playerId: string, dataUrl: string): void {
+    if (!this.round) throw new Error('PHASE_MISMATCH');
+    if (this.phase !== 'round_collect') throw new Error('PHASE_MISMATCH');
+    if (this.round.collect.kind !== 'gartic-phone') throw new Error('PHASE_MISMATCH');
+    if (!this.players.has(playerId)) throw new Error('NOT_IN_ROOM');
+    const res = _gpSubmitDrawing(this.round.collect.gp, playerId, dataUrl, Date.now());
+    if (!res.accepted) throw new Error(res.code ?? 'INTERNAL');
+  }
+
+  gpPromptFor(playerId: string): { type: 'text' | 'drawing'; content: string } | undefined {
+    if (!this.round || this.round.collect.kind !== 'gartic-phone') return undefined;
+    return _gpPromptFor(this.round.collect.gp, playerId);
+  }
+
+  gpAdvanceReveal(playerId: string): void {
+    if (playerId !== this.hostId) throw new Error('NOT_HOST');
+    if (!this.round || this.round.collect.kind !== 'gartic-phone') throw new Error('PHASE_MISMATCH');
+    const res = _gpAdvanceReveal(this.round.collect.gp, Date.now());
+    if (!res.accepted) throw new Error(res.code ?? 'INTERNAL');
   }
 
   private static readonly MAX_LOBBY_STROKES = 900;

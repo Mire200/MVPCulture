@@ -14,6 +14,9 @@ export const GameModeIdSchema = z.enum([
   'imposter',
   'codenames',
   'wikirace',
+  'gartic-phone',
+  'bombparty',
+  'ticket-to-ride',
 ]);
 export type GameModeId = z.infer<typeof GameModeIdSchema>;
 
@@ -155,6 +158,24 @@ export const WikiraceQuestionSchema = BaseQuestionSchema.extend({
 });
 export type WikiraceQuestion = z.infer<typeof WikiraceQuestionSchema>;
 
+export const GarticPhoneQuestionSchema = BaseQuestionSchema.extend({
+  mode: z.literal('gartic-phone'),
+});
+export type GarticPhoneQuestion = z.infer<typeof GarticPhoneQuestionSchema>;
+
+export const BombpartyQuestionSchema = BaseQuestionSchema.extend({
+  mode: z.literal('bombparty'),
+  initialLives: z.number().int().min(1).max(5).default(3),
+});
+export type BombpartyQuestion = z.infer<typeof BombpartyQuestionSchema>;
+
+export const TicketToRideQuestionSchema = BaseQuestionSchema.extend({
+  mode: z.literal('ticket-to-ride'),
+  // Optionnel : si on veut des questions custom pour chaque tronçon, ou utiliser le pool global.
+  // Pour l'MVP, on pioche des questions globales ou on définit une série de questions.
+});
+export type TicketToRideQuestion = z.infer<typeof TicketToRideQuestionSchema>;
+
 export const QuestionSchema = z.discriminatedUnion('mode', [
   ClassicQuestionSchema,
   QcmQuestionSchema,
@@ -168,6 +189,9 @@ export const QuestionSchema = z.discriminatedUnion('mode', [
   ImposterQuestionSchema,
   CodenamesQuestionSchema,
   WikiraceQuestionSchema,
+  GarticPhoneQuestionSchema,
+  BombpartyQuestionSchema,
+  TicketToRideQuestionSchema,
 ]);
 export type Question = z.infer<typeof QuestionSchema>;
 
@@ -286,6 +310,72 @@ export interface RoundStateBase {
       finishedAt?: number;
     }
   >;
+
+  /** Gartic Phone : sous-phase courante. */
+  gpPhase?: 'write' | 'draw' | 'guess' | 'reveal' | 'done';
+  /** Gartic Phone : index de l'étape courante (0 = write, 1 = draw, …). */
+  gpStepIndex?: number;
+  /** Gartic Phone : nombre total d'étapes. */
+  gpTotalSteps?: number;
+  /** Gartic Phone : ordre circulaire des joueurs. */
+  gpPlayerOrder?: string[];
+  /** Gartic Phone : IDs des joueurs ayant soumis cette étape. */
+  gpSubmitted?: string[];
+  /** Gartic Phone : index de la chaîne en cours de reveal. */
+  gpRevealChainIndex?: number;
+  /** Gartic Phone : index de l'étape courante dans la chaîne en cours de reveal. */
+  gpRevealStepIndex?: number;
+  /** Gartic Phone : la chaîne complète (jusqu'à l'étape courante) pour l'UI. */
+  gpRevealChain?: Array<{ type: 'text' | 'drawing'; playerId: string; content: string }>;
+
+  /** Bombparty : joueur dont c'est le tour. */
+  bpCurrentPlayerId?: string;
+  /** Bombparty : timer restant estimé (en ms) pour la bombe. */
+  bpTimerMs?: number;
+  /** Bombparty : timestamp cible où la bombe explose. */
+  bpExplodesAt?: number;
+  /** Bombparty : syllabe obligatoire. */
+  bpSyllable?: string;
+  /** Bombparty : nombre de vies restantes par joueur. */
+  bpLives?: Record<string, number>;
+  /** Bombparty : tableau des 26 lettres validées par le joueur (pour UI alphabet). */
+  bpAlphabets?: Record<string, string[]>;
+
+  /** Ticket to Ride : sous-phase du jeu. */
+  ttrSub?: 'initial-destinations' | 'playing' | 'last-round' | 'done';
+  /** Ticket to Ride : ordre des joueurs. */
+  ttrTurnOrder?: string[];
+  /** Ticket to Ride : joueur dont c'est le tour. */
+  ttrCurrentPlayerId?: string;
+  /** Ticket to Ride : deadline du tour courant. */
+  ttrTurnEndsAt?: number;
+  /** Ticket to Ride : marché 5 cartes face visible (null = pioche vide). */
+  ttrMarket?: Array<string | null>;
+  /** Ticket to Ride : taille de la pioche wagons. */
+  ttrDeckSize?: number;
+  /** Ticket to Ride : taille de la défausse wagons. */
+  ttrDiscardSize?: number;
+  /** Ticket to Ride : taille de la pioche de billets destination restants. */
+  ttrDestinationDeckSize?: number;
+  /** Ticket to Ride : nombre de wagons restants par joueur. */
+  ttrTrains?: Record<string, number>;
+  /** Ticket to Ride : nombre de cartes en main par joueur (public, pas les couleurs). */
+  ttrHandCounts?: Record<string, number>;
+  /** Ticket to Ride : nombre de billets destination détenus par joueur (public). */
+  ttrDestinationCounts?: Record<string, number>;
+  /** Ticket to Ride : routes capturées (id, ownerId, couleur payée). */
+  ttrClaimedRoutes?: Array<{ id: string; ownerId?: string; paidColor?: string }>;
+  /** Ticket to Ride : score partiel (tronçons uniquement). */
+  ttrScoreFromRoutes?: Record<string, number>;
+  /** Ticket to Ride : joueur qui a déclenché le dernier tour. */
+  ttrLastRoundTriggerId?: string;
+  /** Ticket to Ride : action en cours pour le joueur actif. */
+  ttrTurnAction?:
+    | { kind: 'idle' }
+    | { kind: 'drew-one'; tookLoco: boolean }
+    | { kind: 'picking-destinations'; minKeep: number };
+  /** Ticket to Ride : pour la phase initial-destinations, quels joueurs ont confirmé. */
+  ttrInitialConfirmed?: Record<string, boolean>;
 }
 
 export interface PublicQuestion {

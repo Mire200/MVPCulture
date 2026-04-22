@@ -7,7 +7,7 @@ export interface ModeDescriptor {
   description: string;
   implemented: boolean;
   usesSpeed: boolean;
-  inputKind: 'text' | 'numeric' | 'list-item' | 'map' | 'drag-order';
+  inputKind: 'text' | 'numeric' | 'list-item' | 'map' | 'drag-order' | 'draw';
 }
 
 export const MODE_DESCRIPTORS: Record<GameModeId, ModeDescriptor> = {
@@ -123,6 +123,36 @@ export const MODE_DESCRIPTORS: Record<GameModeId, ModeDescriptor> = {
     usesSpeed: true,
     inputKind: 'text',
   },
+  'gartic-phone': {
+    id: 'gartic-phone',
+    label: 'Gartic Phone',
+    shortLabel: 'Gartic',
+    description:
+      'Téléphone arabe visuel : écris une phrase, dessine, devine… et découvre le résultat hilarant.',
+    implemented: true,
+    usesSpeed: false,
+    inputKind: 'draw',
+  },
+  bombparty: {
+    id: 'bombparty',
+    label: 'Bombparty',
+    shortLabel: 'Bombe',
+    description:
+      'La bombe tourne ! Écris vite un mot contenant la syllabe avant l\'explosion.',
+    implemented: true,
+    usesSpeed: false,
+    inputKind: 'text',
+  },
+  'ticket-to-ride': {
+    id: 'ticket-to-ride',
+    label: 'Aventuriers du Rail',
+    shortLabel: 'Aventuriers',
+    description:
+      'Piochez des cartes wagon, construisez des tronçons et complétez vos billets destination.',
+    implemented: true,
+    usesSpeed: false,
+    inputKind: 'text',
+  },
 };
 
 export const ALL_MODES: GameModeId[] = [
@@ -138,6 +168,9 @@ export const ALL_MODES: GameModeId[] = [
   'imposter',
   'codenames',
   'wikirace',
+  'gartic-phone',
+  'bombparty',
+  'ticket-to-ride',
 ];
 
 export const MVP_MODES: GameModeId[] = ['classic', 'estimation', 'list-turns'];

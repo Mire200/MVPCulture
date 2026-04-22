@@ -185,6 +185,105 @@ export interface WikiraceState {
   ended: boolean;
 }
 
+export interface GarticPhoneEntry {
+  type: 'text' | 'drawing';
+  playerId: string;
+  content: string;
+  submittedAt: number;
+}
+
+export type GarticPhoneSub = 'write' | 'draw' | 'guess' | 'reveal' | 'done';
+
+export interface GarticPhoneState {
+  sub: GarticPhoneSub;
+  /** Ordre circulaire des joueurs. */
+  playerOrder: string[];
+  /** Index de l'étape courante (0 = write, 1 = draw, 2 = guess, …). */
+  stepIndex: number;
+  /** Nombre total d'étapes (= nombre de joueurs). */
+  totalSteps: number;
+  /** Chaînes : chainOwner → entrées ordonnées. */
+  chains: Map<string, GarticPhoneEntry[]>;
+  /** Joueurs ayant soumis à l'étape courante. */
+  submitted: Set<string>;
+  /** Deadline de l'étape courante. */
+  endsAt: number;
+  /** Durée par étape texte (ms). */
+  writeMs: number;
+  /** Durée par étape dessin (ms). */
+  drawMs: number;
+  /** Index de la chaîne en cours de reveal (phase reveal). */
+  revealChainIndex: number;
+  /** Index de l'étape courante dans la chaîne de reveal (phase reveal). */
+  revealStepIndex: number;
+}
+
+export interface BombpartyState {
+  playerOrder: string[];
+  currentPlayerId: string | null;
+  /** Timer total in ms when turn started */
+  timerMs: number;
+  /** Deadline timestamp for explosion */
+  explodesAt: number;
+  syllable: string;
+  lives: Record<string, number>;
+  /** Lettres de l'alphabet déjà utilisées par le joueur */
+  alphabets: Record<string, Set<string>>;
+  usedWords: Set<string>;
+  phase: 'playing' | 'done';
+}
+
+export type TtrSub =
+  | 'initial-destinations' // Chaque joueur choisit ses billets de départ
+  | 'playing' // Boucle normale de tours
+  | 'last-round' // Un joueur a déclenché le dernier tour
+  | 'done';
+
+export type TtrTurnAction =
+  | { kind: 'idle' }
+  | { kind: 'drew-one'; tookLoco: boolean }
+  | { kind: 'picking-destinations'; drawn: string[]; minKeep: number };
+
+export interface TtrPlayerState {
+  trainsLeft: number;
+  /** Main : compte par couleur (incluant 'loco'). */
+  hand: Record<string, number>;
+  /** Billets gardés (ids de TTR_DESTINATIONS). */
+  destinations: string[];
+  /** Ids de tronçons capturés. */
+  claimedRouteIds: string[];
+  /** Score partiel cumulé (tronçons uniquement — destinations/longest en fin de partie). */
+  scoreFromRoutes: number;
+  /** Sélection initiale de destinations pas encore confirmée. */
+  pendingInitialDestinations?: string[];
+  /** Chaque joueur attend-il encore la confirmation des destinations initiales ? */
+  initialDestinationsConfirmed: boolean;
+}
+
+export interface TicketToRideState {
+  sub: TtrSub;
+  turnOrder: string[];
+  currentPlayerIndex: number;
+  /** Timestamp limite du tour courant. */
+  turnEndsAt?: number;
+  /** Pioche de cartes wagons (face cachée). */
+  deck: string[];
+  discard: string[];
+  /** Marché de cartes face visible (null = emplacement vide). */
+  market: (string | null)[];
+  /** Pile de billets destination non distribués. */
+  destinationDeck: string[];
+  /** Billets initiaux distribués à chaque joueur (privés). */
+  initialDestinationsDrawn: Map<string, string[]>;
+  players: Map<string, TtrPlayerState>;
+  routes: Array<{ id: string; ownerId?: string; paidColor?: string }>;
+  /** Joueur qui a déclenché le dernier tour (seuil wagons atteint). */
+  lastRoundTriggerId?: string;
+  /** Nombre de tours restants en phase last-round (décrémenté à chaque fin de tour). */
+  lastRoundTurnsRemaining?: number;
+  /** Action en cours durant le tour. */
+  turnAction: TtrTurnAction;
+}
 export type CollectPhase =
   | { kind: 'parallel'; answers: Map<string, CollectedAnswer>; endsAt: number }
   | { kind: 'turns'; turn: TurnState }
@@ -193,7 +292,10 @@ export type CollectPhase =
   | { kind: 'imposter'; im: ImposterState }
   | { kind: 'codenames'; cn: CodenamesState }
   | { kind: 'speed-elim'; se: SpeedElimState }
-  | { kind: 'wikirace'; wr: WikiraceState };
+  | { kind: 'wikirace'; wr: WikiraceState }
+  | { kind: 'gartic-phone'; gp: GarticPhoneState }
+  | { kind: 'bombparty'; bp: BombpartyState }
+  | { kind: 'ticket-to-ride'; ttr: TicketToRideState };
 
 export interface RoundState {
   roundIndex: number;
@@ -238,4 +340,16 @@ export type RoundEvent =
   | { type: 'hp_item_accepted'; playerId: string; item: string; count: number }
   | { type: 'hp_item_rejected'; playerId: string; reason: 'duplicate' | 'invalid' }
   | { type: 'hp_player_done'; playerId: string; success: boolean }
-  | { type: 'speed_elim_attempt'; playerId: string; correct: boolean };
+  | { type: 'speed_elim_attempt'; playerId: string; correct: boolean }
+  | { type: 'bp_invalid_syllable'; playerId: string; word: string }
+  | { type: 'bp_already_used'; playerId: string; word: string }
+  | { type: 'bp_not_in_dict'; playerId: string; word: string }
+  | { type: 'bp_word_accepted'; playerId: string; word: string }
+  | { type: 'bp_explosion'; playerId: string }
+  // ticket-to-ride
+  | { type: 'ttr_turn_started'; currentPlayerId: string }
+  | { type: 'ttr_card_drawn'; playerId: string; fromMarket: boolean }
+  | { type: 'ttr_route_claimed'; playerId: string; routeId: string; length: number }
+  | { type: 'ttr_destinations_taken'; playerId: string; count: number }
+  | { type: 'ttr_last_round_triggered'; playerId: string }
+  | { type: 'ttr_done' };

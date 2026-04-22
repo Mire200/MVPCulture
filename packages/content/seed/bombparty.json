@@ -1,0 +1,10 @@
+[
+  {
+    "id": "bp-default-1",
+    "mode": "bombparty",
+    "category": "Langue Française",
+    "difficulty": "medium",
+    "prompt": "Le jeu de la bombe",
+    "initialLives": 3
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "ttr-default-1",
+    "mode": "ticket-to-ride",
+    "category": "Course de train",
+    "difficulty": "medium",
+    "prompt": "Connectez vos villes en gagnant des tronçons !"
+  }
+]

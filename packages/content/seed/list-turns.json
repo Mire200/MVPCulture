@@ -1226,21 +1226,6 @@
     "turnSeconds": 12
   },
   {
-    "id": "l-jv-003",
-    "mode": "list-turns",
-    "difficulty": "medium",
-    "category": "Jeux vidéo",
-    "prompt": "Citez un jeu de la saga Assassin's Creed.",
-    "validItems": [
-      "assassin's creed", "assassins creed", "assassin's creed 2", "assassins creed 2",
-      "brotherhood", "revelations", "assassin's creed 3", "assassins creed 3",
-      "black flag", "rogue", "unity", "syndicate",
-      "origins", "odyssey", "valhalla",
-      "mirage", "shadows"
-    ],
-    "turnSeconds": 12
-  },
-  {
     "id": "l-jv-004",
     "mode": "list-turns",
     "difficulty": "easy",
@@ -1278,29 +1263,6 @@
       "level-5", "tri-ace", "platinum games", "gearbox"
     ],
     "turnSeconds": 12
-  },
-  {
-    "id": "l-jv-006",
-    "mode": "list-turns",
-    "difficulty": "medium",
-    "category": "Jeux vidéo",
-    "prompt": "Citez un jeu de la saga Final Fantasy (numéroté).",
-    "validItems": [
-      "final fantasy", "final fantasy i", "final fantasy 1",
-      "final fantasy ii", "final fantasy 2", "final fantasy iii", "final fantasy 3",
-      "final fantasy iv", "final fantasy 4", "final fantasy v", "final fantasy 5",
-      "final fantasy vi", "final fantasy 6", "final fantasy vii", "final fantasy 7",
-      "ff7", "final fantasy viii", "final fantasy 8", "ff8",
-      "final fantasy ix", "final fantasy 9", "ff9",
-      "final fantasy x", "final fantasy 10", "ffx",
-      "final fantasy xi", "final fantasy 11",
-      "final fantasy xii", "final fantasy 12",
-      "final fantasy xiii", "final fantasy 13",
-      "final fantasy xiv", "final fantasy 14", "ffxiv",
-      "final fantasy xv", "final fantasy 15",
-      "final fantasy xvi", "final fantasy 16"
-    ],
-    "turnSeconds": 15
   },
   {
     "id": "l-jv-007",
@@ -1719,25 +1681,6 @@
       "veuve clicquot", "bollinger", "roederer", "perrier-jouët",
       "château pétrus", "chateau petrus", "romanée-conti", "romanee-conti",
       "sèvres", "sevres", "christofle"
-    ],
-    "turnSeconds": 12
-  },
-  {
-    "id": "l-pop-011",
-    "mode": "list-turns",
-    "difficulty": "medium",
-    "category": "Pop culture",
-    "prompt": "Citez une série animée populaire (anime japonais ou dessin animé).",
-    "validItems": [
-      "dragon ball", "dragon ball z", "naruto", "one piece", "bleach",
-      "attack on titan", "l'attaque des titans", "demon slayer", "jujutsu kaisen",
-      "my hero academia", "fullmetal alchemist", "death note",
-      "hunter x hunter", "one punch man", "sword art online",
-      "pokemon", "pokémon", "digimon", "yu-gi-oh", "yu gi oh",
-      "fairy tail", "black clover", "chainsaw man", "spy x family",
-      "mob psycho 100", "avatar", "the simpsons", "family guy", "american dad",
-      "south park", "futurama", "bob's burgers", "archer",
-      "rick and morty", "bojack horseman", "big mouth"
     ],
     "turnSeconds": 12
   }

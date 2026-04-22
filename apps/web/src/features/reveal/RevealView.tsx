@@ -43,15 +43,11 @@ export function RevealView() {
   }, [reveal, snapshot]);
 
   const officialPlayedRef = useRef(false);
-  const [bowlingActive, setBowlingActive] = useState(false);
-  const prevBowlingRef = useRef(false);
 
   // Reset complet quand la question change.
   useEffect(() => {
     setRevealedIdx(0);
     officialPlayedRef.current = false;
-    setBowlingActive(false);
-    prevBowlingRef.current = false;
   }, [answersInOrder]);
 
   const doAdvance = useCallback(() => {
@@ -68,26 +64,15 @@ export function RevealView() {
     });
   }, [answersInOrder]);
 
-  // Programmation du prochain reveal, avec pause automatique pendant la
-  // lecture d'une vidéo bowling.
+  // Programmation du prochain reveal
   useEffect(() => {
     if (!answersInOrder.length) return;
     if (revealedIdx >= answersInOrder.length) return;
 
-    // Transition fin de vidéo → on enchaîne rapidement avec le joueur suivant.
-    if (prevBowlingRef.current && !bowlingActive) {
-      prevBowlingRef.current = false;
-      const id = setTimeout(doAdvance, 700);
-      return () => clearTimeout(id);
-    }
-    prevBowlingRef.current = bowlingActive;
-
-    if (bowlingActive) return; // pause : on attend la fin de la vidéo
-
     const tick = mode === 'map' ? 4200 : 700;
     const id = setTimeout(doAdvance, tick);
     return () => clearTimeout(id);
-  }, [revealedIdx, answersInOrder, mode, bowlingActive, doAdvance]);
+  }, [revealedIdx, answersInOrder, mode, doAdvance]);
 
   useEffect(() => {
     if (
@@ -192,7 +177,6 @@ export function RevealView() {
             distanceKm: answer?.distanceKm,
           }))}
           revealedCount={revealedIdx}
-          onBowlingStateChange={setBowlingActive}
         />
       )}
 

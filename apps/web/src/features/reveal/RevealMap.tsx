@@ -10,12 +10,7 @@ import type { FeatureCollection, LineString } from 'geojson';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { neonMapStyle } from '../round/mapStyle';
 import { MapMarker } from '../round/MapMarker';
-import {
-  BowlingVideoOverlay,
-  pickBowlingKind,
-  pickBowlingSrc,
-  type BowlingShown,
-} from './BowlingVideoOverlay';
+
 
 interface PlayerInput {
   id: string;
@@ -33,9 +28,6 @@ interface Props {
   revealedCount?: number;
   /** Clé logique (ex: id de la question) : change => remount complet. */
   resetKey?: string | number;
-  /** Appelé lorsqu'une vidéo bowling démarre / se termine, pour que le parent
-   *  puisse mettre en pause la séquence de reveal le temps de la lecture. */
-  onBowlingStateChange?: (active: boolean) => void;
 }
 
 const FLIGHT_DURATION_MS = 2100;
@@ -46,7 +38,6 @@ export function RevealMap({
   players,
   revealedCount,
   resetKey,
-  onBowlingStateChange,
 }: Props) {
   const mapRef = useRef<MapRef | null>(null);
   const flightTokenRef = useRef<{ cancelled: boolean } | null>(null);
@@ -57,7 +48,6 @@ export function RevealMap({
     km: number;
     total: number;
   } | null>(null);
-  const [bowling, setBowling] = useState<BowlingShown | null>(null);
 
   const placed = useMemo(
     () => players.filter((p) => typeof p.lat === 'number' && typeof p.lng === 'number'),
@@ -213,14 +203,6 @@ export function RevealMap({
         } else {
           setFlightProgress(null);
           setHud((prev) => (prev ? { ...prev, km: prev.total } : prev));
-          const kind = pickBowlingKind(distance);
-          if (kind) {
-            setBowling({
-              id: `${last.id}-${revealedCount}-${Date.now()}`,
-              kind,
-              src: pickBowlingSrc(kind),
-            });
-          }
         }
       };
       rafId = requestAnimationFrame(tick);
@@ -234,10 +216,6 @@ export function RevealMap({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [revealedCount]);
 
-  // Si la question change, on nettoie l'overlay bowling en route.
-  useEffect(() => {
-    setBowling(null);
-  }, [resetKey]);
 
   // Quand tous les joueurs sont révélés, on cadre l'ensemble.
   const totalPlaced = placed.length;
@@ -416,14 +394,6 @@ export function RevealMap({
           </div>
         )}
 
-        <BowlingVideoOverlay
-          shown={bowling}
-          onOpen={() => onBowlingStateChange?.(true)}
-          onDone={(id) => {
-            setBowling((prev) => (prev && prev.id === id ? null : prev));
-            onBowlingStateChange?.(false);
-          }}
-        />
 
         <div className="mvpc-map-aurora" aria-hidden />
       </div>

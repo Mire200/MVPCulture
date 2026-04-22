@@ -12,6 +12,9 @@ import { guessWhoMode } from './modes/guessWho.js';
 import { imposterMode } from './modes/imposter.js';
 import { codenamesMode } from './modes/codenames.js';
 import { wikiraceMode } from './modes/wikirace.js';
+import { garticPhoneMode } from './modes/garticPhone.js';
+import { bombpartyMode } from './modes/bombparty.js';
+import { ticketToRideMode } from './modes/ticketToRide.js';
 
 export const MODE_REGISTRY: Partial<Record<GameModeId, GameMode>> = {
   classic: classicMode,
@@ -26,6 +29,9 @@ export const MODE_REGISTRY: Partial<Record<GameModeId, GameMode>> = {
   imposter: imposterMode,
   codenames: codenamesMode,
   wikirace: wikiraceMode,
+  'gartic-phone': garticPhoneMode,
+  bombparty: bombpartyMode,
+  'ticket-to-ride': ticketToRideMode,
 };
 
 export function getMode(id: GameModeId): GameMode {

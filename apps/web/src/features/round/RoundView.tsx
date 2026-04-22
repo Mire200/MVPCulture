@@ -12,6 +12,9 @@ import { GuessWhoRound } from './GuessWhoRound';
 import { ImposterRound } from './ImposterRound';
 import { CodenamesRound } from './CodenamesRound';
 import { WikiraceRound } from './WikiraceRound';
+import { GarticPhoneRound } from './GarticPhoneRound';
+import { BombpartyRound } from './BombpartyRound';
+import { TicketToRideRound } from './TicketToRideRound';
 import { RoundShell } from './RoundShell';
 
 export function RoundView() {
@@ -33,6 +36,9 @@ export function RoundView() {
       {mode === 'imposter' && <ImposterRound />}
       {mode === 'codenames' && <CodenamesRound />}
       {mode === 'wikirace' && <WikiraceRound />}
+      {mode === 'gartic-phone' && <GarticPhoneRound />}
+      {mode === 'bombparty' && <BombpartyRound />}
+      {mode === 'ticket-to-ride' && <TicketToRideRound />}
     </RoundShell>
   );
 }

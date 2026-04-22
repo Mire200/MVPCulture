@@ -1,4 +1,9 @@
-import { ALL_QUESTIONS, IMPOSTER_QUESTIONS, WIKIRACE_QUESTIONS } from '@mvpc/content';
+import {
+  ALL_QUESTIONS,
+  IMPOSTER_QUESTIONS,
+  TICKET_TO_RIDE_QUESTIONS,
+  WIKIRACE_QUESTIONS,
+} from '@mvpc/content';
 import type { GameConfig, GameModeId, Question } from '@mvpc/shared';
 
 function syntheticGuessWho(index: number): Question {
@@ -18,6 +23,16 @@ function syntheticCodenames(index: number): Question {
     difficulty: 'medium',
     category: 'Codenames',
     prompt: 'Codenames',
+  } as Question;
+}
+
+function syntheticGarticPhone(index: number): Question {
+  return {
+    id: `gp-${index}`,
+    mode: 'gartic-phone',
+    difficulty: 'easy',
+    category: 'Gartic Phone',
+    prompt: 'Gartic Phone',
   } as Question;
 }
 
@@ -69,6 +84,18 @@ export function buildRoundPlaylist(config: GameConfig): Question[] {
   // tirée au hasard dans la banque.
   if (pool.includes('wikirace')) {
     const list = WIKIRACE_QUESTIONS;
+    if (list.length === 0) return [];
+    return [pickRandom(list)];
+  }
+  // Gartic Phone occupe toute la session : question synthétique.
+  if (pool.includes('gartic-phone')) {
+    return [syntheticGarticPhone(0)];
+  }
+  // Aventuriers du Rail : manche unique qui dure jusqu'à capture de toutes les
+  // routes. La question porteuse ne sert qu'à identifier le mode — les
+  // questions sprint (classic/qcm) sont piochées dynamiquement pendant la manche.
+  if (pool.includes('ticket-to-ride')) {
+    const list = TICKET_TO_RIDE_QUESTIONS;
     if (list.length === 0) return [];
     return [pickRandom(list)];
   }

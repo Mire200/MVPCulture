@@ -2,7 +2,7 @@
 import { useGameStore } from '@/store/gameStore';
 import { AvatarBadge } from '@/components/AvatarPicker';
 import { motion } from 'framer-motion';
-import { Flame, Sparkles, Zap, MapPin, Hourglass, Dices, HelpCircle, UserX, Grid3x3 } from 'lucide-react';
+import { Flame, Sparkles, Zap, MapPin, Hourglass, Dices, HelpCircle, UserX, Grid3x3, Pencil } from 'lucide-react';
 import { Timer } from '@/components/Timer';
 
 type ChipVariant = 'cyan' | 'magenta' | 'violet' | 'lime' | 'amber';
@@ -23,6 +23,9 @@ const MODE_META: Record<
   imposter: { label: "Mot de l'imposteur", chip: 'magenta', icon: <UserX className="w-3.5 h-3.5" /> },
   codenames: { label: 'Codenames', chip: 'cyan', icon: <Grid3x3 className="w-3.5 h-3.5" /> },
   wikirace: { label: 'Wikirace', chip: 'lime', icon: <Zap className="w-3.5 h-3.5" /> },
+  'gartic-phone': { label: 'Gartic Phone', chip: 'violet', icon: <Pencil className="w-3.5 h-3.5" /> },
+  bombparty: { label: 'Bombparty', chip: 'amber', icon: <Flame className="w-3.5 h-3.5" /> },
+  'ticket-to-ride': { label: 'Aventuriers', chip: 'amber', icon: <MapPin className="w-3.5 h-3.5" /> },
 };
 
 export function RoundShell({ children }: { children: React.ReactNode }) {
@@ -30,9 +33,14 @@ export function RoundShell({ children }: { children: React.ReactNode }) {
   if (!snapshot?.round) return null;
   const r = snapshot.round;
   const meta = MODE_META[r.mode] ?? MODE_META.classic!;
+  const isWideMode = r.mode === 'ticket-to-ride';
 
   return (
-    <main className="min-h-dvh flex flex-col px-4 sm:px-6 py-6 max-w-4xl mx-auto w-full">
+    <main
+      className={`min-h-dvh flex flex-col px-4 sm:px-6 py-6 mx-auto w-full ${
+        isWideMode ? 'max-w-[1480px]' : 'max-w-4xl'
+      }`}
+    >
       <header className="flex items-center justify-between mb-6 gap-3 flex-wrap">
         <div className="flex items-center gap-3">
           <div className={`chip-${meta.chip}`}>
