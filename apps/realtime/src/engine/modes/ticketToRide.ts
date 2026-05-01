@@ -13,12 +13,13 @@ import type {
   RoundReveal,
   RoundScoring,
   TicketToRideQuestion,
+  TTRRoute,
 } from '@mvpc/shared';
 import {
+  DEFAULT_TTR_MAP_ID,
+  getTtrMap,
   TTR_CARD_COLORS,
   TTR_CARDS_PER_COLOR,
-  TTR_CITIES,
-  TTR_DESTINATIONS,
   TTR_INITIAL_DESTINATIONS_DRAW,
   TTR_INITIAL_DESTINATIONS_KEEP_MIN,
   TTR_LAST_ROUND_TRAIN_THRESHOLD,
@@ -28,9 +29,7 @@ import {
   TTR_MARKET_SIZE,
   TTR_MIDGAME_DESTINATIONS_DRAW,
   TTR_MIDGAME_DESTINATIONS_KEEP_MIN,
-  TTR_ROUTES,
   TTR_ROUTE_POINTS,
-  TTR_TRAINS_PER_PLAYER,
 } from '@mvpc/shared';
 
 /** Durée max d'un tour (ms) avant d'être auto-skippé. */
@@ -75,6 +74,10 @@ function locoCountInMarket(market: (string | null)[]): number {
   return market.filter((c) => c === 'loco').length;
 }
 
+function routesFor(ttr: TicketToRideState): TTRRoute[] {
+  return getTtrMap(ttr.mapId).routes;
+}
+
 export function ttrRefillMarket(ttr: TicketToRideState): void {
   for (let i = 0; i < TTR_MARKET_SIZE; i++) {
     if (ttr.market[i] == null) {
@@ -109,7 +112,7 @@ export function ttrPayableColorsFor(
   playerId: string,
   routeId: string,
 ): Array<{ color: string; locoCount: number }> {
-  const route = TTR_ROUTES.find((r) => r.id === routeId);
+  const route = routesFor(ttr).find((r) => r.id === routeId);
   if (!route) return [];
   const owned = ttr.routes.find((r) => r.id === routeId);
   if (!owned || owned.ownerId) return [];
@@ -324,7 +327,7 @@ export function ttrClaimRoute(
   if (ttr.turnAction.kind !== 'idle') {
     return { ok: false, code: 'PHASE_MISMATCH', message: 'Action déjà commencée.' };
   }
-  const route = TTR_ROUTES.find((r) => r.id === routeId);
+  const route = routesFor(ttr).find((r) => r.id === routeId);
   if (!route) return { ok: false, code: 'INVALID_PAYLOAD', message: 'Route inconnue.' };
   const owned = ttr.routes.find((r) => r.id === routeId)!;
   if (owned.ownerId) return { ok: false, code: 'PHASE_MISMATCH', message: 'Déjà prise.' };
@@ -518,6 +521,7 @@ export function ttrTick(
 // ---- Scoring ----
 
 function areCitiesConnectedByOwner(
+  routes: TTRRoute[],
   claimedRouteIds: string[],
   cityA: string,
   cityB: string,
@@ -525,7 +529,7 @@ function areCitiesConnectedByOwner(
   if (cityA === cityB) return true;
   const adj = new Map<string, Set<string>>();
   for (const id of claimedRouteIds) {
-    const r = TTR_ROUTES.find((rt) => rt.id === id);
+    const r = routes.find((rt) => rt.id === id);
     if (!r) continue;
     if (!adj.has(r.cityA)) adj.set(r.cityA, new Set());
     if (!adj.has(r.cityB)) adj.set(r.cityB, new Set());
@@ -547,11 +551,11 @@ function areCitiesConnectedByOwner(
   return false;
 }
 
-function computeLongestPathLength(claimedRouteIds: string[]): number {
+function computeLongestPathLength(routes: TTRRoute[], claimedRouteIds: string[]): number {
   // Chaque route ne peut être traversée qu'une fois ; on cherche le chemin
   // eulérien le plus long (en trains). DFS avec backtracking.
   const edges = claimedRouteIds
-    .map((id) => TTR_ROUTES.find((r) => r.id === id))
+    .map((id) => routes.find((r) => r.id === id))
     .filter((r): r is NonNullable<typeof r> => !!r);
   if (edges.length === 0) return 0;
   const adj = new Map<string, Array<{ to: string; edgeId: string; len: number }>>();
@@ -581,8 +585,10 @@ export const ticketToRideMode: GameMode = {
 
   prepare(ctx: GameModeContext): RoundState {
     const q = ctx.question as TicketToRideQuestion;
+    const mapId = ctx.config.ttrMapId ?? DEFAULT_TTR_MAP_ID;
+    const map = getTtrMap(mapId);
     const deck = buildDeck();
-    const destinationDeck = shuffle(TTR_DESTINATIONS.map((d) => d.id));
+    const destinationDeck = shuffle(map.destinations.map((d) => d.id));
 
     const players = new Map<string, TtrPlayerState>();
     const initialDrawn = new Map<string, string[]>();
@@ -596,7 +602,7 @@ export const ticketToRideMode: GameMode = {
         if (c) hand[c] = (hand[c] ?? 0) + 1;
       }
       players.set(pid, {
-        trainsLeft: TTR_TRAINS_PER_PLAYER,
+        trainsLeft: map.trainsPerPlayer ?? 45,
         hand,
         destinations: [],
         claimedRouteIds: [],
@@ -613,6 +619,7 @@ export const ticketToRideMode: GameMode = {
 
     const market: (string | null)[] = new Array(TTR_MARKET_SIZE).fill(null);
     const ttr: TicketToRideState = {
+      mapId,
       sub: 'initial-destinations',
       turnOrder,
       currentPlayerIndex: 0,
@@ -623,7 +630,7 @@ export const ticketToRideMode: GameMode = {
       destinationDeck,
       initialDestinationsDrawn: initialDrawn,
       players,
-      routes: TTR_ROUTES.map((r) => ({ id: r.id })),
+      routes: map.routes.map((r) => ({ id: r.id })),
       turnAction: { kind: 'idle' },
     };
     ttrRefillMarket(ttr);
@@ -676,6 +683,7 @@ export const ticketToRideMode: GameMode = {
       return { roundIndex: state.roundIndex, deltas, totals, officialAnswer: 'Fin de partie' };
     }
     const ttr = state.collect.ttr;
+    const map = getTtrMap(ttr.mapId);
 
     // Destinations : +points si complétée, -points sinon.
     const destinationScore: Record<string, number> = {};
@@ -684,9 +692,9 @@ export const ticketToRideMode: GameMode = {
       if (!p) continue;
       let s = 0;
       for (const dId of p.destinations) {
-        const dest = TTR_DESTINATIONS.find((d) => d.id === dId);
+        const dest = map.destinations.find((d) => d.id === dId);
         if (!dest) continue;
-        const connected = areCitiesConnectedByOwner(p.claimedRouteIds, dest.cityA, dest.cityB);
+        const connected = areCitiesConnectedByOwner(map.routes, p.claimedRouteIds, dest.cityA, dest.cityB);
         s += connected ? dest.points : -dest.points;
       }
       destinationScore[pid] = s;
@@ -696,7 +704,7 @@ export const ticketToRideMode: GameMode = {
     const longest: Record<string, number> = {};
     for (const pid of ttr.turnOrder) {
       const p = ttr.players.get(pid);
-      longest[pid] = p ? computeLongestPathLength(p.claimedRouteIds) : 0;
+      longest[pid] = p ? computeLongestPathLength(map.routes, p.claimedRouteIds) : 0;
     }
     const maxLen = Math.max(0, ...Object.values(longest));
     const bonusIds = new Set(
@@ -714,8 +722,6 @@ export const ticketToRideMode: GameMode = {
       deltas[p.id] = delta;
       totals[p.id] = p.score + delta;
     }
-    // Cities unused: silence TS unused-import in case.
-    void TTR_CITIES;
     return {
       roundIndex: state.roundIndex,
       deltas,

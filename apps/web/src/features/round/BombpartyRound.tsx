@@ -8,6 +8,8 @@ import { AvatarBadge } from '@/components/AvatarPicker';
 import { mvpSound } from '@/lib/sound';
 
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyz'.split('');
+/** Throttle l'envoi du partial typing (ms). */
+const BP_TYPING_EMIT_INTERVAL_MS = 60;
 
 export function BombpartyRound() {
   const snapshot = useGameStore((s) => s.snapshot);
@@ -15,8 +17,14 @@ export function BombpartyRound() {
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
-  
+  /** Input partiel diffusé par le joueur actif (vu par tous les autres). */
+  const [livePartial, setLivePartial] = useState('');
+  /** À qui appartient le `livePartial` courant (pour pouvoir reset au changement de tour). */
+  const [livePartialFrom, setLivePartialFrom] = useState<string | undefined>(undefined);
+
   const inputRef = useRef<HTMLInputElement>(null);
+  const lastEmitRef = useRef(0);
+  const pendingEmitRef = useRef<{ value: string; timer: number | null }>({ value: '', timer: null });
 
   if (!snapshot || !snapshot.round) return null;
   const r = snapshot.round;
@@ -51,6 +59,64 @@ export function BombpartyRound() {
       setErrorMsg('');
     }
   }, [isMyTurn]);
+
+  // Reset le « live caption » dès qu'on change de joueur actif.
+  useEffect(() => {
+    setLivePartial('');
+    setLivePartialFrom(cpId);
+  }, [cpId]);
+
+  // Abonnement au flux `bombparty:typing` du joueur actif.
+  useEffect(() => {
+    const sock = getSocket();
+    const handler = (payload: { playerId: string; partial: string }) => {
+      // Ignore notre propre echo : on connaît déjà notre input local.
+      if (payload.playerId === myId) return;
+      // Sécurité : ignore les messages d'un joueur qui n'est plus à la main.
+      if (payload.playerId !== cpId) return;
+      setLivePartial(payload.partial);
+      setLivePartialFrom(payload.playerId);
+    };
+    sock.on('bombparty:typing', handler);
+    return () => {
+      sock.off('bombparty:typing', handler);
+    };
+  }, [myId, cpId]);
+
+  /** Diffuse l'input partiel courant aux autres joueurs (throttlé). */
+  const emitPartial = useCallback((value: string) => {
+    pendingEmitRef.current.value = value;
+    const now = Date.now();
+    const elapsed = now - lastEmitRef.current;
+    const send = () => {
+      lastEmitRef.current = Date.now();
+      pendingEmitRef.current.timer = null;
+      const sock = getSocket();
+      sock.emit('bombparty:typing', { partial: pendingEmitRef.current.value });
+    };
+    if (elapsed >= BP_TYPING_EMIT_INTERVAL_MS) {
+      send();
+    } else if (pendingEmitRef.current.timer == null) {
+      pendingEmitRef.current.timer = window.setTimeout(send, BP_TYPING_EMIT_INTERVAL_MS - elapsed);
+    }
+  }, []);
+
+  // À chaque keystroke local, on diffuse aux autres si c'est notre tour.
+  useEffect(() => {
+    if (!isMyTurn) return;
+    emitPartial(input);
+  }, [input, isMyTurn, emitPartial]);
+
+  // Quand on perd la main (tour qui change ou démontage), on envoie un dernier
+  // payload vide pour effacer l'overlay côté spectateurs.
+  useEffect(() => {
+    return () => {
+      if (pendingEmitRef.current.timer != null) {
+        clearTimeout(pendingEmitRef.current.timer);
+        pendingEmitRef.current.timer = null;
+      }
+    };
+  }, []);
 
   // Audio heartbeat for bomb
   const playedTickRef = useRef<number>(0);
@@ -90,6 +156,9 @@ export function BombpartyRound() {
           } else if (data?.correct) {
             setInput('');
             mvpSound.success();
+            // Force-clear immédiat de l'overlay des spectateurs.
+            const sock2 = getSocket();
+            sock2.emit('bombparty:typing', { partial: '' });
           }
         }
       });
@@ -199,28 +268,36 @@ export function BombpartyRound() {
 
         {/* Input area */}
         <div className="mt-12 w-full max-w-sm">
-           <form onSubmit={handleSubmit} className="relative">
-             <input
-               ref={inputRef}
-               type="text"
-               value={input}
-               onChange={(e) => setInput(e.target.value.toUpperCase())}
-               disabled={!isMyTurn || sending}
-               placeholder={isMyTurn ? "Tape un mot..." : "Attends ton tour..."}
-               className={`w-full h-16 rounded-2xl bg-surface-elevated border-2 text-center text-2xl font-display uppercase tracking-widest outline-none transition
-                  ${isMyTurn ? 'border-neon-cyan text-white shadow-[0_0_15px_rgba(34,211,238,0.3)]' : 'border-border text-text-dim'}
-                  ${errorMsg ? 'border-neon-rose text-neon-rose bg-neon-rose/10 animate-shake' : ''}
-               `}
-               autoComplete="off"
-               spellCheck={false}
+           {isMyTurn ? (
+             <form onSubmit={handleSubmit} className="relative">
+               <input
+                 ref={inputRef}
+                 type="text"
+                 value={input}
+                 onChange={(e) => setInput(e.target.value.toUpperCase())}
+                 disabled={!isMyTurn || sending}
+                 placeholder="Tape un mot..."
+                 className={`w-full h-16 rounded-2xl bg-surface-elevated border-2 text-center text-2xl font-display uppercase tracking-widest outline-none transition
+                    border-neon-cyan text-white shadow-[0_0_15px_rgba(34,211,238,0.3)]
+                    ${errorMsg ? 'border-neon-rose text-neon-rose bg-neon-rose/10 animate-shake' : ''}
+                 `}
+                 autoComplete="off"
+                 spellCheck={false}
+               />
+               {errorMsg && (
+                  <div className="absolute -bottom-8 left-0 right-0 text-center text-sm font-medium text-neon-rose flex items-center justify-center gap-1">
+                     <AlertTriangle className="w-4 h-4" />
+                     {errorMsg}
+                  </div>
+               )}
+             </form>
+           ) : (
+             /* Live caption — ce que le joueur actif est en train de taper. */
+             <BpLiveCaption
+               partial={livePartialFrom === cpId ? livePartial : ''}
+               nickname={currentPlayer?.nickname ?? '…'}
              />
-             {errorMsg && (
-                <div className="absolute -bottom-8 left-0 right-0 text-center text-sm font-medium text-neon-rose flex items-center justify-center gap-1">
-                   <AlertTriangle className="w-4 h-4" />
-                   {errorMsg}
-                </div>
-             )}
-           </form>
+           )}
         </div>
 
       </div>
@@ -264,7 +341,72 @@ export function BombpartyRound() {
           </AnimatePresence>
         </div>
       </div>
-      
+
+    </div>
+  );
+}
+
+/**
+ * Affichage live, lettre par lettre, du mot que le joueur actif est en train
+ * de taper. Visible uniquement par les spectateurs (le joueur actif voit son
+ * propre input field). Anime chaque caractère qui apparaît / disparaît.
+ */
+function BpLiveCaption({ partial, nickname }: { partial: string; nickname: string }) {
+  const chars = partial.toUpperCase().split('');
+  // Donne à chaque position une clé stable pour que AnimatePresence ne ré-anime
+  // pas tout quand on ajoute juste une lettre à la fin.
+  return (
+    <div className="relative w-full h-16 rounded-2xl bg-surface-elevated border-2 border-border/60 overflow-hidden">
+      {/* Bandeau de fond pulsé pour signaler que ça vient des autres. */}
+      <div
+        className="absolute inset-0 opacity-30 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(90deg, rgba(34,211,238,0) 0%, rgba(34,211,238,0.18) 50%, rgba(34,211,238,0) 100%)',
+          backgroundSize: '200% 100%',
+          animation: 'bpCaptionShimmer 2.4s linear infinite',
+        }}
+      />
+      <div className="absolute top-1 left-3 text-[10px] uppercase tracking-widest text-text-dim/80">
+        {nickname} tape…
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center px-4 pt-3">
+        {chars.length === 0 ? (
+          <motion.span
+            key="placeholder"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-text-dim font-display tracking-widest text-sm flex items-center gap-1"
+          >
+            <span className="inline-block w-0.5 h-5 bg-neon-cyan/70 animate-pulse" />
+            <span className="ml-1">en attente…</span>
+          </motion.span>
+        ) : (
+          <div className="flex items-center gap-[3px]">
+            <AnimatePresence mode="popLayout" initial={false}>
+              {chars.map((ch, i) => (
+                <motion.span
+                  key={`${i}-${ch}`}
+                  layout
+                  initial={{ opacity: 0, y: 14, scale: 0.6, color: '#22d3ee' }}
+                  animate={{ opacity: 1, y: 0, scale: 1, color: '#ffffff' }}
+                  exit={{ opacity: 0, y: -10, scale: 0.6 }}
+                  transition={{ type: 'spring', stiffness: 520, damping: 26, mass: 0.5 }}
+                  className="text-2xl font-display font-black uppercase tracking-wider drop-shadow-[0_0_6px_rgba(34,211,238,0.45)]"
+                >
+                  {ch === ' ' ? ' ' : ch}
+                </motion.span>
+              ))}
+            </AnimatePresence>
+            <motion.span
+              key="caret"
+              animate={{ opacity: [1, 0.2, 1] }}
+              transition={{ repeat: Infinity, duration: 0.9 }}
+              className="inline-block w-[2px] h-6 bg-neon-cyan ml-1"
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

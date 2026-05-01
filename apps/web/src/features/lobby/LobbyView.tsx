@@ -5,8 +5,8 @@ import { Copy, Check, Crown, Play, Settings2, Eraser, Grid3x3 } from 'lucide-rea
 import { useState, useEffect } from 'react';
 import { getSocket } from '@/lib/socket';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { GameModeId } from '@mvpc/shared';
-import { lobbyPenColorForPlayer } from '@mvpc/shared';
+import type { GameModeId, TtrMapId } from '@mvpc/shared';
+import { lobbyPenColorForPlayer, TTR_MAP_IDS, TTR_MAPS } from '@mvpc/shared';
 import { mvpSound } from '@/lib/sound';
 import {
   LobbyDrawingCanvas,
@@ -111,6 +111,7 @@ export function LobbyView() {
     rounds?: number;
     modesPool?: GameModeId[];
     categoriesPool?: string[];
+    ttrMapId?: TtrMapId;
   }) => {
     const sock = getSocket();
     sock.emit('lobby:setConfig', { config: partial }, (res) => {
@@ -155,6 +156,11 @@ export function LobbyView() {
     if (!isHost) return;
     setRoundsLocal(n);
     emitConfig({ rounds: n });
+  };
+
+  const changeTtrMap = (id: TtrMapId) => {
+    if (!isHost) return;
+    emitConfig({ ttrMapId: id });
   };
 
   const clearLobbyCanvas = () => {
@@ -432,6 +438,48 @@ export function LobbyView() {
                   ? 'Chaque équipe doit avoir au moins 2 joueurs.'
                   : 'Codenames : 2 équipes avec 1 spymaster chacune. Partie unique.'}
               </span>
+            </div>
+          )}
+
+          {isTicketToRide && (
+            <div className="space-y-2 rounded-xl border border-neon-amber/25 bg-neon-amber/5 p-3">
+              <div className="flex items-center justify-between gap-2">
+                <label className="text-[11px] text-text-muted uppercase tracking-[0.1em]">
+                  Carte
+                </label>
+                <span className="text-[10px] text-text-dim">Aventuriers du Rail</span>
+              </div>
+              <div className="grid gap-2">
+                {TTR_MAP_IDS.map((id) => {
+                  const map = TTR_MAPS[id];
+                  const active = (snapshot.config.ttrMapId ?? 'france') === id;
+                  return (
+                    <button
+                      key={id}
+                      type="button"
+                      disabled={!isHost}
+                      onClick={() => changeTtrMap(id)}
+                      className="flex min-h-[54px] items-center justify-between gap-3 rounded-xl border px-3 py-2 text-left transition disabled:cursor-not-allowed disabled:opacity-70"
+                      style={{
+                        borderColor: active ? 'rgba(251, 191, 36, 0.62)' : 'rgba(148, 163, 184, 0.16)',
+                        background: active
+                          ? 'linear-gradient(135deg, rgba(251,191,36,0.16), rgba(34,211,238,0.055))'
+                          : 'rgba(15, 23, 42, 0.32)',
+                        boxShadow: active ? '0 0 0 1px rgba(251,191,36,0.22)' : undefined,
+                      }}
+                    >
+                      <span className="flex min-w-0 items-center gap-2">
+                        <span className="text-lg leading-none">{map.emoji}</span>
+                        <span className="min-w-0">
+                          <span className="block truncate text-sm font-semibold text-white">{map.name}</span>
+                          <span className="block truncate text-[10px] text-text-dim">{map.subtitle}</span>
+                        </span>
+                      </span>
+                      {active && <Check className="h-4 w-4 shrink-0 text-neon-amber" />}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
 

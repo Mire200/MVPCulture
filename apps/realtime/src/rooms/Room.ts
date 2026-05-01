@@ -67,6 +67,7 @@ const DEFAULT_CONFIG: GameConfig = {
   difficulty: 'mixed',
   answerTimeSeconds: 30,
   categoriesPool: [],
+  ttrMapId: 'france',
 };
 
 export class Room {
@@ -223,6 +224,7 @@ export class Room {
         players: this.allPlayers(),
         question: q,
         roundIndex: this.roundIndex,
+        config: this.config,
         now: () => Date.now(),
       },
       this.config.answerTimeSeconds,
@@ -435,6 +437,7 @@ export class Room {
     let gpRevealStepIndex: number | undefined;
     let gpRevealChain: Array<{ type: 'text' | 'drawing'; playerId: string; content: string }> | undefined;
     let ttrSub: 'initial-destinations' | 'playing' | 'last-round' | 'done' | undefined;
+    let ttrMapId: GameConfig['ttrMapId'] | undefined;
     let ttrTurnOrder: string[] | undefined;
     let ttrMarket: Array<string | null> | undefined;
     let ttrDeckSize: number | undefined;
@@ -578,6 +581,7 @@ export class Room {
       endsAt = gp.endsAt;
     } else if (r.collect.kind === 'ticket-to-ride') {
       const ttr = r.collect.ttr;
+      ttrMapId = ttr.mapId;
       ttrSub = ttr.sub;
       ttrTurnOrder = [...ttr.turnOrder];
       currentPlayerId = ttr.sub === 'done' ? undefined : ttr.turnOrder[ttr.currentPlayerIndex];
@@ -676,6 +680,7 @@ export class Room {
       gpRevealStepIndex,
       gpRevealChain,
       ttrSub,
+      ttrMapId,
       ttrTurnOrder,
       ttrCurrentPlayerId: currentPlayerId,
       ttrTurnEndsAt: endsAt,

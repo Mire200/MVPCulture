@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { TTR_MAP_IDS, type TtrMapId } from './ticketToRideMap.js';
 
 export const GameModeIdSchema = z.enum([
   'classic',
@@ -213,6 +214,8 @@ export const GameConfigSchema = z.object({
   difficulty: z.enum(['mixed', 'easy', 'medium', 'hard']).default('mixed'),
   answerTimeSeconds: z.number().int().min(10).max(180).default(30),
   categoriesPool: z.array(z.string()).default([]),
+  /** Carte choisie pour le mode Aventuriers du Rail. */
+  ttrMapId: z.enum(TTR_MAP_IDS).default('france'),
 });
 export type GameConfig = z.infer<typeof GameConfigSchema>;
 
@@ -343,6 +346,8 @@ export interface RoundStateBase {
 
   /** Ticket to Ride : sous-phase du jeu. */
   ttrSub?: 'initial-destinations' | 'playing' | 'last-round' | 'done';
+  /** Ticket to Ride : carte jouée. */
+  ttrMapId?: TtrMapId;
   /** Ticket to Ride : ordre des joueurs. */
   ttrTurnOrder?: string[];
   /** Ticket to Ride : joueur dont c'est le tour. */

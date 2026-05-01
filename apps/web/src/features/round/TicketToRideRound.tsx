@@ -7,11 +7,15 @@ import { getSocket } from '@/lib/socket';
 import { mvpSound } from '@/lib/sound';
 import { useGameStore } from '@/store/gameStore';
 import {
+  getTtrMap,
   TTR_CARD_COLORS,
-  TTR_CITIES,
-  TTR_DESTINATIONS,
-  TTR_ROUTES,
   TTR_ROUTE_POINTS,
+  type TTRDestination,
+  type TTRGeoPoint,
+  type TTRMap,
+  type TTRMapBounds,
+  type TTRMapCity,
+  type TTRRoute,
 } from '@mvpc/shared';
 
 const CARD_META: Record<
@@ -30,158 +34,40 @@ const CARD_META: Record<
   loco: { label: 'Loco', fill: '#a855f7', text: '#fff', shadow: 'rgba(168,85,247,0.55)', soft: 'rgba(168,85,247,0.18)' },
 };
 
-const CITY_LABEL_OFFSETS: Record<string, { x: number; y: number; anchor?: 'start' | 'middle' | 'end' }> = {
-  paris: { x: 2.8, y: -2.6, anchor: 'start' },
-  lille: { x: 0, y: -4 },
-  strasbourg: { x: -2.6, y: -3.1, anchor: 'end' },
-  lyon: { x: 3, y: -2.4, anchor: 'start' },
-  marseille: { x: 0, y: 4.4 },
-  nice: { x: 2.6, y: 1.1, anchor: 'start' },
-  toulouse: { x: -2.8, y: 4.2, anchor: 'end' },
-  bordeaux: { x: -3.4, y: 1.2, anchor: 'end' },
-  nantes: { x: -3.4, y: 1.3, anchor: 'end' },
-  brest: { x: 2.8, y: -2.6, anchor: 'start' },
-  rennes: { x: -2.8, y: -3.2, anchor: 'end' },
-  rouen: { x: -2.8, y: -3.4, anchor: 'end' },
-  dijon: { x: 3.1, y: -2.9, anchor: 'start' },
-  clermont: { x: -3.2, y: 0.6, anchor: 'end' },
-  montpellier: { x: -3.2, y: 4.1, anchor: 'end' },
-};
-
-const FRANCE_BOUNDS = {
-  minLon: -5.8,
-  maxLon: 8.9,
-  minLat: 41.25,
-  maxLat: 51.25,
-  padX: 6.5,
-  padY: 5.5,
-};
-
-const CITY_GEO: Record<string, { lon: number; lat: number }> = {
-  paris: { lon: 2.3522, lat: 48.8566 },
-  lille: { lon: 3.0573, lat: 50.6292 },
-  strasbourg: { lon: 7.7521, lat: 48.5734 },
-  lyon: { lon: 4.8357, lat: 45.764 },
-  marseille: { lon: 5.3698, lat: 43.2965 },
-  nice: { lon: 7.262, lat: 43.7102 },
-  toulouse: { lon: 1.4442, lat: 43.6047 },
-  bordeaux: { lon: -0.5792, lat: 44.8378 },
-  nantes: { lon: -1.5536, lat: 47.2184 },
-  brest: { lon: -4.4861, lat: 48.3904 },
-  rennes: { lon: -1.6778, lat: 48.1173 },
-  rouen: { lon: 1.0993, lat: 49.4432 },
-  dijon: { lon: 5.0415, lat: 47.322 },
-  clermont: { lon: 3.087, lat: 45.7772 },
-  montpellier: { lon: 3.8767, lat: 43.6108 },
-};
-
-const FRANCE_OUTLINE_GEO: Array<[number, number]> = [
-  [-4.78, 48.44],
-  [-4.15, 48.08],
-  [-3.58, 48.78],
-  [-2.25, 48.78],
-  [-1.62, 49.66],
-  [-0.18, 49.42],
-  [1.08, 50.07],
-  [2.82, 50.78],
-  [4.15, 50.43],
-  [4.82, 49.9],
-  [6.15, 49.48],
-  [7.45, 48.72],
-  [7.65, 47.6],
-  [6.75, 46.92],
-  [6.95, 46.18],
-  [6.6, 45.36],
-  [7.18, 44.48],
-  [7.62, 43.78],
-  [7.18, 43.3],
-  [5.9, 43.08],
-  [4.66, 43.34],
-  [3.08, 42.82],
-  [1.55, 42.45],
-  [0.35, 42.68],
-  [-0.78, 43.05],
-  [-1.54, 43.43],
-  [-1.23, 44.35],
-  [-1.12, 45.28],
-  [-1.18, 46.12],
-  [-1.78, 46.85],
-  [-2.92, 47.48],
-  [-4.25, 47.82],
-  [-5.05, 48.12],
-  [-4.78, 48.44],
-];
-
-const FRANCE_REGION_LINES: Array<Array<[number, number]>> = [
-  [
-    [-4.4, 48.1],
-    [-2.0, 47.8],
-    [0.1, 47.4],
-    [2.3, 47.1],
-    [4.9, 47.3],
-    [7.4, 48.2],
-  ],
-  [
-    [-1.3, 49.3],
-    [0.8, 48.6],
-    [2.35, 48.85],
-    [4.8, 47.6],
-    [6.7, 46.4],
-  ],
-  [
-    [-1.2, 44.8],
-    [1.4, 44.1],
-    [3.1, 43.9],
-    [5.4, 43.3],
-    [7.2, 43.7],
-  ],
-  [
-    [2.9, 50.5],
-    [2.35, 48.85],
-    [3.08, 45.78],
-    [3.88, 43.61],
-  ],
-];
-
 type PayOption = { color: string; locoCount: number; colorCount: number };
-type TtrRoute = (typeof TTR_ROUTES)[number];
-type TtrDestination = (typeof TTR_DESTINATIONS)[number];
+type TtrRoute = TTRRoute;
+type TtrDestination = TTRDestination;
 type ClaimedRoute = { id: string; ownerId?: string; paidColor?: string };
 
-function projectGeo(lon: number, lat: number) {
-  const width = 100 - FRANCE_BOUNDS.padX * 2;
-  const height = 100 - FRANCE_BOUNDS.padY * 2;
+function projectGeo(bounds: TTRMapBounds, lon: number, lat: number) {
+  const width = 100 - bounds.padX * 2;
+  const height = 100 - bounds.padY * 2;
   const x =
-    FRANCE_BOUNDS.padX +
-    ((lon - FRANCE_BOUNDS.minLon) / (FRANCE_BOUNDS.maxLon - FRANCE_BOUNDS.minLon)) * width;
+    bounds.padX +
+    ((lon - bounds.minLon) / (bounds.maxLon - bounds.minLon)) * width;
   const y =
-    FRANCE_BOUNDS.padY +
-    ((FRANCE_BOUNDS.maxLat - lat) / (FRANCE_BOUNDS.maxLat - FRANCE_BOUNDS.minLat)) * height;
+    bounds.padY +
+    ((bounds.maxLat - lat) / (bounds.maxLat - bounds.minLat)) * height;
   return { x, y };
 }
 
-function geoPath(points: Array<[number, number]>, close = false) {
+function geoPath(map: TTRMap, points: TTRGeoPoint[], close = false) {
   return points
     .map(([lon, lat], index) => {
-      const p = projectGeo(lon, lat);
+      const p = projectGeo(map.bounds, lon, lat);
       return `${index === 0 ? 'M' : 'L'}${p.x.toFixed(2)} ${p.y.toFixed(2)}`;
     })
     .join(' ') + (close ? ' Z' : '');
 }
 
-function cityPoint(cityId: string) {
-  const geo = CITY_GEO[cityId];
-  if (geo) return projectGeo(geo.lon, geo.lat);
-  const fallback = TTR_CITIES.find((c) => c.id === cityId);
-  return { x: fallback?.x ?? 50, y: fallback?.y ?? 50 };
+function cityPoint(map: TTRMap, cityId: string) {
+  const city = map.cities.find((c) => c.id === cityId);
+  if (!city) return { x: 50, y: 50 };
+  return projectGeo(map.bounds, city.lon, city.lat);
 }
 
-const FRANCE_OUTLINE_PATH = geoPath(FRANCE_OUTLINE_GEO, true);
-const FRANCE_REGION_PATHS = FRANCE_REGION_LINES.map((line) => geoPath(line));
-
-
-function cityName(id: string) {
-  return TTR_CITIES.find((c) => c.id === id)?.name ?? id;
+function cityName(map: TTRMap, id: string) {
+  return map.cities.find((c) => c.id === id)?.name ?? id;
 }
 
 function cardCount(hand: Record<string, number> | undefined) {
@@ -248,6 +134,7 @@ export function TicketToRideRound() {
 
   if (!snapshot || !round || round.mode !== 'ticket-to-ride') return null;
 
+  const ttrMap = getTtrMap(round.ttrMapId);
   const players = snapshot.players;
   const currentPlayerId = round.ttrCurrentPlayerId ?? round.currentPlayerId;
   const currentPlayer = players.find((p) => p.id === currentPlayerId);
@@ -272,23 +159,23 @@ export function TicketToRideRound() {
   }, [round.ttrClaimedRoutes]);
 
   const destinationById = useMemo(() => {
-    const map = new Map(TTR_DESTINATIONS.map((d) => [d.id, d]));
+    const map = new Map(ttrMap.destinations.map((d) => [d.id, d]));
     return map;
-  }, []);
+  }, [ttrMap]);
 
   const payOptionsByRouteId = useMemo(() => {
     const map = new Map<string, PayOption[]>();
-    for (const route of TTR_ROUTES) {
+    for (const route of ttrMap.routes) {
       map.set(
         route.id,
         buildPayOptions(route, myHand, myTrains, canBuildRoute, !!claimedById.get(route.id)?.ownerId),
       );
     }
     return map;
-  }, [canBuildRoute, claimedById, myHand, myTrains]);
+  }, [canBuildRoute, claimedById, myHand, myTrains, ttrMap]);
 
   const selectedRoute = selectedRouteId
-    ? TTR_ROUTES.find((route) => route.id === selectedRouteId)
+    ? ttrMap.routes.find((route) => route.id === selectedRouteId)
     : undefined;
   const selectedPayOptions = selectedRoute ? payOptionsByRouteId.get(selectedRoute.id) ?? [] : [];
 
@@ -338,13 +225,19 @@ export function TicketToRideRound() {
             <h3 className="font-display text-xl font-bold sm:text-2xl">Aventuriers du Rail</h3>
           </div>
           <p className="mt-1 text-sm text-text-muted">
-            {claimedCount}/{TTR_ROUTES.length} tronçons capturés · {round.ttrDeckSize ?? 0} cartes wagon ·{' '}
+            {ttrMap.emoji} {ttrMap.name} · {claimedCount}/{ttrMap.routes.length} tronçons capturés · {round.ttrDeckSize ?? 0} cartes wagon ·{' '}
             {round.ttrDestinationDeckSize ?? 0} billets restants
           </p>
         </div>
-        <div className="grid w-full grid-cols-3 gap-2 sm:w-auto sm:min-w-[420px]">
+        <div className="grid w-full grid-cols-3 gap-2 sm:w-auto sm:min-w-[460px]">
           <StatusTile icon={<MapIcon className="h-4 w-4" />} label="Phase" value={phaseLabel} />
-          <StatusTile icon={<Ticket className="h-4 w-4" />} label="Tour" value={currentPlayer?.nickname ?? 'En attente'} />
+          <StatusTile
+            icon={<Ticket className="h-4 w-4" />}
+            label="Tour"
+            value={currentPlayer?.nickname ?? 'En attente'}
+            active={isMyTurn}
+            accentColor={currentPlayer?.avatar.color}
+          />
           <StatusTile icon={<Trophy className="h-4 w-4" />} label="Wagons" value={`${myTrains}`} />
         </div>
       </section>
@@ -357,6 +250,7 @@ export function TicketToRideRound() {
 
       {pendingTickets.length > 0 && (
         <TicketPicker
+          ttrMap={ttrMap}
           destinationById={destinationById}
           minKeep={minTicketKeep}
           pendingIds={pendingTickets}
@@ -370,6 +264,7 @@ export function TicketToRideRound() {
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
         <section className="flex min-w-0 flex-col gap-4">
           <TtrBoardMap
+            ttrMap={ttrMap}
             players={players}
             claimedById={claimedById}
             currentPlayerId={currentPlayerId}
@@ -382,7 +277,14 @@ export function TicketToRideRound() {
 
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.62fr)]">
             <HandPanel hand={myHand} />
-            <DestinationPanel destinationById={destinationById} destinationIds={ttrPrivate?.destinations ?? []} />
+            <DestinationPanel
+              ttrMap={ttrMap}
+              destinationById={destinationById}
+              destinationIds={ttrPrivate?.destinations ?? []}
+              myClaimedRouteIds={(round.ttrClaimedRoutes ?? [])
+                .filter((r) => r.ownerId === myId)
+                .map((r) => r.id)}
+            />
           </div>
         </section>
 
@@ -403,6 +305,7 @@ export function TicketToRideRound() {
           />
 
           <RoutePanel
+            ttrMap={ttrMap}
             route={selectedRoute}
             ownerName={
               selectedRoute
@@ -429,13 +332,28 @@ function StatusTile({
   icon,
   label,
   value,
+  active,
+  accentColor,
 }: {
   icon: React.ReactNode;
   label: string;
   value: string;
+  active?: boolean;
+  accentColor?: string;
 }) {
+  const style = accentColor
+    ? {
+        borderColor: `${accentColor}55`,
+        background: `linear-gradient(135deg, ${accentColor}18, rgba(255,255,255,0.035))`,
+      }
+    : undefined;
   return (
-    <div className="rounded-lg border border-white/10 bg-white/[0.045] px-3 py-2 shadow-inner">
+    <div
+      className={`relative rounded-xl border border-white/10 bg-white/[0.045] px-3 py-2 shadow-inner ${
+        active ? 'ttr-active-ring' : ''
+      }`}
+      style={style}
+    >
       <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-text-muted">
         {icon}
         {label}
@@ -446,6 +364,7 @@ function StatusTile({
 }
 
 function TtrBoardMap({
+  ttrMap,
   players,
   claimedById,
   currentPlayerId,
@@ -453,6 +372,7 @@ function TtrBoardMap({
   payableRouteIds,
   onSelectRoute,
 }: {
+  ttrMap: TTRMap;
   players: NonNullable<ReturnType<typeof useGameStore.getState>['snapshot']>['players'];
   claimedById: Map<string, ClaimedRoute>;
   currentPlayerId?: string;
@@ -460,12 +380,15 @@ function TtrBoardMap({
   payableRouteIds: Set<string>;
   onSelectRoute: (routeId: string) => void;
 }) {
+  const outlinePath = geoPath(ttrMap, ttrMap.outline, true);
+  const regionPaths = ttrMap.regionLines.map((line) => geoPath(ttrMap, line));
+
   return (
     <div className="ttr-board-shell">
       <div className="ttr-board-topline">
         <div>
           <div className="text-[10px] uppercase tracking-[0.28em] text-amber-200/70">Plateau réseau</div>
-          <div className="mt-1 text-sm font-semibold text-white">France express · réseau premium</div>
+          <div className="mt-1 text-sm font-semibold text-white">{ttrMap.name} · réseau premium</div>
         </div>
         <div className="hidden text-right text-xs text-text-muted sm:block">Routes · villes · objectifs</div>
       </div>
@@ -500,7 +423,7 @@ function TtrBoardMap({
 
           <rect width="100" height="100" fill="url(#ttrSeaGlow)" />
           <path
-            d={FRANCE_OUTLINE_PATH}
+            d={outlinePath}
             fill="url(#ttrLand)"
             stroke="rgba(255,255,255,0.16)"
             strokeWidth="0.55"
@@ -508,14 +431,14 @@ function TtrBoardMap({
           />
           <rect width="100" height="100" fill="url(#ttrGrid)" opacity="0.55" />
           <path
-            d={FRANCE_OUTLINE_PATH}
+            d={outlinePath}
             fill="none"
             stroke="rgba(251,191,36,0.16)"
             strokeWidth="0.28"
             strokeDasharray="1.3 1.2"
             pointerEvents="none"
           />
-          {FRANCE_REGION_PATHS.map((path, index) => (
+          {regionPaths.map((path, index) => (
             <path
               key={index}
               d={path}
@@ -536,16 +459,17 @@ function TtrBoardMap({
             letterSpacing="0.18em"
             className="pointer-events-none select-none"
           >
-            FRANCE
+            {ttrMap.name.toUpperCase()}
           </text>
 
-          {TTR_ROUTES.map((route) => {
+          {ttrMap.routes.map((route) => {
             const claimed = claimedById.get(route.id);
             const owner = players.find((p) => p.id === claimed?.ownerId);
             return (
               <TtrRouteSegment
                 key={route.id}
                 route={route}
+                ttrMap={ttrMap}
                 claimed={claimed}
                 ownerColor={owner?.avatar.color}
                 isCurrentOwner={claimed?.ownerId === currentPlayerId}
@@ -556,8 +480,8 @@ function TtrBoardMap({
             );
           })}
 
-          {TTR_CITIES.map((city) => (
-            <TtrCityMarker key={city.id} city={city} />
+          {ttrMap.cities.map((city) => (
+            <TtrCityMarker key={city.id} city={city} ttrMap={ttrMap} />
           ))}
 
           <rect
@@ -579,6 +503,7 @@ function TtrBoardMap({
 
 function TtrRouteSegment({
   route,
+  ttrMap,
   claimed,
   ownerColor,
   isCurrentOwner,
@@ -587,6 +512,7 @@ function TtrRouteSegment({
   onSelect,
 }: {
   route: TtrRoute;
+  ttrMap: TTRMap;
   claimed?: ClaimedRoute;
   ownerColor?: string;
   isCurrentOwner: boolean;
@@ -594,8 +520,8 @@ function TtrRouteSegment({
   payable: boolean;
   onSelect: (routeId: string) => void;
 }) {
-  const a = cityPoint(route.cityA);
-  const b = cityPoint(route.cityB);
+  const a = cityPoint(ttrMap, route.cityA);
+  const b = cityPoint(ttrMap, route.cityB);
 
   const angle = Math.atan2(b.y - a.y, b.x - a.x) * (180 / Math.PI);
   const routeMeta = CARD_META[claimed?.paidColor ?? route.color] ?? CARD_META.gray;
@@ -668,9 +594,9 @@ function TtrRouteSegment({
   );
 }
 
-function TtrCityMarker({ city }: { city: (typeof TTR_CITIES)[number] }) {
-  const label = CITY_LABEL_OFFSETS[city.id] ?? { x: 0, y: -4, anchor: 'middle' as const };
-  const point = cityPoint(city.id);
+function TtrCityMarker({ city, ttrMap }: { city: TTRMapCity; ttrMap: TTRMap }) {
+  const label = city.label ?? { x: 0, y: -4, anchor: 'middle' as const };
+  const point = cityPoint(ttrMap, city.id);
   const fontSize = city.id === 'clermont' ? 1.55 : 1.72;
   const labelWidth = Math.max(7.2, city.name.length * fontSize * 0.72 + 1.7);
   const labelX =
@@ -742,13 +668,18 @@ function TtrTrainCard({
     ['--card-shadow' as string]: meta.shadow,
   };
 
+  const empty = typeof count === 'number' && count === 0;
+  const classes = [
+    'ttr-train-card',
+    compact ? 'ttr-train-card--compact' : '',
+    empty ? 'ttr-train-card--empty' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   if (!onClick) {
     return (
-      <div
-        className={`ttr-train-card ${compact ? 'ttr-train-card--compact' : ''}`}
-        style={style}
-        title={card ? meta.label : 'Vide'}
-      >
+      <div className={classes} style={style} title={card ? meta.label : 'Vide'}>
         {inner}
       </div>
     );
@@ -759,7 +690,7 @@ function TtrTrainCard({
       type="button"
       disabled={disabled || !card}
       onClick={onClick}
-      className={`ttr-train-card ${compact ? 'ttr-train-card--compact' : ''}`}
+      className={classes}
       style={style}
       title={card ? meta.label : 'Vide'}
     >
@@ -769,45 +700,82 @@ function TtrTrainCard({
 }
 
 function TtrDestinationCard({
+  ttrMap,
   destination,
   selected,
   interactive,
   onToggle,
+  reached,
 }: {
+  ttrMap: TTRMap;
   destination: TtrDestination;
   selected?: boolean;
   interactive?: boolean;
   onToggle?: () => void;
+  reached?: boolean;
 }) {
   const body = (
     <>
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <div className="text-[10px] uppercase tracking-[0.22em] text-amber-200/70">Billet</div>
+          <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-amber-200/70">
+            <span>Billet</span>
+            {typeof reached === 'boolean' && (
+              <span
+                className={`rounded-full px-1.5 py-0.5 text-[9px] font-bold tracking-wider ${
+                  reached
+                    ? 'bg-emerald-400/20 text-emerald-200'
+                    : 'bg-rose-400/20 text-rose-200'
+                }`}
+              >
+                {reached ? 'Complété' : 'En cours'}
+              </span>
+            )}
+          </div>
           <div className="mt-1 text-sm font-bold leading-tight text-white">
-            {cityName(destination.cityA)} → {cityName(destination.cityB)}
+            {cityName(ttrMap, destination.cityA)} <span className="text-amber-200/70">→</span>{' '}
+            {cityName(ttrMap, destination.cityB)}
           </div>
         </div>
-        <div className="rounded-lg border border-amber-200/30 bg-amber-300/15 px-2 py-1 font-mono text-sm font-bold text-amber-200">
+        <div className="rounded-lg border border-amber-200/30 bg-amber-300/15 px-2 py-1 font-mono text-base font-black text-amber-200">
           {destination.points}
         </div>
       </div>
-      <div className="mt-3 h-1 rounded-full bg-gradient-to-r from-amber-300/80 via-cyan-200/60 to-fuchsia-300/70" />
+      <div className="mt-3 flex items-center gap-1.5">
+        <span
+          className="h-1 flex-1 rounded-full"
+          style={{
+            background:
+              reached === true
+                ? 'linear-gradient(90deg, rgba(52,211,153,0.9), rgba(34,211,238,0.7))'
+                : reached === false
+                  ? 'linear-gradient(90deg, rgba(248,113,113,0.75), rgba(251,191,36,0.55))'
+                  : 'linear-gradient(90deg, rgba(251,191,36,0.8), rgba(34,211,238,0.55), rgba(168,85,247,0.6))',
+          }}
+        />
+      </div>
       {selected && (
-        <CheckCircle2 className="absolute bottom-2 right-2 h-4 w-4 text-emerald-300" aria-hidden />
+        <CheckCircle2 className="absolute bottom-2 right-3 h-4 w-4 text-emerald-300" aria-hidden />
       )}
     </>
   );
 
+  const stateClass =
+    reached === true
+      ? 'ttr-destination-card--done'
+      : reached === false
+        ? 'ttr-destination-card--fail'
+        : '';
+
   if (!interactive) {
-    return <div className="ttr-destination-card">{body}</div>;
+    return <div className={`ttr-destination-card ${stateClass}`}>{body}</div>;
   }
 
   return (
     <button
       type="button"
       onClick={onToggle}
-      className={`ttr-destination-card text-left ${selected ? 'ttr-destination-card--selected' : ''}`}
+      className={`ttr-destination-card text-left ${selected ? 'ttr-destination-card--selected' : ''} ${stateClass}`}
     >
       {body}
     </button>
@@ -912,39 +880,112 @@ function TtrActionPanel({
 }
 
 function HandPanel({ hand }: { hand: Record<string, number> }) {
+  const total = cardCount(hand);
+  const locoCount = hand.loco ?? 0;
+  const colorTotal = total - locoCount;
   return (
     <div className="ttr-bottom-panel">
-      <div className="mb-3 flex items-center justify-between gap-3">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <div>
           <div className="text-[10px] uppercase tracking-[0.24em] text-text-muted">Ma main</div>
-          <div className="text-sm font-semibold text-white">{cardCount(hand)} cartes wagon</div>
+          <div className="text-sm font-semibold text-white">{total} cartes wagon</div>
+        </div>
+        <div className="flex items-center gap-2 text-[11px] text-text-muted">
+          <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 font-semibold text-white/80">
+            {colorTotal} couleurs
+          </span>
+          <span
+            className="rounded-full border px-2 py-0.5 font-semibold"
+            style={{
+              borderColor: 'rgba(168,85,247,0.4)',
+              background: 'rgba(168,85,247,0.16)',
+              color: '#e9d5ff',
+            }}
+          >
+            {locoCount} loco
+          </span>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-2 sm:grid-cols-5 lg:grid-cols-9">
-        {[...TTR_CARD_COLORS, 'loco'].map((color) => (
+      <div className="grid grid-cols-4 gap-2 sm:grid-cols-8">
+        {TTR_CARD_COLORS.map((color) => (
           <TtrTrainCard key={color} card={color} count={hand[color] ?? 0} compact />
         ))}
+      </div>
+      <div className="mt-2">
+        <TtrTrainCard card="loco" count={locoCount} compact />
       </div>
     </div>
   );
 }
 
+function computeReached(ttrMap: TTRMap, myClaimedRouteIds: string[], cityA: string, cityB: string): boolean {
+  if (cityA === cityB) return true;
+  const adj = new Map<string, Set<string>>();
+  for (const id of myClaimedRouteIds) {
+    const r = ttrMap.routes.find((rt) => rt.id === id);
+    if (!r) continue;
+    if (!adj.has(r.cityA)) adj.set(r.cityA, new Set());
+    if (!adj.has(r.cityB)) adj.set(r.cityB, new Set());
+    adj.get(r.cityA)!.add(r.cityB);
+    adj.get(r.cityB)!.add(r.cityA);
+  }
+  const seen = new Set([cityA]);
+  const queue = [cityA];
+  while (queue.length) {
+    const cur = queue.shift()!;
+    if (cur === cityB) return true;
+    for (const nb of adj.get(cur) ?? []) {
+      if (!seen.has(nb)) {
+        seen.add(nb);
+        queue.push(nb);
+      }
+    }
+  }
+  return false;
+}
+
 function DestinationPanel({
+  ttrMap,
   destinationById,
   destinationIds,
+  myClaimedRouteIds,
 }: {
+  ttrMap: TTRMap;
   destinationById: Map<string, TtrDestination>;
   destinationIds: string[];
+  myClaimedRouteIds: string[];
 }) {
+  const stats = destinationIds.reduce(
+    (acc, id) => {
+      const d = destinationById.get(id);
+      if (!d) return acc;
+      const ok = computeReached(ttrMap, myClaimedRouteIds, d.cityA, d.cityB);
+      acc.total += d.points;
+      if (ok) acc.done += d.points;
+      else acc.pending += d.points;
+      return acc;
+    },
+    { done: 0, pending: 0, total: 0 },
+  );
   return (
     <div className="ttr-bottom-panel">
-      <div className="mb-3 flex items-center justify-between gap-3">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <div>
           <div className="text-[10px] uppercase tracking-[0.24em] text-text-muted">Billets gardés</div>
           <div className="text-sm font-semibold text-white">{destinationIds.length} objectif(s)</div>
         </div>
+        {destinationIds.length > 0 && (
+          <div className="flex items-center gap-2 text-[11px]">
+            <span className="rounded-full border border-emerald-300/40 bg-emerald-300/10 px-2 py-0.5 font-semibold text-emerald-200">
+              +{stats.done}
+            </span>
+            <span className="rounded-full border border-rose-300/30 bg-rose-300/10 px-2 py-0.5 font-semibold text-rose-200">
+              −{stats.pending}
+            </span>
+          </div>
+        )}
       </div>
-      <div className="grid max-h-[220px] gap-2 overflow-y-auto pr-1">
+      <div className="grid max-h-[260px] gap-2 overflow-y-auto pr-1">
         {destinationIds.length === 0 && (
           <div className="rounded-lg border border-dashed border-white/10 px-3 py-4 text-sm text-text-muted">
             Aucun billet confirmé.
@@ -953,7 +994,8 @@ function DestinationPanel({
         {destinationIds.map((id) => {
           const destination = destinationById.get(id);
           if (!destination) return null;
-          return <TtrDestinationCard key={id} destination={destination} />;
+          const reached = computeReached(ttrMap, myClaimedRouteIds, destination.cityA, destination.cityB);
+          return <TtrDestinationCard key={id} ttrMap={ttrMap} destination={destination} reached={reached} />;
         })}
       </div>
     </div>
@@ -961,6 +1003,7 @@ function DestinationPanel({
 }
 
 function TicketPicker({
+  ttrMap,
   destinationById,
   pendingIds,
   minKeep,
@@ -969,6 +1012,7 @@ function TicketPicker({
   onConfirm,
   initial,
 }: {
+  ttrMap: TTRMap;
   destinationById: Map<string, TtrDestination>;
   pendingIds: string[];
   minKeep: number;
@@ -998,6 +1042,7 @@ function TicketPicker({
           return (
             <TtrDestinationCard
               key={id}
+              ttrMap={ttrMap}
               destination={destination}
               selected={checked}
               interactive
@@ -1024,12 +1069,14 @@ function TicketPicker({
 }
 
 function RoutePanel({
+  ttrMap,
   route,
   ownerName,
   ownerColor,
   payOptions,
   onPay,
 }: {
+  ttrMap: TTRMap;
   route: TtrRoute | undefined;
   ownerName?: string;
   ownerColor?: string;
@@ -1051,7 +1098,7 @@ function RoutePanel({
         <div className="min-w-0">
           <div className="text-[10px] uppercase tracking-[0.24em] text-text-muted">Tronçon sélectionné</div>
           <div className="mt-1 text-lg font-bold leading-tight text-white">
-            {cityName(route.cityA)} → {cityName(route.cityB)}
+            {cityName(ttrMap, route.cityA)} → {cityName(ttrMap, route.cityB)}
           </div>
         </div>
         <div className="rounded-xl border border-amber-200/25 bg-amber-300/15 px-3 py-2 text-center">

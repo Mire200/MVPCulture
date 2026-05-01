@@ -1,5 +1,6 @@
 import type {
   AnswerPayload,
+  GameConfig,
   GameModeId,
   HostValidation,
   Player,
@@ -7,12 +8,14 @@ import type {
   Question,
   RoundReveal,
   RoundScoring,
+  TtrMapId,
 } from '@mvpc/shared';
 
 export interface GameModeContext {
   players: Player[];
   question: Question;
   roundIndex: number;
+  config: GameConfig;
   now: () => number;
 }
 
@@ -261,6 +264,7 @@ export interface TtrPlayerState {
 }
 
 export interface TicketToRideState {
+  mapId: TtrMapId;
   sub: TtrSub;
   turnOrder: string[];
   currentPlayerIndex: number;

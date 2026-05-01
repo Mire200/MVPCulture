@@ -26,6 +26,7 @@ import {
   TicketToRideClaimRoutePayloadSchema,
   TicketToRideDrawFromMarketPayloadSchema,
   TicketToRideKeepDestinationsPayloadSchema,
+  BombpartyTypingPayloadSchema,
   type ClientToServerEvents,
   type ServerToClientEvents,
 } from '@mvpc/shared';
@@ -1359,6 +1360,26 @@ io.on('connection', (socket) => {
     room.clearLobbyDrawing();
     io.to(room.code).emit('lobby:draw:cleared');
     ack({ ok: true, data: null });
+  });
+
+  socket.on('bombparty:typing', (payload) => {
+    const parsed = BombpartyTypingPayloadSchema.safeParse(payload);
+    if (!parsed.success) return;
+    const { room, playerId } = socketRoom(socket);
+    if (!room || !playerId || !room.round) return;
+    if (room.round.mode !== 'bombparty') return;
+    if (room.round.collect.kind !== 'bombparty') return;
+    const bp = room.round.collect.bp;
+    // Seul le joueur actif peut « teaser » son input.
+    if (bp.currentPlayerId !== playerId) return;
+    if (bp.phase !== 'playing') return;
+    // Throttle agressif : ~30 events/s par joueur.
+    if (hitRateLimit(`bptyping:${playerId}`, 30, 1000)) return;
+    // Diffusion best-effort à toute la room ; l'auteur s'auto-exclut côté UI.
+    io.to(room.code).emit('bombparty:typing', {
+      playerId,
+      partial: parsed.data.partial,
+    });
   });
 
   socket.on('lobby:drawing:request', (...args: unknown[]) => {

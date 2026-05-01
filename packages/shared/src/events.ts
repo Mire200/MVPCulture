@@ -166,6 +166,22 @@ export const BombpartySubmitWordPayloadSchema = z.object({
 });
 export type BombpartySubmitWordPayload = z.infer<typeof BombpartySubmitWordPayloadSchema>;
 
+/**
+ * Le joueur actif diffuse en continu son input partiel pour que les autres
+ * voient en direct ce qu'il est en train de taper (effet « live caption »).
+ * Aucun ack — c'est un canal best-effort, throttlé côté client.
+ */
+export const BombpartyTypingPayloadSchema = z.object({
+  partial: z.string().max(50),
+});
+export type BombpartyTypingPayload = z.infer<typeof BombpartyTypingPayloadSchema>;
+
+/** Diffusé par le serveur à toute la room avec l'auteur du tapotement. */
+export type BombpartyTypingBroadcastPayload = {
+  playerId: string;
+  partial: string;
+};
+
 export const TicketToRideDrawFromMarketPayloadSchema = z.object({
   /** Index de l'emplacement 0..4 du marché. */
   slot: z.number().int().min(0).max(4),
@@ -297,6 +313,8 @@ export type ClientToServerEvents = {
     payload: BombpartySubmitWordPayload,
     ack: (res: AckResult<null>) => void,
   ) => void;
+  /** Best-effort, sans ack : le joueur actif diffuse son input partiel. */
+  'bombparty:typing': (payload: BombpartyTypingPayload) => void;
   'ttr:confirmInitialDestinations': (
     payload: TicketToRideKeepDestinationsPayload,
     ack: (res: AckResult<null>) => void,
@@ -352,6 +370,8 @@ export type ServerToClientEvents = {
   'garticPhone:prompt': (payload: GarticPhonePromptPayload) => void;
   'garticPhone:reveal': (payload: GarticPhoneRevealPayload) => void;
   'ttr:private': (payload: TicketToRidePrivatePayload) => void;
+  /** Live partial typing du joueur actif Bombparty. */
+  'bombparty:typing': (payload: BombpartyTypingBroadcastPayload) => void;
 };
 
 export type AckResult<T> = { ok: true; data: T } | { ok: false; code: string; message: string };
